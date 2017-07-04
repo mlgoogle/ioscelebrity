@@ -17,6 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="4nm-rK-nkL">
+                            <rect key="frame" x="0.0" y="224" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OEZ-GH-XMx">
+                                    <rect key="frame" x="137.5" y="50" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="Ef1-lL-fqw"/>
+                                        <constraint firstAttribute="width" constant="100" id="I2s-QS-e2A"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="OEZ-GH-XMx" firstAttribute="centerX" secondItem="4nm-rK-nkL" secondAttribute="centerX" id="9hS-Oo-Z40"/>
+                                <constraint firstItem="OEZ-GH-XMx" firstAttribute="centerY" secondItem="4nm-rK-nkL" secondAttribute="centerY" id="v3z-jH-Rqt"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2lh-Ps-d99">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -26,7 +44,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Cp8-Jn-fsX">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cp8-Jn-fsX" id="7xs-Z8-Pbz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XWF-gL-Ig6">
+                                <rect key="frame" x="0.0" y="116" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XWF-gL-Ig6" id="bKC-rn-zva">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="qg2-8k-xgs" id="6sD-WN-5zn"/>
                             <outlet property="delegate" destination="qg2-8k-xgs" id="1aZ-eP-Tgb"/>
@@ -34,6 +69,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="收益管理" id="eT4-cb-0pZ"/>
                     <connections>
+                        <outlet property="testIcon" destination="OEZ-GH-XMx" id="hMb-sS-ECG"/>
                         <segue destination="rYO-ct-My8" kind="push" id="K1O-xH-baP"/>
                     </connections>
                 </tableViewController>
@@ -195,7 +231,7 @@
             <objects>
                 <navigationController id="Wde-2L-EIb" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="粉丝管理" image="user_item_normal" selectedImage="user_item_selected" id="8vy-Ef-BkN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="56T-Rs-srp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="56T-Rs-srp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -212,7 +248,7 @@
             <objects>
                 <navigationController id="UOj-eQ-fBS" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="联系粉丝" image="tour_item_normal" selectedImage="tour_item_selected" id="dUd-XU-Exw"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qXa-2K-69X">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="qXa-2K-69X">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -229,7 +265,7 @@
             <objects>
                 <navigationController id="MjM-rt-LhP" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="收益" image="home_item_normal" selectedImage="home_item_selected" id="NZb-Ei-jVv"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FZa-HU-HCN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FZa-HU-HCN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
