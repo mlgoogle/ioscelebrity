@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */; };
-		67563DCFE7C11C493D5E3BE0 /* Pods_wp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB87B95C21847F47B3B5B8C /* Pods_wp.framework */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
 		8E8FB0B41F0AA4EA00A7B85C /* CommenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */; };
@@ -168,7 +167,6 @@
 				B08673461DE5C4C0008DD8A1 /* libstdc++.tbd in Frameworks */,
 				2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */,
 				8E8FB0D21F0AA4EA00A7B85C /* OEZCommSDK.framework in Frameworks */,
-				67563DCFE7C11C493D5E3BE0 /* Pods_wp.framework in Frameworks */,
 				BF9EF4285D4C60EDFE739685 /* Pods_YStar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
