@@ -20,6 +20,7 @@
 		8E435F5A1F0B484300FB1976 /* ShareModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F591F0B484300FB1976 /* ShareModelHelper.swift */; };
 		8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */; };
 		8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */; };
+		8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E435F5F1F0B754D00FB1976 /* iconfont.ttf */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
 		8E8FB0B41F0AA4EA00A7B85C /* CommenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */; };
@@ -94,6 +95,7 @@
 		8E435F591F0B484300FB1976 /* ShareModelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModelHelper.swift; sourceTree = "<group>"; };
 		8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		8E435F5F1F0B754D00FB1976 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIHelper.swift; sourceTree = "<group>"; };
 		8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSocketAPI.swift; sourceTree = "<group>"; };
 		8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenApi.swift; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 		8E8FB0881F0AA4EA00A7B85C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8E435F5F1F0B754D00FB1976 /* iconfont.ttf */,
 				8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */,
 				8E8FB08A1F0AA4EA00A7B85C /* LaunchScreen.storyboard */,
 				8E8FB08C1F0AA4EA00A7B85C /* Main.storyboard */,
@@ -581,6 +584,7 @@
 				8E8FB0D01F0AA4EA00A7B85C /* MJRefresh.bundle in Resources */,
 				8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
+				8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */,
 				8E8FB0DD1F0AA4EA00A7B85C /* LaunchScreen.storyboard in Resources */,
 				A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */,
 				8E8FB0DC1F0AA4EA00A7B85C /* Assets.xcassets in Resources */,
