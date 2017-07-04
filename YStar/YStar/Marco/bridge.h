@@ -33,5 +33,6 @@ struct SocketPacketHead {
 #import <sys/utsname.h>
 #import <DKNightVersion/DKNightVersion.h>
 #import "IPManager.h"
+#import <NIMSDK/NIMSDK.h>
 //#import <CommonCrypto/CommonCrytor.h>
 /* nineSister_Bridging_Header_h */

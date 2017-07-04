@@ -13,6 +13,7 @@ class FansListViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "粉丝列表"
         // Do any additional setup after loading the view.
     }
 

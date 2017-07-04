@@ -4,7 +4,7 @@ target 'YStar' do
     # Comment this line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
     
-    # Pods for wp
+    # Pods for YStar
     
     use_frameworks! # Add this if you are targeting iOS 8+ or using Swift
     pod 'Alamofire', '~> 4.2.0'
@@ -26,4 +26,10 @@ target 'YStar' do
     #pod 'ReactiveCocoa'
     pod 'iCarousel'
     #pod 'WechatOpenSDK'
+    pod 'NIMSDK'
+    pod 'SDWebImage', '~> 3.8.2'
+    pod 'Toast', '~> 3.0'
+#    pod 'SVProgressHUD', '~> 2.0.3'
+    pod 'M80AttributedLabel', '~> 1.6.3'
+    pod 'TZImagePickerController', '~> 1.7.7'
 end

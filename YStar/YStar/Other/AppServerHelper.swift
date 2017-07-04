@@ -19,9 +19,14 @@ class AppServerHelper: NSObject , WXApiDelegate{
     }
     
     func initServer() {
-    
+        initYunXin()
     }
 
+    //MARK: --云信
+    func initYunXin() {
+        
+        NIMSDK.shared().register(withAppID: "appkey", cerName: "")
+    }
     
 
 }
