@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */; };
+		8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F461F0B440B00FB1976 /* BaseModel.swift */; };
+		8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */; };
+		8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4B1F0B449F00FB1976 /* LoginVC.swift */; };
+		8E435F4E1F0B44C500FB1976 /* BenifityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */; };
+		8E435F501F0B44E800FB1976 /* BenifityDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */; };
+		8E435F521F0B450E00FB1976 /* FansListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F511F0B450E00FB1976 /* FansListViewController.swift */; };
+		8E435F541F0B452C00FB1976 /* MeetManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */; };
+		8E435F561F0B454400FB1976 /* MeetTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F551F0B454400FB1976 /* MeetTypeVC.swift */; };
+		8E435F581F0B455D00FB1976 /* MeetOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
 		8E8FB0B41F0AA4EA00A7B85C /* CommenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */; };
@@ -44,7 +53,6 @@
 		8E8FB0D31F0AA4EA00A7B85C /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8FB0781F0AA4EA00A7B85C /* libWeChatSDK.a */; };
 		8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0791F0AA4EA00A7B85C /* README.txt */; };
 		8E8FB0D51F0AA4EA00A7B85C /* AppConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB07E1F0AA4EA00A7B85C /* AppConst.swift */; };
-		8E8FB0D61F0AA4EA00A7B85C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0811F0AA4EA00A7B85C /* BaseModel.swift */; };
 		8E8FB0D81F0AA4EA00A7B85C /* AppDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0841F0AA4EA00A7B85C /* AppDataHelper.swift */; };
 		8E8FB0D91F0AA4EA00A7B85C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0851F0AA4EA00A7B85C /* AppDelegate.swift */; };
 		8E8FB0DA1F0AA4EA00A7B85C /* AppServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0861F0AA4EA00A7B85C /* AppServerHelper.swift */; };
@@ -71,6 +79,15 @@
 /* Begin PBXFileReference section */
 		2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34A71E9057EC9BB492D14F0B /* Pods-wp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wp/Pods-wp.debug.xcconfig"; sourceTree = "<group>"; };
+		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
+		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityVC.swift; sourceTree = "<group>"; };
+		8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityDetailVC.swift; sourceTree = "<group>"; };
+		8E435F511F0B450E00FB1976 /* FansListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansListViewController.swift; sourceTree = "<group>"; };
+		8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetManagerVC.swift; sourceTree = "<group>"; };
+		8E435F551F0B454400FB1976 /* MeetTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeVC.swift; sourceTree = "<group>"; };
+		8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderVC.swift; sourceTree = "<group>"; };
 		8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIHelper.swift; sourceTree = "<group>"; };
 		8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSocketAPI.swift; sourceTree = "<group>"; };
 		8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenApi.swift; sourceTree = "<group>"; };
@@ -112,7 +129,6 @@
 		8E8FB07C1F0AA4EA00A7B85C /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		8E8FB07E1F0AA4EA00A7B85C /* AppConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConst.swift; sourceTree = "<group>"; };
 		8E8FB07F1F0AA4EA00A7B85C /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
-		8E8FB0811F0AA4EA00A7B85C /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8E8FB0841F0AA4EA00A7B85C /* AppDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataHelper.swift; sourceTree = "<group>"; };
 		8E8FB0851F0AA4EA00A7B85C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E8FB0861F0AA4EA00A7B85C /* AppServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppServerHelper.swift; sourceTree = "<group>"; };
@@ -209,6 +225,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8E435F441F0B440B00FB1976 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
+				8E435F4B1F0B449F00FB1976 /* LoginVC.swift */,
+				8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */,
+				8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */,
+				8E435F511F0B450E00FB1976 /* FansListViewController.swift */,
+				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
+				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
+				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E435F451F0B440B00FB1976 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E435F461F0B440B00FB1976 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E435F471F0B440B00FB1976 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8E8FB04A1F0AA4EA00A7B85C /* YStar */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,7 +262,6 @@
 				8E8FB05A1F0AA4EA00A7B85C /* General */,
 				8E8FB0701F0AA4EA00A7B85C /* Library */,
 				8E8FB07D1F0AA4EA00A7B85C /* Marco */,
-				8E8FB0801F0AA4EA00A7B85C /* Model */,
 				8E8FB0831F0AA4EA00A7B85C /* Other */,
 				8E8FB0881F0AA4EA00A7B85C /* Resource */,
 				8E8FB09D1F0AA4EA00A7B85C /* Scenes */,
@@ -358,14 +403,6 @@
 			path = Marco;
 			sourceTree = "<group>";
 		};
-		8E8FB0801F0AA4EA00A7B85C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8E8FB0811F0AA4EA00A7B85C /* BaseModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8E8FB0831F0AA4EA00A7B85C /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,82 +420,9 @@
 				8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */,
 				8E8FB08A1F0AA4EA00A7B85C /* LaunchScreen.storyboard */,
 				8E8FB08C1F0AA4EA00A7B85C /* Main.storyboard */,
-				8E8FB08E1F0AA4EA00A7B85C /* html */,
-				8E8FB08F1F0AA4EA00A7B85C /* image */,
 				8E8FB0971F0AA4EA00A7B85C /* plist */,
-				8E8FB09C1F0AA4EA00A7B85C /* storyboard */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		8E8FB08E1F0AA4EA00A7B85C /* html */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = html;
-			sourceTree = "<group>";
-		};
-		8E8FB08F1F0AA4EA00A7B85C /* image */ = {
-			isa = PBXGroup;
-			children = (
-				8E8FB0901F0AA4EA00A7B85C /* bankImg */,
-				8E8FB0911F0AA4EA00A7B85C /* deal */,
-				8E8FB0921F0AA4EA00A7B85C /* homeAndUser */,
-				8E8FB0931F0AA4EA00A7B85C /* img */,
-				8E8FB0941F0AA4EA00A7B85C /* login */,
-				8E8FB0951F0AA4EA00A7B85C /* nav */,
-				8E8FB0961F0AA4EA00A7B85C /* share */,
-			);
-			path = image;
-			sourceTree = "<group>";
-		};
-		8E8FB0901F0AA4EA00A7B85C /* bankImg */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = bankImg;
-			sourceTree = "<group>";
-		};
-		8E8FB0911F0AA4EA00A7B85C /* deal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = deal;
-			sourceTree = "<group>";
-		};
-		8E8FB0921F0AA4EA00A7B85C /* homeAndUser */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = homeAndUser;
-			sourceTree = "<group>";
-		};
-		8E8FB0931F0AA4EA00A7B85C /* img */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = img;
-			sourceTree = "<group>";
-		};
-		8E8FB0941F0AA4EA00A7B85C /* login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = login;
-			sourceTree = "<group>";
-		};
-		8E8FB0951F0AA4EA00A7B85C /* nav */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = nav;
-			sourceTree = "<group>";
-		};
-		8E8FB0961F0AA4EA00A7B85C /* share */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = share;
 			sourceTree = "<group>";
 		};
 		8E8FB0971F0AA4EA00A7B85C /* plist */ = {
@@ -472,16 +436,12 @@
 			path = plist;
 			sourceTree = "<group>";
 		};
-		8E8FB09C1F0AA4EA00A7B85C /* storyboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = storyboard;
-			sourceTree = "<group>";
-		};
 		8E8FB09D1F0AA4EA00A7B85C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8E435F441F0B440B00FB1976 /* Controller */,
+				8E435F451F0B440B00FB1976 /* Model */,
+				8E435F471F0B440B00FB1976 /* View */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -689,14 +649,18 @@
 				8E8FB0BA1F0AA4EA00A7B85C /* SocketHelper.swift in Sources */,
 				8E8FB0C61F0AA4EA00A7B85C /* String+Extension.swift in Sources */,
 				8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */,
+				8E435F541F0B452C00FB1976 /* MeetManagerVC.swift in Sources */,
 				8E8FB0C91F0AA4EA00A7B85C /* UIImage+Extension.swift in Sources */,
 				8E8FB0CD1F0AA4EA00A7B85C /* UIViewController+Extension.swift in Sources */,
+				8E435F521F0B450E00FB1976 /* FansListViewController.swift in Sources */,
 				8E8FB0C51F0AA4EA00A7B85C /* NSObject+GCD.swift in Sources */,
 				8E8FB0BC1F0AA4EA00A7B85C /* SocketRequestManage.swift in Sources */,
 				8E8FB0C81F0AA4EA00A7B85C /* UIFont+Extension.swift in Sources */,
 				8E8FB0C11F0AA4EA00A7B85C /* SegmentedViewController.swift in Sources */,
+				8E435F561F0B454400FB1976 /* MeetTypeVC.swift in Sources */,
 				8E8FB0BD1F0AA4EA00A7B85C /* SocketResponse.swift in Sources */,
 				8E8FB0B81F0AA4EA00A7B85C /* LocalSocketHelper.swift in Sources */,
+				8E435F4E1F0B44C500FB1976 /* BenifityVC.swift in Sources */,
 				8E8FB0D91F0AA4EA00A7B85C /* AppDelegate.swift in Sources */,
 				8E8FB0B61F0AA4EA00A7B85C /* SocketConst.swift in Sources */,
 				8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */,
@@ -704,16 +668,20 @@
 				8E8FB0CC1F0AA4EA00A7B85C /* UIView+Extension.swift in Sources */,
 				8E8FB0D11F0AA4EA00A7B85C /* IPManager.c in Sources */,
 				8E8FB0DA1F0AA4EA00A7B85C /* AppServerHelper.swift in Sources */,
+				8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */,
 				8E8FB0C21F0AA4EA00A7B85C /* BankLogoColor.swift in Sources */,
 				8E8FB0D51F0AA4EA00A7B85C /* AppConst.swift in Sources */,
 				8E8FB0B91F0AA4EA00A7B85C /* SocketDataPacket.swift in Sources */,
+				8E435F501F0B44E800FB1976 /* BenifityDetailVC.swift in Sources */,
+				8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */,
+				8E435F581F0B455D00FB1976 /* MeetOrderVC.swift in Sources */,
+				8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */,
 				8E8FB0BF1F0AA4EA00A7B85C /* BaseNavigationController.swift in Sources */,
 				8E8FB0C31F0AA4EA00A7B85C /* BaseMode+Extension.swift in Sources */,
 				8E8FB0CA1F0AA4EA00A7B85C /* UIScreen+Extension.swift in Sources */,
 				8E8FB0BB1F0AA4EA00A7B85C /* SocketRequest.swift in Sources */,
 				8E8FB0C71F0AA4EA00A7B85C /* SVProgressHUDExt.swift in Sources */,
 				8E8FB0D81F0AA4EA00A7B85C /* AppDataHelper.swift in Sources */,
-				8E8FB0D61F0AA4EA00A7B85C /* BaseModel.swift in Sources */,
 				8E8FB0B51F0AA4EA00A7B85C /* CommenSocketApi.swift in Sources */,
 				8E8FB0B41F0AA4EA00A7B85C /* CommenApi.swift in Sources */,
 				8E8FB0CE1F0AA4EA00A7B85C /* EmojiFaceHelper.swift in Sources */,
