@@ -9,6 +9,7 @@
 import UIKit
 import SVProgressHUD
 import DKNightVersion
+
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appearance()
         AppDataHelper.instance().initData()
         AppServerHelper.instance().initServer()
+        
+
+        
         return true
     }
 
