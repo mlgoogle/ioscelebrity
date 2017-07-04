@@ -141,7 +141,7 @@ class SocketRequestManage: NSObject {
     
     
     fileprivate func sendHeart() {
-        let packet = SocketDataPacket(opcode: .heart,dict:[SocketConst.Key.uid: 0 as AnyObject])
+        let packet = SocketDataPacket(opcode: .heart,dict:["uid": 0 as AnyObject])
         sendRequest(packet)
     }
     

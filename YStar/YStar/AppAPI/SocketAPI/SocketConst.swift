@@ -15,5 +15,9 @@ class SocketConst: NSObject {
     }
     enum type:UInt8 {
         case error  = 0
+        case user   = 3
     }
+    
+    
+    
 }

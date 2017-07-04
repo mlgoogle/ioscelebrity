@@ -10,8 +10,10 @@ import UIKit
 
 class BenifityVC: BaseTableViewController {
 
+    @IBOutlet weak var testIcon: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        testIcon.image = UIImage.imageWith("\u{e64a}", fontSize: testIcon.frame.size, fontColor: UIColor.red)
     }
 }
