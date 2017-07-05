@@ -31,6 +31,8 @@ class AppServerHelper: NSObject , WXApiDelegate{
         NIMSDK.shared().register(withAppID: "appkey", cerName: "")
     }
     
+    
+    // MARK: - 友盟统计
     func initUMengAnalytics() {
         
         // 开启日志

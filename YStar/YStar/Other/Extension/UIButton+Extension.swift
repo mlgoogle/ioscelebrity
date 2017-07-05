@@ -24,9 +24,6 @@ extension UIButton {
     
     func y_sendAction(_ action: Selector, to target: Any?, for event: UIEvent?) {
         
-        
-        print("哈哈哈哈哈哈");
-        
         y_sendAction(action, to: target, for: event)
         
     }
