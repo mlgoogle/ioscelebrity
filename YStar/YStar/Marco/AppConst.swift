@@ -55,6 +55,7 @@ class AppConst {
 
     enum iconFontName: String {
         case backItem = "\u{e61a}"
+        case test = ""
     }
     
 
