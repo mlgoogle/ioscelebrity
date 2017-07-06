@@ -16,14 +16,15 @@ class BenifityVC: BaseTableViewController {
         super.viewDidLoad()
         testIcon.image = UIImage.imageWith("\u{e64a}", fontSize: testIcon.frame.size, fontColor: UIColor.red)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(rightButtonClick))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
         
     }
 
-    func rightButtonClick() {
+    func leftButtonClick() {
 
-        let nextVC = nextViewViewController()
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        let bindBankCardVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
+        self.navigationController?.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(bindBankCardVC, animated: true)
     }
     
 }

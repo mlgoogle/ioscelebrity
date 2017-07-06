@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */; };
+		8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */; };
 		8D09D9001F0CBFB900A52EC3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */; };
 		8D09D9041F0CC67F00A52EC3 /* yRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */; };
-		8D09D9061F0CCB8600A52EC3 /* nextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */; };
 		8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */; };
 		8D1CC71B1F0BAE3F009B1A1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */; };
 		8D1CC71D1F0BAE4E009B1A1B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71C1F0BAE4E009B1A1B /* CoreMedia.framework */; };
@@ -206,9 +206,9 @@
 /* Begin PBXFileReference section */
 		2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34A71E9057EC9BB492D14F0B /* Pods-wp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wp/Pods-wp.debug.xcconfig"; sourceTree = "<group>"; };
+		8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindBankCardVC.swift; sourceTree = "<group>"; };
 		8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yRuntime.swift; sourceTree = "<group>"; };
-		8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nextViewViewController.swift; sourceTree = "<group>"; };
 		8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8D1CC71C1F0BAE4E009B1A1B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -1099,11 +1099,11 @@
 				8E435F4B1F0B449F00FB1976 /* LoginVC.swift */,
 				8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */,
 				8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */,
+				8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */,
 				8E435F511F0B450E00FB1976 /* FansListViewController.swift */,
 				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
 				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
 				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
-				8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1648,6 +1648,7 @@
 				8D312A4A1F0BC233001B54F3 /* UIView+NIM.m in Sources */,
 				8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */,
 				8E8FB0CA1F0AA4EA00A7B85C /* UIScreen+Extension.swift in Sources */,
+				8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */,
 				8D312A4D1F0BC233001B54F3 /* NIMKitColorButtonCell.m in Sources */,
 				8D312A621F0BC233001B54F3 /* NIMGrowingInternalTextView.m in Sources */,
 				8D312A8A1F0BC233001B54F3 /* NIMMessageCell.m in Sources */,
@@ -1659,7 +1660,6 @@
 				8D312AA91F0BC233001B54F3 /* NIMTeamMemberCardHeaderCell.m in Sources */,
 				8D312AAF1F0BC233001B54F3 /* NIMKitUtil.m in Sources */,
 				8D312A6C1F0BC233001B54F3 /* NIMInputToolBar.m in Sources */,
-				8D09D9061F0CCB8600A52EC3 /* nextViewViewController.swift in Sources */,
 				8D312A841F0BC233001B54F3 /* NIMSessionConfigurator.m in Sources */,
 				8E8FB0C71F0AA4EA00A7B85C /* SVProgressHUDExt.swift in Sources */,
 				8E8FB0D81F0AA4EA00A7B85C /* AppDataHelper.swift in Sources */,
