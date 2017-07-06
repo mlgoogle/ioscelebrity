@@ -61,7 +61,15 @@ class AppConst {
         case CFBundleDisplayName = "CFBundleDisplayName"
         case CFBundleShortVersionString = "CFBundleShortVersionString"
         case CFBundleVersion = "CFBundleVersion"
-    }	
+    }
+    
+    enum ColorKey: UInt32 {
+        case main = 0x8c0808
+        case bgColor = 0xfafafa
+    }
+    enum iconFontName: String {
+        case backItem = "\u{e61a}"
+    }
     
    
   

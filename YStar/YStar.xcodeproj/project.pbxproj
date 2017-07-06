@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */; };
 		8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */; };
+		8D0090EF1F0E11BB00AB9C05 /* Benifity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */; };
 		8D09D9001F0CBFB900A52EC3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */; };
 		8D09D9041F0CC67F00A52EC3 /* yRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */; };
 		8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */; };
@@ -209,6 +210,7 @@
 		2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34A71E9057EC9BB492D14F0B /* Pods-wp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wp/Pods-wp.debug.xcconfig"; sourceTree = "<group>"; };
 		8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindBankCardVC.swift; sourceTree = "<group>"; };
+		8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benifity.storyboard; sourceTree = "<group>"; };
 		8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yRuntime.swift; sourceTree = "<group>"; };
 		8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1103,6 +1105,7 @@
 				8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */,
 				8E338E011F0E0C4D006D3C68 /* Main.storyboard */,
 				8E338E021F0E0C4D006D3C68 /* Meet.storyboard */,
+				8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -1461,6 +1464,7 @@
 				8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */,
 				8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */,
 				8E8FB0D01F0AA4EA00A7B85C /* MJRefresh.bundle in Resources */,
+				8D0090EF1F0E11BB00AB9C05 /* Benifity.storyboard in Resources */,
 				8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */,
 				8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
