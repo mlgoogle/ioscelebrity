@@ -63,9 +63,11 @@ class AppConst {
     enum ColorKey: UInt32 {
         case main = 0x8c0808
         case bgColor = 0xfafafa
+        case closeColor = 0xFFFFFF
     }
     enum iconFontName: String {
         case backItem = "\u{e61a}"
+        case closeItme = "\u{e62b}"
     }
     
    
