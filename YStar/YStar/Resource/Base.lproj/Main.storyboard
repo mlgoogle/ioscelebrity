@@ -478,6 +478,9 @@
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="sendCodeAction:" destination="XBZ-nF-mS4" eventType="touchUpInside" id="AKu-UR-Ra1"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -515,6 +518,9 @@
                                                             <integer key="value" value="4"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="bindBankAction:" destination="XBZ-nF-mS4" eventType="touchUpInside" id="Zmq-2l-WLf"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -534,6 +540,14 @@
                             <outlet property="delegate" destination="XBZ-nF-mS4" id="ds6-c4-7Yz"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="bindBankButton" destination="4VM-BY-Bhq" id="6oA-Wp-faQ"/>
+                        <outlet property="sendCodeButton" destination="pH4-sF-vBw" id="dTe-lM-k7e"/>
+                        <outlet property="starCardNumTextField" destination="rhU-jx-jIc" id="tqV-C1-heO"/>
+                        <outlet property="starNameTextField" destination="NMJ-lr-oI2" id="y6c-2m-Jo3"/>
+                        <outlet property="starPhoneNumTextField" destination="dOy-st-5lo" id="a3E-qA-FRg"/>
+                        <outlet property="verificationCodeTextField" destination="9dA-W7-coK" id="61D-Zc-poC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Beb-ya-3fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
