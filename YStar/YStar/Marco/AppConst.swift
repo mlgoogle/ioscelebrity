@@ -21,22 +21,6 @@ func isTelNumber(num: String)->Bool
 
 class AppConst {
 
-    
-    enum KVOKey: String {
-        case selectProduct = "selectProduct"
-        case allProduct = "allProduct"
-        case currentUserId = "currentUserId"
-        case balance = "balance"
-    }
-    
-    enum NoticeKey: String {
-        case logoutNotice = "LogoutNotice"
-        case updateSoftware = "updateSoftware"
-    }
-    
-
-   
-    
     class Network {
         #if false //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22";
@@ -51,6 +35,23 @@ class AppConst {
         static let qiniuHost = "http://ofr5nvpm7.bkt.clouddn.com/"
     }
 
+    enum KVOKey: String {
+        case selectProduct = "selectProduct"
+        case allProduct = "allProduct"
+        case currentUserId = "currentUserId"
+        case balance = "balance"
+    }
+    
+    enum NoticeKey: String {
+        case logoutNotice = "LogoutNotice"
+        case updateSoftware = "updateSoftware"
+    }
+    
+
+    enum iconFontName: String {
+        case backItem = "\u{e61a}"
+    }
+    
 
     enum Action:UInt {
         case callPhone = 10001
