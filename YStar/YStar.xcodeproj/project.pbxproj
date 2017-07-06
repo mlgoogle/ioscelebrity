@@ -131,6 +131,10 @@
 		8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */; };
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
+		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
+		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
+		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
+		8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E021F0E0C4D006D3C68 /* Meet.storyboard */; };
 		8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F461F0B440B00FB1976 /* BaseModel.swift */; };
 		8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */; };
 		8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4B1F0B449F00FB1976 /* LoginVC.swift */; };
@@ -185,8 +189,6 @@
 		8E8FB0DA1F0AA4EA00A7B85C /* AppServerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0861F0AA4EA00A7B85C /* AppServerHelper.swift */; };
 		8E8FB0DB1F0AA4EA00A7B85C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0871F0AA4EA00A7B85C /* Info.plist */; };
 		8E8FB0DC1F0AA4EA00A7B85C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */; };
-		8E8FB0DD1F0AA4EA00A7B85C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB08A1F0AA4EA00A7B85C /* LaunchScreen.storyboard */; };
-		8E8FB0DE1F0AA4EA00A7B85C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB08C1F0AA4EA00A7B85C /* Main.storyboard */; };
 		8E8FB0DF1F0AA4EA00A7B85C /* BankList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0981F0AA4EA00A7B85C /* BankList.plist */; };
 		8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0991F0AA4EA00A7B85C /* city.plist */; };
 		8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */; };
@@ -452,6 +454,10 @@
 		8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
+		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
+		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8E338E021F0E0C4D006D3C68 /* Meet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Meet.storyboard; sourceTree = "<group>"; };
 		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -511,8 +517,6 @@
 		8E8FB0861F0AA4EA00A7B85C /* AppServerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppServerHelper.swift; sourceTree = "<group>"; };
 		8E8FB0871F0AA4EA00A7B85C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E8FB08B1F0AA4EA00A7B85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8E8FB08D1F0AA4EA00A7B85C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E8FB0981F0AA4EA00A7B85C /* BankList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BankList.plist; sourceTree = "<group>"; };
 		8E8FB0991F0AA4EA00A7B85C /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 		8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorcode.plist; sourceTree = "<group>"; };
@@ -1092,6 +1096,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8E338DFE1F0E0C4D006D3C68 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */,
+				8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */,
+				8E338E011F0E0C4D006D3C68 /* Main.storyboard */,
+				8E338E021F0E0C4D006D3C68 /* Meet.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		8E435F441F0B440B00FB1976 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1291,10 +1306,9 @@
 		8E8FB0881F0AA4EA00A7B85C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8E338DFE1F0E0C4D006D3C68 /* storyboard */,
 				8E435F5F1F0B754D00FB1976 /* iconfont.ttf */,
 				8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */,
-				8E8FB08A1F0AA4EA00A7B85C /* LaunchScreen.storyboard */,
-				8E8FB08C1F0AA4EA00A7B85C /* Main.storyboard */,
 				8E8FB0971F0AA4EA00A7B85C /* plist */,
 			);
 			path = Resource;
@@ -1442,7 +1456,7 @@
 				8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */,
 				8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */,
 				8E8FB0DF1F0AA4EA00A7B85C /* BankList.plist in Resources */,
-				8E8FB0DE1F0AA4EA00A7B85C /* Main.storyboard in Resources */,
+				8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */,
 				8E8FB0DB1F0AA4EA00A7B85C /* Info.plist in Resources */,
 				8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */,
 				8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */,
@@ -1450,8 +1464,10 @@
 				8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */,
 				8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
+				8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */,
+				8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */,
+				8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */,
 				8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */,
-				8E8FB0DD1F0AA4EA00A7B85C /* LaunchScreen.storyboard in Resources */,
 				A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */,
 				8E8FB0DC1F0AA4EA00A7B85C /* Assets.xcassets in Resources */,
 			);
@@ -1688,25 +1704,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8E8FB08A1F0AA4EA00A7B85C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E8FB08B1F0AA4EA00A7B85C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		8E8FB08C1F0AA4EA00A7B85C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E8FB08D1F0AA4EA00A7B85C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B0CF59EF1DE5BEC300C40C9C /* Debug */ = {

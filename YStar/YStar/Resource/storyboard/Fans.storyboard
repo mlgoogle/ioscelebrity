@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4ie-fC-b5d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--粉丝管理-->
+        <scene sceneID="8cZ-r5-c4Z">
+            <objects>
+                <tableViewController title="粉丝管理" id="GzK-Gs-cDK" customClass="FansListViewController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="B3g-Vm-0sv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="u0H-Vs-NqB">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u0H-Vs-NqB" id="LUQ-ZJ-kUl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GzK-Gs-cDK" id="3GB-JS-lWz"/>
+                            <outlet property="delegate" destination="GzK-Gs-cDK" id="gUs-1B-LBX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="粉丝管理" id="wmh-56-LYA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36D-FL-MBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="140"/>
+        </scene>
+        <!--粉丝管理-->
+        <scene sceneID="6wn-iV-VtX">
+            <objects>
+                <navigationController id="4ie-fC-b5d" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="粉丝管理" image="user_item_normal" selectedImage="user_item_selected" id="ZhL-fm-8fo"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="48n-VO-vM3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GzK-Gs-cDK" kind="relationship" relationship="rootViewController" id="vkd-YW-Tih"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O8i-53-OGB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="user_item_normal" width="25" height="25"/>
+        <image name="user_item_selected" width="25" height="25"/>
+    </resources>
+</document>

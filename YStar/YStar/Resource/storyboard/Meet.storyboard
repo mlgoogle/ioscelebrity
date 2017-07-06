@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VNs-BP-Wie">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--约见管理-->
+        <scene sceneID="j3n-Tu-QUh">
+            <objects>
+                <tableViewController title="约见管理" id="qoF-0n-Wwb" customClass="MeetManagerVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2IN-cK-rdn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="AJC-sw-wmA">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AJC-sw-wmA" id="JEv-9J-8eH">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qoF-0n-Wwb" id="3n5-Ji-xwR"/>
+                            <outlet property="delegate" destination="qoF-0n-Wwb" id="LXR-xB-p8o"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="约见管理" id="mvf-bp-rHK"/>
+                    <connections>
+                        <segue destination="EkI-Qp-wcd" kind="push" id="Mhl-aN-t1c"/>
+                        <segue destination="P7e-3B-7g3" kind="push" id="wBP-EV-QOg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNI-W2-sDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="836"/>
+        </scene>
+        <!--约见类型管理-->
+        <scene sceneID="Fqp-se-mL4">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="EkI-Qp-wcd" customClass="MeetTypeVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ajV-Ol-cpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6Kj-z6-2AH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Kj-z6-2AH" id="wjC-UE-WPy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EkI-Qp-wcd" id="Ndi-pb-WhK"/>
+                            <outlet property="delegate" destination="EkI-Qp-wcd" id="7TS-g2-k06"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="约见类型管理" id="kdD-fK-D9n"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYe-75-Gjh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="836"/>
+        </scene>
+        <!--约见订单-->
+        <scene sceneID="2NU-ZN-Kud">
+            <objects>
+                <tableViewController id="P7e-3B-7g3" customClass="MeetOrderVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NYI-Px-B5J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DkD-ih-IUS">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DkD-ih-IUS" id="bfN-2v-wZf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="P7e-3B-7g3" id="Sjj-z4-x9v"/>
+                            <outlet property="delegate" destination="P7e-3B-7g3" id="5Oy-6D-QVM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="约见订单" id="1ls-2g-Pnd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jnx-Ge-oFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2094" y="1588"/>
+        </scene>
+        <!--联系粉丝-->
+        <scene sceneID="1ho-77-PKs">
+            <objects>
+                <navigationController id="VNs-BP-Wie" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="联系粉丝" image="tour_item_normal" selectedImage="tour_item_selected" id="649-pP-MFu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eUN-q5-EYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qoF-0n-Wwb" kind="relationship" relationship="rootViewController" id="bbI-fs-p01"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VG2-6W-ah1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="837"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tour_item_normal" width="25" height="25"/>
+        <image name="tour_item_selected" width="25" height="25"/>
+    </resources>
+</document>
