@@ -1470,7 +1470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7216018706741901D5FE5A13 /* [CP] Copy Pods Resources */ = {
@@ -1610,14 +1610,11 @@
 				8E8FB0B91F0AA4EA00A7B85C /* SocketDataPacket.swift in Sources */,
 				8E435F501F0B44E800FB1976 /* BenifityDetailVC.swift in Sources */,
 				8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */,
-
 				8D312A7A1F0BC233001B54F3 /* NIMTextContentConfig.m in Sources */,
 				8D312AB11F0BC233001B54F3 /* NIMSpellingCenter.m in Sources */,
 				8D312A641F0BC233001B54F3 /* NIMInputAtCache.m in Sources */,
 				8D312A5A1F0BC233001B54F3 /* NIMContactDataCell.m in Sources */,
-
 				8E435F5A1F0B484300FB1976 /* ShareModelHelper.swift in Sources */,
-
 				8E435F581F0B455D00FB1976 /* MeetOrderVC.swift in Sources */,
 				8D312A831F0BC233001B54F3 /* NIMKitAudioCenter.m in Sources */,
 				8D312AB01F0BC233001B54F3 /* NIMPinyinConverter.m in Sources */,
@@ -1628,12 +1625,9 @@
 				8D312A4F1F0BC233001B54F3 /* NIMKitSwitcherCell.m in Sources */,
 				8D312A9B1F0BC233001B54F3 /* NIMCardMemberItem.m in Sources */,
 				8E8FB0C31F0AA4EA00A7B85C /* BaseMode+Extension.swift in Sources */,
-
 				8D312A491F0BC233001B54F3 /* UITableView+NIMScrollToBottom.m in Sources */,
 				8D312A4A1F0BC233001B54F3 /* UIView+NIM.m in Sources */,
-
 				8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */,
-
 				8E8FB0CA1F0AA4EA00A7B85C /* UIScreen+Extension.swift in Sources */,
 				8D312A4D1F0BC233001B54F3 /* NIMKitColorButtonCell.m in Sources */,
 				8D312A621F0BC233001B54F3 /* NIMGrowingInternalTextView.m in Sources */,
