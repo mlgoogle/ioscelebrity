@@ -21,24 +21,6 @@ func isTelNumber(num: String)->Bool
 
 class AppConst {
 
-    class Network {
-        #if false //是否是开发环境
-        static let TcpServerIP:String = "139.224.34.22";
-        static let TcpServerPort:UInt16 = 16205
-        static let TttpHostUrl:String = "http://139.224.34.22";
-        #else
-        static let TcpServerIP:String = "i.flight.dlgrme.com";
-        static let TcpServerPort:UInt16 = 16205;
-        static let HttpHostUrl:String = "http://i.flight.dlgrme.com";
-        #endif
-        static let TimeoutSec:UInt16 = 10
-        static let qiniuHost = "http://ofr5nvpm7.bkt.clouddn.com/"
-    }
-    
-    enum ColorKey: UInt32 {
-        case main = 0x8c0808
-        case bgColor = 0xfafafa
-    }
     
     enum KVOKey: String {
         case selectProduct = "selectProduct"
@@ -52,12 +34,20 @@ class AppConst {
         case updateSoftware = "updateSoftware"
     }
     
-
-    enum iconFontName: String {
-        case backItem = "\u{e61a}"
-        case test = ""
+    class Network {
+        #if false //是否是开发环境
+        static let TcpServerIP:String = "139.224.34.22";
+        static let TcpServerPort:UInt16 = 16205
+        static let TttpHostUrl:String = "http://139.224.34.22";
+        #else
+        static let TcpServerIP:String = "i.flight.dlgrme.com";
+        static let TcpServerPort:UInt16 = 16205;
+        static let HttpHostUrl:String = "http://i.flight.dlgrme.com";
+        #endif
+        static let TimeoutSec:UInt16 = 10
+        static let qiniuHost = "http://ofr5nvpm7.bkt.clouddn.com/"
     }
-    
+
 
     enum Action:UInt {
         case callPhone = 10001
@@ -68,7 +58,15 @@ class AppConst {
         case CFBundleDisplayName = "CFBundleDisplayName"
         case CFBundleShortVersionString = "CFBundleShortVersionString"
         case CFBundleVersion = "CFBundleVersion"
-    }	
+    }
+    
+    enum ColorKey: UInt32 {
+        case main = 0x8c0808
+        case bgColor = 0xfafafa
+    }
+    enum iconFontName: String {
+        case backItem = "\u{e61a}"
+    }
     
    
   

@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */; };
+		8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */; };
+		8D0090EF1F0E11BB00AB9C05 /* Benifity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */; };
+		8D0090F21F0E14E100AB9C05 /* WithDrawaListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */; };
+		8D0090F31F0E14E100AB9C05 /* WithdrawalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */; };
 		8D09D9001F0CBFB900A52EC3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */; };
 		8D09D9041F0CC67F00A52EC3 /* yRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */; };
-		8D09D9061F0CCB8600A52EC3 /* nextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */; };
 		8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */; };
 		8D1CC71B1F0BAE3F009B1A1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */; };
 		8D1CC71D1F0BAE4E009B1A1B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71C1F0BAE4E009B1A1B /* CoreMedia.framework */; };
@@ -131,13 +134,10 @@
 		8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */; };
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
-		8E338DF61F0DE7BD006D3C68 /* WithdrawalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E338DF51F0DE7BD006D3C68 /* WithdrawalVC.swift */; };
-		8E338DF81F0DFB8E006D3C68 /* WithDrawaListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E338DF71F0DFB8E006D3C68 /* WithDrawaListVC.swift */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
 		8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E021F0E0C4D006D3C68 /* Meet.storyboard */; };
-		8E338E081F0E0D0A006D3C68 /* Benifity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E071F0E0D0A006D3C68 /* Benifity.storyboard */; };
 		8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F461F0B440B00FB1976 /* BaseModel.swift */; };
 		8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */; };
 		8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4B1F0B449F00FB1976 /* LoginVC.swift */; };
@@ -211,9 +211,12 @@
 /* Begin PBXFileReference section */
 		2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34A71E9057EC9BB492D14F0B /* Pods-wp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wp/Pods-wp.debug.xcconfig"; sourceTree = "<group>"; };
+		8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindBankCardVC.swift; sourceTree = "<group>"; };
+		8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benifity.storyboard; sourceTree = "<group>"; };
+		8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithDrawaListVC.swift; sourceTree = "<group>"; };
+		8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawalVC.swift; sourceTree = "<group>"; };
 		8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yRuntime.swift; sourceTree = "<group>"; };
-		8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nextViewViewController.swift; sourceTree = "<group>"; };
 		8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8D1CC71C1F0BAE4E009B1A1B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -457,13 +460,10 @@
 		8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
-		8E338DF51F0DE7BD006D3C68 /* WithdrawalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawalVC.swift; sourceTree = "<group>"; };
-		8E338DF71F0DFB8E006D3C68 /* WithDrawaListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithDrawaListVC.swift; sourceTree = "<group>"; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E338E021F0E0C4D006D3C68 /* Meet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Meet.storyboard; sourceTree = "<group>"; };
-		8E338E071F0E0D0A006D3C68 /* Benifity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benifity.storyboard; sourceTree = "<group>"; };
 		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -1109,7 +1109,7 @@
 				8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */,
 				8E338E011F0E0C4D006D3C68 /* Main.storyboard */,
 				8E338E021F0E0C4D006D3C68 /* Meet.storyboard */,
-				8E338E071F0E0D0A006D3C68 /* Benifity.storyboard */,
+				8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -1117,17 +1117,17 @@
 		8E435F441F0B440B00FB1976 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8E338DF71F0DFB8E006D3C68 /* WithDrawaListVC.swift */,
-				8E338DF51F0DE7BD006D3C68 /* WithdrawalVC.swift */,
 				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
 				8E435F4B1F0B449F00FB1976 /* LoginVC.swift */,
 				8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */,
 				8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */,
+				8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */,
+				8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */,
+				8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */,
 				8E435F511F0B450E00FB1976 /* FansListViewController.swift */,
 				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
 				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
 				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
-				8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1470,7 +1470,7 @@
 				8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */,
 				8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */,
 				8E8FB0D01F0AA4EA00A7B85C /* MJRefresh.bundle in Resources */,
-				8E338E081F0E0D0A006D3C68 /* Benifity.storyboard in Resources */,
+				8D0090EF1F0E11BB00AB9C05 /* Benifity.storyboard in Resources */,
 				8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */,
 				8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
@@ -1513,7 +1513,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7216018706741901D5FE5A13 /* [CP] Copy Pods Resources */ = {
@@ -1599,6 +1599,7 @@
 				8D312A451F0BC233001B54F3 /* M80AttributedLabel+NIMKit.m in Sources */,
 				8D312AA31F0BC233001B54F3 /* NIMTeamAnnouncementListViewController.m in Sources */,
 				8D312AA11F0BC233001B54F3 /* NIMCreateTeamAnnouncement.m in Sources */,
+				8D0090F21F0E14E100AB9C05 /* WithDrawaListVC.swift in Sources */,
 				8E8FB0C11F0AA4EA00A7B85C /* SegmentedViewController.swift in Sources */,
 				8D312A4B1F0BC233001B54F3 /* NIMCommonTableData.m in Sources */,
 				8E435F561F0B454400FB1976 /* MeetTypeVC.swift in Sources */,
@@ -1659,7 +1660,6 @@
 				8D312AB11F0BC233001B54F3 /* NIMSpellingCenter.m in Sources */,
 				8D312A641F0BC233001B54F3 /* NIMInputAtCache.m in Sources */,
 				8D312A5A1F0BC233001B54F3 /* NIMContactDataCell.m in Sources */,
-				8E338DF81F0DFB8E006D3C68 /* WithDrawaListVC.swift in Sources */,
 				8E435F5A1F0B484300FB1976 /* ShareModelHelper.swift in Sources */,
 				8E435F581F0B455D00FB1976 /* MeetOrderVC.swift in Sources */,
 				8D312A831F0BC233001B54F3 /* NIMKitAudioCenter.m in Sources */,
@@ -1675,6 +1675,7 @@
 				8D312A4A1F0BC233001B54F3 /* UIView+NIM.m in Sources */,
 				8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */,
 				8E8FB0CA1F0AA4EA00A7B85C /* UIScreen+Extension.swift in Sources */,
+				8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */,
 				8D312A4D1F0BC233001B54F3 /* NIMKitColorButtonCell.m in Sources */,
 				8D312A621F0BC233001B54F3 /* NIMGrowingInternalTextView.m in Sources */,
 				8D312A8A1F0BC233001B54F3 /* NIMMessageCell.m in Sources */,
@@ -1686,7 +1687,6 @@
 				8D312AA91F0BC233001B54F3 /* NIMTeamMemberCardHeaderCell.m in Sources */,
 				8D312AAF1F0BC233001B54F3 /* NIMKitUtil.m in Sources */,
 				8D312A6C1F0BC233001B54F3 /* NIMInputToolBar.m in Sources */,
-				8D09D9061F0CCB8600A52EC3 /* nextViewViewController.swift in Sources */,
 				8D312A841F0BC233001B54F3 /* NIMSessionConfigurator.m in Sources */,
 				8E8FB0C71F0AA4EA00A7B85C /* SVProgressHUDExt.swift in Sources */,
 				8E8FB0D81F0AA4EA00A7B85C /* AppDataHelper.swift in Sources */,
@@ -1701,6 +1701,7 @@
 				8E8FB0C01F0AA4EA00A7B85C /* BaseTableViewController.swift in Sources */,
 				8D312A501F0BC233001B54F3 /* NIMKitUIConfig.m in Sources */,
 				8D312A8D1F0BC233001B54F3 /* NIMSessionFileTransContentView.m in Sources */,
+				8D0090F31F0E14E100AB9C05 /* WithdrawalVC.swift in Sources */,
 				8E8FB0C41F0AA4EA00A7B85C /* NSDateExt.swift in Sources */,
 				8D312AA21F0BC233001B54F3 /* NIMNormalTeamCardViewController.m in Sources */,
 				8E8FB0BE1F0AA4EA00A7B85C /* BaseCustomTableViewController.swift in Sources */,
@@ -1709,7 +1710,6 @@
 				8D312A7F1F0BC233001B54F3 /* NIMKitLocationPoint.m in Sources */,
 				8D312A961F0BC233001B54F3 /* NIMLocationViewController.m in Sources */,
 				8D312A751F0BC233001B54F3 /* NIMBaseSessionContentConfig.m in Sources */,
-				8E338DF61F0DE7BD006D3C68 /* WithdrawalVC.swift in Sources */,
 				8D312A881F0BC233001B54F3 /* NIMSessionMsgDatasource.m in Sources */,
 				8E8FB0CB1F0AA4EA00A7B85C /* UITableView+Extension.swift in Sources */,
 			);
