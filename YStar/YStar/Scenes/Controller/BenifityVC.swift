@@ -22,9 +22,12 @@ class BenifityVC: BaseTableViewController {
 
     func leftButtonClick() {
 
-        let bindBankCardVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
-        self.navigationController?.hidesBottomBarWhenPushed = true
+        let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
         self.navigationController?.pushViewController(bindBankCardVC, animated: true)
+    }
+    
+    @IBAction func withdrawItemTapped(_ sender: Any) {
+        performSegue(withIdentifier: WithdrawalVC.className(), sender: nil)
     }
     
 }

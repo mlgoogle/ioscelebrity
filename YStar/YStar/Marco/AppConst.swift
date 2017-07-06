@@ -34,9 +34,6 @@ class AppConst {
         case updateSoftware = "updateSoftware"
     }
     
-
-   
-    
     class Network {
         #if false //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22";
