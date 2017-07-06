@@ -19,14 +19,33 @@ class AppServerHelper: NSObject , WXApiDelegate{
     }
     
     func initServer() {
+        
         initYunXin()
+        
+        initUMengAnalytics()
     }
 
-    //MARK: --云信
+    // MARK: -云信
     func initYunXin() {
         
         NIMSDK.shared().register(withAppID: "appkey", cerName: "")
     }
+    
+    
+    // MARK: - 友盟统计
+    func initUMengAnalytics() {
+        
+        // 开启日志
+        MobClick.setLogEnabled(true)
+        
+        // appkey = "595c53077f2c747e0600087a"
+        
+        UMAnalyticsConfig.sharedInstance().appKey = "595c53077f2c747e0600087a"
+        
+        MobClick.start(withConfigure: UMAnalyticsConfig.sharedInstance())
+        
+    }
+    
     
 
 }

@@ -32,4 +32,5 @@ target 'YStar' do
 #    pod 'SVProgressHUD', '~> 2.0.3'
     pod 'M80AttributedLabel', '~> 1.6.3'
     pod 'TZImagePickerController', '~> 1.7.7'
+    pod 'UMengAnalytics'
 end
