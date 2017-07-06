@@ -34,7 +34,12 @@ class AppConst {
         static let TimeoutSec:UInt16 = 10
         static let qiniuHost = "http://ofr5nvpm7.bkt.clouddn.com/"
     }
-
+    
+    enum ColorKey: UInt32 {
+        case main = 0x8c0808
+        case bgColor = 0xfafafa
+    }
+    
     enum KVOKey: String {
         case selectProduct = "selectProduct"
         case allProduct = "allProduct"
