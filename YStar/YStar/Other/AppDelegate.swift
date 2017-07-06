@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDataHelper.instance().initData()
         AppServerHelper.instance().initServer()
         
+        
+        
 
         
         return true

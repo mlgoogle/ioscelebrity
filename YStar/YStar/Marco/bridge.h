@@ -34,5 +34,7 @@ struct SocketPacketHead {
 #import <DKNightVersion/DKNightVersion.h>
 #import "IPManager.h"
 #import <NIMSDK/NIMSDK.h>
+#import "UMMobClick/MobClick.h"
+#import <objc/runtime.h>
 //#import <CommonCrypto/CommonCrytor.h>
 /* nineSister_Bridging_Header_h */

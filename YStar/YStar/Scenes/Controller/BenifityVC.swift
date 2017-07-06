@@ -15,5 +15,15 @@ class BenifityVC: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         testIcon.image = UIImage.imageWith("\u{e64a}", fontSize: testIcon.frame.size, fontColor: UIColor.red)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(rightButtonClick))
+        
     }
+
+    func rightButtonClick() {
+
+        let nextVC = nextViewViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
 }

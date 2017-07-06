@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */; };
+		8D09D9001F0CBFB900A52EC3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */; };
+		8D09D9041F0CC67F00A52EC3 /* yRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */; };
+		8D09D9061F0CCB8600A52EC3 /* nextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */; };
 		8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */; };
 		8D1CC71B1F0BAE3F009B1A1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */; };
 		8D1CC71D1F0BAE4E009B1A1B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71C1F0BAE4E009B1A1B /* CoreMedia.framework */; };
@@ -203,6 +206,9 @@
 /* Begin PBXFileReference section */
 		2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34A71E9057EC9BB492D14F0B /* Pods-wp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wp/Pods-wp.debug.xcconfig"; sourceTree = "<group>"; };
+		8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yRuntime.swift; sourceTree = "<group>"; };
+		8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nextViewViewController.swift; sourceTree = "<group>"; };
 		8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8D1CC71C1F0BAE4E009B1A1B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -609,6 +615,15 @@
 				F406DC4604C979FC9CD92E45 /* Pods-YStar.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D09D8FE1F0CBF6500A52EC3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */,
+				8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8D31293C1F0BC232001B54F3 /* NIMKit */ = {
@@ -1088,6 +1103,7 @@
 				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
 				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
 				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
+				8D09D9051F0CCB8600A52EC3 /* nextViewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1267,6 +1283,7 @@
 				8E8FB0851F0AA4EA00A7B85C /* AppDelegate.swift */,
 				8E8FB0861F0AA4EA00A7B85C /* AppServerHelper.swift */,
 				8E8FB0871F0AA4EA00A7B85C /* Info.plist */,
+				8D09D8FE1F0CBF6500A52EC3 /* Extension */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1527,6 +1544,7 @@
 				8D312A9C1F0BC233001B54F3 /* NIMTeamCardOperationItem.m in Sources */,
 				8D312A901F0BC233001B54F3 /* NIMSessionMessageContentView.m in Sources */,
 				8D312A5F1F0BC233001B54F3 /* NIMContactSelectConfig.m in Sources */,
+				8D09D9041F0CC67F00A52EC3 /* yRuntime.swift in Sources */,
 				8D312A971F0BC233001B54F3 /* NIMSessionViewController.m in Sources */,
 				8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */,
 				8E435F541F0B452C00FB1976 /* MeetManagerVC.swift in Sources */,
@@ -1570,6 +1588,7 @@
 				8D312A871F0BC233001B54F3 /* NIMSessionLayoutImpl.m in Sources */,
 				8D312A781F0BC233001B54F3 /* NIMLocationContentConfig.m in Sources */,
 				8E435F4E1F0B44C500FB1976 /* BenifityVC.swift in Sources */,
+				8D09D9001F0CBFB900A52EC3 /* UIButton+Extension.swift in Sources */,
 				8D312A801F0BC233001B54F3 /* NIMKitMessageAtModel.m in Sources */,
 				8D312A471F0BC233001B54F3 /* NSString+NIMKit.m in Sources */,
 				8D312A9F1F0BC233001B54F3 /* NIMUsrInfoData.m in Sources */,
@@ -1640,6 +1659,7 @@
 				8D312AA91F0BC233001B54F3 /* NIMTeamMemberCardHeaderCell.m in Sources */,
 				8D312AAF1F0BC233001B54F3 /* NIMKitUtil.m in Sources */,
 				8D312A6C1F0BC233001B54F3 /* NIMInputToolBar.m in Sources */,
+				8D09D9061F0CCB8600A52EC3 /* nextViewViewController.swift in Sources */,
 				8D312A841F0BC233001B54F3 /* NIMSessionConfigurator.m in Sources */,
 				8E8FB0C71F0AA4EA00A7B85C /* SVProgressHUDExt.swift in Sources */,
 				8E8FB0D81F0AA4EA00A7B85C /* AppDataHelper.swift in Sources */,
