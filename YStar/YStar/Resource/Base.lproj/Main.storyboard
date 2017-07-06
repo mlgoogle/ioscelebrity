@@ -520,7 +520,13 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="xcD-oV-AuT"/>
+                    <navigationItem key="navigationItem" title="提现" id="xcD-oV-AuT">
+                        <barButtonItem key="rightBarButtonItem" title="提现记录" id="qKV-XC-15N">
+                            <connections>
+                                <segue destination="oZe-MA-ye4" kind="push" id="p5K-iD-XJd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKh-0g-33e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -604,7 +610,7 @@
                             <outlet property="delegate" destination="oZe-MA-ye4" id="IgY-Pi-gdD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="QHa-6O-N7e"/>
+                    <navigationItem key="navigationItem" title="提现记录" id="QHa-6O-N7e"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKU-WY-3m8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

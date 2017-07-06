@@ -132,6 +132,7 @@
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
 		8E338DF61F0DE7BD006D3C68 /* WithdrawalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E338DF51F0DE7BD006D3C68 /* WithdrawalVC.swift */; };
+		8E338DF81F0DFB8E006D3C68 /* WithDrawaListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E338DF71F0DFB8E006D3C68 /* WithDrawaListVC.swift */; };
 		8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F461F0B440B00FB1976 /* BaseModel.swift */; };
 		8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */; };
 		8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4B1F0B449F00FB1976 /* LoginVC.swift */; };
@@ -454,6 +455,7 @@
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
 		8E338DF51F0DE7BD006D3C68 /* WithdrawalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawalVC.swift; sourceTree = "<group>"; };
+		8E338DF71F0DFB8E006D3C68 /* WithDrawaListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithDrawaListVC.swift; sourceTree = "<group>"; };
 		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -1097,6 +1099,7 @@
 		8E435F441F0B440B00FB1976 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E338DF71F0DFB8E006D3C68 /* WithDrawaListVC.swift */,
 				8E338DF51F0DE7BD006D3C68 /* WithdrawalVC.swift */,
 				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
 				8E435F4B1F0B449F00FB1976 /* LoginVC.swift */,
@@ -1636,6 +1639,7 @@
 				8D312AB11F0BC233001B54F3 /* NIMSpellingCenter.m in Sources */,
 				8D312A641F0BC233001B54F3 /* NIMInputAtCache.m in Sources */,
 				8D312A5A1F0BC233001B54F3 /* NIMContactDataCell.m in Sources */,
+				8E338DF81F0DFB8E006D3C68 /* WithDrawaListVC.swift in Sources */,
 				8E435F5A1F0B484300FB1976 /* ShareModelHelper.swift in Sources */,
 				8E435F581F0B455D00FB1976 /* MeetOrderVC.swift in Sources */,
 				8D312A831F0BC233001B54F3 /* NIMKitAudioCenter.m in Sources */,
