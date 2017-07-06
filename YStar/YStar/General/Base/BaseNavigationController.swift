@@ -18,11 +18,9 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
         navigationBar.barTintColor = UIColor.white
         navigationBar.titleTextAttributes = [
             NSFontAttributeName: UIFont.systemFont(ofSize: 18),
-            NSForegroundColorAttributeName: UIColor.init(rgbHex: 0x8c8080)
+            NSForegroundColorAttributeName: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
         ]
-        navigationBar.tintColor = UIColor.init(rgbHex: 0x666666)
-        
-        
+        navigationBar.tintColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
     }
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return true

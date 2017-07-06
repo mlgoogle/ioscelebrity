@@ -69,7 +69,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="收益管理" id="eT4-cb-0pZ">
                         <barButtonItem key="rightBarButtonItem" title="提现" id="aGE-x1-K16">
-                            <color key="tintColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="withdrawItemTapped:" destination="qg2-8k-xgs" id="Hya-dF-rGN"/>
                             </connections>
