@@ -9,7 +9,7 @@
 import UIKit
 
 class BaseNavigationController: UINavigationController,UINavigationControllerDelegate ,UIGestureRecognizerDelegate {
-
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         interactivePopGestureRecognizer?.isEnabled = true
@@ -32,9 +32,9 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         
         super.pushViewController(viewController, animated: true)
-
+        
         let btn : UIButton = UIButton.init(type: UIButtonType.custom)
-         let backImage = UIImage.imageWith(AppConst.iconFontName.backItem.rawValue, fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: 0x8c0808))
+        let backImage = UIImage.imageWith(AppConst.iconFontName.backItem.rawValue, fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: 0x8c0808))
         btn.setTitle("", for: UIControlState.normal)
         btn.setBackgroundImage(backImage, for: UIControlState.normal )
         btn.addTarget(self, action: #selector(popself), for: UIControlEvents.touchUpInside)
