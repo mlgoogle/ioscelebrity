@@ -41,46 +41,56 @@ class BankModel: BaseModel {
     //返回的列表的key
     var cardList : [BankListModel]?
     
+    var cardInfo : [BankInfoModel]?
+    
     class func  cardListModelClass() ->AnyClass {
         return  BankListModel.classForCoder()
+        
     }
+    class func cardInfoModelClass() -> AnyClass {
+        return BankInfoModel.classForCoder()
+    }
+    
+    
 }
 
 class BankInfoModel: BaseModel {
     
-    //返回的列表的key
     var bankId: Int64 = 0
-    var bankName:  String = "-"
-    var cardNO: String = "-"
-    var cardName:  String = "-"
+
+    // 银行名称 : "招商银行"
+    var bankName:  String = ""
     
-}
-class BindBankModel: BaseModel {
+    // 卡号: "**** **** **** 2345"
+    var cardNO: String = ""
     
-    //返回的列表的key
-    var cardNO:  String = "--"
-    var name:  String = "-"
-    var bid: Int64 = 0
-    var bankName:  String = "-"
-    var bankId:  String = "-"
+    // "招商银行·银联IC普卡"
+    var cardName:  String = ""
     
 }
 
 //  银行卡返回列表model
 class BankListModel: BaseModel {
     
-    // 银行卡id
+    // bid
     var bid: Int64 = 0
-    // 用户id
-    //    var account: Int64 = 0
-    // 银行名称
+    // bank
     var bank:  String = ""
-    // 支行名称
-    var account: String = ""
-    // 银行卡号
-    //    var account: String = "cardNo"
-    //  开户名
+    // 卡持有人名称
     var bankUsername: String = ""
+    // 卡号
     var cardNo: String = ""
+    // 卡类型
     var cardName: String = ""
+}
+
+class BindBankModel: BaseModel {
+    
+    //返回的列表的key
+    var bid: Int64 = 0
+    var cardNO:  String = ""
+    var name:  String = ""
+    var bankName:  String = ""
+    var bankId:  String = ""
+    
 }

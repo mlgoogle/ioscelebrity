@@ -22,8 +22,6 @@ class BankInfoCell: OEZTableViewCell {
     
     @IBOutlet weak var cardNumLabel: UILabel! // 卡号
     
-    // @IBOutlet weak var closeButton: UIButton! // 关闭按钮
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,41 +29,70 @@ class BankInfoCell: OEZTableViewCell {
         bankContentView.layer.cornerRadius = 5.0
         bankContentView.layer.masksToBounds = true
         
-        // closeButton.setImage(UIImage.imageWith(AppConst.iconFontName.closeIcon.rawValue,fontSize: closeButton.frame.size                                               fontColor: UIColor.init(rgbHex: 0xFFFFFF)), for: .normal)
-        
         cardImageView.backgroundColor = UIColor.orange
         
     }
     
     override func update(_ data: Any!) {
-    
-        self.bankNameLabel.text = "工商银行"
-        self.cardTypeLabel.text = "储蓄卡"
-        self.cardNumLabel.text  = "**** **** **** 1567"
-    }
-    
-    // closeButtonAction
-    @IBAction func closeButtonAction(_ sender: UIButton) {
         
-        // 代理
-        didSelectRowAction(1)
+        if let model = data as? BankInfoModel {
+            
+            self.bankNameLabel.text = model.bankName
+            self.cardTypeLabel.text = model.cardName
+            
+            let index = model.cardNO.index(model.cardNO.startIndex,  offsetBy: 4)
+            let index1 = model.cardNO.index(model.cardNO.startIndex,  offsetBy: model.cardNO.length()-4)
+            self.cardNumLabel.text =  model.cardNO.substring(to: index) + "  ****  ****  ****  " + model.cardNO.substring(from: index1)
+        }
     }
+    
 }
 
 // MARK: - 银行信息Controller
 class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
 
+    // 传入来的模型
+    var bankCardNO = ""
+    
+    var dataBankInfoModle : BankInfoModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
         setupUI()
+        requestBankInfo()
 
     }
     
     func setupUI() {
         
-        self.title = "银行卡"
+        print("----\(bankCardNO)")
+        
+        self.title = "我的银行卡"
+        self.tableView.separatorStyle = .none
         self.tableView.tableFooterView = UIView()
+    }
+    
+
+    func requestBankInfo() {
+        
+        let model = BankCardInfoRequestModel()
+        model.cardNo = bankCardNO
+        
+        AppAPIHelper.commen().bankCardInfo(model: model, complete: {[weak self] (response) -> ()? in
+            
+            if let objects = response as? BankInfoModel {
+                
+                self?.dataBankInfoModle = objects
+                
+                self?.tableView.reloadData()
+            }
+            return nil
+        }) { (error) -> ()? in
+            
+            self.didRequestError(error)
+            return nil
+        }
     }
     
     // MARK: - UITableViewDataSource , UITableViewDelegate
@@ -78,7 +105,7 @@ class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
         
         let bankInfocell = tableView.dequeueReusableCell(withIdentifier: "BankInfoCellID") as! BankInfoCell
         
-        bankInfocell.update("haha")
+        bankInfocell.update(self.dataBankInfoModle)
         
         return bankInfocell
     }
@@ -87,17 +114,6 @@ class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
         
         return 140
     }
-    
-    func tableView(_ tableView: UITableView!, rowAt indexPath: IndexPath!, didAction action: Int, data: Any!) {
-        
-        if action == 1 {
-            
-            print("点击了close按钮")
-        }
-        
-    }
-
-    
 }
 
 
