@@ -21,10 +21,7 @@ class BenifityVC: BaseTableViewController {
     }
 
     func leftButtonClick() {
-
-
         let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
-
         self.navigationController?.pushViewController(bindBankCardVC, animated: true)
     }
     
