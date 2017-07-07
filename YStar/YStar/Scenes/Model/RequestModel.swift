@@ -8,13 +8,6 @@
 
 import Foundation
 
-class RequestBaseModel: BaseModel {
-    
-    // 185
-    var id = ShareModelHelper.instance().uid ?? 0
-    // f7c0f6a8f222ca81e2f60139578552ae
-    var token = ShareModelHelper.instance().token ?? ""
-}
 
 
 class LoginRequestModel: BaseModel {
@@ -24,8 +17,21 @@ class LoginRequestModel: BaseModel {
 }
 
 
-class BindCardRequestModel: RequestBaseModel {
+class BindCardRequestModel: LoginModle {
     var account = "1001"
     var bankUsername = "1001"
 }
 
+class BankCardListRequestModel: LoginModle {
+    
+}
+
+class BankCardInfoRequestModel : LoginModle {
+    
+    var cardNo = ""
+    
+}
+
+class SendVerificationCodeRequestModel: BaseModel {
+    var phone = ""
+}

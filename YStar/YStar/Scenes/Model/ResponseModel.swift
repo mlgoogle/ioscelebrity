@@ -29,8 +29,14 @@ class StarUserModel: Object {
     }
 }
 
+class verifyCodeModel: BaseModel {
+    var result : Int64 = 0
+    var timeStamp = ""
+    var vToken = ""
+}
 
-class  BankModel: BaseModel {
+
+class BankModel: BaseModel {
     
     //返回的列表的key
     var cardList : [BankListModel]?
@@ -39,13 +45,8 @@ class  BankModel: BaseModel {
         return  BankListModel.classForCoder()
     }
 }
-class UnBindBank: BaseModel {
-    
-    //返回的列表的key
-    var result: Int64 = 0
-    
-}
-class BankInfo: BaseModel {
+
+class BankInfoModel: BaseModel {
     
     //返回的列表的key
     var bankId: Int64 = 0
@@ -54,7 +55,7 @@ class BankInfo: BaseModel {
     var cardName:  String = "-"
     
 }
-class BindBank: BaseModel {
+class BindBankModel: BaseModel {
     
     //返回的列表的key
     var cardNO:  String = "--"
@@ -73,13 +74,13 @@ class BankListModel: BaseModel {
     // 用户id
     //    var account: Int64 = 0
     // 银行名称
-    var bank:  String = "--"
+    var bank:  String = ""
     // 支行名称
-    var account: String = "--"
+    var account: String = ""
     // 银行卡号
     //    var account: String = "cardNo"
     //  开户名
-    var bankUsername: String = "--"
-    var cardNo: String = "--"
-    var cardName: String = "--"
+    var bankUsername: String = ""
+    var cardNo: String = ""
+    var cardName: String = ""
 }

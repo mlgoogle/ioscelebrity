@@ -35,6 +35,10 @@ class BaseDBModel: BaseModel {
 
 
 class LoginModle: BaseModel {
-    var id  = ShareModelHelper.instance().uid
-    var token = ShareModelHelper.instance().token
+    
+    // var id  = ShareModelHelper.instance().uid
+    // var token = ShareModelHelper.instance().token
+    
+    var id = 185
+    var token = "d786fccafc0e4d68314b257959977d1a"
 }
