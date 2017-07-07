@@ -18,6 +18,18 @@ class SocketConst: NSObject {
         case errorCode = 0
         // 登录
         case login = 3003
+
+        // 绑定银行卡
+        case bindCard = 8005
+        // 验证码
+        case verifycode = 3011
+        
+        // 是否绑定银行
+        case bankcardList = 8003
+        // 银行信息
+        case bankinfo = 8009
+        
+        
         // 注册
         case register = 3001
         // 注册
@@ -33,7 +45,6 @@ class SocketConst: NSObject {
         case bindWchat = 3015
         //设置账号信息
         case WchatLogin = 3013
-        case verifycode = 3011
         case getRealm = 3027
         // 校验用户
         case checkRegist = 3029
@@ -131,12 +142,12 @@ class SocketConst: NSObject {
         case update = 3033
         //更新devicetoken
         case updateDeviceToken = 3035
-        case bankcardList = 8003
-        case unbindcard = 8007
-        case bindCard = 8005
+        
+        
+        
         case withdraw = 7057
         case withdrawlist = 6019
-        case bankinfo = 8009
+        
         //单点登录
         case onlyLogin = 3040
         //取消充值

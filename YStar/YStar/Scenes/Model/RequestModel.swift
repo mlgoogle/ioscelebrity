@@ -9,10 +9,27 @@
 import Foundation
 
 
+
 class LoginRequestModel: BaseModel {
     var phone = ""
     var pwd = ""
     var deviceId = ""
+}
+
+
+class BindCardRequestModel: LoginModle {
+    var account = "1001"
+    var bankUsername = "1001"
+}
+
+class BankCardListRequestModel: LoginModle {
+    
+}
+
+class BankCardInfoRequestModel : LoginModle {
+    
+    var cardNo = ""
+    
 }
 
 class CheckRegisterRequestModel: BaseModel {
@@ -26,4 +43,5 @@ class SendVerificationCodeRequestModel: BaseModel {
 class ResetPwdReqModel: BaseModel{
     var phone = ""
     var pwd = ""
+
 }

@@ -35,7 +35,15 @@ class BaseDBModel: BaseModel {
 
 
 class LoginModle: BaseModel {
-    lazy var id  = { () -> Int in 
+//<<<<<<< HEAD
+//    
+//    // var id  = ShareModelHelper.instance().uid
+//    // var token = ShareModelHelper.instance().token
+//    
+//    var id = 185
+//    var token = "d786fccafc0e4d68314b257959977d1a"
+//=======
+    lazy var id  = { () -> Int in
         if let uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) {
             return uid as! Int
         }
@@ -47,4 +55,5 @@ class LoginModle: BaseModel {
         }
         return ""
     }()
+
 }

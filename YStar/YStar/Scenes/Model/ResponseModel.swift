@@ -28,3 +28,59 @@ class StarUserModel: Object {
         return "id"
     }
 }
+
+class verifyCodeModel: BaseModel {
+    var result : Int64 = 0
+    var timeStamp = ""
+    var vToken = ""
+}
+
+
+class BankModel: BaseModel {
+    
+    //返回的列表的key
+    var cardList : [BankListModel]?
+    
+    class func  cardListModelClass() ->AnyClass {
+        return  BankListModel.classForCoder()
+    }
+}
+
+class BankInfoModel: BaseModel {
+    
+    //返回的列表的key
+    var bankId: Int64 = 0
+    var bankName:  String = "-"
+    var cardNO: String = "-"
+    var cardName:  String = "-"
+    
+}
+class BindBankModel: BaseModel {
+    
+    //返回的列表的key
+    var cardNO:  String = "--"
+    var name:  String = "-"
+    var bid: Int64 = 0
+    var bankName:  String = "-"
+    var bankId:  String = "-"
+    
+}
+
+//  银行卡返回列表model
+class BankListModel: BaseModel {
+    
+    // 银行卡id
+    var bid: Int64 = 0
+    // 用户id
+    //    var account: Int64 = 0
+    // 银行名称
+    var bank:  String = ""
+    // 支行名称
+    var account: String = ""
+    // 银行卡号
+    //    var account: String = "cardNo"
+    //  开户名
+    var bankUsername: String = ""
+    var cardNo: String = ""
+    var cardName: String = ""
+}

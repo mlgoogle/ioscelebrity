@@ -22,7 +22,7 @@ class BankInfoCell: OEZTableViewCell {
     
     @IBOutlet weak var cardNumLabel: UILabel! // 卡号
     
-    @IBOutlet weak var closeButton: UIButton! // 关闭按钮
+    // @IBOutlet weak var closeButton: UIButton! // 关闭按钮
     
     
     override func awakeFromNib() {
@@ -31,9 +31,7 @@ class BankInfoCell: OEZTableViewCell {
         bankContentView.layer.cornerRadius = 5.0
         bankContentView.layer.masksToBounds = true
         
-        closeButton.setImage(UIImage.imageWith(AppConst.iconFontName.closeIcon.rawValue,
-                                               fontSize: closeButton.frame.size,
-                                               fontColor: UIColor.init(rgbHex: 0xFFFFFF)), for: .normal)
+        // closeButton.setImage(UIImage.imageWith(AppConst.iconFontName.closeIcon.rawValue,fontSize: closeButton.frame.size                                               fontColor: UIColor.init(rgbHex: 0xFFFFFF)), for: .normal)
         
         cardImageView.backgroundColor = UIColor.orange
         
@@ -61,11 +59,13 @@ class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
         super.viewDidLoad()
     
         setupUI()
+
     }
     
     func setupUI() {
         
         self.title = "银行卡"
+        self.tableView.tableFooterView = UIView()
     }
     
     // MARK: - UITableViewDataSource , UITableViewDelegate

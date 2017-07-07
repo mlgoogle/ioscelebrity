@@ -134,6 +134,7 @@
 		8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */; };
 		8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */; };
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
+		8DBDBFDF1F0F290400736408 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDBFDE1F0F290400736408 /* UIView.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
@@ -464,6 +465,7 @@
 		8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitEmoticon.bundle; sourceTree = "<group>"; };
 		8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
+		8DBDBFDE1F0F290400736408 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 		8D09D8FE1F0CBF6500A52EC3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8DBDBFDE1F0F290400736408 /* UIView.swift */,
 				8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */,
 				8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */,
 			);
@@ -1603,6 +1606,7 @@
 				8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */,
 				8D312A851F0BC233001B54F3 /* NIMSessionDataSourceImpl.m in Sources */,
 				8D312A691F0BC233001B54F3 /* NIMInputEmoticonParser.m in Sources */,
+				8DBDBFDF1F0F290400736408 /* UIView.swift in Sources */,
 				8E8FB0BC1F0AA4EA00A7B85C /* SocketRequestManage.swift in Sources */,
 				8D312A9D1F0BC233001B54F3 /* NIMTeamCardRowItem.m in Sources */,
 				8D312AAD1F0BC233001B54F3 /* NIMKitFileLocationHelper.m in Sources */,

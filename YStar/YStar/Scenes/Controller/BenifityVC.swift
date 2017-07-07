@@ -21,11 +21,31 @@ class BenifityVC: BaseTableViewController {
     }
 
     func leftButtonClick() {
-
-
-        let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
-
-        self.navigationController?.pushViewController(bindBankCardVC, animated: true)
+        
+        let model = BankCardListRequestModel()
+        
+        print("====\(model)")
+        
+        AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self](response) -> ()? in
+            
+            if let object = response as? BankListModel {
+                if object.cardNo.length() != 0 {
+                    let bankCardVC  = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BankCardVC")
+                    self?.navigationController?.pushViewController(bankCardVC, animated: true)
+                } else {
+                    // 未绑定银行卡
+                    let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
+                    self?.navigationController?.pushViewController(bindBankCardVC, animated: true)
+                }
+            }
+            return nil
+        }) { (error) -> ()? in
+            
+            let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
+            self.navigationController?.pushViewController(bindBankCardVC, animated: true)
+            return nil
+        }
+        
     }
     
     @IBAction func withdrawItemTapped(_ sender: Any) {
