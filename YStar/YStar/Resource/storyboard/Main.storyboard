@@ -155,7 +155,7 @@
                                                 <color key="titleColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
-                                                <segue destination="Hvh-rt-bIs" kind="replace" splitViewControllerTargetIndex="1" id="T54-ds-doj"/>
+                                                <action selector="forgetBtnTapped:" destination="V4N-nb-DQt" eventType="touchUpInside" id="Hig-Ja-XZS"/>
                                             </connections>
                                         </button>
                                     </subviews>

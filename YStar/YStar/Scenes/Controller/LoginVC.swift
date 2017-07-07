@@ -8,7 +8,7 @@
 
 import UIKit
 import SVProgressHUD
-class LoginVC: BaseTableViewController {
+class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
 
     @IBOutlet weak var phoneText: UITextField!
     @IBOutlet weak var pwdText: UITextField!
@@ -35,9 +35,7 @@ class LoginVC: BaseTableViewController {
         
         if let vc  = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
             ResetPwdVC.className()) as? ResetPwdVC{
-            vc.modalPresentationStyle = .custom
-            vc.modalTransitionStyle = .crossDissolve
-//            present(vc, animated: true, completion: nil)
+            navigationController?.delegate = self
             navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -80,5 +78,15 @@ class LoginVC: BaseTableViewController {
     
     @IBAction func closeBtnTapped(_ sender: UIButton) {
         dismissController()
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .pop{
+            return YPopAnimation()
+        }
+        if operation == .push{
+            return YPushAnimation()
+        }
+        return nil
     }
 }
