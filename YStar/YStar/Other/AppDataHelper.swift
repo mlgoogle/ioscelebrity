@@ -32,5 +32,6 @@ class AppDataHelper: NSObject {
     func clearUserInfo(){
         UserDefaults.standard.removeObject(forKey: AppConst.UserDefaultKey.uid.rawValue)
         UserDefaults.standard.removeObject(forKey: AppConst.UserDefaultKey.phone.rawValue)
+        UserDefaults.standard.removeObject(forKey: AppConst.UserDefaultKey.token.rawValue)
     }
 }

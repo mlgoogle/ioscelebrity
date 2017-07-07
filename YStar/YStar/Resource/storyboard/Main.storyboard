@@ -327,6 +327,9 @@
                                                 <constraint firstAttribute="height" constant="44" id="t7H-SH-HNL"/>
                                             </constraints>
                                             <state key="normal" title="确定"/>
+                                            <connections>
+                                                <action selector="resetBtnTapped:" destination="Hvh-rt-bIs" eventType="touchUpInside" id="qdJ-sM-M0T"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dB-gq-vZd">
                                             <rect key="frame" x="15" y="29" width="175" height="21"/>
@@ -461,12 +464,12 @@
                     <navigationItem key="navigationItem" id="ROU-rU-y4g"/>
                     <connections>
                         <outlet property="closeBtn" destination="ExU-tM-IKW" id="Zqh-Ph-ual"/>
-                        <outlet property="codeBtn" destination="mIg-1K-F1f" id="cif-vV-0xZ"/>
                         <outlet property="codeText" destination="3vV-Ol-kSW" id="UpY-0N-tKx"/>
                         <outlet property="headerView" destination="0C4-My-T6n" id="AIz-4y-Tbg"/>
                         <outlet property="phoneText" destination="V5f-l0-4hn" id="mOq-xI-gTF"/>
                         <outlet property="pwdText" destination="cg4-yB-eQB" id="jiP-Yx-IKV"/>
                         <outlet property="sureBtn" destination="MQ0-cj-nVi" id="BDO-S6-qd9"/>
+                        <outlet property="vaildCodeBtn" destination="mIg-1K-F1f" id="yo1-vP-ok8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMA-84-k53" userLabel="First Responder" sceneMemberID="firstResponder"/>
