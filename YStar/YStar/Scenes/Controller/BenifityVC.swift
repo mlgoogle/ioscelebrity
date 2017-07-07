@@ -14,17 +14,18 @@ class BenifityVC: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
         checkLogin()
         
     }
 
     func leftButtonClick() {
-        AppDataHelper.instance().clearUserInfo()
-        checkLogin()
-//        let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
-//        self.navigationController?.pushViewController(bindBankCardVC, animated: true)
+
+
+        let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
+
+        self.navigationController?.pushViewController(bindBankCardVC, animated: true)
     }
     
     @IBAction func withdrawItemTapped(_ sender: Any) {

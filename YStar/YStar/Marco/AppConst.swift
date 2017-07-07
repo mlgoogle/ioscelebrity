@@ -74,6 +74,7 @@ class AppConst {
         case label6 = 0x666666
         case label3 = 0x333333
         case label9 = 0x999999
+        case closeColor = 0xFFFFFF
     }
     
     enum iconFontName: String {

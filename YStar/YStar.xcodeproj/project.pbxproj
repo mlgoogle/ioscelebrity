@@ -12,6 +12,7 @@
 		8D0090EF1F0E11BB00AB9C05 /* Benifity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */; };
 		8D0090F21F0E14E100AB9C05 /* WithDrawaListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */; };
 		8D0090F31F0E14E100AB9C05 /* WithdrawalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */; };
+		8D0090F51F0E2A7100AB9C05 /* BankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */; };
 		8D09D9001F0CBFB900A52EC3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */; };
 		8D09D9041F0CC67F00A52EC3 /* yRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */; };
 		8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */; };
@@ -217,6 +218,7 @@
 		8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benifity.storyboard; sourceTree = "<group>"; };
 		8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithDrawaListVC.swift; sourceTree = "<group>"; };
 		8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithdrawalVC.swift; sourceTree = "<group>"; };
+		8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankCardVC.swift; sourceTree = "<group>"; };
 		8D09D8FF1F0CBFB900A52EC3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8D09D9031F0CC67F00A52EC3 /* yRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yRuntime.swift; sourceTree = "<group>"; };
 		8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -1126,6 +1128,7 @@
 				8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */,
 				8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */,
 				8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */,
+				8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */,
 				8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */,
 				8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */,
 				8E435F511F0B450E00FB1976 /* FansListViewController.swift */,
@@ -1614,6 +1617,7 @@
 				8D312A6F1F0BC233001B54F3 /* NIMKitInfo.m in Sources */,
 				8D312A731F0BC233001B54F3 /* NIMTimestampModel.m in Sources */,
 				8D312A5C1F0BC233001B54F3 /* NIMGroupedUsrInfo.m in Sources */,
+				8D0090F51F0E2A7100AB9C05 /* BankCardVC.swift in Sources */,
 				8D312A7D1F0BC233001B54F3 /* NIMVideoContentConfig.m in Sources */,
 				8E8FB0BD1F0AA4EA00A7B85C /* SocketResponse.swift in Sources */,
 				8D312A581F0BC233001B54F3 /* NIMMemberGroupView.m in Sources */,
