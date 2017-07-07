@@ -41,6 +41,31 @@ extension UIViewController {
         SVProgressHUD.show(withStatus: status)
     }
     
+    func checkLogin() {
+        if AppDataHelper.instance().checkLogin(){
+            return
+        }
+        if let vc  = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: LoginNavigationController.className()) as? LoginNavigationController{
+            vc.modalPresentationStyle = .custom
+            present(vc, animated: true, completion: nil)
+        }
+    }
+    
+    //退出登录
+    func userLogout() {
+        if let tabbar = UIApplication.shared.windows[0].rootViewController as? BaseTabbarViewController{
+            //为了让退回跟视图
+            if let nav : UINavigationController = tabbar.selectedViewController as? UINavigationController{
+                if nav.viewControllers.count > 0{
+                    _ = self.navigationController?.popToRootViewController(animated: true)
+                }
+            }
+            DispatchQueue.main.async {
+                tabbar.selectedIndex = 0
+            }
+        }
+        AppDataHelper.instance().clearUserInfo()
+    }
     
     //检查text是否为空
     func checkTextFieldEmpty(_ array:[UITextField]) -> Bool {

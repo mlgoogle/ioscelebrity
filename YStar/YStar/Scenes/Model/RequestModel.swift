@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+
+class LoginRequestModel: BaseModel {
+    var phone = ""
+    var pwd = ""
+    var deviceId = ""
+}

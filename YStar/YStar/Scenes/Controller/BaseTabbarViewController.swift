@@ -24,6 +24,8 @@ class BaseTabbarViewController: UITabBarController {
             controller?.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)], for: .selected)
             addChildViewController(controller!)
         }
+        
+        
     }
     
 }

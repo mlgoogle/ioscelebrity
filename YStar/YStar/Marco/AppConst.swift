@@ -19,6 +19,14 @@ func isTelNumber(num: String)->Bool
 }
 
 
+let kScreenWidth = UIScreen.main.bounds.size.width
+let kScreenHeight = UIScreen.main.bounds.size.height
+// 密码校验
+func isPassWord(pwd: String) ->Bool {
+    let predicate:NSPredicate = NSPredicate(format: "SELF MATCHES %@", "(^[A-Za-z0-9]{6,20}$)")
+    return predicate.evaluate(with: pwd)
+}
+
 class AppConst {
 
     
@@ -35,9 +43,9 @@ class AppConst {
     }
     
     class Network {
-        #if false //是否是开发环境
+        #if true //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22";
-        static let TcpServerPort:UInt16 = 16205
+        static let TcpServerPort:UInt16 = 16060
         static let TttpHostUrl:String = "http://139.224.34.22";
         #else
         static let TcpServerIP:String = "i.flight.dlgrme.com";
@@ -63,11 +71,19 @@ class AppConst {
     enum ColorKey: UInt32 {
         case main = 0x8c0808
         case bgColor = 0xfafafa
-    }
-    enum iconFontName: String {
-        case backItem = "\u{e61a}"
+        case label6 = 0x666666
+        case label3 = 0x333333
+        case label9 = 0x999999
     }
     
-   
+    enum iconFontName: String {
+        case backItem = "\u{e61a}"
+        case closeIcon = "\u{e62b}"
+    }
+    
+    enum UserDefaultKey: String {
+        case uid = "uid"
+        case phone = "phone"
+    }
   
 }
