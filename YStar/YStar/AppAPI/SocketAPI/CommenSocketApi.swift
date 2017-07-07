@@ -19,6 +19,7 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     // MARK: - 绑定银行卡(模型)
     func bindCard(model: BindCardRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         
+        let packet: SocketDataPacket = SocketDataPacket.init(opcode: .bin, model: model)
     }
     
     

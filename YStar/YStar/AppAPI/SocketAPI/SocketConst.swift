@@ -13,6 +13,8 @@ class SocketConst: NSObject {
         // 心跳包
         case heart = 3019
         case login = 3003
+        // 绑定银行卡
+        case bindCard = 8005
     }
     enum type:UInt8 {
         case error  = 0

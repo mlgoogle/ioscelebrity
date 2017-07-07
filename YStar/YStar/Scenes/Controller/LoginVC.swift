@@ -60,6 +60,9 @@ class LoginVC: BaseTableViewController {
             param.pwd = pwdText.text!.md5()
             AppAPIHelper.commen().login(model: param, complete: { [weak self](result) -> ()? in
                 SVProgressHUD.dismiss()
+                
+                print("===\(result)")
+                
                 if let object = result as? StarUserModel{
                     if let uid = object.userinfo?.id{
                         ShareModelHelper.instance().uid = Int(uid)

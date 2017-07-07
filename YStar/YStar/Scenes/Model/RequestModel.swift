@@ -10,9 +10,10 @@ import Foundation
 
 class RequestBaseModel: BaseModel {
     
-//    var id :Int64 = StarUserModel.getCurrentUser()?.userinfo?.id ?? 0
+    // 185
     var id = ShareModelHelper.instance().uid ?? 0
-    var token =  ""
+    // f7c0f6a8f222ca81e2f60139578552ae
+    var token = ShareModelHelper.instance().token ?? ""
 }
 
 
