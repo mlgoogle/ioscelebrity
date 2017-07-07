@@ -69,6 +69,7 @@ class LoginVC: BaseTableViewController {
                         ShareModelHelper.instance().phone = phone
                         UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
                     }
+                    ShareModelHelper.instance().token = object.token
                     self?.dismissController()
                 }
                 return nil

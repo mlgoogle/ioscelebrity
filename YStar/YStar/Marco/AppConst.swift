@@ -28,7 +28,6 @@ func isPassWord(pwd: String) ->Bool {
 }
 
 class AppConst {
-
     
     enum KVOKey: String {
         case selectProduct = "selectProduct"
