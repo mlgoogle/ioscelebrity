@@ -140,6 +140,7 @@
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
 		8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E021F0E0C4D006D3C68 /* Meet.storyboard */; };
+		8E338E0A1F0E2EB6006D3C68 /* ResetPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */; };
 		8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F461F0B440B00FB1976 /* BaseModel.swift */; };
 		8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */; };
 		8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4B1F0B449F00FB1976 /* LoginVC.swift */; };
@@ -198,6 +199,7 @@
 		8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0991F0AA4EA00A7B85C /* city.plist */; };
 		8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */; };
 		8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */; };
+		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
 		A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = A02722AC1E49C23000801A44 /* DKColorTable.txt */; };
 		A0EA2D511E481BC300DD3158 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D501E481BC300DD3158 /* CFNetwork.framework */; };
 		A0EA2D531E481BD600DD3158 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D521E481BD600DD3158 /* SystemConfiguration.framework */; };
@@ -468,6 +470,7 @@
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E338E021F0E0C4D006D3C68 /* Meet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Meet.storyboard; sourceTree = "<group>"; };
+		8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPwdVC.swift; sourceTree = "<group>"; };
 		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -532,6 +535,7 @@
 		8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorcode.plist; sourceTree = "<group>"; };
 		8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testsocket.plist; sourceTree = "<group>"; };
 		8E8FB0B11F0AA4EA00A7B85C /* wp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = wp.entitlements; sourceTree = "<group>"; };
+		8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		A02722AC1E49C23000801A44 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKColorTable.txt; sourceTree = "<group>"; };
 		A0EA2D4D1E481BA200DD3158 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
 		A0EA2D4E1E481BA200DD3158 /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
@@ -1134,6 +1138,8 @@
 				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
 				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
 				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
+				8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */,
+				8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1519,7 +1525,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7216018706741901D5FE5A13 /* [CP] Copy Pods Resources */ = {
@@ -1609,6 +1615,7 @@
 				8D0090F21F0E14E100AB9C05 /* WithDrawaListVC.swift in Sources */,
 				8E8FB0C11F0AA4EA00A7B85C /* SegmentedViewController.swift in Sources */,
 				8D312A4B1F0BC233001B54F3 /* NIMCommonTableData.m in Sources */,
+				8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */,
 				8E435F561F0B454400FB1976 /* MeetTypeVC.swift in Sources */,
 				8D312A6A1F0BC233001B54F3 /* NIMInputEmoticonTabView.m in Sources */,
 				8D312A6F1F0BC233001B54F3 /* NIMKitInfo.m in Sources */,
@@ -1689,6 +1696,7 @@
 				8D312A8A1F0BC233001B54F3 /* NIMMessageCell.m in Sources */,
 				8D312AAA1F0BC233001B54F3 /* NIMTeamSwitchTableViewCell.m in Sources */,
 				8D312A921F0BC233001B54F3 /* NIMSessionNotificationContentView.m in Sources */,
+				8E338E0A1F0E2EB6006D3C68 /* ResetPwdVC.swift in Sources */,
 				8D312A9E1F0BC233001B54F3 /* NIMTeamInfoData.m in Sources */,
 				8D312A5B1F0BC233001B54F3 /* NIMGroupedDataCollection.m in Sources */,
 				8E8FB0BB1F0AA4EA00A7B85C /* SocketRequest.swift in Sources */,

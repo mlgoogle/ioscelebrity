@@ -10,18 +10,18 @@ import UIKit
 
 class BenifityVC: BaseTableViewController {
 
-    @IBOutlet weak var testIcon: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        testIcon.image = UIImage.imageWith("\u{e64a}", fontSize: testIcon.frame.size, fontColor: UIColor.red)
-        
+
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
+        checkLogin()
         
     }
 
     func leftButtonClick() {
+
 
         let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
 
@@ -31,5 +31,6 @@ class BenifityVC: BaseTableViewController {
     @IBAction func withdrawItemTapped(_ sender: Any) {
         performSegue(withIdentifier: WithdrawalVC.className(), sender: nil)
     }
+    
     
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 protocol CommenApi {
-
+    // 登录(模型)
+    func login(model: LoginRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
 }
 

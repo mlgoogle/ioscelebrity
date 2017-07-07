@@ -9,5 +9,13 @@
 import UIKit
 
 class ShareModelHelper: BaseModel {
-
+    static let model = ShareModelHelper()
+    class func instance() -> ShareModelHelper{
+        return model
+    }
+    var uid = 0
+    var phone  = ""
+    
+    
+    
 }
