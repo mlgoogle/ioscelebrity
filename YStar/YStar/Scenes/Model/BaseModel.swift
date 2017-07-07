@@ -18,6 +18,7 @@ class BaseModel: OEZModel {
 }
 
 
+
 class BaseDBModel: BaseModel {
     var id:Int = 0
     
@@ -32,3 +33,8 @@ class BaseDBModel: BaseModel {
     
 }
 
+
+class LoginModle: BaseModel {
+    var id  = ShareModelHelper.instance().uid
+    var token = ShareModelHelper.instance().token
+}
