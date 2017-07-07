@@ -198,6 +198,7 @@
 		8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0991F0AA4EA00A7B85C /* city.plist */; };
 		8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */; };
 		8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */; };
+		8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */; };
 		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
 		A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = A02722AC1E49C23000801A44 /* DKColorTable.txt */; };
 		A0EA2D511E481BC300DD3158 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D501E481BC300DD3158 /* CFNetwork.framework */; };
@@ -533,6 +534,7 @@
 		8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorcode.plist; sourceTree = "<group>"; };
 		8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testsocket.plist; sourceTree = "<group>"; };
 		8E8FB0B11F0AA4EA00A7B85C /* wp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = wp.entitlements; sourceTree = "<group>"; };
+		8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTransition.swift; sourceTree = "<group>"; };
 		8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		A02722AC1E49C23000801A44 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKColorTable.txt; sourceTree = "<group>"; };
 		A0EA2D4D1E481BA200DD3158 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
@@ -1305,6 +1307,7 @@
 			children = (
 				8E8FB07E1F0AA4EA00A7B85C /* AppConst.swift */,
 				8E8FB07F1F0AA4EA00A7B85C /* bridge.h */,
+				8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */,
 			);
 			path = Marco;
 			sourceTree = "<group>";
@@ -1597,6 +1600,7 @@
 				8D312A561F0BC233001B54F3 /* NIMKitNotificationFirer.m in Sources */,
 				8D312AAE1F0BC233001B54F3 /* NIMKitTimerHolder.m in Sources */,
 				8D312A991F0BC233001B54F3 /* NIMSessionListViewController.m in Sources */,
+				8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */,
 				8D312A851F0BC233001B54F3 /* NIMSessionDataSourceImpl.m in Sources */,
 				8D312A691F0BC233001B54F3 /* NIMInputEmoticonParser.m in Sources */,
 				8E8FB0BC1F0AA4EA00A7B85C /* SocketRequestManage.swift in Sources */,

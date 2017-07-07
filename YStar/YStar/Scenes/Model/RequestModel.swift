@@ -14,3 +14,16 @@ class LoginRequestModel: BaseModel {
     var pwd = ""
     var deviceId = ""
 }
+
+class CheckRegisterRequestModel: BaseModel {
+    var phone = ""
+}
+
+class SendVerificationCodeRequestModel: BaseModel {
+    var phone = ""
+}
+
+class ResetPwdReqModel: BaseModel{
+    var phone = ""
+    var pwd = ""
+}
