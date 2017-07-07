@@ -46,4 +46,21 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     }
     
     
+    // 校验用户登录(模型)
+    func CheckRegister(model: CheckRegisterRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        
+        let packet : SocketDataPacket = SocketDataPacket.init(opcode: .checkRegist, model: model)
+        
+        startRequest(packet, complete: complete, error: error)
+    }
+    // 发送验证码(模型)
+    func SendVerificationCode(model: SendVerificationCodeRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet:SocketDataPacket = SocketDataPacket.init(opcode: .verifycode, model: model)
+        startRequest(packet, complete: complete, error: error)
+    }    
+    // 重置密码(模型)
+    func Resetpwd(model: ResetPwdReqModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet:SocketDataPacket = SocketDataPacket.init(opcode: .verifycode, model: model)
+        startRequest(packet, complete: complete, error: error)
+    }
 }

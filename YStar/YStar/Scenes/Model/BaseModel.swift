@@ -35,10 +35,25 @@ class BaseDBModel: BaseModel {
 
 
 class LoginModle: BaseModel {
-    
-    // var id  = ShareModelHelper.instance().uid
-    // var token = ShareModelHelper.instance().token
-    
-    var id = 185
-    var token = "d786fccafc0e4d68314b257959977d1a"
+//<<<<<<< HEAD
+//    
+//    // var id  = ShareModelHelper.instance().uid
+//    // var token = ShareModelHelper.instance().token
+//    
+//    var id = 185
+//    var token = "d786fccafc0e4d68314b257959977d1a"
+//=======
+    lazy var id  = { () -> Int in
+        if let uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) {
+            return uid as! Int
+        }
+        return 0
+    }()
+    lazy var token = { () -> String in
+        if let token = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.token.rawValue){
+            return token as! String
+        }
+        return ""
+    }()
+
 }

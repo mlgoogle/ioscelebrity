@@ -32,6 +32,16 @@ class BankCardInfoRequestModel : LoginModle {
     
 }
 
+class CheckRegisterRequestModel: BaseModel {
+    var phone = ""
+}
+
 class SendVerificationCodeRequestModel: BaseModel {
     var phone = ""
+}
+
+class ResetPwdReqModel: BaseModel{
+    var phone = ""
+    var pwd = ""
+
 }
