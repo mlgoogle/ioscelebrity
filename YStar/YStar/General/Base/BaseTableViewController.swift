@@ -18,6 +18,8 @@ class BaseTableViewController: UITableViewController , TableViewHelperProtocol {
         if tableView.tableFooterView == nil {
             tableView.tableFooterView = UIView(frame:CGRect(x: 0,y: 0,width: 0,height: 0.5));
         }
+        
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

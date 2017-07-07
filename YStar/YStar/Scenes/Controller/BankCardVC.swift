@@ -31,7 +31,7 @@ class BankInfoCell: OEZTableViewCell {
         bankContentView.layer.cornerRadius = 5.0
         bankContentView.layer.masksToBounds = true
         
-        closeButton.setImage(UIImage.imageWith(AppConst.iconFontName.closeItme.rawValue,
+        closeButton.setImage(UIImage.imageWith(AppConst.iconFontName.closeIcon.rawValue,
                                                fontSize: closeButton.frame.size,
                                                fontColor: UIColor.init(rgbHex: 0xFFFFFF)), for: .normal)
         

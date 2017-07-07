@@ -12,6 +12,7 @@ class SocketConst: NSObject {
     enum OPCode:UInt16 {
         // 心跳包
         case heart = 3019
+        case login = 3003
     }
     enum type:UInt8 {
         case error  = 0
