@@ -135,6 +135,8 @@
 		8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */; };
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
 		8DBDBFDF1F0F290400736408 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDBFDE1F0F290400736408 /* UIView.swift */; };
+		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
+		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
@@ -466,6 +468,8 @@
 		8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
 		8DBDBFDE1F0F290400736408 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
+		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1139,7 +1143,9 @@
 				8E435F511F0B450E00FB1976 /* FansListViewController.swift */,
 				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
 				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
+				8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */,
 				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
+				8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */,
 				8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */,
 				8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */,
 			);
@@ -1573,6 +1579,7 @@
 				8D312A8B1F0BC233001B54F3 /* NIMSessionTimestampCell.m in Sources */,
 				8D312A661F0BC233001B54F3 /* NIMInputEmoticonButton.m in Sources */,
 				8D312A611F0BC233001B54F3 /* NIMContactSelectViewController.m in Sources */,
+				8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */,
 				8D312AA61F0BC233001B54F3 /* NIMAdvancedTeamMemberCell.m in Sources */,
 				8D312A891F0BC233001B54F3 /* NIMSessionTableAdapter.m in Sources */,
 				8D312A941F0BC233001B54F3 /* NIMSessionUnknowContentView.m in Sources */,
@@ -1618,6 +1625,7 @@
 				8D312AA11F0BC233001B54F3 /* NIMCreateTeamAnnouncement.m in Sources */,
 				8D0090F21F0E14E100AB9C05 /* WithDrawaListVC.swift in Sources */,
 				8E8FB0C11F0AA4EA00A7B85C /* SegmentedViewController.swift in Sources */,
+				8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */,
 				8D312A4B1F0BC233001B54F3 /* NIMCommonTableData.m in Sources */,
 				8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */,
 				8E435F561F0B454400FB1976 /* MeetTypeVC.swift in Sources */,

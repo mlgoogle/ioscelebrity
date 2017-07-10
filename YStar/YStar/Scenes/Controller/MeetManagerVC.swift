@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 // MARK: - 自定义按钮
 class TitleButton: UIButton {
     
@@ -16,7 +17,6 @@ class TitleButton: UIButton {
 
         self.setTitleColor(UIColor.init(hexString: "#C2CFD8"), for: .normal)
         self.setTitleColor(UIColor.init(hexString: "#8C0808"), for: .selected)
-        
         self.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
     }
     
@@ -49,7 +49,7 @@ class MeetManagerVC: BaseTableViewController {
     
     let titleArrM = ["约见类型","约见订单"]
     
-    private lazy var titleButtons : NSMutableArray = {
+    private lazy var titleButtonArrM : NSMutableArray = {
         var tempArr = NSMutableArray()
         return tempArr
     }()
@@ -95,7 +95,7 @@ class MeetManagerVC: BaseTableViewController {
         
         // 标题view
         let titlesView = UIView()
-        titlesView.backgroundColor = UIColor.init(white: 1.0, alpha: 0.7)
+        titlesView.backgroundColor = UIColor.init(white: 1.0, alpha: 1.0)
         titlesView.frame = CGRect.init(x: 0, y: 64, width: self.view.width, height: 40)
         self.view.addSubview(titlesView)
         self.titlesView = titlesView
@@ -111,7 +111,7 @@ class MeetManagerVC: BaseTableViewController {
             titlesView.addSubview(titleButton)
             titleButton.addTarget(self, action: #selector(titleButtonClick(_ :)), for: .touchUpInside)
             
-            self.titleButtons.add(titleButton)
+            self.titleButtonArrM.add(titleButton)
             let titleString = self.titleArrM[i]
             titleButton.setTitle(titleString, for: .normal)
             
@@ -132,7 +132,7 @@ class MeetManagerVC: BaseTableViewController {
         self.indicatorView = indicatorView
         
         // 默认选中第一个按钮
-        let firstTitleButton = self.titleButtons.firstObject as! TitleButton
+        let firstTitleButton = self.titleButtonArrM.firstObject as! TitleButton
         firstTitleButton.titleLabel?.sizeToFit()
         indicatorView.width = (firstTitleButton.titleLabel?.width)!
         indicatorView.centerX = firstTitleButton.centerX
@@ -156,7 +156,7 @@ class MeetManagerVC: BaseTableViewController {
         }
 
         var offset = self.scrollView?.contentOffset
-        let index = self.titleButtons.index(of: titleButton)
+        let index = self.titleButtonArrM.index(of: titleButton)
         offset?.x = (self.scrollView?.width)! * CGFloat(index)
         
         self.scrollView?.setContentOffset(offset!, animated: true)
