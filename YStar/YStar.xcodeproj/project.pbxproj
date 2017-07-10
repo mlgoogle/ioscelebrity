@@ -203,10 +203,17 @@
 		8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */; };
 		8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */; };
 		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
+		8EFEF56E1F13984A00AD9513 /* YStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEF56D1F13984A00AD9513 /* YStarTests.swift */; };
+		8EFEF5751F139D7100AD9513 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8FB0761F0AA4EA00A7B85C /* OEZCommSDK.framework */; };
+		8EFEF5761F139DD500AD9513 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
+		8EFEF5781F139E3300AD9513 /* NIMSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEF5771F139E3300AD9513 /* NIMSDK.framework */; };
+		8EFEF57A1F139E6300AD9513 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEF5791F139E6300AD9513 /* UMMobClick.framework */; };
+		8EFEF57C1F13A2E100AD9513 /* APITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEF57B1F13A2E100AD9513 /* APITestCase.swift */; };
 		A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = A02722AC1E49C23000801A44 /* DKColorTable.txt */; };
 		A0EA2D511E481BC300DD3158 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D501E481BC300DD3158 /* CFNetwork.framework */; };
 		A0EA2D531E481BD600DD3158 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D521E481BD600DD3158 /* SystemConfiguration.framework */; };
 		A0EA2D551E481BF900DD3158 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D541E481BF900DD3158 /* libz.tbd */; };
+		AF420058EC9D46FFE5CD7A99 /* Pods_YStarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C68113F81D52432837FF9B /* Pods_YStarTests.framework */; };
 		B02DB25C1DF985B70044F910 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B02DB25B1DF985B70044F910 /* libsqlite3.tbd */; };
 		B08673461DE5C4C0008DD8A1 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B08673451DE5C4C0008DD8A1 /* libstdc++.tbd */; };
 		BF87C3741E023A180074D696 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF87C3731E023A180074D696 /* CoreTelephony.framework */; };
@@ -215,9 +222,21 @@
 		BFA9FAB31DF6AEBF00E2A67C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA9FAB21DF6AEBF00E2A67C /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8EFEF5701F13984A00AD9513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0CF59D51DE5BEC300C40C9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0CF59DC1DE5BEC300C40C9C;
+			remoteInfo = YStar;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		09C1C064B02FD7B7A25C2AE6 /* Pods-YStarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests.release.xcconfig"; sourceTree = "<group>"; };
 		2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34A71E9057EC9BB492D14F0B /* Pods-wp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wp/Pods-wp.debug.xcconfig"; sourceTree = "<group>"; };
+		7198D21C9F0B5E7723A4B9C2 /* Pods-YStarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindBankCardVC.swift; sourceTree = "<group>"; };
 		8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benifity.storyboard; sourceTree = "<group>"; };
 		8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithDrawaListVC.swift; sourceTree = "<group>"; };
@@ -542,6 +561,12 @@
 		8E8FB0B11F0AA4EA00A7B85C /* wp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = wp.entitlements; sourceTree = "<group>"; };
 		8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTransition.swift; sourceTree = "<group>"; };
 		8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
+		8EFEF56B1F13984A00AD9513 /* YStarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YStarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EFEF56D1F13984A00AD9513 /* YStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YStarTests.swift; sourceTree = "<group>"; };
+		8EFEF56F1F13984A00AD9513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EFEF5771F139E3300AD9513 /* NIMSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NIMSDK.framework; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework; sourceTree = "<group>"; };
+		8EFEF5791F139E6300AD9513 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
+		8EFEF57B1F13A2E100AD9513 /* APITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITestCase.swift; sourceTree = "<group>"; };
 		A02722AC1E49C23000801A44 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKColorTable.txt; sourceTree = "<group>"; };
 		A0EA2D4D1E481BA200DD3158 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
 		A0EA2D4E1E481BA200DD3158 /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
@@ -565,10 +590,23 @@
 		BFC81E9D1DFA9E6600ADC291 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = "Pods/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.1.5/UMMobClick.framework"; sourceTree = "<group>"; };
 		DFB87B95C21847F47B3B5B8C /* Pods_wp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E225FA6D7F593209964802D3 /* Pods_YStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5C68113F81D52432837FF9B /* Pods_YStarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YStarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F406DC4604C979FC9CD92E45 /* Pods-YStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStar.release.xcconfig"; path = "Pods/Target Support Files/Pods-YStar/Pods-YStar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8EFEF5681F13984A00AD9513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFEF57A1F139E6300AD9513 /* UMMobClick.framework in Frameworks */,
+				8EFEF5781F139E3300AD9513 /* NIMSDK.framework in Frameworks */,
+				8EFEF5761F139DD500AD9513 /* NIMSDK.h in Frameworks */,
+				8EFEF5751F139D7100AD9513 /* OEZCommSDK.framework in Frameworks */,
+				AF420058EC9D46FFE5CD7A99 /* Pods_YStarTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0CF59DA1DE5BEC300C40C9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -602,6 +640,8 @@
 		10CEA088AA8041FD84B55B62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EFEF5791F139E6300AD9513 /* UMMobClick.framework */,
+				8EFEF5771F139E3300AD9513 /* NIMSDK.framework */,
 				8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */,
 				8D1CC7231F0BAE74009B1A1B /* libsqlite3.0.tbd */,
 				8D1CC7201F0BAE5E009B1A1B /* VideoToolbox.framework */,
@@ -625,6 +665,7 @@
 				B94EA5E418699240B04889F4 /* Pods_nineSister.framework */,
 				DFB87B95C21847F47B3B5B8C /* Pods_wp.framework */,
 				E225FA6D7F593209964802D3 /* Pods_YStar.framework */,
+				E5C68113F81D52432837FF9B /* Pods_YStarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -637,6 +678,8 @@
 				A02722AC1E49C23000801A44 /* DKColorTable.txt */,
 				B78D9EE8CD4277E28B8C22A1 /* Pods-YStar.debug.xcconfig */,
 				F406DC4604C979FC9CD92E45 /* Pods-YStar.release.xcconfig */,
+				7198D21C9F0B5E7723A4B9C2 /* Pods-YStarTests.debug.xcconfig */,
+				09C1C064B02FD7B7A25C2AE6 /* Pods-YStarTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1365,6 +1408,16 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		8EFEF56C1F13984A00AD9513 /* YStarTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EFEF56D1F13984A00AD9513 /* YStarTests.swift */,
+				8EFEF56F1F13984A00AD9513 /* Info.plist */,
+				8EFEF57B1F13A2E100AD9513 /* APITestCase.swift */,
+			);
+			path = YStarTests;
+			sourceTree = "<group>";
+		};
 		A0EA2D4C1E481B8000DD3158 /* paysdk */ = {
 			isa = PBXGroup;
 			children = (
@@ -1378,6 +1431,7 @@
 			isa = PBXGroup;
 			children = (
 				8E8FB04A1F0AA4EA00A7B85C /* YStar */,
+				8EFEF56C1F13984A00AD9513 /* YStarTests */,
 				B0CF59DE1DE5BEC300C40C9C /* Products */,
 				568B61F3BC4BD4BB15E8999D /* Pods */,
 				10CEA088AA8041FD84B55B62 /* Frameworks */,
@@ -1388,6 +1442,7 @@
 			isa = PBXGroup;
 			children = (
 				B0CF59DD1DE5BEC300C40C9C /* YStar.app */,
+				8EFEF56B1F13984A00AD9513 /* YStarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1407,6 +1462,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8EFEF56A1F13984A00AD9513 /* YStarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EFEF5741F13984A00AD9513 /* Build configuration list for PBXNativeTarget "YStarTests" */;
+			buildPhases = (
+				7D5EDF6D72F0E51FB41E0695 /* [CP] Check Pods Manifest.lock */,
+				8EFEF5671F13984A00AD9513 /* Sources */,
+				8EFEF5681F13984A00AD9513 /* Frameworks */,
+				8EFEF5691F13984A00AD9513 /* Resources */,
+				FF93B84854A536EA0176F5FD /* [CP] Embed Pods Frameworks */,
+				656D9BC8F054A9366B43ACC6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EFEF5711F13984A00AD9513 /* PBXTargetDependency */,
+			);
+			name = YStarTests;
+			productName = YStarTests;
+			productReference = 8EFEF56B1F13984A00AD9513 /* YStarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B0CF59DC1DE5BEC300C40C9C /* YStar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0CF59F11DE5BEC300C40C9C /* Build configuration list for PBXNativeTarget "YStar" */;
@@ -1434,10 +1510,15 @@
 		B0CF59D51DE5BEC300C40C9C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = com.yundian;
 				TargetAttributes = {
+					8EFEF56A1F13984A00AD9513 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Manual;
+						TestTargetID = B0CF59DC1DE5BEC300C40C9C;
+					};
 					B0CF59DC1DE5BEC300C40C9C = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = GED83X9MRE;
@@ -1474,11 +1555,19 @@
 			projectRoot = "";
 			targets = (
 				B0CF59DC1DE5BEC300C40C9C /* YStar */,
+				8EFEF56A1F13984A00AD9513 /* YStarTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8EFEF5691F13984A00AD9513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0CF59DB1DE5BEC300C40C9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1537,6 +1626,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		656D9BC8F054A9366B43ACC6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7216018706741901D5FE5A13 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1552,6 +1656,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YStar/Pods-YStar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7D5EDF6D72F0E51FB41E0695 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		BFEC3F231DF6A73600B36A0E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1565,9 +1684,33 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 13b0dd85b007ad78249b02fc26fa3972dff8da79 09fbffcee88c3bfa1086819566cdaf4b4c0f451fe57b9699cd9525804778308d";
 		};
+		FF93B84854A536EA0176F5FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8EFEF5671F13984A00AD9513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFEF57C1F13A2E100AD9513 /* APITestCase.swift in Sources */,
+				8EFEF56E1F13984A00AD9513 /* YStarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B0CF59D91DE5BEC300C40C9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1745,7 +1888,70 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8EFEF5711F13984A00AD9513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0CF59DC1DE5BEC300C40C9C /* YStar */;
+			targetProxy = 8EFEF5701F13984A00AD9513 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8EFEF5721F13984A00AD9513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7198D21C9F0B5E7723A4B9C2 /* Pods-YStarTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YStar/Library",
+					"$(PROJECT_DIR)/Pods/NIMSDK/NIMSDK",
+					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+				);
+				INFOPLIST_FILE = YStarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = daf.YStarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YStar.app/YStar";
+			};
+			name = Debug;
+		};
+		8EFEF5731F13984A00AD9513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09C1C064B02FD7B7A25C2AE6 /* Pods-YStarTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YStar/Library",
+					"$(PROJECT_DIR)/Pods/NIMSDK/NIMSDK",
+					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+				);
+				INFOPLIST_FILE = YStarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = daf.YStarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YStar.app/YStar";
+			};
+			name = Release;
+		};
 		B0CF59EF1DE5BEC300C40C9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1849,6 +2055,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/YStar/Library",
 					"$(PROJECT_DIR)/Pods/",
+					"$(PROJECT_DIR)/Pods/NIMSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1861,10 +2068,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/wp/Library/master/tvlios/HappyTravel/Other/WeChatSDK1.7.4",
-					"$(PROJECT_DIR)/wp/Library/master/tvlios/Pods/Realm/core",
-					"$(PROJECT_DIR)/wp/Library/WeChatSDK1.7.4",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/YStar/Library/WeChatSDK1.7.4",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -1917,10 +2120,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/wp/Library/master/tvlios/HappyTravel/Other/WeChatSDK1.7.4",
-					"$(PROJECT_DIR)/wp/Library/master/tvlios/Pods/Realm/core",
-					"$(PROJECT_DIR)/wp/Library/WeChatSDK1.7.4",
-					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/YStar/Library/WeChatSDK1.7.4",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -1946,6 +2145,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8EFEF5741F13984A00AD9513 /* Build configuration list for PBXNativeTarget "YStarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EFEF5721F13984A00AD9513 /* Debug */,
+				8EFEF5731F13984A00AD9513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B0CF59D81DE5BEC300C40C9C /* Build configuration list for PBXProject "YStar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
