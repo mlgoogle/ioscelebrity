@@ -56,7 +56,7 @@ class MeetTypeDetailVC: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "detailCellID", for: indexPath)
-//        cell.textLabel?.text = String.init(format: "这个第 %d 行." ,indexPath.row)
+        // cell.textLabel?.text = String.init(format: "这个第 %d 行." ,indexPath.row)
         cell.textLabel?.text = self.items[indexPath.row]
         // 判断是否选中（选中单元格尾部打勾）
         if selectedIndexs.contains(indexPath.row) {
@@ -67,8 +67,7 @@ class MeetTypeDetailVC: BaseTableViewController {
         return cell
     }
     
-    
-    // UITableViewDelegate 方法，处理列表项的选中事件
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //判断该行原先是否选中
         if let index = selectedIndexs.index(of: indexPath.row){
