@@ -35,7 +35,8 @@ class BaseDBModel: BaseModel {
 
 
 class LoginModle: BaseModel {
-    lazy var id  = { () -> Int in 
+
+    lazy var id  = { () -> Int in
         if let uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) {
             return uid as! Int
         }
@@ -47,4 +48,5 @@ class LoginModle: BaseModel {
         }
         return ""
     }()
+
 }
