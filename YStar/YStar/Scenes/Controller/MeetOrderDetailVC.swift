@@ -1,26 +1,26 @@
 //
-//  MeetOrderVC.swift
+//  MeetOrderDetailVC.swift
 //  YStar
 //
-//  Created by mu on 2017/7/4.
+//  Created by MONSTER on 2017/7/10.
 //  Copyright © 2017年 com.yundian. All rights reserved.
 //
 
 import UIKit
 
-class MeetOrderVC: BaseTableViewController {
+class MeetOrderDetailVC: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.contentInset = UIEdgeInsetsMake(64 + 40, 0, 49, 0)
+        self.title = "约见订单详情"
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 
     /*

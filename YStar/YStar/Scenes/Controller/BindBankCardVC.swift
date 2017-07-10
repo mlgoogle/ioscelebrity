@@ -91,7 +91,7 @@ extension BindBankCardVC {
             sendCodeButton.setTitle("重新发送", for: .normal)
             codeTimer = 60
             timer?.invalidate()
-            sendCodeButton.setTitleColor(UIColor.init(hexString: "ffffff"), for: .normal)
+            sendCodeButton.setTitleColor(UIColor.init(hexString: "FFFFFF"), for: .normal)
             sendCodeButton.backgroundColor = UIColor(hexString: "FB9938")
             return
         }
@@ -109,8 +109,15 @@ extension BindBankCardVC {
         if !checkTextFieldEmpty([starNameTextField,starCardNumTextField,starPhoneNumTextField,verificationCodeTextField]) {
             return
         }
+        
         if !isTelNumber(num: starPhoneNumTextField.text!) {
             SVProgressHUD.showError(withStatus: "请您输入正确的手机号")
+            return
+        }
+
+        let stringToken = AppConst.pwdKey + self.timeStamp + verificationCodeTextField.text! + starPhoneNumTextField.text!
+        if  stringToken.md5() != self.vToken {
+            SVProgressHUD.showErrorMessage(ErrorMessage: "验证码错误", ForDuration: 1.0, completion: nil)
             return
         }
         
