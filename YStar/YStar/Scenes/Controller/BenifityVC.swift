@@ -31,6 +31,8 @@ class BenifityVC: BaseTableViewController {
             if let object = response as? BankListModel {
                 if object.cardNo.length() != 0 {
                     let bankCardVC  = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BankCardVC")
+                    // 传值
+                    (bankCardVC as! BankCardVC).bankCardNO = object.cardNo
                     self?.navigationController?.pushViewController(bankCardVC, animated: true)
                 } else {
                     // 未绑定银行卡
