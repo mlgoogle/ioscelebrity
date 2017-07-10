@@ -51,7 +51,7 @@ class BankInfoCell: OEZTableViewCell {
 // MARK: - 银行信息Controller
 class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
 
-    // 传入来的模型
+    // 接收银行卡号
     var bankCardNO = ""
     
     var dataBankInfoModle : BankInfoModel?
@@ -60,13 +60,13 @@ class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
         super.viewDidLoad()
     
         setupUI()
+        
+        // 获取绑定的银行卡信息
         requestBankInfo()
 
     }
     
     func setupUI() {
-        
-        print("----\(bankCardNO)")
         
         self.title = "我的银行卡"
         self.tableView.separatorStyle = .none
