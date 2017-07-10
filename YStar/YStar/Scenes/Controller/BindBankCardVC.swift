@@ -117,21 +117,15 @@ extension BindBankCardVC {
         let model = BindCardRequestModel()
         model.bankUsername = starNameTextField.text!
         model.account = starCardNumTextField.text!
-                
         AppAPIHelper.commen().bindCard(model: model, complete: {[weak self] (response) -> ()? in
             
             if (response as? BindBankModel) != nil{
                     SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: nil)
-                    self?.navigationController?.popViewController(animated: true)
+                    _ = self?.navigationController?.popViewController(animated: true)
             }
             return nil
         }, error: errorBlockFunc())
         
-        // let bankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BankCardVC")
-        
-        //  self.navigationController?.pushViewController(bankCardVC, animated: true)
-        
-        print("点击了绑定银行卡")
     }
     
 }

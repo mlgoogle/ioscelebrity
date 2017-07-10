@@ -21,11 +21,9 @@ class BenifityVC: BaseTableViewController {
     }
 
     func leftButtonClick() {
-        
+
         let model = BankCardListRequestModel()
-        
         print("====\(model)")
-        
         AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self](response) -> ()? in
             
             if let object = response as? BankListModel {
@@ -47,7 +45,8 @@ class BenifityVC: BaseTableViewController {
             self.navigationController?.pushViewController(bindBankCardVC, animated: true)
             return nil
         }
-        
+        AppDataHelper.instance().clearUserInfo()
+        checkLogin()
     }
     
     @IBAction func withdrawItemTapped(_ sender: Any) {

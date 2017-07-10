@@ -16,6 +16,6 @@ class ShareModelHelper: BaseModel {
     var uid = 0
     var phone  = ""
     var token = ""
-    
+    var userinfo = UserBalance()
     
 }

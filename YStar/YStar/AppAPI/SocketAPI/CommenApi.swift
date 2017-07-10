@@ -11,8 +11,8 @@ import Foundation
 protocol CommenApi {
     // 登录(模型)
     func login(model: LoginRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
-
-    
+    // 用户信息(模型)
+    func userinfo(model: LoginModle, complete: CompleteBlock?, error: ErrorBlock?)
     // 获取短信验证码(模型)
     func sendVerificationCode(model:SendVerificationCodeRequestModel,complete : CompleteBlock? ,error: ErrorBlock?)
     
