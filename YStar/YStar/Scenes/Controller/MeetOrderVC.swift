@@ -13,7 +13,7 @@ class MeetOrderVC: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.tableView.contentInset = UIEdgeInsetsMake(64 + 44, 0, 49, 0)
     }
 
     override func didReceiveMemoryWarning() {
