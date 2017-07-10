@@ -41,7 +41,7 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     func bankCardInfo(model: BankCardInfoRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         
         let packet = SocketDataPacket(opcode: .bankinfo, model: model)
-        startModelsRequest(packet, modelClass: BankInfoModel.self, complete: complete, error: error)
+        startModelRequest(packet, modelClass: BankInfoModel.self, complete: complete, error: error)
     }
     
     // MARK: - 绑定银行卡(模型)
