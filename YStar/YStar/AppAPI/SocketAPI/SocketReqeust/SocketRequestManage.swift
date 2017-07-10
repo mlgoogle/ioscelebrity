@@ -62,7 +62,7 @@ class SocketRequestManage: NSObject {
     func notifyResponsePacket(_ packet: SocketDataPacket) {
         
         objc_sync_enter(self)
-        var socketReqeust = socketRequests[packet.session_id]
+        let socketReqeust = socketRequests[packet.session_id]
         socketRequests.removeValue(forKey: packet.session_id)
         objc_sync_exit(self)
         let response:SocketJsonResponse = SocketJsonResponse(packet:packet)

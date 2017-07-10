@@ -34,4 +34,13 @@ class AppDataHelper: NSObject {
         UserDefaults.standard.removeObject(forKey: AppConst.UserDefaultKey.phone.rawValue)
         UserDefaults.standard.removeObject(forKey: AppConst.UserDefaultKey.token.rawValue)
     }
+    //获取用户信息
+    func userBalance(){
+        AppAPIHelper.commen().userinfo(model: LoginModle(), complete: { (result) in
+            if let userbalance = result as? UserBalance{
+                ShareModelHelper.instance().userinfo = userbalance
+            }
+            return nil
+        }, error: nil)
+    }
 }

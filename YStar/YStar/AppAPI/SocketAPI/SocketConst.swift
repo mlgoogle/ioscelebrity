@@ -9,6 +9,7 @@
 import Foundation
 
 class SocketConst: NSObject {
+    
     enum OPCode:UInt16 {
         // 心跳包
         case heart = 1000
@@ -28,8 +29,6 @@ class SocketConst: NSObject {
         case bankcardList = 8003
         // 银行信息
         case bankinfo = 8009
-        
-        
         // 注册
         case register = 3001
         // 注册
@@ -60,15 +59,12 @@ class SocketConst: NSObject {
         case starInfo = 11005
         //资讯列表
         case newsInfo = 10013
-        
         // banner
         case banners = 10015
         //行情分类
         case marketType = 11001
-        
         //搜索
         case searchStar = 13001
-        
         //搜索
         case weixinpay = 7033
         case alipay = 7049
@@ -142,17 +138,16 @@ class SocketConst: NSObject {
         case update = 3033
         //更新devicetoken
         case updateDeviceToken = 3035
-        
-        
-        
+        //提现
         case withdraw = 7057
         case withdrawlist = 6019
-        
         //单点登录
         case onlyLogin = 3040
         //取消充值
         case cancelRecharge = 7055
     }
+    
+    
     enum type:UInt8 {
         case error  = 0
         case wp     = 1

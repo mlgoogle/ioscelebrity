@@ -29,6 +29,13 @@ class StarUserModel: Object {
     }
 }
 
+class UserBalance: BaseModel {
+    var balance: Double = 0
+    var is_setpwd = 0
+    var nick_name = ""
+    var head_url = ""
+}
+
 class verifyCodeModel: BaseModel {
     var result : Int64 = 0
     var timeStamp = ""

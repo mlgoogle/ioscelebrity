@@ -24,8 +24,7 @@ class BaseTableViewController: UITableViewController , TableViewHelperProtocol {
         super.viewWillAppear(animated)
         
         MobClick.beginLogPageView(NSStringFromClass(self.classForCoder))
-        
-        
+        AppDataHelper.instance().userBalance()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

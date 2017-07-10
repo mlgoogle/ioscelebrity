@@ -16,6 +16,12 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startModelRequest(packet, modelClass: StarUserModel.self, complete: complete, error: error)
     }
     
+    // MARK: - 用户信息(模型)
+    func userinfo(model: LoginModle, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet : SocketDataPacket = SocketDataPacket.init(opcode: .userinfo, model: model)
+        startModelRequest(packet, modelClass: UserBalance.self, complete: complete, error: error)
+    }
+    
     // MARK: - 获取短信验证码(模型)
     func sendVerificationCode(model: SendVerificationCodeRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         
