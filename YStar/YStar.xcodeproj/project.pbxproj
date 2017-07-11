@@ -136,6 +136,8 @@
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
 		8D91709D1F149CC60027AF03 /* MeetTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */; };
 		8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */; };
+		8D9170A11F14D7900027AF03 /* MeetOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */; };
+		8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */; };
 		8DBDBFDF1F0F290400736408 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDBFDE1F0F290400736408 /* UIView.swift */; };
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
@@ -490,6 +492,8 @@
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
 		8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeCell.swift; path = YStar/Scenes/Controller/MeetTypeCell.swift; sourceTree = SOURCE_ROOT; };
 		8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeDetailCell.swift; path = YStar/Scenes/Controller/MeetTypeDetailCell.swift; sourceTree = SOURCE_ROOT; };
+		8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderCell.swift; path = YStar/Scenes/Controller/MeetOrderCell.swift; sourceTree = SOURCE_ROOT; };
+		8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderDetailCell.swift; path = YStar/Scenes/Controller/MeetOrderDetailCell.swift; sourceTree = SOURCE_ROOT; };
 		8DBDBFDE1F0F290400736408 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
@@ -1215,6 +1219,8 @@
 			children = (
 				8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */,
 				8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */,
+				8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */,
+				8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1759,6 +1765,7 @@
 				8E8FB0C51F0AA4EA00A7B85C /* NSObject+GCD.swift in Sources */,
 				8D312A561F0BC233001B54F3 /* NIMKitNotificationFirer.m in Sources */,
 				8D312AAE1F0BC233001B54F3 /* NIMKitTimerHolder.m in Sources */,
+				8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */,
 				8D312A991F0BC233001B54F3 /* NIMSessionListViewController.m in Sources */,
 				8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */,
 				8D312A851F0BC233001B54F3 /* NIMSessionDataSourceImpl.m in Sources */,
@@ -1813,6 +1820,7 @@
 				8D312A671F0BC233001B54F3 /* NIMInputEmoticonContainerView.m in Sources */,
 				8E8FB0CF1F0AA4EA00A7B85C /* TableViewHelper.swift in Sources */,
 				8E8FB0CC1F0AA4EA00A7B85C /* UIView+Extension.swift in Sources */,
+				8D9170A11F14D7900027AF03 /* MeetOrderCell.swift in Sources */,
 				8D312A4E1F0BC233001B54F3 /* NIMKitDataProviderImpl.m in Sources */,
 				8E8FB0D11F0AA4EA00A7B85C /* IPManager.c in Sources */,
 				8D312AA41F0BC233001B54F3 /* NIMTeamMemberCardViewController.m in Sources */,

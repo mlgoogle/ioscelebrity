@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+private let KMeetOrderCellID = "MeetOrderCell"
+
 class MeetOrderVC: BaseTableViewController {
 
     override func viewDidLoad() {
@@ -20,4 +23,29 @@ class MeetOrderVC: BaseTableViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 60
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 5
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let meetOrderCell = tableView.dequeueReusableCell(withIdentifier: KMeetOrderCellID, for: indexPath) as! MeetOrderCell
+        
+        return meetOrderCell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        let meetOrderDetailVC = UIStoryboard.init(name: "Meet", bundle: nil).instantiateViewController(withIdentifier: "MeetOrderDetailVC")
+        self.navigationController?.pushViewController(meetOrderDetailVC, animated: true)
+        
+    }
 }
