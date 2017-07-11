@@ -20,7 +20,7 @@ class APITestCase: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+    //功能测试：测试登录功能（异步测试）
     func testLogin() {
         let expectOption = expectation(description: "登录测试")
         let param = LoginRequestModel()
@@ -45,12 +45,24 @@ class APITestCase: XCTestCase {
         }, error: nil)
         waitForExpectations(timeout: 15, handler: nil)
     }
+    //逻辑测试举例： 测试期望结果与实际结果是否相等
+    func testAdd(){
+        let expectValue = 30
+        let actualValue = 30
+        XCTAssertEqual(expectValue, actualValue)
+    }
     
+    //性能测试：测试登录功能和Add方法性能表现
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            self.testLogin()
+            
+            self.testAdd()
         }
     }
+    
+    
     
 }
