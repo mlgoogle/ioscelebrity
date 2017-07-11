@@ -43,13 +43,19 @@ class APITestCase: XCTestCase {
             }
             return nil
         }, error: nil)
-        waitForExpectations(timeout: 15, handler: nil)
+        // waitForExpectations(timeout: 15, handler: nil)
+        self.waitForExpectations(timeout: 15) { (error) in
+            if let error = error {
+                print("Error : \(error.localizedDescription)")
+            }
+        }
     }
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            self.testLogin()
         }
     }
     

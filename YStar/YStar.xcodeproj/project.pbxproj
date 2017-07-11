@@ -134,6 +134,8 @@
 		8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */; };
 		8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */; };
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
+		8D91709D1F149CC60027AF03 /* MeetTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */; };
+		8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */; };
 		8DBDBFDF1F0F290400736408 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDBFDE1F0F290400736408 /* UIView.swift */; };
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
@@ -486,6 +488,8 @@
 		8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitEmoticon.bundle; sourceTree = "<group>"; };
 		8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
+		8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeCell.swift; path = YStar/Scenes/Controller/MeetTypeCell.swift; sourceTree = SOURCE_ROOT; };
+		8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeDetailCell.swift; path = YStar/Scenes/Controller/MeetTypeDetailCell.swift; sourceTree = SOURCE_ROOT; };
 		8DBDBFDE1F0F290400736408 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
@@ -1209,6 +1213,8 @@
 		8E435F471F0B440B00FB1976 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */,
+				8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1623,7 +1629,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		656D9BC8F054A9366B43ACC6 /* [CP] Copy Pods Resources */ = {
@@ -1668,7 +1674,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BFEC3F231DF6A73600B36A0E /* ShellScript */ = {
@@ -1745,6 +1751,7 @@
 				8D312A6E1F0BC233001B54F3 /* NIMKitEvent.m in Sources */,
 				8D312A701F0BC233001B54F3 /* NIMKitInfoFetchOption.m in Sources */,
 				8D312A911F0BC233001B54F3 /* NIMSessionNetChatNotifyContentView.m in Sources */,
+				8D91709D1F149CC60027AF03 /* MeetTypeCell.swift in Sources */,
 				8D312A7C1F0BC233001B54F3 /* NIMUnsupportContentConfig.m in Sources */,
 				8E8FB0CD1F0AA4EA00A7B85C /* UIViewController+Extension.swift in Sources */,
 				8E435F521F0B450E00FB1976 /* FansListViewController.swift in Sources */,
@@ -1811,6 +1818,7 @@
 				8D312AA41F0BC233001B54F3 /* NIMTeamMemberCardViewController.m in Sources */,
 				8D312A741F0BC233001B54F3 /* NIMAudioContentConfig.m in Sources */,
 				8E8FB0DA1F0AA4EA00A7B85C /* AppServerHelper.swift in Sources */,
+				8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */,
 				8D312AA71F0BC233001B54F3 /* NIMTeamAnnouncementListCell.m in Sources */,
 				8D312A7B1F0BC233001B54F3 /* NIMTipContentConfig.m in Sources */,
 				8D312A6B1F0BC233001B54F3 /* NIMInputMoreContainerView.m in Sources */,

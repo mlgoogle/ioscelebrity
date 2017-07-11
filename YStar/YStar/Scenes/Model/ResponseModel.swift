@@ -42,7 +42,6 @@ class verifyCodeModel: BaseModel {
     var vToken = ""
 }
 
-
 class BankModel: BaseModel {
     
     //返回的列表的key
@@ -99,5 +98,15 @@ class BindBankModel: BaseModel {
     var name:  String = ""
     var bankName:  String = ""
     var bankId:  String = ""
-    
 }
+
+// 约见类型model
+class MeetTypeModel: BaseModel {
+    var meetTypeId = ""
+    var meetTypeTitle = ""
+    var meetTypePrice = ""
+    var meetSelect = ""
+}
+
+
+
