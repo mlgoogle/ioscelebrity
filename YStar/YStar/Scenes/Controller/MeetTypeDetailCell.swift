@@ -25,6 +25,17 @@ class MeetTypeDetailCell: UITableViewCell {
         // Initialization code
     }
     
+    // FIXME: - 提醒
+    func setMeetTypeDetail() {
+        
+        self.meetTypeImageView.backgroundColor = UIColor.red
+        
+        self.meetTypeLabel.text = "电视采访"
+        
+        self.meetTypePriceLabel.text = "时间消耗：1000秒"
+        
+        self.meetTypeIsSelectedImageView.backgroundColor = UIColor.orange
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

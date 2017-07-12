@@ -10,6 +10,7 @@ import UIKit
 
 private let KMeetOrderDetailCellID = "MeetOrderDetailCell"
 
+
 class MeetOrderDetailVC: BaseTableViewController {
 
     // 同意按钮
@@ -19,15 +20,9 @@ class MeetOrderDetailVC: BaseTableViewController {
         super.viewDidLoad()
 
         self.title = "约见订单详情"
-        
-        self.tableView.contentInset = UIEdgeInsetsMake(12, 0, 0, 0)
         self.tableView.separatorStyle = .none
-        
-    }
-
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 300
+        self.tableView.estimatedRowHeight = 300
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,6 +35,10 @@ class MeetOrderDetailVC: BaseTableViewController {
         
         let meetOrderDetailCell = tableView.dequeueReusableCell(withIdentifier: KMeetOrderDetailCellID, for: indexPath) as! MeetOrderDetailCell
         meetOrderDetailCell.selectionStyle = .none
+        
+        // TODO: - 待处理数据
+        meetOrderDetailCell.setMeetOrderDetail()
+        
         return meetOrderDetailCell
     }
     

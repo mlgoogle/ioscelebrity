@@ -62,6 +62,9 @@ class MeetTypeDetailVC: BaseTableViewController {
         
         let meetTypeDetailCell = tableView.dequeueReusableCell(withIdentifier: KMeetTypeDetailCellID, for: indexPath) as! MeetTypeDetailCell
         
+        // TODO: - 待处理数据
+        meetTypeDetailCell.setMeetTypeDetail()
+        
         return meetTypeDetailCell
         
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "detailCellID", for: indexPath)

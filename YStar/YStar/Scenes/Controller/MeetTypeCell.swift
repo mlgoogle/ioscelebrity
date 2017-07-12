@@ -98,10 +98,11 @@ class MeetTypeItemCell: UICollectionViewCell {
         self.backgroundColor = colorRun
     }
     
+    // FIXME: - 提醒
     func setMeetTypeItem() {
-        meetTypeImageView.backgroundColor = UIColor.blue
-        meetTypeLabel.text = "录制节目"
-        meetTypePriceLabel.text = "600秒"
+        meetTypeImageView.backgroundColor = UIColor.orange
+        meetTypeLabel.text = "开演唱会"
+        meetTypePriceLabel.text = "1000秒"
     }
     
     override func layoutSubviews() {
@@ -126,7 +127,14 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         
         setupInit()
     }
-
+    
+    // FIXME: - 提醒
+    func setMeetType() {
+        
+        self.meetTypeCollectionViewCell.reloadData()
+    }
+    
+    
     func setupInit() {
         
         self.meetTypeCollectionViewCell.dataSource = self
@@ -152,7 +160,6 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         if meetTypeArryCount == 0 {
             return 1
         }
-        
         // 分页
         let pageNum = (meetTypeArryCount - 1) / 8 + 1
         if meetTypeArryCount == 0 {
@@ -172,6 +179,8 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
             return cell
         }
         let meetTypeItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: KMeetTypeItemCellID, for: indexPath) as! MeetTypeItemCell
+        
+        // TODO: - 待处理数据
         meetTypeItemCell.setMeetTypeItem()
         
         return meetTypeItemCell

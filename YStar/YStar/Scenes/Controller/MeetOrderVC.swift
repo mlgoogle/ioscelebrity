@@ -16,12 +16,7 @@ class MeetOrderVC: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.contentInset = UIEdgeInsetsMake(64 + 40 + 33, 0, 49, 0)
         self.tableView.separatorStyle = .none
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -38,8 +33,9 @@ class MeetOrderVC: BaseTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let meetOrderCell = tableView.dequeueReusableCell(withIdentifier: KMeetOrderCellID, for: indexPath) as! MeetOrderCell
-        meetOrderCell.isSureLabel.text = "未确认"
-        meetOrderCell.isSureLabel.backgroundColor = UIColor.init(hexString: "#CCCCCC")
+        
+        // TODO: - 待处理数据
+        meetOrderCell.setMeetOrder()
         
         return meetOrderCell
     }
