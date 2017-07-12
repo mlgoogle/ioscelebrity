@@ -77,13 +77,10 @@
                             <outlet property="delegate" destination="wPm-EO-ikc" id="mXx-03-vd8"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="4nS-Kn-QaH" kind="push" identifier="CreatNewsVC" id="12L-Du-20R"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGN-du-7tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2169" y="627"/>
+            <point key="canvasLocation" x="1020" y="-690"/>
         </scene>
         <!--Star NewsVC-->
         <scene sceneID="jeI-UR-MsM">
@@ -275,12 +272,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3K-H0-Mew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2169" y="-277"/>
+            <point key="canvasLocation" x="33" y="-690"/>
         </scene>
         <!--粉丝管理-->
         <scene sceneID="8cZ-r5-c4Z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="36D-FL-MBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="粉丝管理" id="GzK-Gs-cDK" customClass="FansManagerVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="B3g-Vm-0sv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -350,7 +346,13 @@
                             <outlet property="delegate" destination="GzK-Gs-cDK" id="gUs-1B-LBX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="粉丝管理" id="wmh-56-LYA"/>
+                    <navigationItem key="navigationItem" title="粉丝管理" id="wmh-56-LYA">
+                        <barButtonItem key="rightBarButtonItem" title="发布动态" id="DqC-Pa-vaZ">
+                            <connections>
+                                <segue destination="4nS-Kn-QaH" kind="push" id="thh-ze-Jqy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="chatBtn" destination="eRv-L1-t2l" id="n2s-4f-EZy"/>
                         <outlet property="choseView" destination="VhZ-EC-rwT" id="fZM-cF-vfc"/>
@@ -358,13 +360,14 @@
                         <outlet property="newsBtn" destination="duh-Cg-a60" id="csy-Vx-hEN"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36D-FL-MBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1020" y="140"/>
         </scene>
         <!--发布动态-->
         <scene sceneID="nY5-c4-7aj">
             <objects>
-                <tableViewController restorationIdentifier="CreatNewsVC" storyboardIdentifier="CreatNewsVC" id="4nS-Kn-QaH" customClass="CreatNewsVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="CreatNewsVC" storyboardIdentifier="CreatNewsVC" hidesBottomBarWhenPushed="YES" id="4nS-Kn-QaH" customClass="CreatNewsVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="t3n-n3-RFP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,7 +391,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFK-zj-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3238" y="627"/>
+            <point key="canvasLocation" x="2014" y="140"/>
         </scene>
         <!--粉丝管理-->
         <scene sceneID="6wn-iV-VtX">
