@@ -14,12 +14,12 @@
         <scene sceneID="jz9-Vb-dOd">
             <objects>
                 <tableViewController restorationIdentifier="FansListVC" storyboardIdentifier="FansListVC" id="wPm-EO-ikc" customClass="FansListVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GYE-oy-tVP">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GYE-oy-tVP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FansListCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="FansListCell" rowHeight="60" id="PcF-Ex-KTz" customClass="FansListCell" customModule="YStar" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FansListCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="FansListCell" rowHeight="60" id="PcF-Ex-KTz" customClass="FansListCell" customModule="YStar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PcF-Ex-KTz" id="K5G-Gu-aKm">
@@ -77,10 +77,13 @@
                             <outlet property="delegate" destination="wPm-EO-ikc" id="mXx-03-vd8"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="4nS-Kn-QaH" kind="push" identifier="CreatNewsVC" id="12L-Du-20R"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGN-du-7tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="-553"/>
+            <point key="canvasLocation" x="2169" y="627"/>
         </scene>
         <!--Star NewsVC-->
         <scene sceneID="jeI-UR-MsM">
@@ -272,7 +275,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u3K-H0-Mew" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1797.5999999999999" y="-552.77361319340332"/>
+            <point key="canvasLocation" x="2169" y="-277"/>
         </scene>
         <!--粉丝管理-->
         <scene sceneID="8cZ-r5-c4Z">
@@ -353,7 +356,6 @@
                         <outlet property="choseView" destination="VhZ-EC-rwT" id="fZM-cF-vfc"/>
                         <outlet property="contentSV" destination="so4-KC-ns0" id="WAE-8e-do2"/>
                         <outlet property="newsBtn" destination="duh-Cg-a60" id="csy-Vx-hEN"/>
-                        <segue destination="4nS-Kn-QaH" kind="push" identifier="CreatNewsVC" id="Mou-nY-wnD"/>
                     </connections>
                 </tableViewController>
             </objects>
@@ -386,7 +388,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFK-zj-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798" y="140"/>
+            <point key="canvasLocation" x="3238" y="627"/>
         </scene>
         <!--粉丝管理-->
         <scene sceneID="6wn-iV-VtX">
