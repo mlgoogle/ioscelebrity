@@ -12,6 +12,15 @@ import SVProgressHUD
 import Qiniu
 extension UIViewController {
     
+//     func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        MobClick.beginLogPageView(NSStringFromClass(self.classForCoder))
+//        
+//    }
+    
+    
+    
     static func storyboardViewController<T:UIViewController>(_ storyboard:UIStoryboard) ->T {
         return storyboard.instantiateViewController(withIdentifier: T.className()) as! T;
     }

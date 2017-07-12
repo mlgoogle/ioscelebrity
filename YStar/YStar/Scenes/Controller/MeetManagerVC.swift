@@ -56,7 +56,6 @@ class MeetManagerVC: BaseTableViewController {
     
     
     override func loadView() {
-        
         // 将tableView替换成view
         let currentView = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height))
         currentView.backgroundColor = UIColor.white
@@ -187,7 +186,7 @@ class MeetManagerVC: BaseTableViewController {
         let button = titlesView!.subviews[index] as! TitleButton
         
         titleButtonClick(button)
-    }
+    }    
 }
 
 
