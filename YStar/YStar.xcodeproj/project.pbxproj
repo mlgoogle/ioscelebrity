@@ -147,12 +147,15 @@
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
 		8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E021F0E0C4D006D3C68 /* Meet.storyboard */; };
 		8E338E0A1F0E2EB6006D3C68 /* ResetPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */; };
+		8E36FC031F14B22C007AEFA6 /* FansManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36FC021F14B22C007AEFA6 /* FansManagerVC.swift */; };
+		8E36FC051F14B293007AEFA6 /* FansListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36FC041F14B293007AEFA6 /* FansListVC.swift */; };
+		8E36FC071F14B2B6007AEFA6 /* StarNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36FC061F14B2B6007AEFA6 /* StarNewsVC.swift */; };
+		8E36FC091F14B5A8007AEFA6 /* CreatNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E36FC081F14B5A8007AEFA6 /* CreatNewsVC.swift */; };
 		8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F461F0B440B00FB1976 /* BaseModel.swift */; };
 		8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */; };
 		8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4B1F0B449F00FB1976 /* LoginVC.swift */; };
 		8E435F4E1F0B44C500FB1976 /* BenifityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */; };
 		8E435F501F0B44E800FB1976 /* BenifityDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */; };
-		8E435F521F0B450E00FB1976 /* FansListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F511F0B450E00FB1976 /* FansListViewController.swift */; };
 		8E435F541F0B452C00FB1976 /* MeetManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */; };
 		8E435F561F0B454400FB1976 /* MeetTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F551F0B454400FB1976 /* MeetTypeVC.swift */; };
 		8E435F581F0B455D00FB1976 /* MeetOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */; };
@@ -503,12 +506,15 @@
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8E338E021F0E0C4D006D3C68 /* Meet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Meet.storyboard; sourceTree = "<group>"; };
 		8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPwdVC.swift; sourceTree = "<group>"; };
+		8E36FC021F14B22C007AEFA6 /* FansManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansManagerVC.swift; sourceTree = "<group>"; };
+		8E36FC041F14B293007AEFA6 /* FansListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansListVC.swift; sourceTree = "<group>"; };
+		8E36FC061F14B2B6007AEFA6 /* StarNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarNewsVC.swift; sourceTree = "<group>"; };
+		8E36FC081F14B5A8007AEFA6 /* CreatNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatNewsVC.swift; sourceTree = "<group>"; };
 		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityVC.swift; sourceTree = "<group>"; };
 		8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityDetailVC.swift; sourceTree = "<group>"; };
-		8E435F511F0B450E00FB1976 /* FansListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansListViewController.swift; sourceTree = "<group>"; };
 		8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetManagerVC.swift; sourceTree = "<group>"; };
 		8E435F551F0B454400FB1976 /* MeetTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeVC.swift; sourceTree = "<group>"; };
 		8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderVC.swift; sourceTree = "<group>"; };
@@ -1180,25 +1186,60 @@
 			path = storyboard;
 			sourceTree = "<group>";
 		};
-		8E435F441F0B440B00FB1976 /* Controller */ = {
+		8E36FBFE1F14B0EE007AEFA6 /* Fans */ = {
 			isa = PBXGroup;
 			children = (
-				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
-				8E435F4B1F0B449F00FB1976 /* LoginVC.swift */,
+				8E36FC021F14B22C007AEFA6 /* FansManagerVC.swift */,
+				8E36FC041F14B293007AEFA6 /* FansListVC.swift */,
+				8E36FC061F14B2B6007AEFA6 /* StarNewsVC.swift */,
+				8E36FC081F14B5A8007AEFA6 /* CreatNewsVC.swift */,
+			);
+			name = Fans;
+			sourceTree = "<group>";
+		};
+		8E36FBFF1F14B0FF007AEFA6 /* Meet */ = {
+			isa = PBXGroup;
+			children = (
+				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
+				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
+				8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */,
+				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
+				8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */,
+			);
+			name = Meet;
+			sourceTree = "<group>";
+		};
+		8E36FC001F14B10A007AEFA6 /* Benifity */ = {
+			isa = PBXGroup;
+			children = (
 				8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */,
 				8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */,
 				8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */,
 				8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */,
 				8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */,
 				8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */,
-				8E435F511F0B450E00FB1976 /* FansListViewController.swift */,
-				8E435F531F0B452C00FB1976 /* MeetManagerVC.swift */,
-				8E435F551F0B454400FB1976 /* MeetTypeVC.swift */,
-				8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */,
-				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
-				8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */,
-				8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */,
+			);
+			name = Benifity;
+			sourceTree = "<group>";
+		};
+		8E36FC011F14B116007AEFA6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
 				8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */,
+				8E435F4B1F0B449F00FB1976 /* LoginVC.swift */,
+				8E338E091F0E2EB6006D3C68 /* ResetPwdVC.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		8E435F441F0B440B00FB1976 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E36FC011F14B116007AEFA6 /* Login */,
+				8E36FC001F14B10A007AEFA6 /* Benifity */,
+				8E36FBFF1F14B0FF007AEFA6 /* Meet */,
+				8E36FBFE1F14B0EE007AEFA6 /* Fans */,
+				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1755,12 +1796,12 @@
 				8D312A811F0BC233001B54F3 /* NIMMessageCellFactory.m in Sources */,
 				8D312A521F0BC233001B54F3 /* NIMAvatarImageView.m in Sources */,
 				8D312A6E1F0BC233001B54F3 /* NIMKitEvent.m in Sources */,
+				8E36FC091F14B5A8007AEFA6 /* CreatNewsVC.swift in Sources */,
 				8D312A701F0BC233001B54F3 /* NIMKitInfoFetchOption.m in Sources */,
 				8D312A911F0BC233001B54F3 /* NIMSessionNetChatNotifyContentView.m in Sources */,
 				8D91709D1F149CC60027AF03 /* MeetTypeCell.swift in Sources */,
 				8D312A7C1F0BC233001B54F3 /* NIMUnsupportContentConfig.m in Sources */,
 				8E8FB0CD1F0AA4EA00A7B85C /* UIViewController+Extension.swift in Sources */,
-				8E435F521F0B450E00FB1976 /* FansListViewController.swift in Sources */,
 				8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */,
 				8E8FB0C51F0AA4EA00A7B85C /* NSObject+GCD.swift in Sources */,
 				8D312A561F0BC233001B54F3 /* NIMKitNotificationFirer.m in Sources */,
@@ -1812,6 +1853,7 @@
 				8D312A571F0BC233001B54F3 /* NIMLoadProgressView.m in Sources */,
 				8D312AAB1F0BC233001B54F3 /* NIMTimePickerView.m in Sources */,
 				8D312AA01F0BC233001B54F3 /* NIMAdvancedTeamCardViewController.m in Sources */,
+				8E36FC031F14B22C007AEFA6 /* FansManagerVC.swift in Sources */,
 				8D312A4C1F0BC233001B54F3 /* NIMCommonTableDelegate.m in Sources */,
 				8E8FB0B61F0AA4EA00A7B85C /* SocketConst.swift in Sources */,
 				8D312AAC1F0BC233001B54F3 /* NIMKitDevice.m in Sources */,
@@ -1894,10 +1936,12 @@
 				8E8FB0BE1F0AA4EA00A7B85C /* BaseCustomTableViewController.swift in Sources */,
 				8E8FB0B71F0AA4EA00A7B85C /* APISocketHelper.swift in Sources */,
 				8D312A601F0BC233001B54F3 /* NIMContactSelectTabView.m in Sources */,
+				8E36FC071F14B2B6007AEFA6 /* StarNewsVC.swift in Sources */,
 				8D312A7F1F0BC233001B54F3 /* NIMKitLocationPoint.m in Sources */,
 				8D312A961F0BC233001B54F3 /* NIMLocationViewController.m in Sources */,
 				8D312A751F0BC233001B54F3 /* NIMBaseSessionContentConfig.m in Sources */,
 				8D312A881F0BC233001B54F3 /* NIMSessionMsgDatasource.m in Sources */,
+				8E36FC051F14B293007AEFA6 /* FansListVC.swift in Sources */,
 				8E8FB0CB1F0AA4EA00A7B85C /* UITableView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

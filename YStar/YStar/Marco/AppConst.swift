@@ -81,6 +81,10 @@ class AppConst {
     enum iconFontName: String {
         case backItem = "\u{e61a}"
         case closeIcon = "\u{e62b}"
+        case newsIcon = "\u{e629}"
+        case userPlaceHolder = "\u{e60d}"
+        case thumpUpIcon = "\u{e624}"
+        case newsPlaceHolder = "\u{e603}"
     }
     
     enum UserDefaultKey: String {
