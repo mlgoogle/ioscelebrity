@@ -182,6 +182,17 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.width)
     }
     
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        
+        let view = super.hitTest(point, with: event)
+        
+        if view == self.meetTypeCollectionViewCell {
+            
+            return self.meetTypeCollectionViewCell
+        }
+        return view
+    }
+    
     
     
     // CustomLayoutDataSource

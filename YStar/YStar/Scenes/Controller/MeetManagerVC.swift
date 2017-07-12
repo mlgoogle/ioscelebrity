@@ -17,6 +17,9 @@ class TitleButton: UIButton {
 
         self.setTitleColor(UIColor.init(hexString: "#C2CFD8"), for: .normal)
         self.setTitleColor(UIColor.init(hexString: "#8C0808"), for: .selected)
+        // self.titleLabel?.backgroundColor = UIColor.orange
+        // self.titleLabel?.layer.cornerRadius = 13
+        // self.titleLabel?.layer.masksToBounds = true
         self.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
     }
     
