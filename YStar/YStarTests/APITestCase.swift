@@ -43,7 +43,12 @@ class APITestCase: XCTestCase {
             }
             return nil
         }, error: nil)
-        waitForExpectations(timeout: 15, handler: nil)
+        // waitForExpectations(timeout: 15, handler: nil)
+        self.waitForExpectations(timeout: 15) { (error) in
+            if let error = error {
+                print("Error : \(error.localizedDescription)")
+            }
+        }
     }
     //逻辑测试举例： 测试期望结果与实际结果是否相等
     func testAdd(){
@@ -58,8 +63,6 @@ class APITestCase: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
             self.testLogin()
-            
-            self.testAdd()
         }
     }
     
