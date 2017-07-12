@@ -7,19 +7,30 @@
 //
 
 import UIKit
-
+import Kingfisher
 class CreatNewsVC: BaseTableViewController {
-
+    
+    @IBOutlet var commentTV: UITextView!
+    @IBOutlet var commentPlace: UILabel!
+    @IBOutlet var commentCountL: UILabel!
+    @IBOutlet var commentPic: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        commentPic.setImage(UIImage.imageWith(AppConst.iconFontName.addIcon.rawValue, fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.init(rgbHex: 0x666666)), for: .normal)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //选择图片
+    @IBAction func commentPicTapped(_ sender: UIButton) {
+        
+    }
+    //点击取消
+    @IBAction func cancelItemTapped(_ sender: UIBarButtonItem) {
+        
+    }
+    //发布文章
+    @IBAction func publishItemTapped(_ sender: UIBarButtonItem) {
+        
     }
     
-
+    
 }

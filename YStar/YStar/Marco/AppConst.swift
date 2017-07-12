@@ -85,6 +85,7 @@ class AppConst {
         case userPlaceHolder = "\u{e60d}"
         case thumpUpIcon = "\u{e624}"
         case newsPlaceHolder = "\u{e603}"
+        case addIcon = "\u{e606}"
     }
     
     enum UserDefaultKey: String {
