@@ -164,6 +164,15 @@
 		8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */; };
 		8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */; };
 		8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E435F5F1F0B754D00FB1976 /* iconfont.ttf */; };
+		8E4C4D1E1F17055F0002EABF /* KeyboardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C4D1D1F17055F0002EABF /* KeyboardInputViewController.swift */; };
+		8E4C4D2A1F172CA70002EABF /* aio_face_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4C4D221F172CA70002EABF /* aio_face_delete@2x.png */; };
+		8E4C4D2B1F172CA70002EABF /* aio_face_delete_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E4C4D231F172CA70002EABF /* aio_face_delete_pressed@2x.png */; };
+		8E4C4D2C1F172CA70002EABF /* EmojisList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E4C4D241F172CA70002EABF /* EmojisList.plist */; };
+		8E4C4D2D1F172CA70002EABF /* HHCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C4D251F172CA70002EABF /* HHCollectionViewFlowLayout.swift */; };
+		8E4C4D2E1F172CA70002EABF /* HHEmojiKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C4D261F172CA70002EABF /* HHEmojiKeyboard.swift */; };
+		8E4C4D2F1F172CA70002EABF /* HHEmojiKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C4D271F172CA70002EABF /* HHEmojiKeyboardCell.swift */; };
+		8E4C4D301F172CA70002EABF /* HHEmojiManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C4D281F172CA70002EABF /* HHEmojiManage.swift */; };
+		8E4C4D311F172CA70002EABF /* HHImageKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4C4D291F172CA70002EABF /* HHImageKeyboardCell.swift */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
 		8E8FB0B41F0AA4EA00A7B85C /* CommenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */; };
@@ -524,6 +533,15 @@
 		8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		8E435F5F1F0B754D00FB1976 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		8E4C4D1D1F17055F0002EABF /* KeyboardInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInputViewController.swift; sourceTree = "<group>"; };
+		8E4C4D221F172CA70002EABF /* aio_face_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aio_face_delete@2x.png"; sourceTree = "<group>"; };
+		8E4C4D231F172CA70002EABF /* aio_face_delete_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aio_face_delete_pressed@2x.png"; sourceTree = "<group>"; };
+		8E4C4D241F172CA70002EABF /* EmojisList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = EmojisList.plist; sourceTree = "<group>"; };
+		8E4C4D251F172CA70002EABF /* HHCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		8E4C4D261F172CA70002EABF /* HHEmojiKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHEmojiKeyboard.swift; sourceTree = "<group>"; };
+		8E4C4D271F172CA70002EABF /* HHEmojiKeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHEmojiKeyboardCell.swift; sourceTree = "<group>"; };
+		8E4C4D281F172CA70002EABF /* HHEmojiManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHEmojiManage.swift; sourceTree = "<group>"; };
+		8E4C4D291F172CA70002EABF /* HHImageKeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHImageKeyboardCell.swift; sourceTree = "<group>"; };
 		8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIHelper.swift; sourceTree = "<group>"; };
 		8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSocketAPI.swift; sourceTree = "<group>"; };
 		8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenApi.swift; sourceTree = "<group>"; };
@@ -1185,6 +1203,7 @@
 				8E36FC041F14B293007AEFA6 /* FansListVC.swift */,
 				8E36FC061F14B2B6007AEFA6 /* StarNewsVC.swift */,
 				8E36FC081F14B5A8007AEFA6 /* CreatNewsVC.swift */,
+				8E4C4D1D1F17055F0002EABF /* KeyboardInputViewController.swift */,
 			);
 			name = Fans;
 			sourceTree = "<group>";
@@ -1256,6 +1275,21 @@
 				8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		8E4C4D211F172CA70002EABF /* EmojiKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8E4C4D221F172CA70002EABF /* aio_face_delete@2x.png */,
+				8E4C4D231F172CA70002EABF /* aio_face_delete_pressed@2x.png */,
+				8E4C4D241F172CA70002EABF /* EmojisList.plist */,
+				8E4C4D251F172CA70002EABF /* HHCollectionViewFlowLayout.swift */,
+				8E4C4D261F172CA70002EABF /* HHEmojiKeyboard.swift */,
+				8E4C4D271F172CA70002EABF /* HHEmojiKeyboardCell.swift */,
+				8E4C4D281F172CA70002EABF /* HHEmojiManage.swift */,
+				8E4C4D291F172CA70002EABF /* HHImageKeyboardCell.swift */,
+			);
+			path = EmojiKeyboard;
 			sourceTree = "<group>";
 		};
 		8E8FB04A1F0AA4EA00A7B85C /* YStar */ = {
@@ -1364,6 +1398,7 @@
 		8E8FB0701F0AA4EA00A7B85C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				8E4C4D211F172CA70002EABF /* EmojiKeyboard */,
 				8D31293C1F0BC232001B54F3 /* NIMKit */,
 				8D312A411F0BC233001B54F3 /* Resources */,
 				8E8FB0711F0AA4EA00A7B85C /* MJRefresh */,
@@ -1625,14 +1660,17 @@
 				8E8FB0DF1F0AA4EA00A7B85C /* BankList.plist in Resources */,
 				8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */,
 				8E8FB0DB1F0AA4EA00A7B85C /* Info.plist in Resources */,
+				8E4C4D2B1F172CA70002EABF /* aio_face_delete_pressed@2x.png in Resources */,
 				8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */,
 				8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */,
 				8E8FB0D01F0AA4EA00A7B85C /* MJRefresh.bundle in Resources */,
 				8D0090EF1F0E11BB00AB9C05 /* Benifity.storyboard in Resources */,
+				8E4C4D2A1F172CA70002EABF /* aio_face_delete@2x.png in Resources */,
 				8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */,
 				8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
 				8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */,
+				8E4C4D2C1F172CA70002EABF /* EmojisList.plist in Resources */,
 				8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */,
 				8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */,
 				8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */,
@@ -1772,6 +1810,7 @@
 				8D312A611F0BC233001B54F3 /* NIMContactSelectViewController.m in Sources */,
 				8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */,
 				8D312AA61F0BC233001B54F3 /* NIMAdvancedTeamMemberCell.m in Sources */,
+				8E4C4D2F1F172CA70002EABF /* HHEmojiKeyboardCell.swift in Sources */,
 				8D312A891F0BC233001B54F3 /* NIMSessionTableAdapter.m in Sources */,
 				8D312A941F0BC233001B54F3 /* NIMSessionUnknowContentView.m in Sources */,
 				8E8FB0BA1F0AA4EA00A7B85C /* SocketHelper.swift in Sources */,
@@ -1804,6 +1843,7 @@
 				8E36FE4C1F15CE44007AEFA6 /* yRuntime.swift in Sources */,
 				8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */,
 				8D312A991F0BC233001B54F3 /* NIMSessionListViewController.m in Sources */,
+				8E4C4D1E1F17055F0002EABF /* KeyboardInputViewController.swift in Sources */,
 				8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */,
 				8D312A851F0BC233001B54F3 /* NIMSessionDataSourceImpl.m in Sources */,
 				8D312A691F0BC233001B54F3 /* NIMInputEmoticonParser.m in Sources */,
@@ -1811,6 +1851,7 @@
 				8D312A9D1F0BC233001B54F3 /* NIMTeamCardRowItem.m in Sources */,
 				8E36FE4B1F15CE44007AEFA6 /* UIView.swift in Sources */,
 				8D312AAD1F0BC233001B54F3 /* NIMKitFileLocationHelper.m in Sources */,
+				8E4C4D2E1F172CA70002EABF /* HHEmojiKeyboard.swift in Sources */,
 				8D312A681F0BC233001B54F3 /* NIMInputEmoticonManager.m in Sources */,
 				8D312A9A1F0BC233001B54F3 /* NIMSessionListCell.m in Sources */,
 				8E8FB0C81F0AA4EA00A7B85C /* UIFont+Extension.swift in Sources */,
@@ -1866,6 +1907,7 @@
 				8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */,
 				8D312AA71F0BC233001B54F3 /* NIMTeamAnnouncementListCell.m in Sources */,
 				8D312A7B1F0BC233001B54F3 /* NIMTipContentConfig.m in Sources */,
+				8E4C4D311F172CA70002EABF /* HHImageKeyboardCell.swift in Sources */,
 				8D312A6B1F0BC233001B54F3 /* NIMInputMoreContainerView.m in Sources */,
 				8D312A6D1F0BC233001B54F3 /* NIMInputView.m in Sources */,
 				8D312A481F0BC233001B54F3 /* UIImage+NIM.m in Sources */,
@@ -1894,6 +1936,7 @@
 				8D312A4F1F0BC233001B54F3 /* NIMKitSwitcherCell.m in Sources */,
 				8D312A9B1F0BC233001B54F3 /* NIMCardMemberItem.m in Sources */,
 				8E8FB0C31F0AA4EA00A7B85C /* BaseMode+Extension.swift in Sources */,
+				8E4C4D2D1F172CA70002EABF /* HHCollectionViewFlowLayout.swift in Sources */,
 				8D312A491F0BC233001B54F3 /* UITableView+NIMScrollToBottom.m in Sources */,
 				8D312A4A1F0BC233001B54F3 /* UIView+NIM.m in Sources */,
 				8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */,
@@ -1926,6 +1969,7 @@
 				8E8FB0C01F0AA4EA00A7B85C /* BaseTableViewController.swift in Sources */,
 				8D312A501F0BC233001B54F3 /* NIMKitUIConfig.m in Sources */,
 				8D312A8D1F0BC233001B54F3 /* NIMSessionFileTransContentView.m in Sources */,
+				8E4C4D301F172CA70002EABF /* HHEmojiManage.swift in Sources */,
 				8D0090F31F0E14E100AB9C05 /* WithdrawalVC.swift in Sources */,
 				8E8FB0C41F0AA4EA00A7B85C /* NSDateExt.swift in Sources */,
 				8D312AA21F0BC233001B54F3 /* NIMNormalTeamCardViewController.m in Sources */,

@@ -29,11 +29,13 @@ struct SocketPacketHead {
 #import "WechatAuthSDK.h"
 #import "WXApi.h"
 #import "WXApiObject.h"
+#import <YYText/YYText.h>
 #import <CommonCrypto/CommonDigest.h>
 #import <sys/utsname.h>
 #import <DKNightVersion/DKNightVersion.h>
 #import "IPManager.h"
 #import <NIMSDK/NIMSDK.h>
+#import "NIMInputView.h"
 #import "UMMobClick/MobClick.h"
 #import <objc/runtime.h>
 //#import <CommonCrypto/CommonCrytor.h>

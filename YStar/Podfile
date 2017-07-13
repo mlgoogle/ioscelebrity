@@ -33,6 +33,7 @@ target 'YStar' do
     pod 'M80AttributedLabel', '~> 1.6.3'
     pod 'TZImagePickerController', '~> 1.7.7'
     pod 'UMengAnalytics'
+    pod 'YYText'
     
     target 'YStarTests' do
         inherit! :search_paths

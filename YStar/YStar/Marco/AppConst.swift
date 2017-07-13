@@ -76,6 +76,7 @@ class AppConst {
         case label3 = 0x333333
         case label9 = 0x999999
         case closeColor = 0xFFFFFF
+        case linkColor = 0x75c1e7
     }
     
     enum iconFontName: String {
@@ -86,6 +87,9 @@ class AppConst {
         case thumpUpIcon = "\u{e624}"
         case newsPlaceHolder = "\u{e603}"
         case addIcon = "\u{e606}"
+        case commentIcon = "\u{e635}"
+        case thumbIcon = "\u{e62f}"
+        case showIcon = "\u{e628}"
     }
     
     enum UserDefaultKey: String {
