@@ -134,6 +134,7 @@
 		8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */; };
 		8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */; };
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
+		8D5736B11F17231E003510D2 /* BenifityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5736B01F17231E003510D2 /* BenifityCell.swift */; };
 		8D91709D1F149CC60027AF03 /* MeetTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */; };
 		8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */; };
 		8D9170A11F14D7900027AF03 /* MeetOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */; };
@@ -493,6 +494,7 @@
 		8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitEmoticon.bundle; sourceTree = "<group>"; };
 		8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
+		8D5736B01F17231E003510D2 /* BenifityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BenifityCell.swift; path = YStar/Scenes/Controller/BenifityCell.swift; sourceTree = SOURCE_ROOT; };
 		8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeCell.swift; path = YStar/Scenes/Controller/MeetTypeCell.swift; sourceTree = SOURCE_ROOT; };
 		8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeDetailCell.swift; path = YStar/Scenes/Controller/MeetTypeDetailCell.swift; sourceTree = SOURCE_ROOT; };
 		8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderCell.swift; path = YStar/Scenes/Controller/MeetOrderCell.swift; sourceTree = SOURCE_ROOT; };
@@ -1262,6 +1264,7 @@
 				8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */,
 				8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */,
 				8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */,
+				8D5736B01F17231E003510D2 /* BenifityCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1935,6 +1938,7 @@
 				8D312AA21F0BC233001B54F3 /* NIMNormalTeamCardViewController.m in Sources */,
 				8E8FB0BE1F0AA4EA00A7B85C /* BaseCustomTableViewController.swift in Sources */,
 				8E8FB0B71F0AA4EA00A7B85C /* APISocketHelper.swift in Sources */,
+				8D5736B11F17231E003510D2 /* BenifityCell.swift in Sources */,
 				8D312A601F0BC233001B54F3 /* NIMContactSelectTabView.m in Sources */,
 				8E36FC071F14B2B6007AEFA6 /* StarNewsVC.swift in Sources */,
 				8D312A7F1F0BC233001B54F3 /* NIMKitLocationPoint.m in Sources */,

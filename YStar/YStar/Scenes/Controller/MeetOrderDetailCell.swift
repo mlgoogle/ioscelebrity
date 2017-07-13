@@ -42,6 +42,8 @@ class MeetOrderDetailCell: UITableViewCell {
     func setMeetOrderDetail() {
         
         // 假数据
+        self.iconImageView.layer.cornerRadius = iconImageView.width * 0.5
+        self.iconImageView.layer.masksToBounds = true
         self.iconImageView.backgroundColor = UIColor.orange
         self.nameLabel.text = "田馥甄"
         self.timeLabel.text = "时间：2017年07月12日14:41"

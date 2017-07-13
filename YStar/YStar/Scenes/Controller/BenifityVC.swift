@@ -8,17 +8,61 @@
 
 import UIKit
 
+private let KBenifityCellID = "BenifityCell"
+
 class BenifityVC: BaseTableViewController {
 
+    // headerView
+    @IBOutlet weak var contentView: UIView!
+    // 开始时间按钮
+    @IBOutlet weak var beginTimeButton: UIButton!
+    // 结束时间按钮
+    @IBOutlet weak var endTimeButton: UIButton!
+    
+    @IBOutlet weak var beginPlaceholderImageView: UIImageView!
+    
+    @IBOutlet weak var endPlaceholderImageView: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.beginPlaceholderImageView.backgroundColor = UIColor.orange
+        self.endPlaceholderImageView.backgroundColor = UIColor.orange
+        
+        self.tableView.tableHeaderView = contentView
+    
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
         checkLogin()
         
     }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 7
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
+        // cell.textLabel?.text = String.init(format: "这个第 %d 行." ,indexPath.row)
+        // return cell
+        
+        let benifityCell = tableView.dequeueReusableCell(withIdentifier: KBenifityCellID, for: indexPath) as! BenifityCell
+        
+        // TODO: - 待处理数据
+        benifityCell.setBenifity()
+        
+        return benifityCell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+    }
+    
 
     func leftButtonClick() {
 
