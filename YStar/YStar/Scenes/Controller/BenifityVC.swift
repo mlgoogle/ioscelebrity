@@ -12,8 +12,10 @@ private let KBenifityCellID = "BenifityCell"
 
 class BenifityVC: BaseTableViewController {
 
-    // headerView
+    // tableHeaderView
     @IBOutlet weak var contentView: UIView!
+    // 折线图
+    @IBOutlet weak var lineChatView: UIView!
     // 开始时间按钮
     @IBOutlet weak var beginTimeButton: UIButton!
     // 结束时间按钮
@@ -24,13 +26,27 @@ class BenifityVC: BaseTableViewController {
     @IBOutlet weak var endPlaceholderImageView: UIImageView!
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.beginPlaceholderImageView.backgroundColor = UIColor.orange
         self.endPlaceholderImageView.backgroundColor = UIColor.orange
+        self.beginTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
+        
         
         self.tableView.tableHeaderView = contentView
+        
+        self.tableView.separatorStyle = .none
+        
     
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
         checkLogin()
@@ -49,7 +65,6 @@ class BenifityVC: BaseTableViewController {
         // return cell
         
         let benifityCell = tableView.dequeueReusableCell(withIdentifier: KBenifityCellID, for: indexPath) as! BenifityCell
-        
         // TODO: - 待处理数据
         benifityCell.setBenifity()
         
@@ -61,7 +76,16 @@ class BenifityVC: BaseTableViewController {
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let benifityDetailVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BenifityDetailVC")
+        self.navigationController?.pushViewController(benifityDetailVC, animated: true)
+        
     }
+    
+    func timeButtonClick(_ sender : UIButton) {
+     
+        print("点击了选择时间按钮")
+    }
+    
     
 
     func leftButtonClick() {
