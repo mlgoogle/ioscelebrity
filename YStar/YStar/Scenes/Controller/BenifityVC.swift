@@ -10,7 +10,7 @@ import UIKit
 
 private let KBenifityCellID = "BenifityCell"
 
-class BenifityVC: BaseTableViewController {
+class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
 
     // tableHeaderView
     @IBOutlet weak var contentView: UIView!
@@ -25,7 +25,9 @@ class BenifityVC: BaseTableViewController {
     
     @IBOutlet weak var endPlaceholderImageView: UIImageView!
     
-    
+    // 标识
+    var beginOrEnd : Bool = true
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -40,8 +42,9 @@ class BenifityVC: BaseTableViewController {
 
         self.beginPlaceholderImageView.backgroundColor = UIColor.orange
         self.endPlaceholderImageView.backgroundColor = UIColor.orange
-        self.beginTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
         
+        self.beginTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
+        self.endTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
         
         self.tableView.tableHeaderView = contentView
         
@@ -82,8 +85,40 @@ class BenifityVC: BaseTableViewController {
     }
     
     func timeButtonClick(_ sender : UIButton) {
-     
-        print("点击了选择时间按钮")
+        
+        if sender == beginTimeButton {
+            let datePickerView = DateSelectorView(delegate: self)
+            beginOrEnd = true
+            datePickerView.showPicker()
+        } else {
+            let datePickerView = DateSelectorView(delegate: self)
+            beginOrEnd = false
+            datePickerView.showPicker()
+        }
+    }
+    func chooseDate(datePickerView: DateSelectorView, date: Date) {
+        
+        let weekTimeInterval : TimeInterval = 24 * 60 * 60 * 7
+        let dateString = date.string_from(formatter: "yyyy-MM-dd")
+        
+        if beginOrEnd == true {
+            // 获取7天后的日期
+            let afterWeekDate = date.addingTimeInterval(weekTimeInterval)
+            let afterWeekStr = afterWeekDate.string_from(formatter: "yyyy-MM-dd")
+            
+            self.beginTimeButton.setTitle(dateString, for: .normal)
+            self.endTimeButton.setTitle(afterWeekStr, for: .normal)
+            self.tableView.reloadData()
+        } else {
+            // 获取7天前的日期
+            let beforeWeekDate = date.addingTimeInterval(-weekTimeInterval)
+            let beforeWeekStr = beforeWeekDate.string_from(formatter: "yyyy-MM-dd")
+            self.endTimeButton.setTitle(dateString, for: .normal)
+            self.beginTimeButton.setTitle(beforeWeekStr, for: .normal)
+            self.tableView.reloadData()
+            
+        }
+        
     }
     
     
