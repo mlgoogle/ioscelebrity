@@ -10,10 +10,10 @@ import UIKit
 
 protocol DateSelectorViewDelegate {
     
-    func chooseDate(datePickerView : DateSelectorView ,date : Date)
+    func chooseDate(datePickerView : DateSelectorView , date : Date)
 }
 
-// 时间选择器
+// 时间选择器View
 class DateSelectorView: UIView {
 
     var pickerDelegate : DateSelectorViewDelegate?
