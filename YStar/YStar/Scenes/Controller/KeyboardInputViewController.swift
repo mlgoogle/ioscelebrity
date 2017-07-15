@@ -33,7 +33,7 @@ class YInputToolbar: UIView{
     
     override init(frame: CGRect) {
         super.init(frame: CGRect.init(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: 44))
-        backgroundColor = UIColor.init(rgbHex: 0x999999)
+        backgroundColor = UIColor.init(rgbHex: 0xffffff)
         addSubview(sendBtn)
         addSubview(emothionBtn)
         addSubview(inputText)
@@ -58,6 +58,7 @@ class KeyboardInputViewController: UIViewController, HHEmojiKeyboardDelegate {
     lazy var ykeyboard: HHEmojiKeyboard = {
         
         let dic = HHEmojiManage.getEmojiAll()
+        print(dic)
         var emojiArr:[String] = []
         for arr in dic.allValues {
             emojiArr = arr as! [String]
