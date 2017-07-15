@@ -28,14 +28,14 @@
                                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7T-an-I8a">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7T-an-I8a">
                                     <rect key="frame" x="53" y="34" width="87" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="2017-06-19">
                                         <color key="titleColor" red="0.98431372549019602" green="0.59999999999999998" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8e-DG-Ie5">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8e-DG-Ie5">
                                     <rect key="frame" x="223" y="34" width="89" height="32"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                     <state key="normal" title="2017-06-25">
@@ -378,6 +378,16 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9X-EY-353">
+                                    <rect key="frame" x="12" y="37" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="20" id="Atv-Aj-g9G"/>
+                                        <constraint firstAttribute="height" constant="20" id="MzY-eu-NUZ"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="backItemAction:" destination="eHB-bw-U6n" eventType="touchUpInside" id="8pa-bg-gAs"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.98431372549019602" green="0.59999999999999998" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -385,6 +395,7 @@
                                 <constraint firstItem="KB6-3j-FBr" firstAttribute="centerY" secondItem="ISS-KV-C3t" secondAttribute="centerY" id="Cg6-UQ-FDs"/>
                                 <constraint firstItem="HA3-ma-zXd" firstAttribute="top" secondItem="Nyc-VY-GmB" secondAttribute="bottom" constant="50" id="GvU-AT-Fei"/>
                                 <constraint firstItem="ISS-KV-C3t" firstAttribute="centerX" secondItem="JXd-ep-gEt" secondAttribute="centerX" id="LeG-mf-hDr"/>
+                                <constraint firstItem="Q9X-EY-353" firstAttribute="leading" secondItem="JXd-ep-gEt" secondAttribute="leading" constant="12" id="NMU-IG-JCM"/>
                                 <constraint firstItem="H40-St-moe" firstAttribute="centerY" secondItem="ISS-KV-C3t" secondAttribute="centerY" id="O69-YM-PQ1"/>
                                 <constraint firstItem="Nyc-VY-GmB" firstAttribute="centerX" secondItem="JXd-ep-gEt" secondAttribute="centerX" id="QlB-fE-uIj"/>
                                 <constraint firstItem="KB6-3j-FBr" firstAttribute="leading" secondItem="ISS-KV-C3t" secondAttribute="trailing" constant="31" id="SB6-wI-uOd"/>
@@ -392,6 +403,7 @@
                                 <constraint firstItem="SKw-Lf-qgR" firstAttribute="top" secondItem="JXd-ep-gEt" secondAttribute="top" constant="36" id="dlc-gM-6WH"/>
                                 <constraint firstItem="ISS-KV-C3t" firstAttribute="top" secondItem="HA3-ma-zXd" secondAttribute="bottom" constant="30" id="mMt-Pj-izY"/>
                                 <constraint firstItem="Nyc-VY-GmB" firstAttribute="top" secondItem="JXd-ep-gEt" secondAttribute="top" constant="99" id="s1n-Ej-yL0"/>
+                                <constraint firstItem="Q9X-EY-353" firstAttribute="centerY" secondItem="SKw-Lf-qgR" secondAttribute="centerY" id="xHk-Io-4E6"/>
                                 <constraint firstItem="SKw-Lf-qgR" firstAttribute="centerX" secondItem="JXd-ep-gEt" secondAttribute="centerX" id="yWT-VV-MmX"/>
                             </constraints>
                         </view>
@@ -499,6 +511,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="YUd-Mz-KzM"/>
                     <connections>
+                        <outlet property="backItemButton" destination="Q9X-EY-353" id="Oii-ay-TA9"/>
                         <outlet property="earningsLabel" destination="HA3-ma-zXd" id="htU-k7-UOe"/>
                         <outlet property="titleLabel" destination="SKw-Lf-qgR" id="bc9-Ag-2hz"/>
                         <outlet property="todayLabel" destination="H40-St-moe" id="8RK-Aw-Rkp"/>
@@ -514,7 +527,7 @@
             <objects>
                 <navigationController id="Rag-AI-Rap" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="收益" image="home_item_normal" selectedImage="home_item_selected" id="5hN-Rb-Yf5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Iq-EY-AJK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Iq-EY-AJK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -848,6 +861,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="ibD-xH-WdU">
+                            <rect key="frame" x="0.0" y="168" width="375" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目前只支持绑定一张银行卡,如需换卡请联系管理员" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdD-vv-QAZ">
+                                    <rect key="frame" x="29" y="41.5" width="318.5" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="GdD-vv-QAZ" firstAttribute="centerX" secondItem="ibD-xH-WdU" secondAttribute="centerX" id="ibm-JD-zDI"/>
+                                <constraint firstItem="GdD-vv-QAZ" firstAttribute="centerY" secondItem="ibD-xH-WdU" secondAttribute="centerY" id="j4h-2j-4kO"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BindingBankVCCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BankInfoCellID" rowHeight="140" id="KoF-cI-xIy" userLabel="BankInfoCell" customClass="BankInfoCell" customModule="YStar" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="140"/>
@@ -920,7 +950,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5Z-cX-TlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2196" y="227"/>
+            <point key="canvasLocation" x="2196" y="226.23688155922042"/>
         </scene>
         <!--提现-->
         <scene sceneID="BT5-sY-b21">

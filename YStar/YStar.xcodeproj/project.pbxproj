@@ -141,6 +141,7 @@
 		8D9170A11F14D7900027AF03 /* MeetOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */; };
 		8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */; };
 		8DBDBFDF1F0F290400736408 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBDBFDE1F0F290400736408 /* UIView.swift */; };
+		8DCE463D1F185C9E00B789B9 /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */; };
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
@@ -502,6 +503,7 @@
 		8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderCell.swift; path = YStar/Scenes/Controller/MeetOrderCell.swift; sourceTree = SOURCE_ROOT; };
 		8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderDetailCell.swift; path = YStar/Scenes/Controller/MeetOrderDetailCell.swift; sourceTree = SOURCE_ROOT; };
 		8DBDBFDE1F0F290400736408 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateSelectorView.swift; path = YStar/Scenes/Controller/DateSelectorView.swift; sourceTree = SOURCE_ROOT; };
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
@@ -1268,6 +1270,7 @@
 				8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */,
 				8D5736B01F17231E003510D2 /* BenifityCell.swift */,
 				8D5736B41F17A1BE003510D2 /* BenifityDetailCell.swift */,
+				8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1787,6 +1790,7 @@
 				8D312A941F0BC233001B54F3 /* NIMSessionUnknowContentView.m in Sources */,
 				8E8FB0BA1F0AA4EA00A7B85C /* SocketHelper.swift in Sources */,
 				8D312AA51F0BC233001B54F3 /* NIMTeamMemberListViewController.m in Sources */,
+				8DCE463D1F185C9E00B789B9 /* DateSelectorView.swift in Sources */,
 				8D312A5E1F0BC233001B54F3 /* NIMContactPickedView.m in Sources */,
 				8E8FB0C61F0AA4EA00A7B85C /* String+Extension.swift in Sources */,
 				8D312A541F0BC233001B54F3 /* NIMCustomLeftBarView.m in Sources */,

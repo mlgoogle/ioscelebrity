@@ -24,6 +24,7 @@ class BenifityDetailVC: BaseTableViewController {
     // 昨收Label
     @IBOutlet weak var yesterdayLabel: UILabel!
     
+    @IBOutlet weak var backItemButton: UIButton!
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -44,8 +45,22 @@ class BenifityDetailVC: BaseTableViewController {
         // 分割线
         self.tableView.separatorStyle = .none
         
+        let backImage = UIImage.imageWith(AppConst.iconFontName.backItem.rawValue, fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: 0xFFFFFF))
+        self.backItemButton.setBackgroundImage(backImage, for: .normal)
+        
+        // TODO: - 待处理数据
         self.titleLabel.text = "2017-12-23"
+        self.earningsLabel.text = "23452.68"
+        self.todayLabel.text = "今开  12.88"
+        self.yesterdayLabel.text = "昨收  26.58"
     }
+    
+    @IBAction func backItemAction(_ sender: UIButton) {
+        
+        print("======= backItemAction =========")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
