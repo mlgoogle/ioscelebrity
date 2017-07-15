@@ -114,5 +114,76 @@ extension UIView {
             self.height = newValue.height
         }
     }
+}
+public extension UIView {
     
+    var top : CGFloat {
+        get {
+            return self.y
+        }
+        set {
+            self.y = newValue
+        }
+    }
+    
+    var left : CGFloat {
+        get {
+            return self.x
+        }
+        set {
+            self.x = newValue
+        }
+    }
+    
+    var bottom : CGFloat {
+        get {
+            return self.y + self.height
+        }
+        set {
+            self.y = newValue - self.height
+        }
+    }
+    
+    var right : CGFloat {
+        get {
+            return self.x + self.width
+        }
+        set {
+            self.x = newValue - self.width
+        }
+    }
+    
+//    var centerX : CGFloat {
+//        get {
+//            return self.center.x
+//        }
+//        set {
+//            self.center = CGPoint(x: newValue, y: self.center.y)
+//        }
+//    }
+    
+//    var centerY : CGFloat {
+//        get {
+//            return self.center.y
+//        }
+//        set {
+//            self.center = CGPoint(x: self.center.x, y: newValue)
+//        }
+//    }
+    
+    /// 获取响应链上的UIViewController
+    ///
+    /// - Returns: UIViewController?
+    func viewController_lmy() -> UIViewController?{
+        var responder:UIResponder? = self.next
+        while responder != nil {
+            if (responder?.isKind(of: UIViewController.self)) == true {
+                let con = responder as? UIViewController
+                return con
+            }else {
+                responder = responder?.next
+            }
+        }
+        return nil
+    }
 }

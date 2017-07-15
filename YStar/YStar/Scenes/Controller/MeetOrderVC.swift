@@ -16,11 +16,7 @@ class MeetOrderVC: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.contentInset = UIEdgeInsetsMake(64 + 40 + 33, 0, 49, 0)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        self.tableView.separatorStyle = .none
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -38,12 +34,16 @@ class MeetOrderVC: BaseTableViewController {
         
         let meetOrderCell = tableView.dequeueReusableCell(withIdentifier: KMeetOrderCellID, for: indexPath) as! MeetOrderCell
         
+        // TODO: - 待处理数据
+        meetOrderCell.setMeetOrder()
+        
         return meetOrderCell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    
         tableView.deselectRow(at: indexPath, animated: true)
+        
         let meetOrderDetailVC = UIStoryboard.init(name: "Meet", bundle: nil).instantiateViewController(withIdentifier: "MeetOrderDetailVC")
         self.navigationController?.pushViewController(meetOrderDetailVC, animated: true)
         

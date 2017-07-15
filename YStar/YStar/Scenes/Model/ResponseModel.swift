@@ -108,5 +108,37 @@ class MeetTypeModel: BaseModel {
     var meetSelect = ""
 }
 
+class CircleListModel: Object {
+    dynamic var symbol = ""
+    dynamic var symbol_name = ""
+    dynamic var head_url = ""
+    dynamic var circle_id:Int64 = 0
+    dynamic var create_time:Int64 = 0
+    dynamic var content = ""
+    dynamic var pic_url = ""
+    let approve_list = List<ApproveModel>()
+    let comment_list = List<CircleCommentModel>()
+}
 
+class ApproveModel: Object {
+    dynamic var user_name = ""
+    dynamic var uid:Int64 = 0
+}
+
+class CircleCommentModel: Object {
+    dynamic var uid = 0
+    dynamic var user_name = ""
+    dynamic var direction = 0
+    dynamic var content = ""
+    dynamic var priority = 0
+}
+
+class SendCircleResultModel: Object {
+    dynamic var circle_id = 0
+}
+
+class ResultModel: BaseModel{
+    var result = 0
+    
+}
 
