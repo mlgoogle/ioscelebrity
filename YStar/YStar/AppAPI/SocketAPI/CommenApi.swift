@@ -31,5 +31,11 @@ protocol CommenApi {
     func SendVerificationCode(model: SendVerificationCodeRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
     // 重置密码(模型)
     func Resetpwd(model: ResetPwdReqModel, complete: CompleteBlock?, error: ErrorBlock?)
+    
+    // 信息收益列表(模型)
+    func requestEarningInfo(model:EarningRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
+    
+    // 获取昨收今开(模型)
+    func requestYesterdayAndTodayPrice(model:YesterdayAndTodayPriceRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
 }
 

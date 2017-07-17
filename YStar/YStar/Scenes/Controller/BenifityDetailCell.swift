@@ -24,6 +24,13 @@ class BenifityDetailCell: UITableViewCell {
     @IBOutlet weak var orderPriceLabel: UILabel!
     
     
+    func setBenifityDetail(model : EarningInfoModel) {
+        
+        self.dealLabel.text = String.init(format: "%d", model.order_count)
+        self.timeLabel.text = String.init(format: "%d", model.order_num)
+        self.orderPriceLabel.text = String.init(format: "%.2f", model.price)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

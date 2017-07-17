@@ -145,6 +145,12 @@ class SocketConst: NSObject {
         case onlyLogin = 3040
         //取消充值
         case cancelRecharge = 7055
+        
+        // 收益信息
+        case earningInfo = 16001
+        
+        // 昨收今开
+        case yesterdayAndToday = 16003
     }
     
     
