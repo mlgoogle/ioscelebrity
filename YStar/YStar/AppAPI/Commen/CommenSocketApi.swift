@@ -51,8 +51,7 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startModelRequest(packet, modelClass: BindBankModel.self, complete: complete, error: error)
     }
     
-    
-    // 校验用户登录(模型)
+    // MARK: - 校验用户登录(模型)
     func CheckRegister(model: CheckRegisterRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         
         let packet : SocketDataPacket = SocketDataPacket.init(opcode: .checkRegist, model: model)
@@ -60,13 +59,13 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startRequest(packet, complete: complete, error: error)
     }
     
-    // 发送验证码(模型)
+    // MARK: - 发送验证码(模型)
     func SendVerificationCode(model: SendVerificationCodeRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet:SocketDataPacket = SocketDataPacket.init(opcode: .verifycode, model: model)
         startRequest(packet, complete: complete, error: error)
     }
     
-    // 重置密码(模型)
+    // MARK: - 重置密码(模型)
     func Resetpwd(model: ResetPwdReqModel, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet:SocketDataPacket = SocketDataPacket.init(opcode: .verifycode, model: model)
         startRequest(packet, complete: complete, error: error)
@@ -104,8 +103,19 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     
     // 删除动态
     func deleteCircle(requestModel:DeleteCircle, complete: CompleteBlock?, error: ErrorBlock?) {
-        
         let packet = SocketDataPacket(opcode: .deleteCircle, model: requestModel)
         startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
+    }
+    
+    // MARK: - 收益列表(模型)
+    func requestEarningInfo(model: EarningRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .earningInfo, model: model)
+        startModelsRequest(packet, listName: "OrderList", modelClass: EarningInfoModel.self, complete: complete, error: error)
+    }
+    
+    // MARK: - 昨收今开(模型)
+    func requestYesterdayAndTodayPrice(model: YesterdayAndTodayPriceRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .yesterdayAndToday, model: model)
+        startModelRequest(packet, modelClass: YesterdayAndTodayPriceModel.self, complete: complete, error: error)
     }
 }

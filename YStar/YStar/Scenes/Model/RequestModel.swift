@@ -16,7 +16,6 @@ class LoginRequestModel: BaseModel {
     var deviceId = ""
 }
 
-
 class BindCardRequestModel: LoginModle {
     var account = "1001"
     var bankUsername = "1001"
@@ -43,7 +42,17 @@ class SendVerificationCodeRequestModel: BaseModel {
 class ResetPwdReqModel: BaseModel{
     var phone = ""
     var pwd = ""
+}
 
+class EarningRequestModel : LoginModle {
+    var starcode = "1001"
+    var stardate : Int64 = 0
+    var enddate  : Int64 = 0
+}
+
+class YesterdayAndTodayPriceRequestModel: LoginModle {
+    var starcode = "1001"
+    var orderdate : Int64 = 0
 }
 
 class CircleListRequestModel: BaseModel {

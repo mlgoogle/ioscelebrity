@@ -39,5 +39,9 @@ protocol CommenApi {
     func deleteCircle(requestModel:DeleteCircle, complete: CompleteBlock?, error: ErrorBlock?)
     // 明星评论朋友圈
     func starCommentCircle(requestModel:CommentCircleModel,complete: CompleteBlock?, error: ErrorBlock?)
+    // 信息收益列表(模型)
+    func requestEarningInfo(model:EarningRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
+    // 获取昨收今开(模型)
+    func requestYesterdayAndTodayPrice(model:YesterdayAndTodayPriceRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
 }
 

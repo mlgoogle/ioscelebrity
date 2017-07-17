@@ -10,7 +10,6 @@ import UIKit
 
 class BenifityCell: UITableViewCell {
     
-    
     // 容器View
     @IBOutlet weak var containerView: UIView!
     
@@ -44,13 +43,28 @@ class BenifityCell: UITableViewCell {
     }
     
     // FIXME: - 提醒
-    func setBenifity() {
+//    func setBenifity() {
+//        self.dateLabel.text = "2017-12-24"
+//        self.totalLabel.text = "1242"
+//        self.timeLabel.text = "100021.00"
+//        self.orderPriceLabel.text = "10002300.00"
+//    }
+    
+    func setBenifity(model : EarningInfoModel) {
         
-        self.dateLabel.text = "2017-12-24"
-        self.totalLabel.text = "1242"
-        self.timeLabel.text = "100021.00"
-        self.orderPriceLabel.text = "10002300.00"
+        let stringDate = String.init(format: "%d", model.orderdate)
+        let yearStr = (stringDate as NSString).substring(to: 4)
+        let monthStr = (stringDate as NSString).substring(with: NSMakeRange(4, 2))
+        let dayStr = (stringDate as NSString).substring(from: 6)
+        
+        // print("日期=\(stringDate),年份==\(yearStr),月份==\(monthStr),天==\(dayStr)")
+        
+        self.dateLabel.text = String.init(format: "%@-%@-%@", yearStr,monthStr,dayStr)
+        self.totalLabel.text = String.init(format: "%d", model.order_count)
+        self.timeLabel.text = String.init(format: "%d", model.order_num)
+        self.orderPriceLabel.text = String.init(format: "%.2f", model.price)
     }
+    
 
     override func layoutSubviews() {
         super.layoutSubviews()
