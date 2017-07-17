@@ -41,9 +41,4 @@ class FansListVC: BaseListTableViewController {
         return FansListCell.className()
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: CreatNewsVC.className(), sender: nil)
-    }
-    
-    
 }

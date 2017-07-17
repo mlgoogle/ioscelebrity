@@ -19,7 +19,6 @@ class SocketConst: NSObject {
         case errorCode = 0
         // 登录
         case login = 3003
-
         // 绑定银行卡
         case bindCard = 8005
         // 验证码
@@ -85,7 +84,7 @@ class SocketConst: NSObject {
         case starExperience = 11009
         //明星成就
         case starAchive = 11011
-        
+        //新闻
         case newsStarInfo = 10001
         // 明星服务类型
         case starServiceType = 10019
@@ -145,10 +144,22 @@ class SocketConst: NSObject {
         case onlyLogin = 3040
         //取消充值
         case cancelRecharge = 7055
-        
+        //朋友圈
+        case circleList = 15001
+        //某个明星的朋友圈
+        case starCircle = 15003
+        //发布朋友圈
+        case sendCircle = 15005
+        //删除朋友圈
+        case deleteCircle = 15007
+        //点赞朋友圈
+        case approveCircle = 15009
+        //评论朋友圈
+        case commentCircle = 15011
+        //明星回复评论
+        case starComment = 15013
         // 收益信息
         case earningInfo = 16001
-        
         // 昨收今开
         case yesterdayAndToday = 16003
     }

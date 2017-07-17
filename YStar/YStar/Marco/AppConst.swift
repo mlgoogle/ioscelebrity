@@ -30,6 +30,7 @@ func isPassWord(pwd: String) ->Bool {
 class AppConst {
     
     static let pwdKey = "yd1742653sd"
+    static let imageTokenUrl = "http://122.144.169.219:3378/imageToken"
     
     enum KVOKey: String {
         case selectProduct = "selectProduct"
@@ -46,7 +47,7 @@ class AppConst {
     class Network {
         #if true //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22";
-        static let TcpServerPort:UInt16 = 16060
+        static let TcpServerPort:UInt16 = 16006
         static let TttpHostUrl:String = "http://139.224.34.22";
         #else
         static let TcpServerIP:String = "i.flight.dlgrme.com";
@@ -54,7 +55,7 @@ class AppConst {
         static let HttpHostUrl:String = "http://i.flight.dlgrme.com";
         #endif
         static let TimeoutSec:UInt16 = 10
-        static let qiniuHost = "http://ofr5nvpm7.bkt.clouddn.com/"
+        static let qiniuHost = "http://ot81955n7.bkt.clouddn.com/"
     }
 
 
@@ -76,6 +77,7 @@ class AppConst {
         case label3 = 0x333333
         case label9 = 0x999999
         case closeColor = 0xFFFFFF
+        case linkColor = 0x75c1e7
     }
     
     enum iconFontName: String {
@@ -84,6 +86,10 @@ class AppConst {
         case newsIcon = "\u{e634}"
         case userPlaceHolder = "\u{e63d}"
         case thumpUpIcon = "\u{e624}"
+        case addIcon = "\u{e606}"
+        case commentIcon = "\u{e635}"
+        case thumbIcon = "\u{e62f}"
+        case showIcon = "\u{e628}"
         case newsPlaceHolder = "\u{e64a}"
         case downArrow = "\u{e610}"
         case upArrow = "\u{e60f}"

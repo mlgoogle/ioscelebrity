@@ -20,36 +20,37 @@ class APITestCase: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    //功能测试：测试登录功能（异步测试）
+    
+    // 登录功能
     func testLogin() {
         let expectOption = expectation(description: "登录测试")
         let param = LoginRequestModel()
         param.phone = "18657195470"
         param.pwd = "123456".md5()
+        var idExcept = false
+        var phoneExcept = false
+        var tokenExcept = false
         AppAPIHelper.commen().login(model: param, complete: { (result) -> ()? in
             
             if let object = result as? StarUserModel{
-                if let uid = object.userinfo?.id{
-                    ShareModelHelper.instance().uid = Int(uid)
-                    UserDefaults.standard.set(uid, forKey: AppConst.UserDefaultKey.uid.rawValue)
+                if (object.userinfo?.id) != nil{
+                    idExcept = true
                 }
-                if let phone = object.userinfo?.phone{
-                    ShareModelHelper.instance().phone = phone
-                    UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
+                if (object.userinfo?.phone) != nil{
+                    phoneExcept = true
                 }
-                ShareModelHelper.instance().token = object.token
-                UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
+                tokenExcept = object.token.length() > 0
                 expectOption.fulfill()
             }
             return nil
         }, error: nil)
-        // waitForExpectations(timeout: 15, handler: nil)
-        self.waitForExpectations(timeout: 15) { (error) in
-            if let error = error {
-                print("Error : \(error.localizedDescription)")
-            }
-        }
+        waitForExpectations(timeout: 15, handler: nil)
+        
+        XCTAssertTrue(idExcept, "用户id不存在")
+        XCTAssertTrue(phoneExcept, "用户手机号不存在")
+        XCTAssertTrue(tokenExcept, "token不存在")
     }
+    
     //逻辑测试举例： 测试期望结果与实际结果是否相等
     func testAdd(){
         let expectValue = 30

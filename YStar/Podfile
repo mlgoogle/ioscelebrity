@@ -11,7 +11,7 @@ target 'YStar' do
     pod 'CocoaAsyncSocket', '~> 7.5.0'
     pod 'SVProgressHUD', '~> 2.0.3'
     pod 'Kingfisher', '~> 3.2.2'
-    pod 'Qiniu', '~> 7.1'
+    pod 'Qiniu'
     pod 'FMDB', '~> 2.6.2'
     #pod 'GTSDK', '~> 1.4.3'
     pod 'SideMenuController'
@@ -33,7 +33,8 @@ target 'YStar' do
     pod 'M80AttributedLabel', '~> 1.6.3'
     pod 'TZImagePickerController', '~> 1.7.7'
     pod 'UMengAnalytics'
-    
+    pod 'YYText'
+    pod 'MJRefresh', '~> 3.1.12'
     target 'YStarTests' do
         inherit! :search_paths
     end

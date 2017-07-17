@@ -14,7 +14,7 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
         super.viewDidLoad()
         interactivePopGestureRecognizer?.isEnabled = true
         interactivePopGestureRecognizer?.delegate = self
-        
+        navigationBar.hideBottomHairline()
         navigationBar.barTintColor = UIColor.white
         navigationBar.titleTextAttributes = [
             NSFontAttributeName: UIFont.systemFont(ofSize: 18),
