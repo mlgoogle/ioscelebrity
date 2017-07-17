@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 private let KBenifityCellID = "BenifityCell"
 
@@ -15,7 +16,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     // tableHeaderView
     @IBOutlet weak var contentView: UIView!
     // 折线图
-    @IBOutlet weak var lineChatView: UIView!
+    @IBOutlet weak var lineChatView: LineChartView!
     // 开始时间按钮
     @IBOutlet weak var beginTimeButton: UIButton!
     // 结束时间按钮
@@ -26,12 +27,12 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     @IBOutlet weak var endPlaceholderImageView: UIImageView!
     
     var earningData : [EarningInfoModel]?
+    
     // 标识
     var beginOrEnd : Bool = true
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
@@ -41,25 +42,36 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        self.beginPlaceholderImageView.backgroundColor = UIColor.orange
-        self.endPlaceholderImageView.backgroundColor = UIColor.orange
-        self.beginPlaceholderImageView.image = UIImage.imageWith(AppConst.iconFontName.downArrow.rawValue, fontSize: beginPlaceholderImageView.frame.size, fontColor: nil)
         
-        self.beginTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
-        self.endTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
+        setupUI()
         
-        self.tableView.tableHeaderView = contentView
-        self.tableView.separatorStyle = .none
+        setupLineChart()
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
-        
-        setupInit()
+        setupInitResponse()
 
         checkLogin()
     }
     
-    func setupInit() {
+    // 折线图
+    func setupLineChart() {
+        
+    }
+    
+    func setupUI() {
+        
+        self.tableView.tableHeaderView = contentView
+        self.tableView.separatorStyle = .none
+        
+        self.beginPlaceholderImageView.image = UIImage.imageWith(AppConst.iconFontName.downArrow.rawValue, fontSize: beginPlaceholderImageView.frame.size, fontColor: UIColor.init(rgbHex: 0xDFDFDF))
+        self.endPlaceholderImageView.image = UIImage.imageWith(AppConst.iconFontName.downArrow.rawValue, fontSize: beginPlaceholderImageView.frame.size, fontColor: UIColor.init(rgbHex: 0xDFDFDF))
+        
+        self.beginTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
+        self.endTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
+    }
+    
+    func setupInitResponse() {
         
         let cureentDate = NSDate()
         let oneDayTimeInterval : TimeInterval = 24 * 60 * 60 * 1
@@ -92,7 +104,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
         print("====\(beginDateInt) =====\(endDateInt)")
     
-        // requestEarningInfo()
         let model = EarningRequestModel()
         
         // model.stardate = Int64(beginDateString)

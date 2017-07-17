@@ -15,7 +15,7 @@ class BenifityDetailCell: UITableViewCell {
     
     @IBOutlet weak var orderPriceImageView: UIImageView!
     
-    @IBOutlet weak var dealImageView: UILabel!
+    @IBOutlet weak var dealImageView: UIImageView!
     
     @IBOutlet weak var dealLabel: UILabel!
     
@@ -33,7 +33,11 @@ class BenifityDetailCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.dealImageView.image = UIImage.imageWith(AppConst.iconFontName.dealTotalIcon.rawValue, fontSize: dealImageView.frame.size, fontColor: UIColor.init(rgbHex: 0xFB9938))
+        self.timeImageVIew.image = UIImage.imageWith(AppConst.iconFontName.timeTotalIcon.rawValue, fontSize: timeImageVIew.frame.size, fontColor: UIColor.init(rgbHex: 0xFB9938))
+        self.orderPriceImageView.image = UIImage.imageWith(AppConst.iconFontName.priceTotalIcon.rawValue, fontSize: orderPriceImageView.frame.size, fontColor: UIColor.init(rgbHex: 0xFB9938))
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
