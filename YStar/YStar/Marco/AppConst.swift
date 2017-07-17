@@ -30,6 +30,7 @@ func isPassWord(pwd: String) ->Bool {
 class AppConst {
     
     static let pwdKey = "yd1742653sd"
+    static let imageTokenUrl = "http://122.144.169.219:3378/imageToken"
     
     enum KVOKey: String {
         case selectProduct = "selectProduct"
@@ -54,7 +55,7 @@ class AppConst {
         static let HttpHostUrl:String = "http://i.flight.dlgrme.com";
         #endif
         static let TimeoutSec:UInt16 = 10
-        static let qiniuHost = "http://ofr5nvpm7.bkt.clouddn.com/"
+        static let qiniuHost = "http://ot81955n7.bkt.clouddn.com/"
     }
 
 

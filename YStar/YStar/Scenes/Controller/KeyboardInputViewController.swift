@@ -84,6 +84,29 @@ class YInputToolbar: UIView{
     }
 }
 
+//辅助视图toolbar
+class YEmojiInputToolbar: UIView{
+    let sw = UIScreen.main.bounds.width
+
+    lazy var emothionBtn: UIButton = {
+        let btn = UIButton.init(type: UIButtonType.contactAdd)
+        btn.frame = CGRect.init(x: 0 , y: 8, width: 44, height: 44)
+        return btn
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: CGRect.init(x: -0.5, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width+1, height: 44))
+        backgroundColor = UIColor.init(rgbHex: 0xffffff)
+        layer.borderColor = UIColor.init(rgbHex: 0x999999).cgColor
+        layer.borderWidth = 0.5
+        addSubview(emothionBtn)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
 class EmojiHelpView: UIView{
     lazy var emojiBtn: UIButton = {
         let btn = UIButton.init(type: .custom)
@@ -128,7 +151,19 @@ class KeyboardInputViewController: UIViewController, HHEmojiKeyboardDelegate {
     
     let emojiHeight = UIScreen.main.bounds.width*3/7
     var sendMessage: CompleteBlock?
+    var messageChange: CompleteBlock?
     var toolbarSwitch = true
+    
+    enum KeyboardType: NSInteger {
+        case textAndEmoji = 0
+        case onlyEmoji = 1
+    }
+    
+    lazy var emojiToolbar: YEmojiInputToolbar = {
+        let toolbar = YEmojiInputToolbar()
+        toolbar.emothionBtn.addTarget(self, action: #selector(self.emothionBtnTapped(_:)), for: .touchUpInside)
+        return toolbar
+    }()
     
     lazy var toolbar: YInputToolbar = {
         let bar = YInputToolbar.init(frame: CGRect.zero)
@@ -153,6 +188,12 @@ class KeyboardInputViewController: UIViewController, HHEmojiKeyboardDelegate {
         return keyboard
     }()
     
+    var type: KeyboardType? {
+        didSet {
+            self.toolbar.isHidden = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //添加键盘监听
@@ -161,6 +202,9 @@ class KeyboardInputViewController: UIViewController, HHEmojiKeyboardDelegate {
                 if let frame = info["UIKeyboardFrameEndUserInfoKey"] as? CGRect{
                     if self != nil && (self?.toolbarSwitch)! {
                         self?.toolbar.y =  frame.minY - 44
+                    }
+                    if self != nil && (self?.toolbarSwitch)! && self?.type == .onlyEmoji {
+                        self?.emojiToolbar.y =  frame.minY - 44
                     }
                 }
             }
@@ -174,6 +218,8 @@ class KeyboardInputViewController: UIViewController, HHEmojiKeyboardDelegate {
         view.addSubview(ykeyboard)
         //添加辅助视图
         view.addSubview(helpView)
+        //添加emoji辅助视图
+//        view.addSubview(emojiToolbar)
     }
     
     func configKeyboard() {

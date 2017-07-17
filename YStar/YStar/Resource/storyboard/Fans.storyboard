@@ -172,7 +172,7 @@
             </objects>
             <point key="canvasLocation" x="1020" y="140"/>
         </scene>
-        <!--发布动态-->
+        <!--Delegate-->
         <scene sceneID="nY5-c4-7aj">
             <objects>
                 <tableViewController restorationIdentifier="CreatNewsVC" storyboardIdentifier="CreatNewsVC" hidesBottomBarWhenPushed="YES" id="4nS-Kn-QaH" customClass="CreatNewsVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
@@ -208,29 +208,25 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hgl-2D-hXY">
-                                                    <rect key="frame" x="16" y="18" width="343" height="82"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNj-kD-arF" customClass="YYTextView">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="100"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderTextColor">
+                                                            <color key="value" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="这一刻的想法"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <outlet property="delegate" destination="4nS-Kn-QaH" id="rXO-J3-JXl"/>
+                                                        <outlet property="delegate" destination="4nS-Kn-QaH" id="25P-rv-62E"/>
                                                     </connections>
-                                                </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这一刻的想法。。。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vl-M0-d2C">
-                                                    <rect key="frame" x="21" y="23" width="129" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hgl-2D-hXY" firstAttribute="top" secondItem="zvM-k0-CJ3" secondAttribute="top" constant="18" id="Or9-3O-Jey"/>
-                                                <constraint firstAttribute="bottom" secondItem="hgl-2D-hXY" secondAttribute="bottom" id="Sb8-MZ-X89"/>
-                                                <constraint firstAttribute="trailing" secondItem="hgl-2D-hXY" secondAttribute="trailing" constant="16" id="liw-10-cIk"/>
-                                                <constraint firstItem="hgl-2D-hXY" firstAttribute="leading" secondItem="8vl-M0-d2C" secondAttribute="leading" constant="-5" id="r1H-CN-V4E"/>
-                                                <constraint firstItem="hgl-2D-hXY" firstAttribute="leading" secondItem="zvM-k0-CJ3" secondAttribute="leading" constant="16" id="tVc-nq-x0n"/>
-                                                <constraint firstItem="hgl-2D-hXY" firstAttribute="top" secondItem="8vl-M0-d2C" secondAttribute="top" constant="-5" id="zbe-mi-xa7"/>
+                                                <constraint firstAttribute="trailing" secondItem="UNj-kD-arF" secondAttribute="trailing" constant="16" id="MfN-fC-Ppi"/>
+                                                <constraint firstItem="UNj-kD-arF" firstAttribute="top" secondItem="zvM-k0-CJ3" secondAttribute="top" id="Nf7-yX-TRt"/>
+                                                <constraint firstItem="UNj-kD-arF" firstAttribute="leading" secondItem="zvM-k0-CJ3" secondAttribute="leading" constant="16" id="ZwP-ac-G29"/>
+                                                <constraint firstAttribute="bottom" secondItem="UNj-kD-arF" secondAttribute="bottom" id="hpq-Kz-Eq3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -288,12 +284,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="发布动态" id="ZsE-ER-DTl">
-                        <barButtonItem key="leftBarButtonItem" title="取消" style="plain" id="qZY-DT-0Ab">
-                            <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="cancelItemTapped:" destination="4nS-Kn-QaH" id="Tmu-FS-tRl"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="发布" id="fMN-bk-X0h">
                             <connections>
                                 <action selector="publishItemTapped:" destination="4nS-Kn-QaH" id="Lb6-i5-C2s"/>
@@ -303,8 +293,7 @@
                     <connections>
                         <outlet property="commentCountL" destination="Ky5-g9-Ybo" id="0As-sd-ieS"/>
                         <outlet property="commentPic" destination="7Jf-Xu-q4U" id="sgc-1i-Hsu"/>
-                        <outlet property="commentPlace" destination="8vl-M0-d2C" id="dfV-B2-Naw"/>
-                        <outlet property="commentTV" destination="hgl-2D-hXY" id="MzM-oz-KQm"/>
+                        <outlet property="commentTV" destination="UNj-kD-arF" id="Gab-jm-b1C"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFK-zj-sfS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -316,7 +305,7 @@
             <objects>
                 <navigationController id="4ie-fC-b5d" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="粉丝管理" image="user_item_normal" selectedImage="user_item_selected" id="ZhL-fm-8fo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="48n-VO-vM3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="48n-VO-vM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
