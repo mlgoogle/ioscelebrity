@@ -145,6 +145,7 @@
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
+		8DECFFA31F1CBFE600F692EF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DECFFA21F1CBFE600F692EF /* iconfont.ttf */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
@@ -165,7 +166,6 @@
 		8E435F5A1F0B484300FB1976 /* ShareModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F591F0B484300FB1976 /* ShareModelHelper.swift */; };
 		8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */; };
 		8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */; };
-		8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E435F5F1F0B754D00FB1976 /* iconfont.ttf */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
 		8E8FB0B41F0AA4EA00A7B85C /* CommenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */; };
@@ -507,6 +507,7 @@
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
+		8DECFFA21F1CBFE600F692EF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -527,7 +528,6 @@
 		8E435F591F0B484300FB1976 /* ShareModelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModelHelper.swift; sourceTree = "<group>"; };
 		8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
-		8E435F5F1F0B754D00FB1976 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIHelper.swift; sourceTree = "<group>"; };
 		8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSocketAPI.swift; sourceTree = "<group>"; };
 		8E8FB04F1F0AA4EA00A7B85C /* CommenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenApi.swift; sourceTree = "<group>"; };
@@ -1442,8 +1442,8 @@
 			isa = PBXGroup;
 			children = (
 				8E338DFE1F0E0C4D006D3C68 /* storyboard */,
-				8E435F5F1F0B754D00FB1976 /* iconfont.ttf */,
 				8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */,
+				8DECFFA21F1CBFE600F692EF /* iconfont.ttf */,
 				8E8FB0971F0AA4EA00A7B85C /* plist */,
 			);
 			path = Resource;
@@ -1636,6 +1636,7 @@
 			files = (
 				8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */,
 				8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */,
+				8DECFFA31F1CBFE600F692EF /* iconfont.ttf in Resources */,
 				8E8FB0DF1F0AA4EA00A7B85C /* BankList.plist in Resources */,
 				8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */,
 				8E8FB0DB1F0AA4EA00A7B85C /* Info.plist in Resources */,
@@ -1649,7 +1650,6 @@
 				8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */,
 				8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */,
 				8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */,
-				8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */,
 				A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */,
 				8E8FB0DC1F0AA4EA00A7B85C /* Assets.xcassets in Resources */,
 			);

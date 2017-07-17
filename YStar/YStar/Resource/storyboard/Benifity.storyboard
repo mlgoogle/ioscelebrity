@@ -151,7 +151,7 @@
                                         <constraint firstItem="cU6-hm-d7E" firstAttribute="leading" secondItem="GKK-lo-wwL" secondAttribute="trailing" id="xhd-Xy-EP0"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6w-Nu-nff">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6w-Nu-nff" customClass="LineChartView" customModule="Charts">
                                     <rect key="frame" x="12" y="70" width="351" height="278"/>
                                     <color key="backgroundColor" red="0.98431372549999996" green="0.59999999999999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </view>
@@ -315,7 +315,7 @@
                         <outlet property="contentView" destination="Xe2-Hg-KsL" id="3TH-1j-OcA"/>
                         <outlet property="endPlaceholderImageView" destination="O09-2k-G1J" id="qrN-p3-Mf7"/>
                         <outlet property="endTimeButton" destination="r8e-DG-Ie5" id="zkR-hQ-bmb"/>
-                        <outlet property="lineChatView" destination="E6w-Nu-nff" id="6wk-22-g1t"/>
+                        <outlet property="lineChatView" destination="E6w-Nu-nff" id="jbG-ff-9cJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzZ-c5-yVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -495,7 +495,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dealImageView" destination="GXA-19-7XJ" id="VNe-9a-5kt"/>
+                                    <outlet property="dealImageView" destination="Tap-W0-jOn" id="byd-22-smW"/>
                                     <outlet property="dealLabel" destination="f5J-V2-lYy" id="AGO-6h-Y3h"/>
                                     <outlet property="orderPriceImageView" destination="s7h-6M-JCC" id="gbu-7k-Fez"/>
                                     <outlet property="orderPriceLabel" destination="tu8-Zi-kRM" id="hZi-dv-7l4"/>
@@ -527,7 +527,7 @@
             <objects>
                 <navigationController id="Rag-AI-Rap" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="收益" image="home_item_normal" selectedImage="home_item_selected" id="5hN-Rb-Yf5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Iq-EY-AJK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Iq-EY-AJK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

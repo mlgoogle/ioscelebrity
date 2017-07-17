@@ -26,6 +26,10 @@ class BenifityDetailVC: BaseTableViewController {
     
     @IBOutlet weak var backItemButton: UIButton!
     
+    var earningModel : EarningInfoModel?
+    
+    // var yesterdayTodayData : [YesterdayAndTodayPriceModel]?
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -40,20 +44,63 @@ class BenifityDetailVC: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0)
-        self.tableView.tableFooterView = UIView()
-        // 分割线
-        self.tableView.separatorStyle = .none
+        setupUI()
         
-        let backImage = UIImage.imageWith(AppConst.iconFontName.backItem.rawValue, fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: 0xFFFFFF))
-        self.backItemButton.setBackgroundImage(backImage, for: .normal)
+        setupData()
         
         // TODO: - 待处理数据
-        self.titleLabel.text = "2017-12-23"
-        self.earningsLabel.text = "23452.68"
-        self.todayLabel.text = "今开  12.88"
-        self.yesterdayLabel.text = "昨收  26.58"
+        // self.titleLabel.text = "2017-12-23"
+        // self.earningsLabel.text = "23452.68"
+        // self.todayLabel.text = "今开  12.88"
+        // self.yesterdayLabel.text = "昨收  26.58"
     }
+    
+    func setupUI() {
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(-20, 0, 0, 0)
+        self.tableView.tableFooterView = UIView()
+        
+        // 分割线
+        self.tableView.separatorStyle = .none
+        let backImage = UIImage.imageWith(AppConst.iconFontName.backItem.rawValue, fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: 0xFFFFFF))
+        self.backItemButton.setBackgroundImage(backImage, for: .normal)
+    }
+    
+    func setupData() {
+        
+        if self.earningModel != nil {
+            
+            // 日期
+            let stringDate = String.init(format: "%d", (earningModel?.orderdate)!)
+            let yearStr = (stringDate as NSString).substring(to: 4)
+            let monthStr = (stringDate as NSString).substring(with: NSMakeRange(4, 2))
+            let dayStr = (stringDate as NSString).substring(from: 6)
+            self.titleLabel.text = String.init(format: "%@-%@-%@", yearStr,monthStr,dayStr)
+            
+            // 收益
+            self.earningsLabel.text = String.init(format: "%.2f",(earningModel?.profit)!)
+            
+            let model = YesterdayAndTodayPriceRequestModel()
+            model.orderdate = (earningModel?.orderdate)!
+            AppAPIHelper.commen().requestYesterdayAndTodayPrice(model: model, complete: { (response) -> ()? in
+                
+                // print("====\(String(describing: response))")
+                
+                if let objects = response as? YesterdayAndTodayPriceModel {
+                    
+                    self.todayLabel.text = String.init(format:"今开  %.2f",objects.min_price)
+                    self.yesterdayLabel.text = String.init(format:"昨收  %.2f",objects.max_price)
+                }
+                self.tableView.reloadData()
+                return nil
+            }, error: { (error) -> ()? in
+                self.didRequestError(error)
+                self.tableView.reloadData()
+                return nil
+            })
+        }
+    }
+    
     
     @IBAction func backItemAction(_ sender: UIButton) {
         
@@ -77,6 +124,10 @@ class BenifityDetailVC: BaseTableViewController {
         let benifityDetailCell = tableView.dequeueReusableCell(withIdentifier: KBenifityDetailCellID, for: indexPath) as! BenifityDetailCell
         benifityDetailCell.selectionStyle = .none
         // TODO: - 待处理数据
+        if self.earningModel != nil {
+            
+            benifityDetailCell.setBenifityDetail(model: (self.earningModel)!)
+        }
         
         
         return benifityDetailCell

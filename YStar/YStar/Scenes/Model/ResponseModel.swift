@@ -108,5 +108,25 @@ class MeetTypeModel: BaseModel {
     var meetSelect = ""
 }
 
+class EarningInfoModel: Object {
+    
+    dynamic var max_price : Double = 45.21      // 最高价
+    dynamic var min_price : Double = 45.21      // 最低价
+    dynamic var order_count : Int = 1          // 订单总笔数
+    dynamic var order_num : Int = 1             // 订单总时间
+    dynamic var orderdate : Int64 =  20170626      // 日期
+    dynamic var price  : Double = 45.21            // 订单总金额
+    dynamic var profit : Double = 38.4285            // 收益
+    dynamic var starcode : String = "1013"          // 明星id
+}
+
+class YesterdayAndTodayPriceModel: Object {
+    
+    dynamic var max_price : Double = 25.29  //  昨收
+    dynamic var min_price : Double = 19.4   // 今开
+    dynamic var price : Double = 0.0
+}
+
+
 
 
