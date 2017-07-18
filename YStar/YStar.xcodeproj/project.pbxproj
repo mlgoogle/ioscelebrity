@@ -1266,8 +1266,8 @@
 				8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */,
 				8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */,
 				8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */,
-				8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */,
 				8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */,
+				8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */,
 				8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */,
 				8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */,
 			);

@@ -143,4 +143,11 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
         
     }
+    // MARK: - 提现列表(模型)
+    func withDrawList(requestModel: WithdrawalListRequetModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        
+        let packet = SocketDataPacket(opcode: .withdrawlist, model: requestModel)
+        
+        startModelRequest(packet, modelClass: WithdrawListModel.self, complete: complete, error: error)
+    }
 }

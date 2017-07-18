@@ -108,7 +108,6 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                 }
                 return nil
             }, error: { (error) -> ()? in
-                
                 self?.didRequestError(error)
                 return nil
             })
@@ -124,11 +123,10 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
     // 忘记密码
     @IBAction func forgetPwdAction(_ sender: UIButton) {
         let resetTradePassVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "ResetTradePassVC")
-        
         self.navigationController?.pushViewController(resetTradePassVC, animated: true)
         
     }
-    
+
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let resultStr = textField.text?.replacingCharacters(in: (textField.text?.range(from: range))!, with: string)

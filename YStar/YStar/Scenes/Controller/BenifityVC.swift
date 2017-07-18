@@ -87,7 +87,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         let beginDateString = beforeWeekDay.string_from(formatter: "yyyyMMdd")
         let endDateString = beforeDay.string_from(formatter: "yyyyMMdd")
         
-        print("----\(endDateString) ----\(beginDateString)")
+        // print("----\(endDateString) ----\(beginDateString)")
         
         var beginDateInt : Int = 0
         if beginDateStr.length() != 0 {
@@ -98,7 +98,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             endDateInt = Int(endDateString)!
         }
         
-        print("====\(beginDateInt) =====\(endDateInt)")
+        // print("====\(beginDateInt) =====\(endDateInt)")
     
         let model = EarningRequestModel()
         
@@ -108,11 +108,11 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         model.stardate = 20170601
         model.enddate = 20170630
         
-        print("====\(model)")
+        // print("====\(model)")
         
         AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
             
-            print("====\(String(describing: response))")
+            // print("====\(String(describing: response))")
             if let objects = response as? [EarningInfoModel] {
                 
                 self.earningData = objects

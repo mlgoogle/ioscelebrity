@@ -76,6 +76,16 @@ class WithdrawalRequestModel: LoginModle {
     var price = 0.0
 }
 
+// 提现记录
+class WithdrawalListRequetModel: LoginModle {
+    
+    var status:Int32 = 0
+    var startPos:Int32 = 0
+    var count:Int32 = 10
+    var time = ""
+    
+}
+
 class CircleListRequestModel: BaseModel {
     
     var pos:Int64 = 0

@@ -49,5 +49,7 @@ protocol CommenApi {
     func CheckPayPwd(requestModel:CheckPayPwdModel,complete: CompleteBlock?, error: ErrorBlock?)
     // 提现(模型)
     func Withdrawal(requestModel:WithdrawalRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
+    // 提现记录(模型)
+    func withDrawList(requestModel:WithdrawalListRequetModel, complete: CompleteBlock?, error: ErrorBlock?)
 }
 
