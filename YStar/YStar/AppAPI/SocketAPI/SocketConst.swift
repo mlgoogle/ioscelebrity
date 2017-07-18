@@ -71,6 +71,7 @@ class SocketConst: NSObject {
         case accountMoney = 1004
         case detailList = 1005
         case creditlist = 6003
+        // 重置支付密码
         case restPwd = 3005
         case authentication = 3021
         //分类明星

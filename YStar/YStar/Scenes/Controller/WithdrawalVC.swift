@@ -39,16 +39,18 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
             return nil
         }, error:errorBlockFunc())
     }
+    
+    
     func  getwealth(){
         withDrawMoney.text = "可提现金额" + "¥" + String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance)
     }
 
  
-    //全部提现
+    // 全部提现
     @IBAction func withDrawAll(_ sender: Any) {
         inputMoney.text = String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance)
     }
-    //提现
+    // 提现
     @IBAction func withDraw(_ sender: Any) {
         
         if inputMoney.text != ""{
@@ -60,9 +62,23 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                 SVProgressHUD.showErrorMessage(ErrorMessage: "提现金额大于0" , ForDuration: 1, completion: nil)
                 return
             }
-            
         }
+        
+        // SetPayPwdVC()
+        let setPayPwdVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "SetPayPwdVC")
+        
+        self.navigationController?.pushViewController(setPayPwdVC, animated: true)
+        
     }
+    
+    // 忘记密码
+    @IBAction func forgetPwdAction(_ sender: UIButton) {
+        let resetTradePassVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "ResetTradePassVC")
+        
+        self.navigationController?.pushViewController(resetTradePassVC, animated: true)
+        
+    }
+    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let resultStr = textField.text?.replacingCharacters(in: (textField.text?.range(from: range))!, with: string)

@@ -15,16 +15,12 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
 
     // tableHeaderView
     @IBOutlet weak var contentView: UIView!
-    // 折线图
-    @IBOutlet weak var lineChatView: LineChartView!
-    // 开始时间按钮
     @IBOutlet weak var beginTimeButton: UIButton!
-    // 结束时间按钮
     @IBOutlet weak var endTimeButton: UIButton!
-    
     @IBOutlet weak var beginPlaceholderImageView: UIImageView!
-    
     @IBOutlet weak var endPlaceholderImageView: UIImageView!
+    @IBOutlet weak var lineView: KLineView!
+    
     
     var earningData : [EarningInfoModel]?
     
@@ -120,6 +116,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             if let objects = response as? [EarningInfoModel] {
                 
                 self.earningData = objects
+                self.lineView.refreshLineChartData(models: objects)
             }
             self.tableView.reloadData()
             return nil
@@ -154,6 +151,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             benifityCell.setBenifity(model: earningData![indexPath.row])
         }
 //        benifityCell.setBenifity()
+        benifityCell.containerView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.clear : UIColor.white
         
         return benifityCell
     }

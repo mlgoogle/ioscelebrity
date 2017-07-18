@@ -132,19 +132,22 @@
 		8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */; };
 		8D312AB31F0BC233001B54F3 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */; };
 		8D312AB41F0BC233001B54F3 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */; };
-		8D5736B11F17231E003510D2 /* BenifityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5736B01F17231E003510D2 /* BenifityCell.swift */; };
-		8D5736B51F17A1BE003510D2 /* BenifityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5736B41F17A1BE003510D2 /* BenifityDetailCell.swift */; };
-		8D91709D1F149CC60027AF03 /* MeetTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */; };
-		8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */; };
-		8D9170A11F14D7900027AF03 /* MeetOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */; };
-		8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */; };
-		8DCE463D1F185C9E00B789B9 /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */; };
+		8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */; };
+		8DC75D191F1DB7BA000A9BB9 /* SetPayPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */; };
+		8DC75D1C1F1DECFD000A9BB9 /* PayPwdAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */; };
+		8DC75D1E1F1DEE56000A9BB9 /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D1D1F1DEE56000A9BB9 /* DateSelectorView.swift */; };
+		8DC75D261F1DEE9F000A9BB9 /* BenifityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D201F1DEE9F000A9BB9 /* BenifityCell.swift */; };
+		8DC75D271F1DEE9F000A9BB9 /* BenifityDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D211F1DEE9F000A9BB9 /* BenifityDetailCell.swift */; };
+		8DC75D281F1DEE9F000A9BB9 /* MeetOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D221F1DEE9F000A9BB9 /* MeetOrderCell.swift */; };
+		8DC75D291F1DEE9F000A9BB9 /* MeetOrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D231F1DEE9F000A9BB9 /* MeetOrderDetailCell.swift */; };
+		8DC75D2A1F1DEE9F000A9BB9 /* MeetTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D241F1DEE9F000A9BB9 /* MeetTypeCell.swift */; };
+		8DC75D2B1F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D251F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift */; };
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
 		8DECFFA31F1CBFE600F692EF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DECFFA21F1CBFE600F692EF /* iconfont.ttf */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
-		8E08A5D61F1DEDA40072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D51F1DEDA40072AB14 /* KLineView.swift */; };
+		8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
@@ -506,19 +509,22 @@
 		8D312A421F0BC233001B54F3 /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitEmoticon.bundle; sourceTree = "<group>"; };
 		8D312A431F0BC233001B54F3 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8D312A441F0BC233001B54F3 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
-		8D5736B01F17231E003510D2 /* BenifityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BenifityCell.swift; path = YStar/Scenes/Controller/BenifityCell.swift; sourceTree = SOURCE_ROOT; };
-		8D5736B41F17A1BE003510D2 /* BenifityDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BenifityDetailCell.swift; path = YStar/Scenes/Controller/BenifityDetailCell.swift; sourceTree = SOURCE_ROOT; };
-		8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeCell.swift; path = YStar/Scenes/Controller/MeetTypeCell.swift; sourceTree = SOURCE_ROOT; };
-		8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeDetailCell.swift; path = YStar/Scenes/Controller/MeetTypeDetailCell.swift; sourceTree = SOURCE_ROOT; };
-		8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderCell.swift; path = YStar/Scenes/Controller/MeetOrderCell.swift; sourceTree = SOURCE_ROOT; };
-		8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderDetailCell.swift; path = YStar/Scenes/Controller/MeetOrderDetailCell.swift; sourceTree = SOURCE_ROOT; };
-		8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateSelectorView.swift; path = YStar/Scenes/Controller/DateSelectorView.swift; sourceTree = SOURCE_ROOT; };
+		8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetTradePassVC.swift; sourceTree = "<group>"; };
+		8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPayPwdVC.swift; sourceTree = "<group>"; };
+		8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPwdAlertView.swift; sourceTree = "<group>"; };
+		8DC75D1D1F1DEE56000A9BB9 /* DateSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectorView.swift; sourceTree = "<group>"; };
+		8DC75D201F1DEE9F000A9BB9 /* BenifityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityCell.swift; sourceTree = "<group>"; };
+		8DC75D211F1DEE9F000A9BB9 /* BenifityDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityDetailCell.swift; sourceTree = "<group>"; };
+		8DC75D221F1DEE9F000A9BB9 /* MeetOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderCell.swift; sourceTree = "<group>"; };
+		8DC75D231F1DEE9F000A9BB9 /* MeetOrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailCell.swift; sourceTree = "<group>"; };
+		8DC75D241F1DEE9F000A9BB9 /* MeetTypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeCell.swift; sourceTree = "<group>"; };
+		8DC75D251F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailCell.swift; sourceTree = "<group>"; };
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
 		8DECFFA21F1CBFE600F692EF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
-		8E08A5D51F1DEDA40072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineView.swift; sourceTree = "<group>"; };
+		8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KLineView.swift; path = YStar/Scenes/View/KLineView.swift; sourceTree = SOURCE_ROOT; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -1194,6 +1200,29 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8DC75D1A1F1DECE3000A9BB9 /* customToolView */ = {
+			isa = PBXGroup;
+			children = (
+				8DC75D1D1F1DEE56000A9BB9 /* DateSelectorView.swift */,
+				8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */,
+			);
+			path = customToolView;
+			sourceTree = "<group>";
+		};
+		8DC75D1F1F1DEE9F000A9BB9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */,
+				8DC75D201F1DEE9F000A9BB9 /* BenifityCell.swift */,
+				8DC75D211F1DEE9F000A9BB9 /* BenifityDetailCell.swift */,
+				8DC75D221F1DEE9F000A9BB9 /* MeetOrderCell.swift */,
+				8DC75D231F1DEE9F000A9BB9 /* MeetOrderDetailCell.swift */,
+				8DC75D241F1DEE9F000A9BB9 /* MeetTypeCell.swift */,
+				8DC75D251F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		8E338DFE1F0E0C4D006D3C68 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1239,6 +1268,8 @@
 				8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */,
 				8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */,
 				8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */,
+				8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */,
+				8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */,
 			);
 			name = Benifity;
 			sourceTree = "<group>";
@@ -1274,21 +1305,6 @@
 				8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		8E435F471F0B440B00FB1976 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				8D91709C1F149CC60027AF03 /* MeetTypeCell.swift */,
-				8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */,
-				8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */,
-				8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */,
-				8D5736B01F17231E003510D2 /* BenifityCell.swift */,
-				8D5736B41F17A1BE003510D2 /* BenifityDetailCell.swift */,
-				8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */,
-				8E08A5D51F1DEDA40072AB14 /* KLineView.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		8E4455881F19F7A80059CEEC /* Commen */ = {
@@ -1509,7 +1525,8 @@
 			children = (
 				8E435F441F0B440B00FB1976 /* Controller */,
 				8E435F451F0B440B00FB1976 /* Model */,
-				8E435F471F0B440B00FB1976 /* View */,
+				8DC75D1F1F1DEE9F000A9BB9 /* view */,
+				8DC75D1A1F1DECE3000A9BB9 /* customToolView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1835,14 +1852,13 @@
 				8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */,
 				8D312AA61F0BC233001B54F3 /* NIMAdvancedTeamMemberCell.m in Sources */,
 				8D312A891F0BC233001B54F3 /* NIMSessionTableAdapter.m in Sources */,
-				8E08A5D61F1DEDA40072AB14 /* KLineView.swift in Sources */,
 				8D312A941F0BC233001B54F3 /* NIMSessionUnknowContentView.m in Sources */,
 				8E8FB0BA1F0AA4EA00A7B85C /* SocketHelper.swift in Sources */,
 				8D312AA51F0BC233001B54F3 /* NIMTeamMemberListViewController.m in Sources */,
-				8DCE463D1F185C9E00B789B9 /* DateSelectorView.swift in Sources */,
 				8D312A5E1F0BC233001B54F3 /* NIMContactPickedView.m in Sources */,
 				8E8FB0C61F0AA4EA00A7B85C /* String+Extension.swift in Sources */,
 				8D312A541F0BC233001B54F3 /* NIMCustomLeftBarView.m in Sources */,
+				8DC75D291F1DEE9F000A9BB9 /* MeetOrderDetailCell.swift in Sources */,
 				8D312A951F0BC233001B54F3 /* NIMSessionVideoContentView.m in Sources */,
 				8D312A9C1F0BC233001B54F3 /* NIMTeamCardOperationItem.m in Sources */,
 				8D312A901F0BC233001B54F3 /* NIMSessionMessageContentView.m in Sources */,
@@ -1852,6 +1868,7 @@
 				8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */,
 				8E435F541F0B452C00FB1976 /* MeetManagerVC.swift in Sources */,
 				8E8FB0C91F0AA4EA00A7B85C /* UIImage+Extension.swift in Sources */,
+				8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */,
 				8D312A811F0BC233001B54F3 /* NIMMessageCellFactory.m in Sources */,
 				8D312A521F0BC233001B54F3 /* NIMAvatarImageView.m in Sources */,
 				8D312A6E1F0BC233001B54F3 /* NIMKitEvent.m in Sources */,
@@ -1860,21 +1877,19 @@
 				8E36FC091F14B5A8007AEFA6 /* CreatNewsVC.swift in Sources */,
 				8D312A701F0BC233001B54F3 /* NIMKitInfoFetchOption.m in Sources */,
 				8D312A911F0BC233001B54F3 /* NIMSessionNetChatNotifyContentView.m in Sources */,
-				8D91709D1F149CC60027AF03 /* MeetTypeCell.swift in Sources */,
 				8D312A7C1F0BC233001B54F3 /* NIMUnsupportContentConfig.m in Sources */,
 				8E44558F1F19FC3E0059CEEC /* KeyboardInputViewController.swift in Sources */,
 				8E8FB0CD1F0AA4EA00A7B85C /* UIViewController+Extension.swift in Sources */,
 				8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */,
-				8D5736B51F17A1BE003510D2 /* BenifityDetailCell.swift in Sources */,
 				8E8FB0C51F0AA4EA00A7B85C /* NSObject+GCD.swift in Sources */,
 				8D312A561F0BC233001B54F3 /* NIMKitNotificationFirer.m in Sources */,
 				8D312AAE1F0BC233001B54F3 /* NIMKitTimerHolder.m in Sources */,
 				8E36FE4C1F15CE44007AEFA6 /* yRuntime.swift in Sources */,
-				8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */,
 				8D312A991F0BC233001B54F3 /* NIMSessionListViewController.m in Sources */,
 				8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */,
 				8D312A851F0BC233001B54F3 /* NIMSessionDataSourceImpl.m in Sources */,
 				8D312A691F0BC233001B54F3 /* NIMInputEmoticonParser.m in Sources */,
+				8DC75D2A1F1DEE9F000A9BB9 /* MeetTypeCell.swift in Sources */,
 				8E8FB0BC1F0AA4EA00A7B85C /* SocketRequestManage.swift in Sources */,
 				8D312A9D1F0BC233001B54F3 /* NIMTeamCardRowItem.m in Sources */,
 				8E36FE4B1F15CE44007AEFA6 /* UIView.swift in Sources */,
@@ -1908,7 +1923,9 @@
 				8D312A801F0BC233001B54F3 /* NIMKitMessageAtModel.m in Sources */,
 				8D312A471F0BC233001B54F3 /* NSString+NIMKit.m in Sources */,
 				8D312A9F1F0BC233001B54F3 /* NIMUsrInfoData.m in Sources */,
+				8DC75D281F1DEE9F000A9BB9 /* MeetOrderCell.swift in Sources */,
 				8E8FB0D91F0AA4EA00A7B85C /* AppDelegate.swift in Sources */,
+				8DC75D271F1DEE9F000A9BB9 /* BenifityDetailCell.swift in Sources */,
 				8D312A591F0BC233001B54F3 /* NIMPageView.m in Sources */,
 				8D312AA81F0BC233001B54F3 /* NIMTeamCardHeaderCell.m in Sources */,
 				8D312A981F0BC233001B54F3 /* NIMSessionListDefaultConfig.m in Sources */,
@@ -1926,13 +1943,11 @@
 				8D312A671F0BC233001B54F3 /* NIMInputEmoticonContainerView.m in Sources */,
 				8E8FB0CF1F0AA4EA00A7B85C /* TableViewHelper.swift in Sources */,
 				8E8FB0CC1F0AA4EA00A7B85C /* UIView+Extension.swift in Sources */,
-				8D9170A11F14D7900027AF03 /* MeetOrderCell.swift in Sources */,
 				8D312A4E1F0BC233001B54F3 /* NIMKitDataProviderImpl.m in Sources */,
 				8E8FB0D11F0AA4EA00A7B85C /* IPManager.c in Sources */,
 				8D312AA41F0BC233001B54F3 /* NIMTeamMemberCardViewController.m in Sources */,
 				8D312A741F0BC233001B54F3 /* NIMAudioContentConfig.m in Sources */,
 				8E8FB0DA1F0AA4EA00A7B85C /* AppServerHelper.swift in Sources */,
-				8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */,
 				8D312AA71F0BC233001B54F3 /* NIMTeamAnnouncementListCell.m in Sources */,
 				8D312A7B1F0BC233001B54F3 /* NIMTipContentConfig.m in Sources */,
 				8D312A6B1F0BC233001B54F3 /* NIMInputMoreContainerView.m in Sources */,
@@ -1946,6 +1961,7 @@
 				8E8FB0D51F0AA4EA00A7B85C /* AppConst.swift in Sources */,
 				8D312A5D1F0BC233001B54F3 /* NIMContactDataItem.m in Sources */,
 				8E44559D1F19FE0E0059CEEC /* HHCollectionViewFlowLayout.swift in Sources */,
+				8DC75D2B1F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift in Sources */,
 				8E8FB0B91F0AA4EA00A7B85C /* SocketDataPacket.swift in Sources */,
 				8E435F501F0B44E800FB1976 /* BenifityDetailVC.swift in Sources */,
 				8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */,
@@ -1959,6 +1975,7 @@
 				8D312AB01F0BC233001B54F3 /* NIMPinyinConverter.m in Sources */,
 				8E435F4A1F0B444700FB1976 /* BaseTabbarViewController.swift in Sources */,
 				8E8FB0BF1F0AA4EA00A7B85C /* BaseNavigationController.swift in Sources */,
+				8DC75D191F1DB7BA000A9BB9 /* SetPayPwdVC.swift in Sources */,
 				8D312A461F0BC233001B54F3 /* NIMExtensionHelper.m in Sources */,
 				8D312A761F0BC233001B54F3 /* NIMFileContentConfig.m in Sources */,
 				8D312A4F1F0BC233001B54F3 /* NIMKitSwitcherCell.m in Sources */,
@@ -1968,10 +1985,12 @@
 				8E44558B1F19F7A80059CEEC /* CommenApi.swift in Sources */,
 				8D312A4A1F0BC233001B54F3 /* UIView+NIM.m in Sources */,
 				8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */,
+				8DC75D1E1F1DEE56000A9BB9 /* DateSelectorView.swift in Sources */,
 				8E8FB0CA1F0AA4EA00A7B85C /* UIScreen+Extension.swift in Sources */,
 				8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */,
 				8D312A4D1F0BC233001B54F3 /* NIMKitColorButtonCell.m in Sources */,
 				8D312A621F0BC233001B54F3 /* NIMGrowingInternalTextView.m in Sources */,
+				8DC75D1C1F1DECFD000A9BB9 /* PayPwdAlertView.swift in Sources */,
 				8D312A8A1F0BC233001B54F3 /* NIMMessageCell.m in Sources */,
 				8D312AAA1F0BC233001B54F3 /* NIMTeamSwitchTableViewCell.m in Sources */,
 				8D312A921F0BC233001B54F3 /* NIMSessionNotificationContentView.m in Sources */,
@@ -1994,7 +2013,9 @@
 				8E8FB0CE1F0AA4EA00A7B85C /* EmojiFaceHelper.swift in Sources */,
 				8D312A711F0BC233001B54F3 /* NIMMediaItem.m in Sources */,
 				8E8FB0C01F0AA4EA00A7B85C /* BaseTableViewController.swift in Sources */,
+				8DC75D261F1DEE9F000A9BB9 /* BenifityCell.swift in Sources */,
 				8E4455901F19FC3E0059CEEC /* StarNewsVC.swift in Sources */,
+				8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */,
 				8D312A501F0BC233001B54F3 /* NIMKitUIConfig.m in Sources */,
 				8D312A8D1F0BC233001B54F3 /* NIMSessionFileTransContentView.m in Sources */,
 				8D0090F31F0E14E100AB9C05 /* WithdrawalVC.swift in Sources */,
@@ -2002,7 +2023,6 @@
 				8D312AA21F0BC233001B54F3 /* NIMNormalTeamCardViewController.m in Sources */,
 				8E8FB0BE1F0AA4EA00A7B85C /* BaseCustomTableViewController.swift in Sources */,
 				8E8FB0B71F0AA4EA00A7B85C /* APISocketHelper.swift in Sources */,
-				8D5736B11F17231E003510D2 /* BenifityCell.swift in Sources */,
 				8D312A601F0BC233001B54F3 /* NIMContactSelectTabView.m in Sources */,
 				8D312A7F1F0BC233001B54F3 /* NIMKitLocationPoint.m in Sources */,
 				8D312A961F0BC233001B54F3 /* NIMLocationViewController.m in Sources */,

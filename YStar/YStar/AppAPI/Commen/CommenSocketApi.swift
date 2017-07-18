@@ -118,4 +118,11 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         let packet = SocketDataPacket(opcode: .yesterdayAndToday, model: model)
         startModelRequest(packet, modelClass: YesterdayAndTodayPriceModel.self, complete: complete, error: error)
     }
+    // MARK: - 重置支付密码(模型)
+    func ResetPayPwd(requestModel:ResetPayPwdRequestModel,complete: CompleteBlock?, error: ErrorBlock?) {
+        
+        let packet = SocketDataPacket(opcode: .restPwd, model: requestModel)
+        
+        startRequest(packet, complete: complete, error: error)
+    }
 }
