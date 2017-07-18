@@ -140,6 +140,7 @@
 		8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */; };
 		8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */; };
 		8DC75D191F1DB7BA000A9BB9 /* SetPayPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */; };
+		8DC75D1C1F1DECFD000A9BB9 /* PayPwdAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */; };
 		8DCE463D1F185C9E00B789B9 /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */; };
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
@@ -514,6 +515,7 @@
 		8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderDetailCell.swift; path = YStar/Scenes/Controller/MeetOrderDetailCell.swift; sourceTree = SOURCE_ROOT; };
 		8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetTradePassVC.swift; sourceTree = "<group>"; };
 		8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPayPwdVC.swift; sourceTree = "<group>"; };
+		8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPwdAlertView.swift; sourceTree = "<group>"; };
 		8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateSelectorView.swift; path = YStar/Scenes/Controller/DateSelectorView.swift; sourceTree = SOURCE_ROOT; };
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
@@ -1194,6 +1196,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8DC75D1A1F1DECE3000A9BB9 /* customToolView */ = {
+			isa = PBXGroup;
+			children = (
+				8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */,
+			);
+			path = customToolView;
+			sourceTree = "<group>";
+		};
 		8E338DFE1F0E0C4D006D3C68 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -1510,6 +1520,7 @@
 				8E435F441F0B440B00FB1976 /* Controller */,
 				8E435F451F0B440B00FB1976 /* Model */,
 				8E435F471F0B440B00FB1976 /* View */,
+				8DC75D1A1F1DECE3000A9BB9 /* customToolView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1972,6 +1983,7 @@
 				8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */,
 				8D312A4D1F0BC233001B54F3 /* NIMKitColorButtonCell.m in Sources */,
 				8D312A621F0BC233001B54F3 /* NIMGrowingInternalTextView.m in Sources */,
+				8DC75D1C1F1DECFD000A9BB9 /* PayPwdAlertView.swift in Sources */,
 				8D312A8A1F0BC233001B54F3 /* NIMMessageCell.m in Sources */,
 				8D312AAA1F0BC233001B54F3 /* NIMTeamSwitchTableViewCell.m in Sources */,
 				8D312A921F0BC233001B54F3 /* NIMSessionNotificationContentView.m in Sources */,
