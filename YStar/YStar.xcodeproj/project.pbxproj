@@ -138,6 +138,7 @@
 		8D91709F1F14C8E60027AF03 /* MeetTypeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */; };
 		8D9170A11F14D7900027AF03 /* MeetOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */; };
 		8D9170A31F14DDC40027AF03 /* MeetOrderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */; };
+		8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */; };
 		8DCE463D1F185C9E00B789B9 /* DateSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */; };
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
@@ -510,6 +511,7 @@
 		8D91709E1F14C8E60027AF03 /* MeetTypeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetTypeDetailCell.swift; path = YStar/Scenes/Controller/MeetTypeDetailCell.swift; sourceTree = SOURCE_ROOT; };
 		8D9170A01F14D7900027AF03 /* MeetOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderCell.swift; path = YStar/Scenes/Controller/MeetOrderCell.swift; sourceTree = SOURCE_ROOT; };
 		8D9170A21F14DDC40027AF03 /* MeetOrderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeetOrderDetailCell.swift; path = YStar/Scenes/Controller/MeetOrderDetailCell.swift; sourceTree = SOURCE_ROOT; };
+		8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetTradePassVC.swift; sourceTree = "<group>"; };
 		8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateSelectorView.swift; path = YStar/Scenes/Controller/DateSelectorView.swift; sourceTree = SOURCE_ROOT; };
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
@@ -1235,6 +1237,7 @@
 				8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */,
 				8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */,
 				8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */,
+				8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */,
 			);
 			name = Benifity;
 			sourceTree = "<group>";
@@ -1844,6 +1847,7 @@
 				8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */,
 				8E435F541F0B452C00FB1976 /* MeetManagerVC.swift in Sources */,
 				8E8FB0C91F0AA4EA00A7B85C /* UIImage+Extension.swift in Sources */,
+				8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */,
 				8D312A811F0BC233001B54F3 /* NIMMessageCellFactory.m in Sources */,
 				8D312A521F0BC233001B54F3 /* NIMAvatarImageView.m in Sources */,
 				8D312A6E1F0BC233001B54F3 /* NIMKitEvent.m in Sources */,

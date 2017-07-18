@@ -57,6 +57,16 @@ class YesterdayAndTodayPriceRequestModel: LoginModle {
     var orderdate : Int64 = 0
 }
 
+// 重置支付密码
+class ResetPayPwdRequestModel: LoginModle {
+    var timestamp : Int64 = 0
+    var vCode = ""
+    var vToken = ""
+    var type = 1
+    var pwd = ""
+    var phone = ""
+}
+
 class CircleListRequestModel: BaseModel {
     
     var pos:Int64 = 0
