@@ -143,6 +143,8 @@
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
 		8DECFFA31F1CBFE600F692EF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DECFFA21F1CBFE600F692EF /* iconfont.ttf */; };
+		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
+		8E08A5D61F1DEDA40072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D51F1DEDA40072AB14 /* KLineView.swift */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
@@ -166,7 +168,6 @@
 		8E435F5A1F0B484300FB1976 /* ShareModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F591F0B484300FB1976 /* ShareModelHelper.swift */; };
 		8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */; };
 		8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */; };
-		8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E435F5F1F0B754D00FB1976 /* iconfont.ttf */; };
 		8E44558B1F19F7A80059CEEC /* CommenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455891F19F7A80059CEEC /* CommenApi.swift */; };
 		8E44558C1F19F7A80059CEEC /* CommenSocketApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44558A1F19F7A80059CEEC /* CommenSocketApi.swift */; };
 		8E44558F1F19FC3E0059CEEC /* KeyboardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44558D1F19FC3E0059CEEC /* KeyboardInputViewController.swift */; };
@@ -516,6 +517,8 @@
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
 		8DECFFA21F1CBFE600F692EF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
+		8E08A5D51F1DEDA40072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KLineView.swift; sourceTree = "<group>"; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -539,7 +542,6 @@
 		8E435F591F0B484300FB1976 /* ShareModelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModelHelper.swift; sourceTree = "<group>"; };
 		8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
-		8E435F5F1F0B754D00FB1976 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8E4455891F19F7A80059CEEC /* CommenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenApi.swift; sourceTree = "<group>"; };
 		8E44558A1F19F7A80059CEEC /* CommenSocketApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenSocketApi.swift; sourceTree = "<group>"; };
 		8E44558D1F19FC3E0059CEEC /* KeyboardInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInputViewController.swift; sourceTree = "<group>"; };
@@ -1284,6 +1286,7 @@
 				8D5736B01F17231E003510D2 /* BenifityCell.swift */,
 				8D5736B41F17A1BE003510D2 /* BenifityDetailCell.swift */,
 				8DCE463C1F185C9E00B789B9 /* DateSelectorView.swift */,
+				8E08A5D51F1DEDA40072AB14 /* KLineView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1496,6 +1499,7 @@
 				8E8FB0991F0AA4EA00A7B85C /* city.plist */,
 				8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */,
 				8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */,
+				8E08A5D31F1DE4D20072AB14 /* ytest.plist */,
 			);
 			path = plist;
 			sourceTree = "<group>";
@@ -1688,6 +1692,7 @@
 				8E44559A1F19FE0E0059CEEC /* aio_face_delete@2x.png in Resources */,
 				8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */,
 				8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */,
+				8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
 				8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */,
 				8E44559C1F19FE0E0059CEEC /* EmojisList.plist in Resources */,
@@ -1830,6 +1835,7 @@
 				8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */,
 				8D312AA61F0BC233001B54F3 /* NIMAdvancedTeamMemberCell.m in Sources */,
 				8D312A891F0BC233001B54F3 /* NIMSessionTableAdapter.m in Sources */,
+				8E08A5D61F1DEDA40072AB14 /* KLineView.swift in Sources */,
 				8D312A941F0BC233001B54F3 /* NIMSessionUnknowContentView.m in Sources */,
 				8E8FB0BA1F0AA4EA00A7B85C /* SocketHelper.swift in Sources */,
 				8D312AA51F0BC233001B54F3 /* NIMTeamMemberListViewController.m in Sources */,
