@@ -13,9 +13,14 @@ class ShareModelHelper: BaseModel {
     class func instance() -> ShareModelHelper{
         return model
     }
+    
+    // 设置交易密码
+    var setPayPwd = [String:String]()
+    
     var uid = 0
     var phone  = ""
     var token = ""
     var userinfo = UserBalance()
+    
     
 }

@@ -43,5 +43,7 @@ protocol CommenApi {
     func requestEarningInfo(model:EarningRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
     // 获取昨收今开(模型)
     func requestYesterdayAndTodayPrice(model:YesterdayAndTodayPriceRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
+    // 重置支付密码(模型)
+    func ResetPayPwd(requestModel:ResetPayPwdRequestModel,complete: CompleteBlock?, error: ErrorBlock?)
 }
 

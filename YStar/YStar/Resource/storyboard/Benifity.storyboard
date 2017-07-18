@@ -952,10 +952,79 @@
             </objects>
             <point key="canvasLocation" x="2196" y="226.23688155922042"/>
         </scene>
+        <!--设置交易密码-->
+        <scene sceneID="Lys-Mg-jbx">
+            <objects>
+                <tableViewController storyboardIdentifier="SetPayPwdVC" title="设置交易密码" hidesBottomBarWhenPushed="YES" id="Df2-Hm-tuX" customClass="SetPayPwdVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cFU-61-yek">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Uiu-dw-ffh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DU-Xx-aA8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
+                                    <connections>
+                                        <action selector="showKeyBordButtonAction:" destination="Df2-Hm-tuX" eventType="touchUpInside" id="GQ9-Bc-nly"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为保障您的交易安全,请设置支付密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9I-t9-GPi">
+                                    <rect key="frame" x="63" y="43" width="249.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83e-zC-nlv">
+                                    <rect key="frame" x="16" y="261" width="343" height="50"/>
+                                    <color key="backgroundColor" red="0.97407889660000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Ilw-rF-5wU"/>
+                                    </constraints>
+                                    <state key="normal" title="下一步">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doSetPwdButtonAction:" destination="Df2-Hm-tuX" eventType="touchUpInside" id="ZGt-If-uyX"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="7DU-Xx-aA8" secondAttribute="trailing" id="8gH-CJ-1hm"/>
+                                <constraint firstItem="7DU-Xx-aA8" firstAttribute="leading" secondItem="Uiu-dw-ffh" secondAttribute="leading" id="Jcv-wx-xWo"/>
+                                <constraint firstAttribute="trailing" secondItem="83e-zC-nlv" secondAttribute="trailing" constant="16" id="S8U-7u-0SD"/>
+                                <constraint firstAttribute="bottom" secondItem="7DU-Xx-aA8" secondAttribute="bottom" id="XId-7F-l4t"/>
+                                <constraint firstItem="83e-zC-nlv" firstAttribute="top" secondItem="m9I-t9-GPi" secondAttribute="bottom" constant="200" id="bJm-ig-OCf"/>
+                                <constraint firstItem="83e-zC-nlv" firstAttribute="leading" secondItem="Uiu-dw-ffh" secondAttribute="leading" constant="16" id="eER-Av-kfo"/>
+                                <constraint firstItem="m9I-t9-GPi" firstAttribute="centerX" secondItem="Uiu-dw-ffh" secondAttribute="centerX" id="j2c-Tu-RdE"/>
+                                <constraint firstItem="7DU-Xx-aA8" firstAttribute="top" secondItem="Uiu-dw-ffh" secondAttribute="top" id="kIU-wR-BF6"/>
+                                <constraint firstItem="m9I-t9-GPi" firstAttribute="top" secondItem="Uiu-dw-ffh" secondAttribute="top" constant="43" id="zEP-zz-YgI"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="Df2-Hm-tuX" id="wfP-Lx-ixs"/>
+                            <outlet property="delegate" destination="Df2-Hm-tuX" id="aU2-kw-XHj"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="doSetPwdButton" destination="83e-zC-nlv" id="THH-eG-QMh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qmb-jG-8dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="-1278"/>
+        </scene>
         <!--提现-->
         <scene sceneID="BT5-sY-b21">
             <objects>
-                <tableViewController storyboardIdentifier="WithdrawalVC" title="提现" id="qks-ys-CNb" customClass="WithdrawalVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WithdrawalVC" title="提现" hidesBottomBarWhenPushed="YES" id="qks-ys-CNb" customClass="WithdrawalVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b9h-p8-2FX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1078,7 +1147,7 @@
                                                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </state>
                                                             <connections>
-                                                                <segue destination="VXZ-Fe-tgd" kind="push" id="YaT-PN-kMC"/>
+                                                                <action selector="forgetPwdAction:" destination="qks-ys-CNb" eventType="touchUpInside" id="6iD-Rm-rdD"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="可提现金额¥888" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WO-Ix-iNf">
@@ -1162,10 +1231,10 @@
             </objects>
             <point key="canvasLocation" x="2196" y="-1349"/>
         </scene>
-        <!--重置支付密码密码-->
+        <!--重置支付密码-->
         <scene sceneID="0nR-Mq-Xj8">
             <objects>
-                <tableViewController storyboardIdentifier="ResetTradePassVC" title="重置支付密码密码" id="VXZ-Fe-tgd" customClass="ResetTradePassVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ResetTradePassVC" title="重置支付密码" id="VXZ-Fe-tgd" customClass="ResetTradePassVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yp1-gP-lwL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1248,7 +1317,7 @@
                                                     <rect key="frame" x="13" y="0.0" width="349" height="40"/>
                                                     <subviews>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpj-ZX-9vB">
-                                                            <rect key="frame" x="8" y="0.0" width="223" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="231" height="40"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1270,7 +1339,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                             <connections>
-                                                                <action selector="sendVaildCode:" destination="VXZ-Fe-tgd" eventType="touchUpInside" id="k8B-rD-7wn"/>
+                                                                <action selector="sendCodeAction:" destination="VXZ-Fe-tgd" eventType="touchUpInside" id="kny-V0-qcz"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -1278,7 +1347,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="ksI-oN-xc2" secondAttribute="bottom" id="7D7-D5-jJf"/>
                                                         <constraint firstAttribute="bottom" secondItem="hpj-ZX-9vB" secondAttribute="bottom" id="PQ5-0d-0cb"/>
-                                                        <constraint firstItem="hpj-ZX-9vB" firstAttribute="leading" secondItem="E7c-aN-8vG" secondAttribute="leading" constant="8" id="PSe-h1-B5N"/>
+                                                        <constraint firstItem="hpj-ZX-9vB" firstAttribute="leading" secondItem="E7c-aN-8vG" secondAttribute="leading" id="PSe-h1-B5N"/>
                                                         <constraint firstItem="ksI-oN-xc2" firstAttribute="leading" secondItem="hpj-ZX-9vB" secondAttribute="trailing" constant="10" id="Wfh-kb-TCa"/>
                                                         <constraint firstItem="hpj-ZX-9vB" firstAttribute="top" secondItem="E7c-aN-8vG" secondAttribute="top" id="hJP-01-Uo5"/>
                                                         <constraint firstItem="ksI-oN-xc2" firstAttribute="top" secondItem="E7c-aN-8vG" secondAttribute="top" id="usT-2h-6XW"/>
@@ -1464,7 +1533,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="doreset:" destination="VXZ-Fe-tgd" eventType="touchUpInside" id="10K-DZ-pr3"/>
+                                                        <action selector="resetPwdButtonAction:" destination="VXZ-Fe-tgd" eventType="touchUpInside" id="FnB-XR-5Zq"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1489,16 +1558,16 @@
                             </tableViewSection>
                         </sections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="发送验证码" id="nOa-WG-e1F">
+                    <navigationItem key="navigationItem" id="nOa-WG-e1F">
                         <barButtonItem key="leftBarButtonItem" id="Cse-pZ-XTs"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="codeTf" destination="hpj-ZX-9vB" id="yAp-r3-8uB"/>
-                        <outlet property="doRset" destination="Hwf-qF-eXy" id="GJ6-ww-Rwl"/>
-                        <outlet property="first_input" destination="q2t-xA-96F" id="jw8-Xl-BIK"/>
-                        <outlet property="phoneTf" destination="YFc-Ah-9ra" id="ciC-JL-8z9"/>
-                        <outlet property="second_input" destination="fAJ-Oh-oPZ" id="zI1-T6-gxP"/>
-                        <outlet property="vaildCodeBtn" destination="ksI-oN-xc2" id="eUj-5W-Iff"/>
+                        <outlet property="firstPwdTextField" destination="q2t-xA-96F" id="U7G-tC-woF"/>
+                        <outlet property="phoneNumTextField" destination="YFc-Ah-9ra" id="qjV-Uj-rK8"/>
+                        <outlet property="resetPwdButton" destination="Hwf-qF-eXy" id="Sm6-fP-sPg"/>
+                        <outlet property="secondPwdTextField" destination="fAJ-Oh-oPZ" id="By2-Vd-FIE"/>
+                        <outlet property="sendCodeButton" destination="ksI-oN-xc2" id="JVO-lA-l5X"/>
+                        <outlet property="verificationCodeTextField" destination="hpj-ZX-9vB" id="v06-Ev-4D3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NvD-aC-4Uv" userLabel="First Responder" sceneMemberID="firstResponder"/>
