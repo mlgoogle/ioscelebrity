@@ -123,7 +123,8 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         
         let packet = SocketDataPacket(opcode: .restPwd, model: requestModel)
         
-        startRequest(packet, complete: complete, error: error)
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
+//         startRequest(packet, complete: complete, error: error)
     }
     // MARK: - 验证支付密码(模型)
     func CheckPayPwd(requestModel: CheckPayPwdModel, complete: CompleteBlock?, error: ErrorBlock?) {

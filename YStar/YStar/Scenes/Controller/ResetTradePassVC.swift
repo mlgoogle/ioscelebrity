@@ -157,9 +157,15 @@ class ResetTradePassVC: BaseTableViewController,UITextFieldDelegate{
         model.phone = self.phoneNumTextField.text!
         
         AppAPIHelper.commen().ResetPayPwd(requestModel: model, complete: { (response) -> ()? in
-            if let objects = response {
-                let dictModel = objects as! [String : AnyObject]
-                if dictModel["status"] as! Int == 0 {
+//            if let objects = response {
+//                let dictModel = objects as! [String : AnyObject]
+//                if dictModel["status"] as! Int == 0 {
+//                    SVProgressHUD.showSuccessMessage(SuccessMessage: "重置成功!", ForDuration: 2.0, completion: nil)
+//                    self.navigationController?.popViewController(animated: true)
+//                }
+//            }
+            if let objects = response as? ResultModel {
+                if objects.result == 0 {
                     SVProgressHUD.showSuccessMessage(SuccessMessage: "重置成功!", ForDuration: 2.0, completion: nil)
                     self.navigationController?.popViewController(animated: true)
                 }

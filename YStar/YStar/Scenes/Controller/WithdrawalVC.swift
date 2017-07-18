@@ -82,8 +82,9 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
             // 校验密码
             AppAPIHelper.commen().CheckPayPwd(requestModel: model, complete: { (response) -> ()? in
                 if let objects = response as? ResultModel {
-                   if objects.result == 1 {
-                            // 成功
+                    // 校验成功
+                    if objects.result == 1 {
+                            // 发起提现
                             let requestModel = WithdrawalRequestModel()
                             requestModel.price = Double.init((self?.inputMoney.text!)!)!
                             AppAPIHelper.commen().Withdrawal(requestModel: requestModel, complete: { (responseObject) -> ()? in
