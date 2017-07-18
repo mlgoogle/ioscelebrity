@@ -527,7 +527,7 @@
             <objects>
                 <navigationController id="Rag-AI-Rap" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="收益" image="home_item_normal" selectedImage="home_item_selected" id="5hN-Rb-Yf5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Iq-EY-AJK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Iq-EY-AJK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -952,10 +952,79 @@
             </objects>
             <point key="canvasLocation" x="2196" y="226.23688155922042"/>
         </scene>
+        <!--设置交易密码-->
+        <scene sceneID="Lys-Mg-jbx">
+            <objects>
+                <tableViewController storyboardIdentifier="SetPayPwdVC" title="设置交易密码" hidesBottomBarWhenPushed="YES" id="Df2-Hm-tuX" customClass="SetPayPwdVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="cFU-61-yek">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Uiu-dw-ffh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7DU-Xx-aA8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="664"/>
+                                    <connections>
+                                        <action selector="showKeyBordButtonAction:" destination="Df2-Hm-tuX" eventType="touchUpInside" id="GQ9-Bc-nly"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为保障您的交易安全,请设置支付密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9I-t9-GPi">
+                                    <rect key="frame" x="63" y="43" width="249.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83e-zC-nlv">
+                                    <rect key="frame" x="16" y="261" width="343" height="50"/>
+                                    <color key="backgroundColor" red="0.97407889660000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Ilw-rF-5wU"/>
+                                    </constraints>
+                                    <state key="normal" title="下一步">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="doSetPwdButtonAction:" destination="Df2-Hm-tuX" eventType="touchUpInside" id="ZGt-If-uyX"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="7DU-Xx-aA8" secondAttribute="trailing" id="8gH-CJ-1hm"/>
+                                <constraint firstItem="7DU-Xx-aA8" firstAttribute="leading" secondItem="Uiu-dw-ffh" secondAttribute="leading" id="Jcv-wx-xWo"/>
+                                <constraint firstAttribute="trailing" secondItem="83e-zC-nlv" secondAttribute="trailing" constant="16" id="S8U-7u-0SD"/>
+                                <constraint firstAttribute="bottom" secondItem="7DU-Xx-aA8" secondAttribute="bottom" id="XId-7F-l4t"/>
+                                <constraint firstItem="83e-zC-nlv" firstAttribute="top" secondItem="m9I-t9-GPi" secondAttribute="bottom" constant="200" id="bJm-ig-OCf"/>
+                                <constraint firstItem="83e-zC-nlv" firstAttribute="leading" secondItem="Uiu-dw-ffh" secondAttribute="leading" constant="16" id="eER-Av-kfo"/>
+                                <constraint firstItem="m9I-t9-GPi" firstAttribute="centerX" secondItem="Uiu-dw-ffh" secondAttribute="centerX" id="j2c-Tu-RdE"/>
+                                <constraint firstItem="7DU-Xx-aA8" firstAttribute="top" secondItem="Uiu-dw-ffh" secondAttribute="top" id="kIU-wR-BF6"/>
+                                <constraint firstItem="m9I-t9-GPi" firstAttribute="top" secondItem="Uiu-dw-ffh" secondAttribute="top" constant="43" id="zEP-zz-YgI"/>
+                            </constraints>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="Df2-Hm-tuX" id="wfP-Lx-ixs"/>
+                            <outlet property="delegate" destination="Df2-Hm-tuX" id="aU2-kw-XHj"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="doSetPwdButton" destination="83e-zC-nlv" id="THH-eG-QMh"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qmb-jG-8dm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="-1278"/>
+        </scene>
         <!--提现-->
         <scene sceneID="BT5-sY-b21">
             <objects>
-                <tableViewController storyboardIdentifier="WithdrawalVC" title="提现" id="qks-ys-CNb" customClass="WithdrawalVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="WithdrawalVC" title="提现" hidesBottomBarWhenPushed="YES" id="qks-ys-CNb" customClass="WithdrawalVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b9h-p8-2FX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

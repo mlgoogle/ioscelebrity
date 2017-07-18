@@ -62,8 +62,13 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                 SVProgressHUD.showErrorMessage(ErrorMessage: "提现金额大于0" , ForDuration: 1, completion: nil)
                 return
             }
-            
         }
+        
+        // SetPayPwdVC()
+        let setPayPwdVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "SetPayPwdVC")
+        
+        self.navigationController?.pushViewController(setPayPwdVC, animated: true)
+        
     }
     
     // 忘记密码
