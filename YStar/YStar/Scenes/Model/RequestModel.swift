@@ -66,6 +66,15 @@ class ResetPayPwdRequestModel: LoginModle {
     var pwd = ""
     var phone = ""
 }
+// 验证支付密码
+class CheckPayPwdModel: LoginModle {
+    var uid:Int64 = Int64(ShareModelHelper.instance().uid)
+    var paypwd = ""
+}
+// 提现
+class WithdrawalRequestModel: LoginModle {
+    var price = 0.0
+}
 
 class CircleListRequestModel: BaseModel {
     

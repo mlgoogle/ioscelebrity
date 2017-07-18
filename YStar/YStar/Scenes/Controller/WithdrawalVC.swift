@@ -53,6 +53,11 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
     // 提现
     @IBAction func withDraw(_ sender: Any) {
         
+        if inputMoney.text?.length() == 0 {
+            SVProgressHUD.showErrorMessage(ErrorMessage: "请输入提现金额", ForDuration: 1.0, completion: nil)
+            return
+        }
+        
         if inputMoney.text != ""{
             if Double.init(inputMoney.text!)! > ShareModelHelper.instance().userinfo.balance{
                 SVProgressHUD.showErrorMessage(ErrorMessage: "最多可提现" + String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance), ForDuration: 1, completion: nil)
@@ -64,10 +69,55 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
             }
         }
         
-        // SetPayPwdVC()
-        let setPayPwdVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "SetPayPwdVC")
+        // 已设置支付密码
+        let payPwdAlertView = PayPwdAlertView(frame: self.view.bounds)
+        payPwdAlertView.show(self.view)
+        payPwdAlertView.completeBlock = ({[weak self](password:String)  -> Void in
+            // print("输入的密码是:" + password)
+            let model = CheckPayPwdModel()
+           
+            model.uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) as! Int64
+            model.paypwd = password.md5()
+            
+            // 校验密码
+            AppAPIHelper.commen().CheckPayPwd(requestModel: model, complete: { (response) -> ()? in
+                if let objects = response as? ResultModel {
+                   if objects.result == 1 {
+                            // 成功
+                            let requestModel = WithdrawalRequestModel()
+                            requestModel.price = Double.init((self?.inputMoney.text!)!)!
+                            AppAPIHelper.commen().Withdrawal(requestModel: requestModel, complete: { (responseObject) -> ()? in
+                                if let resultObj = responseObject as? ResultModel {
+                                    if resultObj.result == 1 {
+                                        SVProgressHUD.showSuccessMessage(SuccessMessage: "提现成功", ForDuration: 2.0, completion: { 
+                                            self?.navigationController?.popViewController(animated: true)
+                                        })
+                                    }
+                                }
+                                return nil
+                            }, error: { (error) -> ()? in
+                                self?.didRequestError(error)
+                                return nil
+                            })
+                   } else {
+                        // 失败
+                        SVProgressHUD.showErrorMessage(ErrorMessage: "密码输入错误", ForDuration: 2.0, completion: { 
+                            payPwdAlertView.close()
+                        })
+                    }
+                }
+                return nil
+            }, error: { (error) -> ()? in
+                
+                self?.didRequestError(error)
+                return nil
+            })
+        })
         
-        self.navigationController?.pushViewController(setPayPwdVC, animated: true)
+        // 未设置支付密码
+        // SetPayPwdVC()
+        // let setPayPwdVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "SetPayPwdVC")
+        // self.navigationController?.pushViewController(setPayPwdVC, animated: true)
         
     }
     

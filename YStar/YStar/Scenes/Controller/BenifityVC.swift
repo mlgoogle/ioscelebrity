@@ -272,8 +272,8 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             self.navigationController?.pushViewController(bindBankCardVC, animated: true)
             return nil
         }
-        // AppDataHelper.instance().clearUserInfo()
-        // checkLogin()
+         AppDataHelper.instance().clearUserInfo()
+         checkLogin()
     }
     
     @IBAction func withdrawItemTapped(_ sender: Any) {
