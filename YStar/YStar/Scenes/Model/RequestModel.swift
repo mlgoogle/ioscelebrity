@@ -44,12 +44,14 @@ class ResetPwdReqModel: BaseModel{
     var pwd = ""
 }
 
+// 收益
 class EarningRequestModel : LoginModle {
     var starcode = "1001"
     var stardate : Int64 = 0
     var enddate  : Int64 = 0
 }
 
+// 昨收今开
 class YesterdayAndTodayPriceRequestModel: LoginModle {
     var starcode = "1001"
     var orderdate : Int64 = 0

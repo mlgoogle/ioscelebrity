@@ -166,7 +166,6 @@
 		8E435F5A1F0B484300FB1976 /* ShareModelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F591F0B484300FB1976 /* ShareModelHelper.swift */; };
 		8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */; };
 		8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */; };
-		8E435F601F0B754D00FB1976 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E435F5F1F0B754D00FB1976 /* iconfont.ttf */; };
 		8E44558B1F19F7A80059CEEC /* CommenApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455891F19F7A80059CEEC /* CommenApi.swift */; };
 		8E44558C1F19F7A80059CEEC /* CommenSocketApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44558A1F19F7A80059CEEC /* CommenSocketApi.swift */; };
 		8E44558F1F19FC3E0059CEEC /* KeyboardInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E44558D1F19FC3E0059CEEC /* KeyboardInputViewController.swift */; };
@@ -539,7 +538,6 @@
 		8E435F591F0B484300FB1976 /* ShareModelHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareModelHelper.swift; sourceTree = "<group>"; };
 		8E435F5B1F0B4AB700FB1976 /* RequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		8E435F5D1F0B4ACE00FB1976 /* ResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
-		8E435F5F1F0B754D00FB1976 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8E4455891F19F7A80059CEEC /* CommenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenApi.swift; sourceTree = "<group>"; };
 		8E44558A1F19F7A80059CEEC /* CommenSocketApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenSocketApi.swift; sourceTree = "<group>"; };
 		8E44558D1F19FC3E0059CEEC /* KeyboardInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInputViewController.swift; sourceTree = "<group>"; };
@@ -1728,7 +1726,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		656D9BC8F054A9366B43ACC6 /* [CP] Copy Pods Resources */ = {
@@ -1773,7 +1771,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BFEC3F231DF6A73600B36A0E /* ShellScript */ = {
