@@ -146,6 +146,8 @@
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
 		8DECFFA31F1CBFE600F692EF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DECFFA21F1CBFE600F692EF /* iconfont.ttf */; };
+		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
+		8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
@@ -521,6 +523,8 @@
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
 		8DECFFA21F1CBFE600F692EF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
+		8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KLineView.swift; path = YStar/Scenes/View/KLineView.swift; sourceTree = SOURCE_ROOT; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -1208,6 +1212,7 @@
 		8DC75D1F1F1DEE9F000A9BB9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */,
 				8DC75D201F1DEE9F000A9BB9 /* BenifityCell.swift */,
 				8DC75D211F1DEE9F000A9BB9 /* BenifityDetailCell.swift */,
 				8DC75D221F1DEE9F000A9BB9 /* MeetOrderCell.swift */,
@@ -1510,6 +1515,7 @@
 				8E8FB0991F0AA4EA00A7B85C /* city.plist */,
 				8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */,
 				8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */,
+				8E08A5D31F1DE4D20072AB14 /* ytest.plist */,
 			);
 			path = plist;
 			sourceTree = "<group>";
@@ -1703,6 +1709,7 @@
 				8E44559A1F19FE0E0059CEEC /* aio_face_delete@2x.png in Resources */,
 				8E8FB0D41F0AA4EA00A7B85C /* README.txt in Resources */,
 				8D312AB21F0BC233001B54F3 /* NIMKitEmoticon.bundle in Resources */,
+				8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
 				8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */,
 				8E44559C1F19FE0E0059CEEC /* EmojisList.plist in Resources */,
@@ -1743,7 +1750,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		656D9BC8F054A9366B43ACC6 /* [CP] Copy Pods Resources */ = {
@@ -1788,7 +1795,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BFEC3F231DF6A73600B36A0E /* ShellScript */ = {
@@ -2008,6 +2015,7 @@
 				8E8FB0C01F0AA4EA00A7B85C /* BaseTableViewController.swift in Sources */,
 				8DC75D261F1DEE9F000A9BB9 /* BenifityCell.swift in Sources */,
 				8E4455901F19FC3E0059CEEC /* StarNewsVC.swift in Sources */,
+				8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */,
 				8D312A501F0BC233001B54F3 /* NIMKitUIConfig.m in Sources */,
 				8D312A8D1F0BC233001B54F3 /* NIMSessionFileTransContentView.m in Sources */,
 				8D0090F31F0E14E100AB9C05 /* WithdrawalVC.swift in Sources */,

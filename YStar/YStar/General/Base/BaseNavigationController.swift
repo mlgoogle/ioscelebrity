@@ -21,6 +21,8 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
             NSForegroundColorAttributeName: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
         ]
         navigationBar.tintColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
+        navigationBar.backgroundColor = UIColor.white
+        navigationBar.isTranslucent = false
     }
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return true

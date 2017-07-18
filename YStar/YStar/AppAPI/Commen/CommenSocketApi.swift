@@ -77,7 +77,7 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startModelsRequest(packet, listKey: "circle_list", modelClass: CircleListModel.self, complete: complete, error: error)
     }
     
-    // 评论动态
+    // 评论动态/回复
     func commentCircle(requestModel:CommentCircleModel,complete: CompleteBlock?, error: ErrorBlock?) {
         let packet = SocketDataPacket(opcode: .commentCircle, model: requestModel)
         startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
