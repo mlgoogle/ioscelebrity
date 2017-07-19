@@ -105,6 +105,7 @@ class AppConst {
         case phone = "phone"
         case token = "token"
         case tokenTime = "token_time"
+        case token_value = "token_value"
     }
   
 }

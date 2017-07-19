@@ -94,7 +94,17 @@ class WithdrawalListRequetModel: LoginModle {
     var startPos:Int32 = 0
     var count:Int32 = 10
     var time = ""
-    
+}
+
+class RegisterWYIMRequestModel: LoginModle {
+    var name_value = ""
+    var user_type = 0
+    var uid  = 0
+    var phone = ""
+    var memberId = 1001
+    var agentId = "186681261"
+    var recommend = "3tewe"
+    var timeStamp = 100088888
 }
 
 //MARK: - Circle
