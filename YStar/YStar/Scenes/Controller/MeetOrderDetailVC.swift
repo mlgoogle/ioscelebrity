@@ -56,7 +56,7 @@ class MeetOrderDetailVC: BaseTableViewController {
                 }
             }
             return nil
-        }, error: nil)
+        }, error: errorBlockFunc())
     }
 
 }
