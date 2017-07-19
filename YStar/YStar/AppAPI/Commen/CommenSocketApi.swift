@@ -123,6 +123,32 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         
         let packet = SocketDataPacket(opcode: .restPwd, model: requestModel)
         
-        startRequest(packet, complete: complete, error: error)
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
+//         startRequest(packet, complete: complete, error: error)
+    }
+    // MARK: - 验证支付密码(模型)
+    func CheckPayPwd(requestModel: CheckPayPwdModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        
+        let packet = SocketDataPacket(opcode: .paypwd, model: requestModel)
+        
+        // startRequest(packet, complete: complete, error: error)
+        
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
+        
+    }
+    // MARK: - 提现(模型)
+    func Withdrawal(requestModel: WithdrawalRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        
+        let packet = SocketDataPacket(opcode: .withdraw, model: requestModel)
+        
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
+        
+    }
+    // MARK: - 提现列表(模型)
+    func withDrawList(requestModel: WithdrawalListRequetModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        
+        let packet = SocketDataPacket(opcode: .withdrawlist, model: requestModel)
+        
+        startModelRequest(packet, modelClass: WithdrawListModel.self, complete: complete, error: error)
     }
 }

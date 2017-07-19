@@ -134,20 +134,18 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
             model.type = 0
             
             AppAPIHelper.commen().ResetPayPwd(requestModel: model, complete: { (response) -> ()? in
-                if let objects = response {
-                    let dictModel = objects as! [String : AnyObject]
-                    if dictModel["status"] as! Int == 0 {
-                        SVProgressHUD.showSuccessMessage(SuccessMessage: "设置成功", ForDuration: 2.0, completion:nil)
+//                if let objects = response {
+//                    let dictModel = objects as! [String : AnyObject]
+//                    if dictModel["status"] as! Int == 0 {
+//                        SVProgressHUD.showSuccessMessage(SuccessMessage: "设置成功", ForDuration: 2.0, completion:nil)
+//                        let vcCount = self.navigationController?.viewControllers.count
+//                        self.navigationController?.popToViewController((self.navigationController?.viewControllers[vcCount! - 3])!, animated: true)
+//                    }
+                if let objects = response as? ResultModel {
+                    if objects.result == 0 {
+                        SVProgressHUD.showSuccessMessage(SuccessMessage: "重置成功!", ForDuration: 2.0, completion: nil)
                         let vcCount = self.navigationController?.viewControllers.count
                         self.navigationController?.popToViewController((self.navigationController?.viewControllers[vcCount! - 3])!, animated: true)
-//                        for childVC in (self.navigationController?.viewControllers)! {
-//                            if childVC.isKind(of: WithdrawalVC.self) {
-//                                let withdrawalVC = childVC as! WithdrawalVC
-//                                self.navigationController?.popToViewController(withdrawalVC, animated: true)
-//                            } else {
-//                                self.navigationController?.popToRootViewController(animated: true)
-//                            }
-//                        }
                     }
                 } else {
                     SVProgressHUD.showErrorMessage(ErrorMessage: "设置失败", ForDuration: 2.0, completion: nil)

@@ -45,5 +45,11 @@ protocol CommenApi {
     func requestYesterdayAndTodayPrice(model:YesterdayAndTodayPriceRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
     // 重置支付密码(模型)
     func ResetPayPwd(requestModel:ResetPayPwdRequestModel,complete: CompleteBlock?, error: ErrorBlock?)
+    // 验证支付密码(模型)
+    func CheckPayPwd(requestModel:CheckPayPwdModel,complete: CompleteBlock?, error: ErrorBlock?)
+    // 提现(模型)
+    func Withdrawal(requestModel:WithdrawalRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
+    // 提现记录(模型)
+    func withDrawList(requestModel:WithdrawalListRequetModel, complete: CompleteBlock?, error: ErrorBlock?)
 }
 
