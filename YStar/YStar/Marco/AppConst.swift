@@ -96,6 +96,8 @@ class AppConst {
         case dealTotalIcon = "\u{e604}"
         case timeTotalIcon = "\u{e603}"
         case priceTotalIcon = "\u{e601}"
+        case selectIcon = "\u{e623}"
+        
     }
     
     enum UserDefaultKey: String {

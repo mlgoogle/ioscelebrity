@@ -45,6 +45,14 @@ protocol CommenApi {
     func requestYesterdayAndTodayPrice(model:YesterdayAndTodayPriceRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
     // 重置支付密码(模型)
     func ResetPayPwd(requestModel:ResetPayPwdRequestModel,complete: CompleteBlock?, error: ErrorBlock?)
+    // 所有活动类型
+    func allOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?)
+    // 明星拥有活动类型
+    func starOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?)
+    // 约见订单
+    func allOrder(requestModel: MeetOrderListRequest, complete: CompleteBlock?, error: ErrorBlock?)
+    // 同意约见
+    func agreeOrder(requestModel: AgreeOrderRequest, complete: CompleteBlock?, error: ErrorBlock?)
     // 验证支付密码(模型)
     func CheckPayPwd(requestModel:CheckPayPwdModel,complete: CompleteBlock?, error: ErrorBlock?)
     // 提现(模型)
