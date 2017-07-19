@@ -36,6 +36,19 @@ class FansListVC: BaseListTableViewController {
     override func didRequest() {
         didRequestComplete(["",""] as AnyObject)
     }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 18657195470   -- "15557198601"
+        let session = NIMSession("15557198601", type: .P2P)
+        
+        let fansSessionVC = FansSessionViewController(session: session)
+        // vc?.starcode = starInfoModel.starcode
+        fansSessionVC?.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(fansSessionVC!, animated: true)
+        
+    }
+    
 
     override func tableView(_ tableView: UITableView, cellIdentifierForRowAtIndexPath indexPath: IndexPath) -> String? {
         return FansListCell.className()

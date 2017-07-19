@@ -150,13 +150,20 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startModelRequest(packet, modelClass: WithdrawListModel.self, complete: complete, error: error)
     }
     
-    // 所有活动类型
+    // MARK: - 网易云信(模型)
+    func registWYIM(model: RegisterWYIMRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        
+        let packet = SocketDataPacket(opcode: .registWY, model: model)
+        startModelRequest(packet, modelClass: WYIMModel.self, complete: complete, error: error)
+    }
+    
+    // MARK: - 所有活动类型
     func allOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet = SocketDataPacket(opcode: .allOrderType, model: requestModel)
         startModelsRequest(packet, listName: "OrderList", modelClass: MeetTypeModel.self, complete: complete, error: error)
     }
     
-    // 明星拥有活动类型
+    // MARK: - 明星拥有活动类型
     func starOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?){
         let packet = SocketDataPacket(opcode: .starOrderType, model: requestModel)
         startModelsRequest(packet, listName: "OrderList", modelClass: MeetTypeModel.self, complete: complete, error: error)
@@ -169,12 +176,13 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     }
     
     // 约见订单
+
     func allOrder(requestModel: MeetOrderListRequest, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet = SocketDataPacket(opcode: .allOrders, model: requestModel)
         startModelsRequest(packet, listName: "OrderList", modelClass: MeetOrderModel.self, complete: complete, error: error)
     }
     
-    // 同意约见
+    // MARK: - 同意约见
     func agreeOrder(requestModel: AgreeOrderRequest, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet = SocketDataPacket(opcode: .agreeOrder, model: requestModel)
         startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
