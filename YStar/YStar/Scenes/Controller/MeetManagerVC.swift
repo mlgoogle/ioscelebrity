@@ -26,7 +26,7 @@ class MeetManagerVC: BaseTableViewController {
         super.viewDidLoad()
 
         setupUI()
-        
+        AppDataHelper.instance().clearUserInfo()
         // 默认选择第一个[meetTypeButton]
         titleViewButtonAction(meetTypeButton)
         

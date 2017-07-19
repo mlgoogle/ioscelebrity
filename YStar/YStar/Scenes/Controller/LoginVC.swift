@@ -58,20 +58,8 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
             param.pwd = pwdText.text!.md5()
             AppAPIHelper.commen().login(model: param, complete: { [weak self](result) -> ()? in
                 SVProgressHUD.dismiss()
-                
-                print("===\(result)")
-                
                 if let object = result as? StarUserModel{
-                    if let uid = object.userinfo?.id{
-                        ShareModelHelper.instance().uid = Int(uid)
-                        UserDefaults.standard.set(uid, forKey: AppConst.UserDefaultKey.uid.rawValue)
-                    }
-                    if let phone = object.userinfo?.phone{
-                        ShareModelHelper.instance().phone = phone
-                        UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
-                    }
-                    ShareModelHelper.instance().token = object.token
-                    UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
+                    
                     self?.dismissController()
                 }
                 return nil

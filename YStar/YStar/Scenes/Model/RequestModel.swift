@@ -16,6 +16,15 @@ class LoginRequestModel: BaseModel {
     var deviceId = ""
 }
 
+class TokenLoginRequestModel: LoginModle {
+    var token_time = { () -> Int in
+        if let tokenTime = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.tokenTime.rawValue) {
+            return tokenTime as! Int
+        }
+        return 0
+    }()
+}
+
 class BindCardRequestModel: LoginModle {
     var account = "1001"
     var bankUsername = "1001"
