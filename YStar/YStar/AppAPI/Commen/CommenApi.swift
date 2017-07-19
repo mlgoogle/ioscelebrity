@@ -49,6 +49,8 @@ protocol CommenApi {
     func allOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?)
     // 明星拥有活动类型
     func starOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?)
+    // 修改明星拥有的活动类型
+    func changeOrderType(requestModel: ChangerMeetTypeRequest, complete: CompleteBlock?, error: ErrorBlock?)
     // 约见订单
     func allOrder(requestModel: MeetOrderListRequest, complete: CompleteBlock?, error: ErrorBlock?)
     // 同意约见

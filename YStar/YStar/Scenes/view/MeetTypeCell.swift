@@ -54,8 +54,12 @@ class CustomLayout: UICollectionViewFlowLayout {
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        attrsArray.removeAll()
         let itemCount = collectionView!.numberOfItems(inSection: 0)
-        for i in 0..<itemCount {
+        if itemCount == 0{
+            return attrsArray
+        }
+        for i in 0...itemCount-1 {
             let attr = layoutAttributesForItem(at: IndexPath(item: i, section: 0))
             attrsArray.append(attr!)
         }
@@ -126,11 +130,10 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         
         self.meetTypeCollectionViewCell.dataSource = self
         self.meetTypeCollectionViewCell.delegate = self
-        
+
         let customLayout = CustomLayout()
         customLayout.dataSource = self
-        customLayout.scrollDirection = .horizontal
-        
+        customLayout.scrollDirection = .horizontal       
         customLayout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
         self.meetTypeCollectionViewCell.collectionViewLayout = customLayout
@@ -170,7 +173,6 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         pageControl.currentPage = Int(scrollView.contentOffset.x / scrollView.bounds.width)
     }
     
@@ -184,8 +186,6 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         }
         return view
     }
-    
-    
     
     // CustomLayoutDataSource
     func numberOfCols(_ customLayout: CustomLayout) -> Int {

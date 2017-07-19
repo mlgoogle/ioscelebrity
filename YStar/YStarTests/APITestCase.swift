@@ -66,7 +66,6 @@ class APITestCase: XCTestCase {
             XCTAssertTrue(tokenExcept, "token不存在")
             return nil
         })
-        
     }
     
     //发送朋友圈
@@ -146,7 +145,6 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-
     //测试所有订单类型
     func testAllOrderTypes() {
         let exception = expectation(description: "测试所有订单类型")
@@ -156,6 +154,65 @@ class APITestCase: XCTestCase {
                 XCTAssert(model.count > 0, "明星订单类型为空")
                 exception.fulfill()
                 
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //测试明星订单类型
+    func testStarOrderTypes() {
+        let exception = expectation(description: "测试明星所有订单类型")
+        let param = MeetTypesRequest()
+        AppAPIHelper.commen().starOrderTypes(requestModel: param, complete: { (result) in
+            if let model = result as? [MeetTypeModel]{
+                XCTAssert(model.count > 0, "明星订单类型为空")
+                exception.fulfill()
+                
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //测试修改明星订单
+    func testChangeStarMeetType() {
+        let exception = expectation(description: "测试修改明星订单")
+        let param  = ChangerMeetTypeRequest()
+        AppAPIHelper.commen().changeOrderType(requestModel: param, complete: { (result) in
+            if let model = result as? ResultModel{
+                if model.result == 1{
+                    exception.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //测试约见订单
+    func testAllOrder() {
+        let exception = expectation(description: "测试约见订单")
+        let param = MeetOrderListRequest()
+        AppAPIHelper.commen().allOrder(requestModel: param, complete: { (result) in
+            if let models = result as? [MeetOrderModel]{
+                XCTAssert(models.count > 0, "约见订单为空")
+                exception.fulfill()
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //同意订单
+    func testAgressOrderTypes() {
+        let exception = expectation(description: "明星拥有订单类型")
+        let param = AgreeOrderRequest()
+        AppAPIHelper.commen().agreeOrder(requestModel: param, complete: { (result) in
+            if let model = result as? ResultModel{
+                if model.result == 1{
+                    exception.fulfill()
+                }
             }
             return nil
         }, error: nil)
@@ -173,23 +230,6 @@ class APITestCase: XCTestCase {
                 if model.count > 0 {
                     exception.fulfill()
                 }
-
-            }
-            return nil
-        }, error: nil)
-        waitForExpectations(timeout: 15, handler: nil)
-    }
-    
-
-    //测试明星订单类型
-    func testStarOrderTypes() {
-        let exception = expectation(description: "测试明星所有订单类型")
-        let param = MeetTypesRequest()
-        AppAPIHelper.commen().starOrderTypes(requestModel: param, complete: { (result) in
-            if let model = result as? [MeetTypeModel]{
-                XCTAssert(model.count > 0, "明星订单类型为空")
-                exception.fulfill()
-                
             }
             return nil
         }, error: nil)
@@ -231,25 +271,12 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //测试约见订单
-    func testAllOrder() {
-        let exception = expectation(description: "测试约见订单")
-        let param = MeetOrderListRequest()
-        AppAPIHelper.commen().allOrder(requestModel: param, complete: { (result) in
-            if let models = result as? [MeetOrderModel]{
-                XCTAssert(models.count > 0, "约见订单为空")
-                exception.fulfill()
-            }
-            return nil
-        }, error: nil)
-        waitForExpectations(timeout: 15, handler: nil)
-    }
+    
     
     // MARK: - 校验交易密码
     func testCheckPayPwd() {
         let exception = expectation(description: "测试校验密码")
         let param = CheckPayPwdModel()
-//        param.uid = 185
         param.uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) as! Int64
         param.paypwd = "123456".md5()
     
@@ -266,20 +293,6 @@ class APITestCase: XCTestCase {
     }
     
 
-    //同意订单
-    func testAgressOrderTypes() {
-        let exception = expectation(description: "明星拥有订单类型")
-        let param = AgreeOrderRequest()
-        AppAPIHelper.commen().agreeOrder(requestModel: param, complete: { (result) in
-            if let model = result as? ResultModel{
-                if model.result == 1{
-                    exception.fulfill()
-                }
-            }
-            return nil
-        }, error: nil)
-        waitForExpectations(timeout: 15, handler: nil)
-    }
     // MARK: - 提现
     func testWithdrawal() {
         let exception = expectation(description: "测试提现")
