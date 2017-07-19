@@ -39,8 +39,8 @@ class FansListVC: BaseListTableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let session = NIMSession("18657195470", type: .P2P)
+        // 18657195470   -- "15557198601"
+        let session = NIMSession("15557198601", type: .P2P)
         
         let fansSessionVC = FansSessionViewController(session: session)
         // vc?.starcode = starInfoModel.starcode
