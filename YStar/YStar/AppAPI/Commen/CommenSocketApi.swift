@@ -118,11 +118,34 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         let packet = SocketDataPacket(opcode: .yesterdayAndToday, model: model)
         startModelRequest(packet, modelClass: YesterdayAndTodayPriceModel.self, complete: complete, error: error)
     }
+    
     // MARK: - 重置支付密码(模型)
     func ResetPayPwd(requestModel:ResetPayPwdRequestModel,complete: CompleteBlock?, error: ErrorBlock?) {
-        
         let packet = SocketDataPacket(opcode: .restPwd, model: requestModel)
-        
         startRequest(packet, complete: complete, error: error)
+    }
+    
+    // 所有活动类型
+    func allOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .allOrderType, model: requestModel)
+        startModelsRequest(packet, listName: "OrderList", modelClass: MeetTypeModel.self, complete: complete, error: error)
+    }
+    
+    // 明星拥有活动类型
+    func starOrderTypes(requestModel: MeetTypesRequest, complete: CompleteBlock?, error: ErrorBlock?){
+        let packet = SocketDataPacket(opcode: .starOrderType, model: requestModel)
+        startModelsRequest(packet, listName: "OrderList", modelClass: MeetTypeModel.self, complete: complete, error: error)
+    }
+    
+    // 约见订单
+    func allOrder(requestModel: MeetOrderListRequest, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .allOrders, model: requestModel)
+        startModelsRequest(packet, listName: "OrderList", modelClass: MeetOrderModel.self, complete: complete, error: error)
+    }
+    
+    // 同意约见
+    func agreeOrder(requestModel: AgreeOrderRequest, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .agreeOrder, model: requestModel)
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
     }
 }

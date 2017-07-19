@@ -146,6 +146,63 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
+    //测试所有订单类型
+    func testAllOrderTypes() {
+        let exception = expectation(description: "测试所有订单类型")
+        let param = MeetTypesRequest()
+        AppAPIHelper.commen().allOrderTypes(requestModel: param, complete: { (result) in
+            if let model = result as? [MeetTypeModel]{
+                XCTAssert(model.count > 0, "明星订单类型为空")
+                exception.fulfill()
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //测试明星订单类型
+    func testStarOrderTypes() {
+        let exception = expectation(description: "测试明星所有订单类型")
+        let param = MeetTypesRequest()
+        AppAPIHelper.commen().starOrderTypes(requestModel: param, complete: { (result) in
+            if let model = result as? [MeetTypeModel]{
+                XCTAssert(model.count > 0, "明星订单类型为空")
+                exception.fulfill()
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //测试约见订单
+    func testAllOrder() {
+        let exception = expectation(description: "测试约见订单")
+        let param = MeetOrderListRequest()
+        AppAPIHelper.commen().allOrder(requestModel: param, complete: { (result) in
+            if let models = result as? [MeetOrderModel]{
+                XCTAssert(models.count > 0, "约见订单为空")
+                exception.fulfill()
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //同意订单
+    func testAgressOrderTypes() {
+        let exception = expectation(description: "明星拥有订单类型")
+        let param = AgreeOrderRequest()
+        AppAPIHelper.commen().agreeOrder(requestModel: param, complete: { (result) in
+            if let model = result as? ResultModel{
+                if model.result == 1{
+                    exception.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
     //性能测试：测试登录功能和Add方法性能表现
     func testPerformanceExample() {
         // This is an example of a performance test case.

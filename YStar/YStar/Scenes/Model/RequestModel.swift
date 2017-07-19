@@ -66,12 +66,13 @@ class ResetPayPwdRequestModel: LoginModle {
     var pwd = ""
     var phone = ""
 }
-
+//MARK: - Circle
 class CircleListRequestModel: BaseModel {
     
     var pos:Int64 = 0
     var count:Int32 = 10
 }
+
 class ApproveCircleModel: BaseModel {
     var star_code = "1001"
     var circle_id:Int64 = 10001
@@ -91,3 +92,16 @@ class DeleteCircle: BaseModel {
     dynamic var star_code = "1001"
     dynamic var circle_id = 0
 }
+
+//MARK: - Meet
+class MeetTypesRequest: LoginModle{
+    var starcode = "1001"
+}
+class MeetOrderListRequest: LoginModle{
+    var starcode = "1001"
+}
+class AgreeOrderRequest: MeetOrderListRequest{
+    var meettype = 4
+    var meetid = 0
+}
+

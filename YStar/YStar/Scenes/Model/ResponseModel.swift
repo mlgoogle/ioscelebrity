@@ -100,13 +100,7 @@ class BindBankModel: BaseModel {
     var bankId:  String = ""
 }
 
-// 约见类型model
-class MeetTypeModel: BaseModel {
-    var meetTypeId = ""
-    var meetTypeTitle = ""
-    var meetTypePrice = ""
-    var meetSelect = ""
-}
+
 
 class CircleListModel: Object {
     dynamic var symbol = ""
@@ -158,6 +152,25 @@ class SendCircleResultModel: Object {
 
 class ResultModel: BaseModel{
     var result = 0
-    
 }
 
+class MeetTypeModel: BaseModel{
+    
+    var mid = 3
+    var name = "录制节目"
+    var price = 100.0
+    var showpic_url = ""
+    var status = 0
+}
+
+class MeetOrderModel: BaseModel{
+    var appoint_time = ""
+    var comment = "sdf.."
+    var headurl = ""
+    var id = 1
+    var meet_city = ""
+    var meet_type = 1
+    var mid = 1
+    var name = "ÅÄmv"
+    var nickname = ""
+}

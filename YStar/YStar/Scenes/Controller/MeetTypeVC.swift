@@ -8,58 +8,58 @@
 
 import UIKit
 
-private let KMeetTypeCellID = "MeetTypeCell"
-
 class MeetTypeVC: BaseTableViewController {
+    
+    @IBOutlet weak var typeCell: MeetTypeCell!
+    
+    var allOrders : [MeetTypeModel] = []
+    var starOrders : [MeetTypeModel] = []
+    var ordersDic : [String: Int] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 255
+        requestAllTypes()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1
+    func requestAllTypes() {
+        let param = MeetTypesRequest()
+        AppAPIHelper.commen().allOrderTypes(requestModel: param, complete: { [weak self](result) in
+            if let models = result as? [MeetTypeModel]{
+                self?.allOrders = models
+                for (index,model) in models.enumerated() {
+                    self?.ordersDic[model.name] = index
+                }
+                self?.requestStarAllTypes()
+            }
+            return nil
+        }, error: nil)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let meetTypeCell = tableView.dequeueReusableCell(withIdentifier: KMeetTypeCellID, for: indexPath) as! MeetTypeCell
-        
-        meetTypeCell.selectionStyle = .none
-        
-        // TODO: - 待处理数据
-        meetTypeCell.setMeetType()
-        
-        return meetTypeCell
-        
+    func requestStarAllTypes() {
+        let param = MeetTypesRequest()
+        AppAPIHelper.commen().starOrderTypes(requestModel: param, complete: { [weak self](result) in
+            if let models = result as? [MeetTypeModel]{
+                self?.starOrders = models
+                for model in models{
+                    if let index = self?.ordersDic[model.name]{
+                        if let order = self?.allOrders[index]{
+                            order.status = 1
+                            model.showpic_url = order.showpic_url
+                            model.price = order.price
+                        }
+                    }
+                }
+                self?.typeCell.setMeetType(models)
+            }
+            return nil
+        }, error: nil)
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return 0.01
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-
-        return 0.01
-    }
-    
     
     @IBAction func AddMeetTypeAction(_ sender: UIButton) {
-        
-        let meetTypeDetailVC = UIStoryboard.init(name: "Meet", bundle: nil).instantiateViewController(withIdentifier: "MeetTypeDetailVC")
-        self.navigationController?.pushViewController(meetTypeDetailVC, animated: true)
-        print("点击了添加类型按钮")
-        
+        if let meetTypeDetailVC = UIStoryboard.init(name: "Meet", bundle: nil).instantiateViewController(withIdentifier: MeetTypeDetailVC.className()) as? MeetTypeDetailVC{
+            meetTypeDetailVC.items = allOrders
+            self.navigationController?.pushViewController(meetTypeDetailVC, animated: true)
+
+        }
     }
 }
