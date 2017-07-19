@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeetOrderCell: UITableViewCell {
+class MeetOrderCell: OEZTableViewCell {
 
     @IBOutlet weak var iconImageView: UIImageView!
     
@@ -23,25 +23,23 @@ class MeetOrderCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    // FIXME: - 提醒
-    func setMeetOrder() {
-        
-        // isSureLabel 状态 : 同意:#FB9938 未确认: #CCCCCC
-        // 假数据
-        self.iconImageView.backgroundColor = UIColor.blue
-        self.nameLabel.text = "田馥甄"
-        self.thingLabel.text = "开演唱会,2017-07-12"
-        self.isSureLabel.text = "同意"
-        self.isSureLabel.backgroundColor = UIColor.init(hexString: "#FB9938")
-        
+  
+    override func update(_ data: Any!) {
+        if let model = data as? MeetOrderModel{
+            self.iconImageView.kf.setImage(with: URL.init(string: model.headurl), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
+            self.nameLabel.text = model.nickname
+            self.thingLabel.text = "\(model.name)\(model.appoint_time)"
+            self.isSureLabel.text = model.meet_type == 4 ? " 同意 ":" 未确定 "
+            self.isSureLabel.backgroundColor = model.meet_type == 4 ? UIColor.init(hexString: "#FB9938") : UIColor.init(rgbHex: 0x999999)
+            isSureLabel.layer.cornerRadius = 3
+            isSureLabel.layer.masksToBounds = true
+
+        }
     }
     
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
