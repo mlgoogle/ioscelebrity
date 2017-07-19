@@ -8,44 +8,37 @@
 
 import UIKit
 
-
-private let KMeetOrderCellID = "MeetOrderCell"
-
-class MeetOrderVC: BaseTableViewController {
+class MeetOrderVC: BaseListTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tableView.separatorStyle = .none
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 60
+    override func didRequest() {
+        let param = MeetOrderListRequest()
+        AppAPIHelper.commen().allOrder(requestModel: param, complete: { [weak self](result) in
+            if let models = result as? [MeetOrderModel]{
+                self?.didRequestComplete(models as AnyObject?)
+            }
+            return nil
+        }, error: nil)
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 5
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let meetOrderCell = tableView.dequeueReusableCell(withIdentifier: KMeetOrderCellID, for: indexPath) as! MeetOrderCell
-        
-        // TODO: - 待处理数据
-        meetOrderCell.setMeetOrder()
-        
-        return meetOrderCell
+    override func tableView(_ tableView: UITableView, cellIdentifierForRowAtIndexPath indexPath: IndexPath) -> String? {
+        return MeetOrderCell.className()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let meetOrderDetailVC = UIStoryboard.init(name: "Meet", bundle: nil).instantiateViewController(withIdentifier: "MeetOrderDetailVC")
-        self.navigationController?.pushViewController(meetOrderDetailVC, animated: true)
-        
+        if (dataSource?[indexPath.row] as? MeetOrderModel) != nil{
+            let model = dataSource?[indexPath.row]
+            navigationController?.pushViewController(withIdentifier: MeetOrderDetailVC.className(), completion: { (controller) in
+                if let vc = controller as? MeetOrderDetailVC{
+                    vc.model = model as! MeetOrderModel
+                }
+            }, animated: true)
+        }
     }
 }
