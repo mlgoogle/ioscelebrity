@@ -137,4 +137,8 @@ class AgreeOrderRequest: MeetOrderListRequest{
     var meettype = 4
     var meetid = 0
 }
-
+class ChangerMeetTypeRequest: MeetOrderListRequest{
+    var mid = 0
+    var type = 0
+    
+}

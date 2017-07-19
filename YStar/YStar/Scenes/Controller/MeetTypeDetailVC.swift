@@ -12,7 +12,6 @@ private let KMeetTypeDetailCellID = "MeetTypeDetailCell"
 
 
 class MeetTypeDetailVC: BaseListTableViewController {
-
     
     var items:[MeetTypeModel] = []
     
@@ -27,6 +26,17 @@ class MeetTypeDetailVC: BaseListTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = items[indexPath.row]
+        let param = ChangerMeetTypeRequest()
+        param.mid = model.mid
+        param.type = model.status == 0 ? 1 :0
+        AppAPIHelper.commen().changeOrderType(requestModel: param, complete: { (result) in
+            if let response = result as? ResultModel{
+                if response.result == 1{
+                    model.status = model.status == 0 ? 1 :0
+                }
+            }
+            return nil
+        }, error: errorBlockFunc())
         model.status = model.status == 0 ? 1 :0
         tableView.reloadRows(at:[indexPath], with: .automatic)
         tableView.deselectRow(at: indexPath, animated: true)

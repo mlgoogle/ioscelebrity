@@ -167,6 +167,8 @@ class SocketConst: NSObject {
         case allOrderType = 16007
         //明星拥有的活动类型
         case starOrderType = 16005
+        //修改明星拥有的活动
+        case changeMeetType = 16011
         //约见订单列表
         case allOrders = 16009
         //同意约见

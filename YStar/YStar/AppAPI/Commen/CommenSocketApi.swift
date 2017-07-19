@@ -169,7 +169,14 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startModelsRequest(packet, listName: "OrderList", modelClass: MeetTypeModel.self, complete: complete, error: error)
     }
     
-    // MARK: - 约见订单
+    // 修改明星拥有的活动类型
+    func changeOrderType(requestModel: ChangerMeetTypeRequest, complete: CompleteBlock?, error: ErrorBlock?){
+        let packet = SocketDataPacket(opcode: .changeMeetType, model: requestModel)
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
+    }
+    
+    // 约见订单
+
     func allOrder(requestModel: MeetOrderListRequest, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet = SocketDataPacket(opcode: .allOrders, model: requestModel)
         startModelsRequest(packet, listName: "OrderList", modelClass: MeetOrderModel.self, complete: complete, error: error)

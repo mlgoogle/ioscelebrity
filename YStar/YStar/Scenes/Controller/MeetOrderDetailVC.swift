@@ -7,46 +7,56 @@
 //
 
 import UIKit
-
-private let KMeetOrderDetailCellID = "MeetOrderDetailCell"
-
+import SVProgressHUD
 
 class MeetOrderDetailVC: BaseTableViewController {
 
     // 同意按钮
     @IBOutlet weak var agreeButton: UIButton!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var headerImage: UIImageView!
+    
+    var model:MeetOrderModel = MeetOrderModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.title = "约见订单详情"
-        self.tableView.separatorStyle = .none
-        self.tableView.estimatedRowHeight = 300
-        self.tableView.rowHeight = UITableViewAutomaticDimension
+        initUI()
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func initUI() {
+        headerImage.kf.setImage(with: URL.init(string: model.headurl), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
+        nameLabel.text = model.nickname
+        timeLabel.text = "时间：\(model.appoint_time)"
+        locationLabel.text = "地点：\(model.meet_city)"
+        typeLabel.text = "约见类型:\(model.meet_type)"
+        contentLabel.text = model.comment
+        agreeButton.isHidden = model.meet_type == 4
         
-        return 1
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let meetOrderDetailCell = tableView.dequeueReusableCell(withIdentifier: KMeetOrderDetailCellID, for: indexPath) as! MeetOrderDetailCell
-        meetOrderDetailCell.selectionStyle = .none
-        
-        // TODO: - 待处理数据
-        meetOrderDetailCell.setMeetOrderDetail()
-        
-        return meetOrderDetailCell
     }
     
     
     @IBAction func agreeButtonAction(_ sender: UIButton) {
-        
-        print("点击了同意按钮")
-        self.tableView.reloadData()
+        let param = AgreeOrderRequest()
+        param.starcode = model.starcode
+        param.meettype = 4
+        param.meetid = model.mid
+        SVProgressHUD.showProgressMessage(ProgressMessage: "处理中...")
+        AppAPIHelper.commen().agreeOrder(requestModel: param, complete: { [weak self](result) in
+            if let model = result as? ResultModel{
+                if model.result == 1{
+                    SVProgressHUD.showSuccessMessage(SuccessMessage: "已同意", ForDuration: 2, completion: {
+                        _ = self?.navigationController?.popViewController(animated: true)
+                    })
+                   
+                }
+            }
+            return nil
+        }, error: nil)
     }
 
 }

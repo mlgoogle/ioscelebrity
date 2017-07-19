@@ -178,6 +178,9 @@ class MeetOrderModel: BaseModel{
     var mid = 1
     var name = "ÅÄmv"
     var nickname = ""
+    var order_time = ""
+    var starcode = ""
+    var uid = 0
 }
 
 class WithdrawModel: BaseModel {
