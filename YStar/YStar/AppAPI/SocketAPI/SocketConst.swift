@@ -159,10 +159,19 @@ class SocketConst: NSObject {
         case commentCircle = 15011
         //明星回复评论
         case starComment = 15013
-        // 收益信息
+        //收益信息
         case earningInfo = 16001
-        // 昨收今开
+        //昨收今开
         case yesterdayAndToday = 16003
+        //所有活动类型
+        case allOrderType = 16007
+        //明星拥有的活动类型
+        case starOrderType = 16005
+        //约见订单列表
+        case allOrders = 16009
+        //同意约见
+        case agreeOrder = 16013
+        
     }
     
     

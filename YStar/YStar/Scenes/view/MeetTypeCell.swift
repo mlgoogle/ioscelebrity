@@ -87,28 +87,14 @@ class MeetTypeItemCell: UICollectionViewCell {
     @IBOutlet weak var meetTypePriceLabel: UILabel!
     
     override func awakeFromNib() {
-        
         super.awakeFromNib()
-        // 随机颜色测试
-        let red = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
-        let green = CGFloat( arc4random_uniform(255))/CGFloat(255.0)
-        let blue = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
-        let colorRun = UIColor.init(red:red, green:green, blue:blue , alpha: 1)
-        
-        self.backgroundColor = colorRun
     }
     
     // FIXME: - 提醒
-    func setMeetTypeItem() {
-        meetTypeImageView.backgroundColor = UIColor.orange
-        meetTypeLabel.text = "开演唱会"
-        meetTypePriceLabel.text = "1000秒"
-    }
-    
-    override func layoutSubviews() {
-        
-        super.layoutSubviews()
-        
+    func setMeetTypeItem(_ data: MeetTypeModel) {
+        meetTypeImageView.kf.setImage(with: URL.init(string: data.showpic_url), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
+        meetTypeLabel.text = data.name
+        meetTypePriceLabel.text = "\(data.price)秒"
     }
 }
 
@@ -117,10 +103,10 @@ private let KMeetTypeItemCellID = "MeetTypeItemCell"
 class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataSource,UICollectionViewDelegate{
 
     @IBOutlet weak var meetTypeCollectionViewCell: UICollectionView!
-    
     @IBOutlet weak var pageControl: UIPageControl!
     
-    let  meetTypeArryCount = 15
+    var meetTypeArryCount = 0
+    var types: [MeetTypeModel] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -129,8 +115,9 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
     }
     
     // FIXME: - 提醒
-    func setMeetType() {
-        
+    func setMeetType(_ data: [MeetTypeModel]) {
+        types = data
+        meetTypeArryCount = data.count
         self.meetTypeCollectionViewCell.reloadData()
     }
     
@@ -158,7 +145,7 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if meetTypeArryCount == 0 {
-            return 1
+            return 0
         }
         // 分页
         let pageNum = (meetTypeArryCount - 1) / 8 + 1
@@ -173,15 +160,11 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-        if meetTypeArryCount == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KMeetTypeItemCellID, for: indexPath) as! MeetTypeItemCell
-            return cell
-        }
         let meetTypeItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: KMeetTypeItemCellID, for: indexPath) as! MeetTypeItemCell
         
         // TODO: - 待处理数据
-        meetTypeItemCell.setMeetTypeItem()
+        let model = types[indexPath.row]
+        meetTypeItemCell.setMeetTypeItem(model)
         
         return meetTypeItemCell
     }

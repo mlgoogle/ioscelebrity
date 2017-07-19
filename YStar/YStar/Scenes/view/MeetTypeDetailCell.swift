@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeetTypeDetailCell: UITableViewCell {
+class MeetTypeDetailCell: OEZTableViewCell {
 
     @IBOutlet weak var bgView: UIView!
     
@@ -25,22 +25,20 @@ class MeetTypeDetailCell: UITableViewCell {
         // Initialization code
     }
     
-    // FIXME: - 提醒
-    func setMeetTypeDetail() {
-        
-        self.meetTypeImageView.backgroundColor = UIColor.red
-        
-        self.meetTypeLabel.text = "电视采访"
-        
-        self.meetTypePriceLabel.text = "时间消耗：1000秒"
-        
-        self.meetTypeIsSelectedImageView.backgroundColor = UIColor.orange
+   
+    override func update(_ data: Any!) {
+        if let model = data as? MeetTypeModel{
+            meetTypeImageView.kf.setImage(with: URL.init(string: model.showpic_url), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
+            meetTypeLabel.text = model.name
+            meetTypePriceLabel.text = "时间消耗：\(model.price)秒"
+            let colorKey = model.status == 0 ? UIColor.init(rgbHex: 0x999999)  : UIColor.init(rgbHex: 0xfb9938)
+            meetTypeIsSelectedImageView.image = UIImage.imageWith(AppConst.iconFontName.selectIcon.rawValue, fontSize: CGSize.init(width: 18, height: 18), fontColor: colorKey)
+        }
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
