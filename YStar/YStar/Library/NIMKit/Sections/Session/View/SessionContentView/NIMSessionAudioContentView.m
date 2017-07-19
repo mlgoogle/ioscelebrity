@@ -13,8 +13,8 @@
 #import "NIMKitUIConfig.h"
 #import "NIMKitAudioCenter.h"
 
+// NIMMediaManagerDelgate
 @interface NIMSessionAudioContentView()<NIMMediaManagerDelegate>
-//@interface NIMSessionAudioContentView()<NIMMediaManagerDelgate>
 
 @property (nonatomic,strong) UIImageView *voiceImageView;
 

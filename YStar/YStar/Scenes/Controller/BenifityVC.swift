@@ -21,7 +21,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     @IBOutlet weak var endPlaceholderImageView: UIImageView!
     @IBOutlet weak var lineView: KLineView!
     
-    
     var earningData : [EarningInfoModel]?
     
     // 标识
@@ -41,30 +40,23 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
         setupUI()
         
-        setupLineChart()
-        
         setupInitResponse()
-
+    
         checkLogin()
     }
     
-    // 折线图
-    func setupLineChart() {
-        
-    }
     
     func setupUI() {
         
-        self.tableView.tableHeaderView = contentView
-        self.tableView.separatorStyle = .none
-        
         self.beginPlaceholderImageView.image = UIImage.imageWith(AppConst.iconFontName.downArrow.rawValue, fontSize: beginPlaceholderImageView.frame.size, fontColor: UIColor.init(rgbHex: 0xDFDFDF))
         self.endPlaceholderImageView.image = UIImage.imageWith(AppConst.iconFontName.downArrow.rawValue, fontSize: beginPlaceholderImageView.frame.size, fontColor: UIColor.init(rgbHex: 0xDFDFDF))
-        
         self.beginTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
         self.endTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
+        
+        self.tableView.tableHeaderView = contentView
+        self.tableView.separatorStyle = .none
     }
     
     func setupInitResponse() {
@@ -98,10 +90,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             endDateInt = Int(endDateString)!
         }
         
-        // print("====\(beginDateInt) =====\(endDateInt)")
-    
         let model = EarningRequestModel()
-        
         // model.stardate = Int64(beginDateString)
         // model.enddate = Int64(endDateString)
         
@@ -110,25 +99,131 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
         // print("====\(model)")
         
-        AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
+//        AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
+//            
+//            // print("====\(String(describing: response))")
+//            if let objects = response as? [EarningInfoModel] {
+//                
+//                self.earningData = objects
+//                self.lineView.refreshLineChartData(models: objects)
+//            }
+//            self.tableView.reloadData()
+//            return nil
+//        }) { (error) -> ()? in
+//            
+//            self.didRequestError(error)
+//            self.tableView.reloadData()
+//            print("====\(error)")
+//            
+//            return nil
+//        }
+        
+        requestInitResponse(stardate: model.stardate, enddate: model.enddate)
+    
+    }
+    
+    // 点击时间选择
+    func timeButtonClick(_ sender : UIButton) {
+        
+        if sender == beginTimeButton {
+            let datePickerView = DateSelectorView(delegate: self)
+            beginOrEnd = true
+            datePickerView.showPicker()
+        } else {
+            let datePickerView = DateSelectorView(delegate: self)
+            beginOrEnd = false
+            datePickerView.showPicker()
+        }
+    }
+    
+    func chooseDate(datePickerView: DateSelectorView, date: Date) {
+        
+        let weekTimeInterval : TimeInterval = 24 * 60 * 60 * 6
+        let dateString = date.string_from(formatter: "yyyy-MM-dd")
+        
+        if beginOrEnd == true {
+            // 获取7天后的日期
+            let afterWeekDate = date.addingTimeInterval(weekTimeInterval)
+            let afterWeekStr = afterWeekDate.string_from(formatter: "yyyy-MM-dd")
+            self.beginTimeButton.setTitle(dateString, for: .normal)
+            self.endTimeButton.setTitle(afterWeekStr, for: .normal)
             
-            // print("====\(String(describing: response))")
+            // 转换成没有分割线
+            let beginDateString = date.string_from(formatter: "yyyyMMdd")
+            let endDateString = afterWeekDate.string_from(formatter: "yyyyMMdd")
+            
+            let model = EarningRequestModel()
+            model.stardate = Int64(beginDateString)!
+            model.enddate = Int64(endDateString)!
+            
+            //            AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
+            //
+            //                self.earningData?.removeAll()
+            //
+            //                if let objects = response as? [EarningInfoModel] {
+            //                    self.earningData = objects
+            //                }
+            //                self.tableView.reloadData()
+            //                return nil
+            //            }, error: { (error) -> ()? in
+            //                self.tableView.reloadData()
+            //                self.didRequestError(error)
+            //                return nil
+            //            })
+            requestInitResponse(stardate: model.stardate, enddate: model.enddate)
+            
+        } else {
+            // 获取7天前的日期
+            let beforeWeekDate = date.addingTimeInterval(-weekTimeInterval)
+            let beforeWeekStr = beforeWeekDate.string_from(formatter: "yyyy-MM-dd")
+            self.endTimeButton.setTitle(dateString, for: .normal)
+            self.beginTimeButton.setTitle(beforeWeekStr, for: .normal)
+            
+            let beginDateString = beforeWeekDate.string_from(formatter: "yyyyMMdd")
+            let endDateString = date.string_from(formatter: "yyyyMMdd")
+            
+            let model = EarningRequestModel()
+            model.stardate = Int64(beginDateString)!
+            model.enddate = Int64(endDateString)!
+            
+            requestInitResponse(stardate: model.stardate, enddate: model.enddate)
+            //            AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
+            //
+            //                self.earningData?.removeAll()
+            //                if let objects = response as? [EarningInfoModel] {
+            //                    self.earningData = objects
+            //                }
+            //                self.tableView.reloadData()
+            //                return nil
+            //            }, error: { (error) -> ()? in
+            //                self.tableView.reloadData()
+            //                self.didRequestError(error)
+            //                return nil
+            //            })
+        }
+    }
+    
+    // 请求收益列表信息
+    func requestInitResponse(stardate: Int64 , enddate : Int64) {
+        
+        let requestModel = EarningRequestModel()
+        requestModel.stardate = stardate
+        requestModel.enddate = enddate
+        AppAPIHelper.commen().requestEarningInfo(model: requestModel, complete: { (response) -> ()? in
+            if self.earningData != nil {
+               self.earningData?.removeAll()
+            }
             if let objects = response as? [EarningInfoModel] {
-                
                 self.earningData = objects
                 self.lineView.refreshLineChartData(models: objects)
             }
             self.tableView.reloadData()
             return nil
         }) { (error) -> ()? in
-            
-            self.didRequestError(error)
             self.tableView.reloadData()
-            print("====\(error)")
-            
+            self.didRequestError(error)
             return nil
         }
-    
     }
     
 
@@ -167,84 +262,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
     }
     
-    func timeButtonClick(_ sender : UIButton) {
-        
-        if sender == beginTimeButton {
-            let datePickerView = DateSelectorView(delegate: self)
-            beginOrEnd = true
-            datePickerView.showPicker()
-        } else {
-            let datePickerView = DateSelectorView(delegate: self)
-            beginOrEnd = false
-            datePickerView.showPicker()
-        }
-    }
-    func chooseDate(datePickerView: DateSelectorView, date: Date) {
-        
-        let weekTimeInterval : TimeInterval = 24 * 60 * 60 * 6
-        let dateString = date.string_from(formatter: "yyyy-MM-dd")
-        
-        if beginOrEnd == true {
-            // 获取7天后的日期
-            let afterWeekDate = date.addingTimeInterval(weekTimeInterval)
-            let afterWeekStr = afterWeekDate.string_from(formatter: "yyyy-MM-dd")
-            self.beginTimeButton.setTitle(dateString, for: .normal)
-            self.endTimeButton.setTitle(afterWeekStr, for: .normal)
-            
-            // 转换成没有分割线
-            let beginDateString = date.string_from(formatter: "yyyyMMdd")
-            let endDateString = afterWeekDate.string_from(formatter: "yyyyMMdd")
-
-            let model = EarningRequestModel()
-            model.stardate = Int64(beginDateString)!
-            model.enddate = Int64(endDateString)!
-            
-            AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
-                
-                self.earningData?.removeAll()
-                if let objects = response as? [EarningInfoModel] {
-                    self.earningData = objects
-                }
-                self.tableView.reloadData()
-                return nil
-            }, error: { (error) -> ()? in
-                self.tableView.reloadData()
-                self.didRequestError(error)
-                return nil
-            })
-            
-        } else {
-            // 获取7天前的日期
-            let beforeWeekDate = date.addingTimeInterval(-weekTimeInterval)
-            let beforeWeekStr = beforeWeekDate.string_from(formatter: "yyyy-MM-dd")
-            self.endTimeButton.setTitle(dateString, for: .normal)
-            self.beginTimeButton.setTitle(beforeWeekStr, for: .normal)
-            
-            let beginDateString = beforeWeekDate.string_from(formatter: "yyyyMMdd")
-            let endDateString = date.string_from(formatter: "yyyyMMdd")
-            
-            let model = EarningRequestModel()
-            model.stardate = Int64(beginDateString)!
-            model.enddate = Int64(endDateString)!
-            
-            AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
-                
-                self.earningData?.removeAll()
-                if let objects = response as? [EarningInfoModel] {
-                    self.earningData = objects
-                }
-                self.tableView.reloadData()
-                return nil
-            }, error: { (error) -> ()? in
-                self.tableView.reloadData()
-                self.didRequestError(error)
-                return nil
-            })
-        }
-    }
-    
-    
-
     func leftButtonClick() {
 
         let model = BankCardListRequestModel()

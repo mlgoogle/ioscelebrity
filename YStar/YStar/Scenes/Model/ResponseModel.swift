@@ -154,6 +154,10 @@ class ResultModel: BaseModel{
     var result = 0
 }
 
+class WYIMModel: BaseModel {
+    var result_value = ""
+    var token_value = ""
+}
 
 class MeetTypeModel: BaseModel{
     

@@ -35,8 +35,18 @@ struct SocketPacketHead {
 #import <DKNightVersion/DKNightVersion.h>
 #import "IPManager.h"
 #import <NIMSDK/NIMSDK.h>
+#import <NIMAVChat/NIMAVChat.h>
+
 #import "NIMInputView.h"
 #import "UMMobClick/MobClick.h"
 #import <objc/runtime.h>
+#import "NIMKit.h"
+
+//#import "Global.h"
+//#import "NTESSessionViewController.h"
+//#import "NSString+NTES.h"
+//#import "NTESCellLayoutConfig.h"
+//#import "NTESSDKConfigDelegate.h"
+
 //#import <CommonCrypto/CommonCrytor.h>
 /* nineSister_Bridging_Header_h */
