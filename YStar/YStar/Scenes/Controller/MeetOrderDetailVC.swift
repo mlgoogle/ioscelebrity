@@ -44,7 +44,7 @@ class MeetOrderDetailVC: BaseTableViewController {
         let param = AgreeOrderRequest()
         param.starcode = model.starcode
         param.meettype = 4
-        param.meetid = model.mid
+        param.meetid = model.id
         SVProgressHUD.showProgressMessage(ProgressMessage: "处理中...")
         AppAPIHelper.commen().agreeOrder(requestModel: param, complete: { [weak self](result) in
             if let model = result as? ResultModel{

@@ -43,10 +43,10 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
     //登录
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         if checkTextFieldEmpty([phoneText, pwdText]){
-            if !isTelNumber(num: phoneText.text!) {
-                SVProgressHUD.showErrorMessage(ErrorMessage: "手机号码格式错误", ForDuration: 2.0, completion: nil)
-                return
-            }
+//            if !isTelNumber(num: phoneText.text!) {
+//                SVProgressHUD.showErrorMessage(ErrorMessage: "手机号码格式错误", ForDuration: 2.0, completion: nil)
+//                return
+//            }
             if !isPassWord(pwd: pwdText.text!) {
                 SVProgressHUD.showErrorMessage(ErrorMessage: "请输入6位字符以上密码", ForDuration: 2.0, completion: nil)
                 return
@@ -59,7 +59,21 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
             AppAPIHelper.commen().login(model: param, complete: { [weak self](result) -> ()? in
                 SVProgressHUD.dismiss()
                 if let object = result as? StarUserModel{
-                    
+                    if object.userinfo?.starcode.length() == 0{
+                        SVProgressHUD.showErrorMessage(ErrorMessage: "账号或密码错误", ForDuration: 2, completion: nil)
+                        return nil
+                    }
+                    if let uid = object.userinfo?.id{
+                        ShareModelHelper.instance().uid = Int(uid)
+                        UserDefaults.standard.set(uid, forKey: AppConst.UserDefaultKey.uid.rawValue)
+                    }
+                    if let phone = object.userinfo?.phone{
+                        ShareModelHelper.instance().phone = phone
+                        UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
+                    }
+                    ShareModelHelper.instance().token = object.token
+                    UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
+                    UserDefaults.standard.set(object.token_time, forKey: AppConst.UserDefaultKey.tokenTime.rawValue)
                     self?.dismissController()
                 }
                 return nil
