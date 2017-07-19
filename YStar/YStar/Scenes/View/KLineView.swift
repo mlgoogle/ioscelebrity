@@ -58,6 +58,7 @@ class KLineView: LineChartView, ChartViewDelegate, UIScrollViewDelegate {
     func initKlineView() {
         self.legend.setCustom(entries: [])
         self.noDataText = "暂无数据"
+        self.doubleTapToZoomEnabled = false
         self.xAxis.labelPosition = .bottom
         self.xAxis.drawGridLinesEnabled = false
         self.xAxis.labelFont = UIFont.systemFont(ofSize: 0)
