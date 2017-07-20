@@ -91,6 +91,13 @@ class WithdrawalListRequetModel: LoginModle {
     var time = ""
 }
 
+// 
+class FansListRquestModel : LoginModle {
+    
+    var starcode = "1001"
+}
+
+
 //MARK: - Circle
 
 class RegisterWYIMRequestModel: LoginModle {
