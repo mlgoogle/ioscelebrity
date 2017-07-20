@@ -36,6 +36,7 @@ class UserBalance: BaseModel {
     var head_url = ""
 }
 
+
 class verifyCodeModel: BaseModel {
     var result : Int64 = 0
     var timeStamp = ""

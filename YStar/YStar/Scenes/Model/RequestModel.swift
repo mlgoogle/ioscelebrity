@@ -8,13 +8,12 @@
 
 import Foundation
 
-
-
 class LoginRequestModel: BaseModel {
     var phone = ""
     var pwd = ""
     var deviceId = ""
 }
+
 
 class BindCardRequestModel: LoginModle {
     var account = "1001"
@@ -26,9 +25,7 @@ class BankCardListRequestModel: LoginModle {
 }
 
 class BankCardInfoRequestModel : LoginModle {
-    
     var cardNo = ""
-    
 }
 
 class CheckRegisterRequestModel: BaseModel {
@@ -57,7 +54,7 @@ class YesterdayAndTodayPriceRequestModel: LoginModle {
     var orderdate : Int64 = 0
 }
 
-// 重置支付密码
+// 重置交易密码
 class ResetPayPwdRequestModel: LoginModle {
     var timestamp : Int64 = 0
     var vCode = ""
@@ -67,8 +64,7 @@ class ResetPayPwdRequestModel: LoginModle {
     var phone = ""
 }
 
-
-// 验证支付密码
+// 验证交易密码
 class CheckPayPwdModel: LoginModle {
     var uid:Int64 = Int64(ShareModelHelper.instance().uid)
     var paypwd = ""
@@ -87,6 +83,8 @@ class WithdrawalListRequetModel: LoginModle {
     var time = ""
 }
 
+//MARK: - Circle
+
 class RegisterWYIMRequestModel: LoginModle {
     var name_value = ""
     var user_type = 0
@@ -97,8 +95,6 @@ class RegisterWYIMRequestModel: LoginModle {
     var recommend = "3tewe"
     var timeStamp = 100088888
 }
-
-//MARK: - Circle
 
 class CircleListRequestModel: BaseModel {
     

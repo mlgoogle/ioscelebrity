@@ -143,9 +143,10 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
 //                    }
                 if let objects = response as? ResultModel {
                     if objects.result == 0 {
-                        SVProgressHUD.showSuccessMessage(SuccessMessage: "重置成功!", ForDuration: 2.0, completion: nil)
-                        let vcCount = self.navigationController?.viewControllers.count
-                        self.navigationController?.popToViewController((self.navigationController?.viewControllers[vcCount! - 3])!, animated: true)
+                        SVProgressHUD.showSuccessMessage(SuccessMessage: "设置成功", ForDuration: 2.0, completion: { 
+                            let vcCount = self.navigationController?.viewControllers.count
+                            self.navigationController?.popToViewController((self.navigationController?.viewControllers[vcCount! - 3])!, animated: true)
+                        })
                     }
                 } else {
                     SVProgressHUD.showErrorMessage(ErrorMessage: "设置失败", ForDuration: 2.0, completion: nil)

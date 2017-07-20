@@ -13,16 +13,32 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
     @IBOutlet var withDrawMoney: UILabel!
     //收款账户
     @IBOutlet var account: UILabel!
+    
     @IBOutlet var inputMoney: UITextField!
+    
+    // 0 设置了密码  1 未设置密码
+    var needPwd : Int = 2
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+       
+        requestUseBalance()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         inputMoney.delegate = self
         inputMoney.becomeFirstResponder()
-        getbankinfo()
-        getwealth()
+        
+        requestGetBankInfo()
+        
+        // requestUseBalance()
         
     }
-    func  getbankinfo(){
+    
+    // 获取银行卡信息
+    func requestGetBankInfo(){
         let model = BankCardListRequestModel()
         AppAPIHelper.commen().bankCardList(model: model, complete: { [weak self](result) in
             if let model =  result as? BankListModel{
@@ -40,9 +56,20 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         }, error:errorBlockFunc())
     }
     
-    
-    func  getwealth(){
-        withDrawMoney.text = "可提现金额" + "¥" + String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance)
+    // 获取金额,及是否设置了交易密码
+    func requestUseBalance() {
+        let model = LoginModle()
+        AppAPIHelper.commen().userinfo(model: model, complete: {[weak self] (response) -> ()? in
+            
+            if let objects = response as? UserBalance {
+                self?.withDrawMoney.text = "可提现金额" + "," + "¥" + String.init(format: "%.2f", objects.balance)
+                ShareModelHelper.instance().userinfo.balance = objects.balance
+                self?.needPwd = objects.is_setpwd
+            }
+            return nil
+        }, error: errorBlockFunc())
+        
+        // withDrawMoney.text = "可提现金额" + "¥" + String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance)
     }
 
  
@@ -69,28 +96,42 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
             }
         }
         
-        // 已设置支付密码
-        let payPwdAlertView = PayPwdAlertView(frame: self.view.bounds)
-        payPwdAlertView.show(self.view)
-        payPwdAlertView.completeBlock = ({[weak self](password:String)  -> Void in
-            // print("输入的密码是:" + password)
-            let model = CheckPayPwdModel()
-           
-            model.uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) as! Int64
-            model.paypwd = password.md5()
-            
-            // 校验密码
-            AppAPIHelper.commen().CheckPayPwd(requestModel: model, complete: { (response) -> ()? in
-                if let objects = response as? ResultModel {
-                    // 校验成功
-                    if objects.result == 1 {
+        inputMoney.resignFirstResponder()
+        
+        if self.needPwd == 1 {
+             // 未设置支付密码
+            let alertVC = AlertViewController()
+            alertVC.showAlertVc(imageName: "tangkuang_kaitongzhifu",
+                                titleLabelText: "交易密码",
+                                subTitleText: "提现需要开通交易密码才能进行操作",
+                                completeButtonTitle: "开 通 支 付", action: {[weak alertVC] (completeButton) in
+                                    alertVC?.dismissAlertVc()
+                                    let setPayPwdVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "SetPayPwdVC")
+                                    self.navigationController?.pushViewController(setPayPwdVC, animated: true)
+                                    
+            })
+        } else {
+            // 已设置支付密码
+            let payPwdAlertView = PayPwdAlertView(frame: self.view.bounds)
+            payPwdAlertView.show(self.view)
+            payPwdAlertView.completeBlock = ({[weak self](password:String)  -> Void in
+                
+                let model = CheckPayPwdModel()
+                model.uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) as! Int64
+                model.paypwd = password.md5()
+                
+                // 校验密码
+                AppAPIHelper.commen().CheckPayPwd(requestModel: model, complete: { (response) -> ()? in
+                    if let objects = response as? ResultModel {
+                        // 密码输入成功
+                        if objects.result == 1 {
                             // 发起提现
                             let requestModel = WithdrawalRequestModel()
                             requestModel.price = Double.init((self?.inputMoney.text!)!)!
                             AppAPIHelper.commen().Withdrawal(requestModel: requestModel, complete: { (responseObject) -> ()? in
                                 if let resultObj = responseObject as? ResultModel {
                                     if resultObj.result == 1 {
-                                        SVProgressHUD.showSuccessMessage(SuccessMessage: "提现成功", ForDuration: 2.0, completion: { 
+                                        SVProgressHUD.showSuccessMessage(SuccessMessage: "提现成功", ForDuration: 1.0, completion: {
                                             self?.navigationController?.popViewController(animated: true)
                                         })
                                     }
@@ -100,25 +141,20 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                                 self?.didRequestError(error)
                                 return nil
                             })
-                   } else {
-                        // 失败
-                        SVProgressHUD.showErrorMessage(ErrorMessage: "密码输入错误", ForDuration: 2.0, completion: { 
-                            payPwdAlertView.close()
-                        })
+                        } else {
+                            // 失败
+                            SVProgressHUD.showErrorMessage(ErrorMessage: "密码输入错误", ForDuration: 2.0, completion: {
+                                payPwdAlertView.close()
+                            })
+                        }
                     }
-                }
-                return nil
-            }, error: { (error) -> ()? in
-                self?.didRequestError(error)
-                return nil
+                    return nil
+                }, error: { (error) -> ()? in
+                    self?.didRequestError(error)
+                    return nil
+                })
             })
-        })
-        
-        // 未设置支付密码
-        // SetPayPwdVC()
-        // let setPayPwdVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "SetPayPwdVC")
-        // self.navigationController?.pushViewController(setPayPwdVC, animated: true)
-        
+        }
     }
     
     // 忘记密码
@@ -128,7 +164,6 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         
     }
 
-    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let resultStr = textField.text?.replacingCharacters(in: (textField.text?.range(from: range))!, with: string)
         return resultStr!.isMoneyString()
