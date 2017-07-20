@@ -68,11 +68,13 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                     if let uid = object.userinfo?.id{
                         ShareModelHelper.instance().uid = Int(uid)
                         UserDefaults.standard.set(uid, forKey: AppConst.UserDefaultKey.uid.rawValue)
+                        UserDefaults.standard.synchronize()
                         self?.uid = Int(uid)
                     }
                     if let phone = object.userinfo?.phone{
                         ShareModelHelper.instance().phone = phone
                         UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
+                        UserDefaults.standard.synchronize()
                     }
                     ShareModelHelper.instance().token = object.token
                     UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
@@ -97,15 +99,20 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: {[weak self] (response) -> ()? in
             
             if let objects = response as? WYIMModel {
+                
+                UserDefaults.standard.set(objects.token_value, forKey: AppConst.UserDefaultKey.token_value.rawValue)
+                UserDefaults.standard.synchronize()
+                
                 let phoneNum = self?.phoneText.text!
                 let token_value = objects.token_value
+                
                 NIMSDK.shared().loginManager.login(phoneNum!, token: token_value, completion: { (error) in
                     if error == nil {
-
+                        // 登陆成功
+                        print(" loginVc---- 登陆成功 ----");
                     }
-                })
-            }
-            
+            })
+        }
             return nil
         }) { (error) -> ()? in
             self.didRequestError(error)

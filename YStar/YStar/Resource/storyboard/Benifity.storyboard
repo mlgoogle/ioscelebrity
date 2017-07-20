@@ -313,8 +313,7 @@
                     <navigationItem key="navigationItem" title="收益管理" id="Xg5-uV-6aH">
                         <barButtonItem key="rightBarButtonItem" title="提现" id="cZD-y2-zXT">
                             <connections>
-                                <action selector="withdrawItemTapped:" destination="do8-zX-8Bq" id="EJN-E6-ueR"/>
-                                <segue destination="qks-ys-CNb" kind="push" id="fbq-9d-X7j"/>
+                                <action selector="rightItemAction:" destination="do8-zX-8Bq" id="brj-Ar-xeV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -536,7 +535,7 @@
             <objects>
                 <navigationController id="Rag-AI-Rap" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="收益" image="home_item_normal" selectedImage="home_item_selected" id="5hN-Rb-Yf5"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="7Iq-EY-AJK">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Iq-EY-AJK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -194,4 +194,12 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         let packet = SocketDataPacket(opcode: .agreeOrder, model: requestModel)
         startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
     }
+    
+    // MARK: - 获取粉丝列表
+    func requestFansList(model: FansListRquestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .fansLists, model: model)
+        startModelsRequest(packet, listName: "OrderList", modelClass: FansListModel.self, complete: complete, error: error)
+        
+    }
+
 }

@@ -35,7 +35,7 @@ class APITestCase: XCTestCase {
         
     }
     
-    // 登录功能
+    // MARK: - 登录功能
     func testLogin() {
         ytimeTest("testLogin", handle: {_ in 
             let expectOption = expectation(description: "登录测试")
@@ -67,8 +67,24 @@ class APITestCase: XCTestCase {
             return nil
         })
     }
+    // MARK: - 发送验证码
+    func testSendCode() {
+        let exceptOption = expectation(description: "发送验证码测试")
+        let param = SendVerificationCodeRequestModel()
+        param.phone = "15557198601"
+        AppAPIHelper.commen().sendVerificationCode(model: param, complete: { (result) -> ()? in
+            if let model = result as? verifyCodeModel {
+                if model.result == 1 {
+                    exceptOption.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
     
-    //发送朋友圈
+    
+    // MARK: - 发送朋友圈
     func testSendCircle(){
         let exceptOption = expectation(description: "发布朋友圈测试")
         let param = SendCircleRequestModel()
@@ -83,7 +99,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //获取朋友圈列表
+    // MARK: - 获取朋友圈列表
     func testCircleList(){
         let exceptOption = expectation(description: "朋友圈测试")
         let model = CircleListRequestModel()
@@ -100,7 +116,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //评论朋友圈
+    // MARK: - 评论朋友圈
     func testCommentCircle()  {
         let exception = expectation(description: "评论朋友圈")
         let param = CommentCircleModel()
@@ -115,7 +131,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //明星回复朋友圈
+    // MARK: - 明星回复朋友圈
     func testStarReply() {
         let exception = expectation(description: "测试明星回复")
         let param = CommentCircleModel()
@@ -130,7 +146,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //点赞朋友圈
+    // MARK: - 点赞朋友圈
     func testApproveCircle() {
         let exception = expectation(description: "测试点赞朋友圈")
         let param  = ApproveCircleModel()
@@ -145,7 +161,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //测试所有订单类型
+    // MARK: - 测试所有订单类型
     func testAllOrderTypes() {
         let exception = expectation(description: "测试所有订单类型")
         let param = MeetTypesRequest()
@@ -160,7 +176,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //测试明星订单类型
+    // MARK: - 测试明星订单类型
     func testStarOrderTypes() {
         let exception = expectation(description: "测试明星所有订单类型")
         let param = MeetTypesRequest()
@@ -175,7 +191,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //测试修改明星订单
+    // MARK: - 测试修改明星订单
     func testChangeStarMeetType() {
         let exception = expectation(description: "测试修改明星订单")
         let param  = ChangerMeetTypeRequest()
@@ -190,7 +206,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //测试约见订单
+    // MARK: - 测试约见订单
     func testAllOrder() {
         let exception = expectation(description: "测试约见订单")
         let param = MeetOrderListRequest()
@@ -204,7 +220,7 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
-    //同意订单
+    // MARK: - 同意订单
     func testAgressOrderTypes() {
         let exception = expectation(description: "明星拥有订单类型")
         let param = AgreeOrderRequest()
@@ -239,9 +255,9 @@ class APITestCase: XCTestCase {
     // MARK: - 今开昨收
     func testrequestYesterdayAndTodayPrice() {
         let exception = expectation(description: "测试今开昨收")
-        let parma = YesterdayAndTodayPriceRequestModel()
-        parma.orderdate = 20170627
-        AppAPIHelper.commen().requestYesterdayAndTodayPrice(model: parma, complete: { (result) -> ()? in
+        let param = YesterdayAndTodayPriceRequestModel()
+        param.orderdate = 20170627
+        AppAPIHelper.commen().requestYesterdayAndTodayPrice(model: param, complete: { (result) -> ()? in
             if let model = result as? YesterdayAndTodayPriceModel {
                 if model.max_price > 0 {
                     exception.fulfill()
@@ -255,12 +271,12 @@ class APITestCase: XCTestCase {
     // MARK: - 设置交易密码
     func testResetPayPwd() {
         let exception = expectation(description: "测试设置交易密码")
-        let parma = ResetPayPwdRequestModel()
-        parma.phone = "15557198601"
-        parma.pwd = "123456".md5()
-        parma.timestamp = 1
-        parma.type = 0
-        AppAPIHelper.commen().ResetPayPwd(requestModel: parma, complete: { (result) -> ()? in
+        let param = ResetPayPwdRequestModel()
+        param.phone = "15557198601"
+        param.pwd = "123456".md5()
+        param.timestamp = 1
+        param.type = 0
+        AppAPIHelper.commen().ResetPayPwd(requestModel: param, complete: { (result) -> ()? in
             if let model = result as? ResultModel {
                 if model.result == 0 {
                     exception.fulfill()
@@ -277,15 +293,12 @@ class APITestCase: XCTestCase {
     func testCheckPayPwd() {
         let exception = expectation(description: "测试校验密码")
         let param = CheckPayPwdModel()
-        param.uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) as! Int64
         param.paypwd = "123456".md5()
-    
         AppAPIHelper.commen().CheckPayPwd(requestModel: param, complete: { (result) -> ()? in
             if let model = result as? ResultModel {
                 if model.result == 1 {
                     exception.fulfill()
                 }
-
             }
             return nil
         }, error: nil)
@@ -316,10 +329,8 @@ class APITestCase: XCTestCase {
     func testWithdrawalList() {
         let exception = expectation(description: "测试提现列表")
         let param = WithdrawalListRequetModel()
-        // param.id = 185
-        // param.token = "4245e53e85840084c7f34b1e301f553a"
         param.status = 0
-        param.startPos = 100
+        param.startPos = 10
         AppAPIHelper.commen().withDrawList(requestModel: param, complete: { (result) -> ()? in
             if let model = result as? WithdrawListModel {
                 if model.withdrawList != nil {
@@ -334,7 +345,75 @@ class APITestCase: XCTestCase {
 
     }
     
-    //性能测试：测试登录功能和Add方法性能表现
+    // MARK: - 网易云测试
+    func testWYIM() {
+        let exception = expectation(description: "测试提现列表")
+        let param = RegisterWYIMRequestModel()
+        param.name_value = "15557198601"
+        param.phone = "15557198601"
+        param.uid = 185
+        AppAPIHelper.commen().registWYIM(model: param, complete: { (result) -> ()? in
+            if let model = result as? WYIMModel {
+                if model.result_value == "success"{
+                    exception.fulfill()
+            }
+          }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    // MARK: - 是否绑定银行卡
+    func testIsBindCardNo() {
+        let exception = expectation(description: "测试是否绑定银行卡")
+        let param = BankCardListRequestModel()
+        param.id = 185
+        param.token = UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.token.rawValue) as! String
+        
+        AppAPIHelper.commen().bankCardList(model: param, complete: { (result) -> ()? in
+            if let model = result as? BankListModel {
+                if model.cardNo.length() > 0 {
+                     exception.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    // MARK: - 银行卡信息
+    func testBankInfo() {
+        let exception = expectation(description: "测试银行卡信息")
+        let param = BankCardInfoRequestModel()
+        param.cardNo = "6214835895926259"
+        AppAPIHelper.commen().bankCardInfo(model: param, complete: { (result) -> ()? in
+            if let model = result as? BankInfoModel {
+                if model.bankName == "招商银行" {
+                    exception.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    // MARK: - 粉丝列表
+    func testFansList() {
+        let exception = expectation(description: "测试粉丝列表")
+        let param = FansListRquestModel()
+        param.starcode = "1001"
+        AppAPIHelper.commen().requestFansList(model: param, complete: { (result) -> ()? in
+            if let model = result as? [FansListModel] {
+                if model.count > 0 {
+                    exception.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
+    //  MARK: - 性能测试：测试登录功能和Add方法性能表现
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

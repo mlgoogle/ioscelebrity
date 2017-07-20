@@ -127,8 +127,9 @@ extension BindBankCardVC {
         AppAPIHelper.commen().bindCard(model: model, complete: {[weak self] (response) -> ()? in
             
             if (response as? BindBankModel) != nil{
-                    SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: nil)
-                    _ = self?.navigationController?.popViewController(animated: true)
+                SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: { 
+                    self?.navigationController?.popViewController(animated: true)
+                })
             }
             return nil
         }, error: errorBlockFunc())

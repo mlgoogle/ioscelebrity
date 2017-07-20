@@ -65,5 +65,7 @@ protocol CommenApi {
     func withDrawList(requestModel:WithdrawalListRequetModel, complete: CompleteBlock?, error: ErrorBlock?)
     // 网易云信注册
     func registWYIM(model:RegisterWYIMRequestModel,complete:CompleteBlock?,error:ErrorBlock?)
+    // 获取粉丝列表
+    func requestFansList(model:FansListRquestModel,complete:CompleteBlock?,error:ErrorBlock?)
 }
 

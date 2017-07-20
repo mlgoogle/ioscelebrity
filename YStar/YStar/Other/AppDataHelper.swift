@@ -65,12 +65,47 @@ class AppDataHelper: NSObject {
         AppAPIHelper.commen().tokenLogin(requestModel: requestModel, complete: {[weak self] (result) in
             if let model = result as? StarUserModel {
                 self?.cacheUserInfo(object: model)
+                
+                self?.LoginToYunxin()
             }
             return nil
         }) {[weak self] (error ) in
             self?.clearUserInfo()
             return nil
         }
+    }
+    
+    func LoginToYunxin() {
         
+        let uid = UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.uid.rawValue) as! Int
+        let phone = UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.phone.rawValue) as! String
+        
+        let requestModel = RegisterWYIMRequestModel()
+        requestModel.name_value = phone
+        requestModel.phone = phone
+        requestModel.uid = uid
+        
+        // print("model ===== \(requestModel)")
+        
+        AppAPIHelper.commen().registWYIM(model: requestModel, complete: { (response) -> ()? in
+            
+            if let objects = response as? WYIMModel {
+                UserDefaults.standard.set(objects.token_value, forKey: AppConst.UserDefaultKey.token_value.rawValue)
+                UserDefaults.standard.synchronize()
+                
+                let phoneNum = UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.phone.rawValue) as! String
+                let token_value = objects.token_value
+                
+                NIMSDK.shared().loginManager.login(phoneNum, token: token_value, completion: { (error) in
+                    if error == nil {
+                        // 登陆成功
+                        print("---- 网易云信登陆成功 ----");
+                    }
+                })
+            }
+            return nil
+        }) { (error) -> ()? in
+            return nil
+        }
     }
 }

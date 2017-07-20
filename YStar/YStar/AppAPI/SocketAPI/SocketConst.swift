@@ -173,6 +173,8 @@ class SocketConst: NSObject {
         case allOrders = 16009
         //同意约见
         case agreeOrder = 16013
+        // 粉丝列表
+        case fansLists = 16019
         
     }
     
