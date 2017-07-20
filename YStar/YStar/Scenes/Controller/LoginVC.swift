@@ -44,10 +44,10 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
     //登录
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         if checkTextFieldEmpty([phoneText, pwdText]){
-            if !isTelNumber(num: phoneText.text!) {
-                SVProgressHUD.showErrorMessage(ErrorMessage: "手机号码格式错误", ForDuration: 2.0, completion: nil)
-                return
-            }
+//            if !isTelNumber(num: phoneText.text!) {
+//                SVProgressHUD.showErrorMessage(ErrorMessage: "手机号码格式错误", ForDuration: 2.0, completion: nil)
+//                return
+//            }
             if !isPassWord(pwd: pwdText.text!) {
                 SVProgressHUD.showErrorMessage(ErrorMessage: "请输入6位字符以上密码", ForDuration: 2.0, completion: nil)
                 return
@@ -59,10 +59,12 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
             param.pwd = pwdText.text!.md5()
             AppAPIHelper.commen().login(model: param, complete: { [weak self](result) -> ()? in
                 SVProgressHUD.dismiss()
-                
-                // print("===\(result)")
-                
+
                 if let object = result as? StarUserModel{
+                    if object.userinfo?.starcode.length() == 0{
+                        SVProgressHUD.showErrorMessage(ErrorMessage: "账号或密码错误", ForDuration: 2, completion: nil)
+                        return nil
+                    }
                     if let uid = object.userinfo?.id{
                         ShareModelHelper.instance().uid = Int(uid)
                         UserDefaults.standard.set(uid, forKey: AppConst.UserDefaultKey.uid.rawValue)
@@ -74,6 +76,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                     }
                     ShareModelHelper.instance().token = object.token
                     UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
+                    UserDefaults.standard.set(object.token_time, forKey: AppConst.UserDefaultKey.tokenTime.rawValue)
                     UserDefaults.standard.synchronize()
                     self?.LoginToYunxin()
                     self?.dismissController()
@@ -94,25 +97,13 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: {[weak self] (response) -> ()? in
             
             if let objects = response as? WYIMModel {
-            
-                // UserDefaults.standard.set(self?.phoneText!, forKey: AppConst.UserDefaultKey.phone.rawValue)
-                // UserDefaults.standard.set(objects.token_value, forKey: AppConst.UserDefaultKey.token_value.rawValue)
-                // UserDefaults.standard.synchronize()
-                
-                let phoneNum = UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.phone.rawValue) as! String
+                let phoneNum = self?.phoneText.text!
                 let token_value = objects.token_value
-                
-                NIMSDK.shared().loginManager.login(phoneNum, token: token_value, completion: { (error) in
+                NIMSDK.shared().loginManager.login(phoneNum!, token: token_value, completion: { (error) in
                     if error == nil {
-                        
-                        print("哈哈哈哈 ----\(String(describing: error))");
-                        // 登陆成功
-                    }
 
+                    }
                 })
-                print("result_value   ------   \(objects.result_value)")
-                print("token_value    ------   \(objects.token_value)")
-            
             }
             
             return nil

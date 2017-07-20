@@ -99,7 +99,7 @@ class KLineView: LineChartView, ChartViewDelegate, UIScrollViewDelegate {
     //Mark: --delegate
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
        
-        let index =  Int(entry.x-1)
+        let index =  Int(entry.x)
         if index >= 0 && index < chartData.count {
             if let model: EarningInfoModel = chartData[index]{
 
@@ -114,8 +114,6 @@ class KLineView: LineChartView, ChartViewDelegate, UIScrollViewDelegate {
         }
     }
     func markerLineText(model: EarningInfoModel) -> String {
-//        let time = Date.yt_convertDateToStr(Date.init(timeIntervalSince1970: TimeInterval(model.priceTime)), format: "MM-dd HH:mm")
-//        let price = String.init(format: "%.4f", model.currentPrice)
         return "\(model.orderdate)\n交易数量\(model.order_count)"
     }
 }
