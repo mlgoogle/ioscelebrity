@@ -29,13 +29,24 @@ class FansListCell: OEZTableViewCell {
             self.nameLabel.text = model.nickname
     }
   }
+    
 }
 
 
-class FansListVC: BaseListTableViewController {
+class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate {
 
+    
+    deinit {
+        
+        NIMSDK.shared().loginManager.remove(self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NIMSDK.shared().loginManager.add(self)
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
         tableView.rowHeight = 60
     }
     

@@ -397,6 +397,22 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
+    // MARK: - 粉丝列表
+    func testFansList() {
+        let exception = expectation(description: "测试粉丝列表")
+        let param = FansListRquestModel()
+        param.starcode = "1001"
+        AppAPIHelper.commen().requestFansList(model: param, complete: { (result) -> ()? in
+            if let model = result as? [FansListModel] {
+                if model.count > 0 {
+                    exception.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+    
     //  MARK: - 性能测试：测试登录功能和Add方法性能表现
     func testPerformanceExample() {
         // This is an example of a performance test case.
