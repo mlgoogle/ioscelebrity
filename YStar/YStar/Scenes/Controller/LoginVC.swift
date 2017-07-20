@@ -97,21 +97,12 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: {[weak self] (response) -> ()? in
             
             if let objects = response as? WYIMModel {
-            
-                // UserDefaults.standard.set(self?.phoneText!, forKey: AppConst.UserDefaultKey.phone.rawValue)
-                // UserDefaults.standard.set(objects.token_value, forKey: AppConst.UserDefaultKey.token_value.rawValue)
-                // UserDefaults.standard.synchronize()
-                
-                let phoneNum = UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.phone.rawValue) as! String
+                let phoneNum = self?.phoneText.text!
                 let token_value = objects.token_value
-                
-                NIMSDK.shared().loginManager.login(phoneNum, token: token_value, completion: { (error) in
+                NIMSDK.shared().loginManager.login(phoneNum!, token: token_value, completion: { (error) in
                     if error == nil {
-                        
-                        print("哈哈哈哈 ----\(String(describing: error))");
-                        // 登陆成功
-                    }
 
+                    }
                 })
             }
             
