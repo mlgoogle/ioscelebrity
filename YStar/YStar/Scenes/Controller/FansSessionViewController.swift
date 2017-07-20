@@ -14,7 +14,7 @@ class FansSessionViewController: NIMSessionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.backgroundColor = UIColor.init(hexString: "FAFAFA")
+        // self.tableView.backgroundColor = UIColor.init(hexString: "FAFAFA")
     }
     
     override func send(_ message: NIMMessage!) {
