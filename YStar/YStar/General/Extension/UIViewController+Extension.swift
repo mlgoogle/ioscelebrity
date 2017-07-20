@@ -50,15 +50,29 @@ extension UIViewController {
         SVProgressHUD.show(withStatus: status)
     }
     
-    func checkLogin() {
+    func checkLogin(){
         if AppDataHelper.instance().checkLogin(){
             return
         }
-        if let vc  = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: LoginNavigationController.className()) as? LoginNavigationController{
+        if let vc  = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: LoginNavigationController.className()) as? LoginNavigationController {
             vc.modalPresentationStyle = .custom
             present(vc, animated: true, completion: nil)
         }
     }
+    
+    func isLogin() -> Bool {
+        
+        if UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.phone.rawValue) as? String == nil {
+            let loginvc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: LoginNavigationController.className()) as? LoginNavigationController
+            loginvc?.modalPresentationStyle = .custom
+            present(loginvc!, animated: true, completion: nil)
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    
     
     //退出登录
     func userLogout() {
