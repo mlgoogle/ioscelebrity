@@ -16,7 +16,7 @@ class ShareModelHelper: BaseModel {
     
     // 设置交易密码
     var setPayPwd = [String:String]()
-    
+    var starCode = ""
     var uid = 0
     var phone  = ""
     var token = ""

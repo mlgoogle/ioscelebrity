@@ -53,6 +53,7 @@ class AppDataHelper: NSObject {
             UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
         }
         ShareModelHelper.instance().token = object.token
+        ShareModelHelper.instance().starCode = (object.userinfo?.starcode)!
         UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
         UserDefaults.standard.set(object.token_time, forKey: AppConst.UserDefaultKey.tokenTime.rawValue)
     }
