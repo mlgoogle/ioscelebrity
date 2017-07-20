@@ -46,13 +46,13 @@ class AppConst {
     
     class Network {
         #if true //是否是开发环境
-        static let TcpServerIP:String = "139.224.34.22";
+        static let TcpServerIP:String = "139.224.34.22"
         static let TcpServerPort:UInt16 = 16060
-        static let TttpHostUrl:String = "http://139.224.34.22";
+        static let TttpHostUrl:String = "http://139.224.34.22"
         #else
-        static let TcpServerIP:String = "i.flight.dlgrme.com";
-        static let TcpServerPort:UInt16 = 16205;
-        static let HttpHostUrl:String = "http://i.flight.dlgrme.com";
+        static let TcpServerIP:String = "122.144.169.214"
+        static let TcpServerPort:UInt16 = 16006
+        static let HttpHostUrl:String = "122.144.169.214"
         #endif
         static let TimeoutSec:UInt16 = 10
         static let qiniuHost = "http://ot81955n7.bkt.clouddn.com/"
@@ -104,6 +104,7 @@ class AppConst {
         case uid = "uid"
         case phone = "phone"
         case token = "token"
+        case tokenTime = "token_time"
         case token_value = "token_value"
     }
   

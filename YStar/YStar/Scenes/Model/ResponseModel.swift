@@ -16,6 +16,7 @@ class UserInfo: Object {
     dynamic var id:Int64 = 142
     dynamic var phone = ""
     dynamic var type = 0
+    dynamic var starcode = ""
 }
 
 class StarUserModel: Object {

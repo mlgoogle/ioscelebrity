@@ -33,6 +33,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        
         super.viewWillDisappear(animated)
     }
     
@@ -157,20 +158,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             model.stardate = Int64(beginDateString)!
             model.enddate = Int64(endDateString)!
             
-            //            AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
-            //
-            //                self.earningData?.removeAll()
-            //
-            //                if let objects = response as? [EarningInfoModel] {
-            //                    self.earningData = objects
-            //                }
-            //                self.tableView.reloadData()
-            //                return nil
-            //            }, error: { (error) -> ()? in
-            //                self.tableView.reloadData()
-            //                self.didRequestError(error)
-            //                return nil
-            //            })
             requestInitResponse(stardate: model.stardate, enddate: model.enddate)
             
         } else {
@@ -188,19 +175,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             model.enddate = Int64(endDateString)!
             
             requestInitResponse(stardate: model.stardate, enddate: model.enddate)
-            //            AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
-            //
-            //                self.earningData?.removeAll()
-            //                if let objects = response as? [EarningInfoModel] {
-            //                    self.earningData = objects
-            //                }
-            //                self.tableView.reloadData()
-            //                return nil
-            //            }, error: { (error) -> ()? in
-            //                self.tableView.reloadData()
-            //                self.didRequestError(error)
-            //                return nil
-            //            })
         }
     }
     
@@ -246,7 +220,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             
             benifityCell.setBenifity(model: earningData![indexPath.row])
         }
-//        benifityCell.setBenifity()
+
         benifityCell.containerView.backgroundColor = indexPath.row % 2 == 0 ? UIColor.clear : UIColor.white
         
         return benifityCell
@@ -270,7 +244,10 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
          checkLogin()
     }
     
+    // MARK: - 点击了提现
     @IBAction func rightItemAction(_ sender: UIBarButtonItem) {
+        
+        checkLogin()
         
         let model = BankCardListRequestModel()
         AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self] (response) -> ()? in
