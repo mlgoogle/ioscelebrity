@@ -54,7 +54,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         self.beginTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
         self.endTimeButton.addTarget(self, action: #selector(timeButtonClick(_ :)), for: .touchUpInside)
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Next", style: .done, target: self, action: #selector(leftButtonClick))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Exit", style: .done, target: self, action: #selector(ExitleftButtonClick))
         
         self.tableView.tableHeaderView = contentView
         self.tableView.separatorStyle = .none
@@ -263,38 +263,45 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
     }
     
-    func leftButtonClick() {
+    func ExitleftButtonClick() {
 
-        let model = BankCardListRequestModel()
-        print("====\(model)")
-        AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self](response) -> ()? in
-            
-            if let object = response as? BankListModel {
-                if object.cardNo.length() != 0 {
-                    let bankCardVC  = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BankCardVC")
-                    // 传值
-                    (bankCardVC as! BankCardVC).bankCardNO = object.cardNo
-                    self?.navigationController?.pushViewController(bankCardVC, animated: true)
-                } else {
-                    // 未绑定银行卡
-                    let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
-                    self?.navigationController?.pushViewController(bindBankCardVC, animated: true)
-                }
-            }
-            return nil
-        }) { (error) -> ()? in
-            
-            let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
-            self.navigationController?.pushViewController(bindBankCardVC, animated: true)
-            return nil
-        }
          AppDataHelper.instance().clearUserInfo()
+        
          checkLogin()
     }
     
-    @IBAction func withdrawItemTapped(_ sender: Any) {
-        performSegue(withIdentifier: WithdrawalVC.className(), sender: nil)
+    @IBAction func rightItemAction(_ sender: UIBarButtonItem) {
+        
+        let model = BankCardListRequestModel()
+        AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self] (response) -> ()? in
+            if let objects = response as? BankListModel {
+                if objects.cardNo.length() != 0 {
+                    // 已绑定
+                    // let bankCardVC  = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BankCardVC") as! BankCardVC
+                    // bankCardVC.bankCardNO = objects.cardNo
+                    // self?.navigationController?.pushViewController(bankCardVC, animated: true)
+                    
+                    let withdrawalVC = UIStoryboard.init(name:"Benifity",bundle: nil).instantiateViewController(withIdentifier: "WithdrawalVC") as! WithdrawalVC
+                    self?.navigationController?.pushViewController(withdrawalVC, animated: true)
+                    
+                } else {
+                    // 未绑定
+                    let alertVC = AlertViewController()
+                    alertVC.showAlertVc(imageName: "tangkuang_kaitongzhifu",
+                                        titleLabelText: "绑定银行卡",
+                                        subTitleText: "提现操作需先绑定银行卡才能进行操作",
+                                        completeButtonTitle: "我 知 道 了",
+                                        action: {[weak alertVC] (completeButton) in
+                                            alertVC?.dismissAlertVc()
+                                            let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
+                                            self?.navigationController?.pushViewController(bindBankCardVC, animated: true)
+                    })
+                }
+            }
+            
+            return nil
+        }, error: errorBlockFunc())
+        
     }
-    
-    
+ 
 }

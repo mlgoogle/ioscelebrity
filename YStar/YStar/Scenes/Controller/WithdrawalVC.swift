@@ -60,7 +60,6 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
     func requestUseBalance() {
         let model = LoginModle()
         AppAPIHelper.commen().userinfo(model: model, complete: {[weak self] (response) -> ()? in
-            
             if let objects = response as? UserBalance {
                 self?.withDrawMoney.text = "可提现金额" + "," + "¥" + String.init(format: "%.2f", objects.balance)
                 ShareModelHelper.instance().userinfo.balance = objects.balance
@@ -68,8 +67,6 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
             }
             return nil
         }, error: errorBlockFunc())
-        
-        // withDrawMoney.text = "可提现金额" + "¥" + String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance)
     }
 
  
