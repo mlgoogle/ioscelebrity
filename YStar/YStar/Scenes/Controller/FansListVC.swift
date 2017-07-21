@@ -33,12 +33,13 @@ class FansListCell: OEZTableViewCell {
 }
 
 
-class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate {
+class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate,NIMConversationManagerDelegate {
 
     
     deinit {
         
         NIMSDK.shared().loginManager.remove(self)
+        NIMSDK.shared().conversationManager.remove(self)
     }
     
     
@@ -46,20 +47,34 @@ class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate {
         super.viewDidLoad()
         
         NIMSDK.shared().loginManager.add(self)
+        NIMSDK.shared().conversationManager.add(self)
+        
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
         tableView.rowHeight = 60
     }
     
-    override func didRequest() {
+//    override func didRequest() {
+//        let requestModel = FansListRquestModel()
+//        AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
+//            if let objects = response as? [FansListModel] {
+//                self?.didRequestComplete(objects as AnyObject?)
+//            }
+//            self?.tableView.reloadData()
+//            return nil
+//        }, error: errorBlockFunc())
+//
+//    }
+    
+    override func didRequest(_ pageIndex: Int) {
         let requestModel = FansListRquestModel()
+        requestModel.starPos = Int32(pageIndex - 1) * 10 + 1
         AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
             if let objects = response as? [FansListModel] {
                 self?.didRequestComplete(objects as AnyObject?)
             }
             self?.tableView.reloadData()
             return nil
-        }, error: errorBlockFunc())
-
+            }, error: errorBlockFunc())
     }
     
     

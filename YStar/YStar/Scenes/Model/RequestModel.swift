@@ -95,6 +95,8 @@ class WithdrawalListRequetModel: LoginModle {
 class FansListRquestModel : LoginModle {
     
     var starcode = "1001"
+    var starPos : Int32 = 0
+    var count : Int32 = 10
 }
 
 
