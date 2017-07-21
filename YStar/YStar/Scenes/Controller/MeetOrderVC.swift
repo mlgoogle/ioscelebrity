@@ -16,6 +16,11 @@ class MeetOrderVC: BaseListTableViewController {
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        didRequest()
+    }
+    
     override func didRequest() {
         let param = MeetOrderListRequest()
         AppAPIHelper.commen().allOrder(requestModel: param, complete: { [weak self](result) in

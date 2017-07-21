@@ -52,6 +52,9 @@ class AppDataHelper: NSObject {
             ShareModelHelper.instance().phone = phone
             UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
         }
+        if let starcode = object.userinfo?.starcode{
+            ShareModelHelper.instance().starCode = (object.userinfo?.starcode)!
+        }
         ShareModelHelper.instance().token = object.token
         UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
         UserDefaults.standard.set(object.token_time, forKey: AppConst.UserDefaultKey.tokenTime.rawValue)
@@ -100,6 +103,7 @@ class AppDataHelper: NSObject {
                     if error == nil {
                         // 登陆成功
                         print("---- 网易云信登陆成功 ----");
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
                     }
                 })
             }

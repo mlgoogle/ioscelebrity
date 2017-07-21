@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class FansSessionViewController: NIMSessionViewController {
-
+    
+    
+    let chatSessionConfig = ChatSessionConfig()
+    
+    override func sessionConfig() -> NIMSessionConfig! {
+        
+        return chatSessionConfig
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // self.tableView.backgroundColor = UIColor.init(hexString: "FAFAFA")
+    
     }
     
     override func send(_ message: NIMMessage!) {
         super.send(message)
     }
+
+    
     
     
 }

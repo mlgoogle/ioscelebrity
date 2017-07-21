@@ -33,13 +33,14 @@ class FansListCell: OEZTableViewCell {
 }
 
 
-class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate,NIMConversationManagerDelegate {
+class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMConversationManagerDelegate,NIMSystemNotificationManagerDelegate {
 
     
     deinit {
         
         NIMSDK.shared().loginManager.remove(self)
         NIMSDK.shared().conversationManager.remove(self)
+        NIMSDK.shared().systemNotificationManager.remove(self)
     }
     
     
@@ -48,22 +49,44 @@ class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate,NIMConvers
         
         NIMSDK.shared().loginManager.add(self)
         NIMSDK.shared().conversationManager.add(self)
+        NIMSDK.shared().systemNotificationManager.add(self)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(WYIMLoginSuccess( _ :)), name: Notification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil)
         
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
         tableView.rowHeight = 60
     }
     
-//    override func didRequest() {
-//        let requestModel = FansListRquestModel()
-//        AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
-//            if let objects = response as? [FansListModel] {
-//                self?.didRequestComplete(objects as AnyObject?)
-//            }
-//            self?.tableView.reloadData()
-//            return nil
-//        }, error: errorBlockFunc())
-//
-//    }
+    func WYIMLoginSuccess(_ IMloginSuccess : NSNotification)  {
+        
+        print("登陆成功")
+        
+        // 刷新红点
+        self.refreshSessionRedDot()
+    }
+    
+    func refreshSessionRedDot() {
+        
+    }
+    
+
+    
+    func didAdd(_ recentSession: NIMRecentSession, totalUnreadCount: Int) {
+        
+        print(" didAdd ++++++ didAdd \(recentSession.unreadCount)")
+    }
+    
+    func didRemove(_ recentSession: NIMRecentSession, totalUnreadCount: Int) {
+        
+        print(" didRemove ====== didRemove \(recentSession.unreadCount)")
+    }
+    
+    
+    func didUpdate(_ recentSession: NIMRecentSession, totalUnreadCount: Int) {
+        
+        print("didUpdate ------ didUpdate \(recentSession.unreadCount) ")
+        
+    }
     
     override func didRequest(_ pageIndex: Int) {
         let requestModel = FansListRquestModel()
@@ -71,6 +94,8 @@ class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate,NIMConvers
         AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
             if let objects = response as? [FansListModel] {
                 self?.didRequestComplete(objects as AnyObject?)
+            }else{
+                self?.didRequestComplete(nil)
             }
             self?.tableView.reloadData()
             return nil
@@ -93,6 +118,9 @@ class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate,NIMConvers
         fansSessionVC?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(fansSessionVC!, animated: true)
         
+//        let nimSeesionVc = NIMSessionViewController(session: session)
+//        nimSeesionVc?.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(nimSeesionVc!, animated: true)
     }
     
 

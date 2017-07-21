@@ -13,7 +13,7 @@ class BaseTabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let storyboardNames = ["Benifity","Fans","Meet"]
-        let itemIconNames = ["\u{e645}","\u{e60e}","\u{e609}"]
+        let itemIconNames = ["\u{e651}","\u{e60e}","\u{e60b}"]
         let titles = ["收益管理","粉丝管理","约见管理"]
         for (index, name) in storyboardNames.enumerated() {
             let storyboard = UIStoryboard.init(name: name, bundle: nil)

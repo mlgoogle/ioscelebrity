@@ -467,6 +467,8 @@
     return nil;
 }
 
+
+
 #pragma mark - 菜单
 - (NSArray *)menusItems:(NIMMessage *)message
 {

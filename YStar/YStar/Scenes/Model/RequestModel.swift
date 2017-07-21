@@ -93,10 +93,16 @@ class WithdrawalListRequetModel: LoginModle {
 
 // 
 class FansListRquestModel : LoginModle {
-    
-    var starcode = "1001"
+//<<<<<<< HEAD
+//    
+//    var starcode = "1001"
+//    var starPos : Int32 = 0
+//    var count : Int32 = 10
+//=======
+    var starcode = "1001"//ShareModelHelper.instance().starCode
     var starPos : Int32 = 0
-    var count : Int32 = 10
+    var count = 10
+
 }
 
 
@@ -120,7 +126,7 @@ class CircleListRequestModel: BaseModel {
 }
 
 class ApproveCircleModel: BaseModel {
-    var star_code = "1001"
+    var star_code = ShareModelHelper.instance().starCode
     var circle_id:Int64 = 10001
     var uid:Int64 = Int64(ShareModelHelper.instance().uid)
 }
@@ -130,7 +136,7 @@ class CommentCircleModel: ApproveCircleModel {
     
 }
 class SendCircleRequestModel: BaseModel {
-    var star_code = "1001"
+    var star_code = ShareModelHelper.instance().starCode
     var content = "d隧道掘进机爱迪生的卡死了；打开了；奥斯卡了；奥斯卡；懒得看洒了；的卡萨；离苦得乐；萨克的；拉斯柯达；拉卡死了；打卡；塑料颗粒；打开了"
     var picurl = "http://p3.img.cctvpic.com/nettv/newgame/2011/0519/20110519071618926.jpg"
 }
@@ -141,10 +147,13 @@ class DeleteCircle: BaseModel {
 
 //MARK: - Meet
 class MeetTypesRequest: LoginModle{
-    var starcode = "1001"
+    var starcode = ShareModelHelper.instance().starCode
 }
 class MeetOrderListRequest: LoginModle{
-    var starcode = "1001"
+    var starcode = ShareModelHelper.instance().starCode
+    var starPos = 0
+    var count = 10
+    
 }
 class AgreeOrderRequest: MeetOrderListRequest{
     var meettype = 4

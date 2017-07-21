@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pVX-9G-3Np">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pVX-9G-3Np">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +13,7 @@
         <scene sceneID="XLy-46-2Hg">
             <objects>
                 <navigationController restorationIdentifier="LoginNavigationController" storyboardIdentifier="LoginNavigationController" navigationBarHidden="YES" id="auy-Kd-UGJ" customClass="LoginNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ux3-G4-EXG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ux3-G4-EXG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -138,16 +138,6 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdO-3a-Hec">
-                                            <rect key="frame" x="239" y="15" width="15" height="15"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="15" id="Mg3-41-khY"/>
-                                                <constraint firstAttribute="width" constant="15" id="uuS-7q-5Xb"/>
-                                            </constraints>
-                                            <connections>
-                                                <action selector="closeBtnTapped:" destination="V4N-nb-DQt" eventType="touchUpInside" id="k7b-Hk-PBJ"/>
-                                            </connections>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZs-om-RFi">
                                             <rect key="frame" x="15" y="208" width="65" height="26"/>
                                             <fontDescription key="fontDescription" name=".PingFangSC-Regular" family=".PingFang SC" pointSize="14"/>
@@ -164,7 +154,6 @@
                                         <constraint firstItem="5lC-jY-zWP" firstAttribute="top" secondItem="rCf-Q7-wQm" secondAttribute="top" constant="80" id="9NF-uf-9fV"/>
                                         <constraint firstItem="NKa-DE-cfg" firstAttribute="top" secondItem="5lC-jY-zWP" secondAttribute="bottom" constant="25" id="9to-Eb-Ok9"/>
                                         <constraint firstItem="VZs-om-RFi" firstAttribute="leading" secondItem="NKa-DE-cfg" secondAttribute="leading" id="DlO-gc-O5K"/>
-                                        <constraint firstAttribute="trailing" secondItem="KdO-3a-Hec" secondAttribute="trailing" constant="14" id="Lrv-hb-mQC"/>
                                         <constraint firstItem="CK9-2T-oqm" firstAttribute="leading" secondItem="rCf-Q7-wQm" secondAttribute="leading" constant="15" id="NcZ-fQ-Yk4"/>
                                         <constraint firstItem="NKa-DE-cfg" firstAttribute="leading" secondItem="rCf-Q7-wQm" secondAttribute="leading" constant="15" id="OBu-Gn-aya"/>
                                         <constraint firstItem="VZs-om-RFi" firstAttribute="top" secondItem="NKa-DE-cfg" secondAttribute="bottom" constant="15" id="PLu-4u-g8Y"/>
@@ -176,7 +165,6 @@
                                         <constraint firstItem="5lC-jY-zWP" firstAttribute="leading" secondItem="rCf-Q7-wQm" secondAttribute="leading" constant="15" id="h1W-ji-MKb"/>
                                         <constraint firstItem="EfN-zJ-At8" firstAttribute="leading" secondItem="rCf-Q7-wQm" secondAttribute="leading" id="hR8-J8-YcL"/>
                                         <constraint firstAttribute="trailing" secondItem="NKa-DE-cfg" secondAttribute="trailing" constant="14" id="jDU-Ed-1Fq"/>
-                                        <constraint firstItem="KdO-3a-Hec" firstAttribute="top" secondItem="rCf-Q7-wQm" secondAttribute="top" constant="15" id="xQY-G8-Zkc"/>
                                         <constraint firstAttribute="trailing" secondItem="5lC-jY-zWP" secondAttribute="trailing" constant="14" id="yDi-aY-f7T"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
@@ -205,7 +193,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="atn-1B-4ZE"/>
                     <connections>
-                        <outlet property="closeBtn" destination="KdO-3a-Hec" id="ez0-A4-Q2F"/>
                         <outlet property="contentView" destination="rCf-Q7-wQm" id="xKv-HG-I9d"/>
                         <outlet property="headerView" destination="cXl-3z-nut" id="jIh-f7-6hJ"/>
                         <outlet property="phoneText" destination="UD4-ba-RX7" id="Mo5-7I-3Zt"/>
