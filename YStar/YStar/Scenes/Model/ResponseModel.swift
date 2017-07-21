@@ -37,6 +37,7 @@ class UserBalance: BaseModel {
     var head_url = ""
 }
 
+
 class verifyCodeModel: BaseModel {
     var result : Int64 = 0
     var timeStamp = ""
@@ -146,6 +147,20 @@ class YesterdayAndTodayPriceModel: Object {
     dynamic var min_price : Double = 19.4   // 今开
     dynamic var price : Double = 0.0
 }
+
+
+// 粉丝列表 
+class FansListModel : Object {
+    
+    dynamic var starcode : String = "1004"
+    dynamic var faccid : String = "15800879645"
+    dynamic var head_url : String = ""
+    dynamic var nickname : String = ""
+    dynamic var ownseconds : Int = 0
+    dynamic var appoint : Int = 0
+    dynamic var uid  : Int = 0
+}
+
 
 class SendCircleResultModel: Object {
     dynamic var circle_id = 0

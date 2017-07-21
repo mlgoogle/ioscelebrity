@@ -146,6 +146,8 @@
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE1D3A31F0BB6E000400A06 /* NIMSDK.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */; };
+		8DE81DBD1F204F9A007656BC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE81DBC1F204F9A007656BC /* AlertViewController.swift */; };
+		8DECFFA31F1CBFE600F692EF /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DECFFA21F1CBFE600F692EF /* iconfont.ttf */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
 		8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
@@ -524,6 +526,8 @@
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NIMSDK.h; path = Pods/NIMSDK/NIMSDK/NIMSDK.framework/Headers/NIMSDK.h; sourceTree = "<group>"; };
+		8DE81DBC1F204F9A007656BC /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		8DECFFA21F1CBFE600F692EF /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
 		8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KLineView.swift; path = YStar/Scenes/View/KLineView.swift; sourceTree = SOURCE_ROOT; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
@@ -1402,6 +1406,7 @@
 				8E8FB05D1F0AA4EA00A7B85C /* BaseNavigationController.swift */,
 				8E8FB05E1F0AA4EA00A7B85C /* BaseTableViewController.swift */,
 				8E8FB05F1F0AA4EA00A7B85C /* SegmentedViewController.swift */,
+				8DE81DBC1F204F9A007656BC /* AlertViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1919,6 +1924,7 @@
 				8D4083451F1F68AA00211E2C /* NIMContactDataCell.m in Sources */,
 				8E4455A01F19FE0E0059CEEC /* HHEmojiManage.swift in Sources */,
 				8D4083631F1F68AA00211E2C /* NIMLocationContentConfig.m in Sources */,
+				8DE81DBD1F204F9A007656BC /* AlertViewController.swift in Sources */,
 				8D4083671F1F68AA00211E2C /* NIMUnsupportContentConfig.m in Sources */,
 				8E435F4E1F0B44C500FB1976 /* BenifityVC.swift in Sources */,
 				8D4083971F1F68AA00211E2C /* NIMKitDevice.m in Sources */,

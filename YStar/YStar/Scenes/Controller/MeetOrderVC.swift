@@ -13,6 +13,7 @@ class MeetOrderVC: BaseListTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
     }
     
     override func viewDidAppear(_ animated: Bool) {
