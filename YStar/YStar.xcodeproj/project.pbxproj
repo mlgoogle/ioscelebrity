@@ -185,6 +185,8 @@
 		8E44559F1F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455971F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift */; };
 		8E4455A01F19FE0E0059CEEC /* HHEmojiManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455981F19FE0E0059CEEC /* HHEmojiManage.swift */; };
 		8E4455A11F19FE0E0059CEEC /* HHImageKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455991F19FE0E0059CEEC /* HHImageKeyboardCell.swift */; };
+		8E58AEB21F209E19002B5810 /* NIMAVChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E58AEB11F209E19002B5810 /* NIMAVChat.framework */; };
+		8E58AEB41F20B64E002B5810 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E58AEB31F20B64E002B5810 /* iconfont.ttf */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
 		8E8FB0B61F0AA4EA00A7B85C /* SocketConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0511F0AA4EA00A7B85C /* SocketConst.swift */; };
@@ -209,7 +211,6 @@
 		8E8FB0C91F0AA4EA00A7B85C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0681F0AA4EA00A7B85C /* UIImage+Extension.swift */; };
 		8E8FB0CA1F0AA4EA00A7B85C /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0691F0AA4EA00A7B85C /* UIScreen+Extension.swift */; };
 		8E8FB0CB1F0AA4EA00A7B85C /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB06A1F0AA4EA00A7B85C /* UITableView+Extension.swift */; };
-		8E8FB0CC1F0AA4EA00A7B85C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB06B1F0AA4EA00A7B85C /* UIView+Extension.swift */; };
 		8E8FB0CD1F0AA4EA00A7B85C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB06C1F0AA4EA00A7B85C /* UIViewController+Extension.swift */; };
 		8E8FB0CE1F0AA4EA00A7B85C /* EmojiFaceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB06E1F0AA4EA00A7B85C /* EmojiFaceHelper.swift */; };
 		8E8FB0CF1F0AA4EA00A7B85C /* TableViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB06F1F0AA4EA00A7B85C /* TableViewHelper.swift */; };
@@ -564,6 +565,8 @@
 		8E4455971F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHEmojiKeyboardCell.swift; sourceTree = "<group>"; };
 		8E4455981F19FE0E0059CEEC /* HHEmojiManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHEmojiManage.swift; sourceTree = "<group>"; };
 		8E4455991F19FE0E0059CEEC /* HHImageKeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHImageKeyboardCell.swift; sourceTree = "<group>"; };
+		8E58AEB11F209E19002B5810 /* NIMAVChat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NIMAVChat.framework; path = Pods/NIMSDK/NIMAVChat/NIMAVChat.framework; sourceTree = "<group>"; };
+		8E58AEB31F20B64E002B5810 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = iconfont.ttf; path = ../../../../../Downloads/font_g27hgpl05ghkt9/iconfont.ttf; sourceTree = "<group>"; };
 		8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIHelper.swift; sourceTree = "<group>"; };
 		8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSocketAPI.swift; sourceTree = "<group>"; };
 		8E8FB0511F0AA4EA00A7B85C /* SocketConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketConst.swift; sourceTree = "<group>"; };
@@ -588,7 +591,6 @@
 		8E8FB0681F0AA4EA00A7B85C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB0691F0AA4EA00A7B85C /* UIScreen+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB06A1F0AA4EA00A7B85C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		8E8FB06B1F0AA4EA00A7B85C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB06C1F0AA4EA00A7B85C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB06E1F0AA4EA00A7B85C /* EmojiFaceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFaceHelper.swift; sourceTree = "<group>"; };
 		8E8FB06F1F0AA4EA00A7B85C /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
@@ -653,6 +655,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E58AEB21F209E19002B5810 /* NIMAVChat.framework in Frameworks */,
 				8EFEF57A1F139E6300AD9513 /* UMMobClick.framework in Frameworks */,
 				8EFEF5781F139E3300AD9513 /* NIMSDK.framework in Frameworks */,
 				8EFEF5761F139DD500AD9513 /* NIMSDK.h in Frameworks */,
@@ -694,6 +697,7 @@
 		10CEA088AA8041FD84B55B62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8E58AEB11F209E19002B5810 /* NIMAVChat.framework */,
 				8EFEF5791F139E6300AD9513 /* UMMobClick.framework */,
 				8EFEF5771F139E3300AD9513 /* NIMSDK.framework */,
 				8DE1D3A21F0BB6E000400A06 /* NIMSDK.h */,
@@ -1424,7 +1428,6 @@
 				8E8FB0681F0AA4EA00A7B85C /* UIImage+Extension.swift */,
 				8E8FB0691F0AA4EA00A7B85C /* UIScreen+Extension.swift */,
 				8E8FB06A1F0AA4EA00A7B85C /* UITableView+Extension.swift */,
-				8E8FB06B1F0AA4EA00A7B85C /* UIView+Extension.swift */,
 				8E8FB06C1F0AA4EA00A7B85C /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
@@ -1506,9 +1509,9 @@
 		8E8FB0881F0AA4EA00A7B85C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				8E58AEB31F20B64E002B5810 /* iconfont.ttf */,
 				8E338DFE1F0E0C4D006D3C68 /* storyboard */,
 				8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */,
-				8DECFFA21F1CBFE600F692EF /* iconfont.ttf */,
 				8E8FB0971F0AA4EA00A7B85C /* plist */,
 			);
 			path = Resource;
@@ -1702,7 +1705,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */,
-				8DECFFA31F1CBFE600F692EF /* iconfont.ttf in Resources */,
 				8E8FB0DF1F0AA4EA00A7B85C /* BankList.plist in Resources */,
 				8D40839E1F1F68AA00211E2C /* NIMKitResource.bundle in Resources */,
 				8D40839D1F1F68AA00211E2C /* NIMKitEmoticon.bundle in Resources */,
@@ -1720,6 +1722,7 @@
 				8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */,
 				8E44559C1F19FE0E0059CEEC /* EmojisList.plist in Resources */,
 				8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */,
+				8E58AEB41F20B64E002B5810 /* iconfont.ttf in Resources */,
 				8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */,
 				A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */,
 				8E8FB0DC1F0AA4EA00A7B85C /* Assets.xcassets in Resources */,
@@ -1946,7 +1949,6 @@
 				8D4083511F1F68AA00211E2C /* NIMInputEmoticonButton.m in Sources */,
 				8D4083791F1F68AA00211E2C /* NIMSessionImageContentView.m in Sources */,
 				8D4083531F1F68AA00211E2C /* NIMInputEmoticonManager.m in Sources */,
-				8E8FB0CC1F0AA4EA00A7B85C /* UIView+Extension.swift in Sources */,
 				8E8FB0D11F0AA4EA00A7B85C /* IPManager.c in Sources */,
 				8D40839C1F1F68AA00211E2C /* NIMSpellingCenter.m in Sources */,
 				8E8FB0DA1F0AA4EA00A7B85C /* AppServerHelper.swift in Sources */,
@@ -2067,6 +2069,7 @@
 					"$(PROJECT_DIR)/YStar/Library",
 					"$(PROJECT_DIR)/Pods/NIMSDK/NIMSDK",
 					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+					"$(PROJECT_DIR)/Pods/NIMSDK/NIMAVChat",
 				);
 				INFOPLIST_FILE = YStarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -2095,6 +2098,7 @@
 					"$(PROJECT_DIR)/YStar/Library",
 					"$(PROJECT_DIR)/Pods/NIMSDK/NIMSDK",
 					"$(PROJECT_DIR)/Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4",
+					"$(PROJECT_DIR)/Pods/NIMSDK/NIMAVChat",
 				);
 				INFOPLIST_FILE = YStarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;

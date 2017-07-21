@@ -13,7 +13,6 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
     @IBOutlet weak var phoneText: UITextField!
     @IBOutlet weak var pwdText: UITextField!
     @IBOutlet var headerView: UIView!
-    @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var contentView: UIView!
     
     var uid : Int = 0
@@ -22,7 +21,6 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor.clear
         headerView.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
-        closeBtn.setImage(UIImage.imageWith(AppConst.iconFontName.closeIcon.rawValue, fontSize: CGSize.init(width: 33, height: 33), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.label9.rawValue)), for: .normal)
         
     }
     
@@ -64,6 +62,9 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                     if object.userinfo?.starcode.length() == 0{
                         SVProgressHUD.showErrorMessage(ErrorMessage: "账号或密码错误", ForDuration: 2, completion: nil)
                         return nil
+                    }
+                    if let starcode = object.userinfo?.starcode{
+                        ShareModelHelper.instance().starCode = starcode
                     }
                     if let uid = object.userinfo?.id{
                         ShareModelHelper.instance().uid = Int(uid)
@@ -120,11 +121,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         }
     }
     
-    
-    @IBAction func closeBtnTapped(_ sender: UIButton) {
-        dismissController()
-    }
-    
+   
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .pop{
             return YPopAnimation()

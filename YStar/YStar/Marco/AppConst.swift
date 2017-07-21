@@ -45,13 +45,13 @@ class AppConst {
     }
     
     class Network {
-        #if true //是否是开发环境
+        #if false //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22"
         static let TcpServerPort:UInt16 = 16060
         static let TttpHostUrl:String = "http://139.224.34.22"
         #else
         static let TcpServerIP:String = "122.144.169.214"
-        static let TcpServerPort:UInt16 = 16006
+        static let TcpServerPort:UInt16 = 16016
         static let HttpHostUrl:String = "122.144.169.214"
         #endif
         static let TimeoutSec:UInt16 = 10
@@ -86,11 +86,11 @@ class AppConst {
         case newsIcon = "\u{e634}"
         case userPlaceHolder = "\u{e63d}"
         case thumpUpIcon = "\u{e624}"
-        case addIcon = "\u{e606}"
+        case addIcon = "\u{e611}"
         case commentIcon = "\u{e635}"
         case thumbIcon = "\u{e62f}"
         case showIcon = "\u{e628}"
-        case newsPlaceHolder = "\u{e64a}"
+        case newsPlaceHolder = "\u{e62a}"
         case downArrow = "\u{e610}"
         case upArrow = "\u{e60f}"
         case dealTotalIcon = "\u{e604}"

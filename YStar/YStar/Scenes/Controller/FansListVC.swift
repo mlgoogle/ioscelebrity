@@ -55,8 +55,9 @@ class FansListVC: BaseListTableViewController,NIMLoginManagerDelegate {
         AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
             if let objects = response as? [FansListModel] {
                 self?.didRequestComplete(objects as AnyObject?)
+            }else{
+                self?.didRequestComplete([] as AnyObject?)
             }
-            self?.tableView.reloadData()
             return nil
         }, error: errorBlockFunc())
 
