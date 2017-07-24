@@ -292,9 +292,9 @@
 		8DE4A83C1F258715001552E5 /* NTESUserUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4A7361F258714001552E5 /* NTESUserUtil.m */; };
 		8DE4A83D1F258715001552E5 /* NTESPinyinConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4A7391F258714001552E5 /* NTESPinyinConverter.m */; };
 		8DE4A83E1F258715001552E5 /* NTESSpellingCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE4A73B1F258714001552E5 /* NTESSpellingCenter.m */; };
-		8DE4A8441F259E3C001552E5 /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8411F259E3C001552E5 /* NIMKitEmoticon.bundle */; };
-		8DE4A8451F259E3C001552E5 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8421F259E3C001552E5 /* NIMKitResource.bundle */; };
-		8DE4A8461F259E3C001552E5 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8431F259E3C001552E5 /* NIMKitSettings.bundle */; };
+		8DE4A84A1F259F4E001552E5 /* NIMKitEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8471F259F4E001552E5 /* NIMKitEmoticon.bundle */; };
+		8DE4A84B1F259F4E001552E5 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8481F259F4E001552E5 /* NIMKitResource.bundle */; };
+		8DE4A84C1F259F4E001552E5 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8491F259F4E001552E5 /* NIMKitSettings.bundle */; };
 		8DE81DBD1F204F9A007656BC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE81DBC1F204F9A007656BC /* AlertViewController.swift */; };
 		8DF308941F21F89A0028D017 /* ChatSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF308931F21F89A0028D017 /* ChatSessionConfig.swift */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
@@ -951,9 +951,9 @@
 		8DE4A7391F258714001552E5 /* NTESPinyinConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESPinyinConverter.m; sourceTree = "<group>"; };
 		8DE4A73A1F258714001552E5 /* NTESSpellingCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTESSpellingCenter.h; sourceTree = "<group>"; };
 		8DE4A73B1F258714001552E5 /* NTESSpellingCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTESSpellingCenter.m; sourceTree = "<group>"; };
-		8DE4A8411F259E3C001552E5 /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitEmoticon.bundle; sourceTree = "<group>"; };
-		8DE4A8421F259E3C001552E5 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
-		8DE4A8431F259E3C001552E5 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
+		8DE4A8471F259F4E001552E5 /* NIMKitEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitEmoticon.bundle; sourceTree = "<group>"; };
+		8DE4A8481F259F4E001552E5 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
+		8DE4A8491F259F4E001552E5 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
 		8DE81DBC1F204F9A007656BC /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		8DF308931F21F89A0028D017 /* ChatSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatSessionConfig.swift; sourceTree = "<group>"; };
 		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
@@ -1195,6 +1195,9 @@
 		8DE4A4E31F258713001552E5 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
+				8DE4A8471F259F4E001552E5 /* NIMKitEmoticon.bundle */,
+				8DE4A8481F259F4E001552E5 /* NIMKitResource.bundle */,
+				8DE4A8491F259F4E001552E5 /* NIMKitSettings.bundle */,
 				8DE4A4E41F258713001552E5 /* Category */,
 				8DE4A4FB1F258713001552E5 /* Classes */,
 				8DE4A5D81F258714001552E5 /* Common */,
@@ -2407,16 +2410,6 @@
 			path = Spelling;
 			sourceTree = "<group>";
 		};
-		8DE4A8401F259E3C001552E5 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8DE4A8411F259E3C001552E5 /* NIMKitEmoticon.bundle */,
-				8DE4A8421F259E3C001552E5 /* NIMKitResource.bundle */,
-				8DE4A8431F259E3C001552E5 /* NIMKitSettings.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		8DF308921F21F8570028D017 /* Chatprofile */ = {
 			isa = PBXGroup;
 			children = (
@@ -2639,7 +2632,6 @@
 		8E8FB0701F0AA4EA00A7B85C /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				8DE4A8401F259E3C001552E5 /* Resources */,
 				8DE4A4E31F258713001552E5 /* ChatView */,
 				8E4455911F19FE0E0059CEEC /* EmojiKeyboard */,
 				8E8FB0711F0AA4EA00A7B85C /* MJRefresh */,
@@ -2905,12 +2897,12 @@
 				8DE4A8071F258714001552E5 /* NTESAudioChatViewController.xib in Resources */,
 				8E8FB0DF1F0AA4EA00A7B85C /* BankList.plist in Resources */,
 				8DE4A7B71F258714001552E5 /* NTESJionTeamViewController.xib in Resources */,
-				8DE4A8461F259E3C001552E5 /* NIMKitSettings.bundle in Resources */,
+				8DE4A84C1F259F4E001552E5 /* NIMKitSettings.bundle in Resources */,
 				8DE4A8291F258714001552E5 /* NTESUserInfoSettingViewController.xib in Resources */,
 				8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */,
 				8DE4A8201F258714001552E5 /* NTESSettingViewController.xib in Resources */,
 				8DE4A7F51F258714001552E5 /* NTESAudio2TextViewController.xib in Resources */,
-				8DE4A8441F259E3C001552E5 /* NIMKitEmoticon.bundle in Resources */,
+				8DE4A84A1F259F4E001552E5 /* NIMKitEmoticon.bundle in Resources */,
 				8DE4A80A1F258714001552E5 /* NTESVideoChatViewController.xib in Resources */,
 				8E8FB0DB1F0AA4EA00A7B85C /* Info.plist in Resources */,
 				8E44559B1F19FE0E0059CEEC /* aio_face_delete_pressed@2x.png in Resources */,
@@ -2937,7 +2929,7 @@
 				8DA7E8A11F2196580059268B /* iconfont.ttf in Resources */,
 				8DE4A7D71F258714001552E5 /* NTESContactViewController.xib in Resources */,
 				8E44559C1F19FE0E0059CEEC /* EmojisList.plist in Resources */,
-				8DE4A8451F259E3C001552E5 /* NIMKitResource.bundle in Resources */,
+				8DE4A84B1F259F4E001552E5 /* NIMKitResource.bundle in Resources */,
 				8DE4A7DB1F258714001552E5 /* NTESCustomSysNotificationViewController.xib in Resources */,
 				8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */,
 				8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */,
