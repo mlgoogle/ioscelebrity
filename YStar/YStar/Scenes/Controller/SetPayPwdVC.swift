@@ -134,13 +134,6 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
             model.type = 0
             
             AppAPIHelper.commen().ResetPayPwd(requestModel: model, complete: { (response) -> ()? in
-//                if let objects = response {
-//                    let dictModel = objects as! [String : AnyObject]
-//                    if dictModel["status"] as! Int == 0 {
-//                        SVProgressHUD.showSuccessMessage(SuccessMessage: "设置成功", ForDuration: 2.0, completion:nil)
-//                        let vcCount = self.navigationController?.viewControllers.count
-//                        self.navigationController?.popToViewController((self.navigationController?.viewControllers[vcCount! - 3])!, animated: true)
-//                    }
                 if let objects = response as? ResultModel {
                     if objects.result == 0 {
                         SVProgressHUD.showSuccessMessage(SuccessMessage: "设置成功", ForDuration: 2.0, completion: { 

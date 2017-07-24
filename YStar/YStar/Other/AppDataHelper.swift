@@ -103,6 +103,7 @@ class AppDataHelper: NSObject {
                     if error == nil {
                         // 登陆成功
                         print("---- 网易云信登陆成功 ----");
+                        NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
                     }
                 })
             }

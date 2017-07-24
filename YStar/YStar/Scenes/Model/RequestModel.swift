@@ -93,9 +93,21 @@ class WithdrawalListRequetModel: LoginModle {
 
 // 
 class FansListRquestModel : LoginModle {
+//<<<<<<< HEAD
+////<<<<<<< HEAD
+////    
+////    var starcode = "1001"
+////    var starPos : Int32 = 0
+////    var count : Int32 = 10
+////=======
+//    var starcode = "1001"//ShareModelHelper.instance().starCode
+//    var starPos : Int32 = 0
+//=======
     var starcode = ShareModelHelper.instance().starCode
     var starPos = 0
+
     var count = 10
+
 }
 
 

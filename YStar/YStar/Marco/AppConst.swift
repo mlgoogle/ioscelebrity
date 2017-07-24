@@ -42,10 +42,11 @@ class AppConst {
     enum NoticeKey: String {
         case logoutNotice = "LogoutNotice"
         case updateSoftware = "updateSoftware"
+        case WYIMLoginSuccess = "WYIMLoginSuccess"
     }
     
     class Network {
-        #if false //是否是开发环境
+        #if true //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22"
         static let TcpServerPort:UInt16 = 16060
         static let TttpHostUrl:String = "http://139.224.34.22"

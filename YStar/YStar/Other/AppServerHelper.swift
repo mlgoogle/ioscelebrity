@@ -20,22 +20,27 @@ class AppServerHelper: NSObject , WXApiDelegate{
     
     func initServer() {
         
-        initYunXin()
+        // initYunXin()
         
-        initUMengAnalytics()
+        // initUMengAnalytics()
     }
 
     // MARK: -云信
     func initYunXin() {
         // 1a666f611bc374c3962b16df2a22cb34
-//         let configDelegate = NIMSDKConfig.init().delegate
-//         NIMSDKConfig.shared().delegate = configDelegate
-//         NIMSDKConfig.shared().shouldSyncUnreadCount = true
-//         NIMSDKConfig.shared().maxAutoLoginRetryTimes = 10
         
          NIMSDK.shared().register(withAppID: "9c3a406f233dea0d355c6458fb0171b8", cerName: "")
         
     }
+    
+    func setupNIMSDK(sdkConfigDelegate:NTESSDKConfigDelegate?) {
+        NIMSDKConfig.shared().delegate = sdkConfigDelegate
+        NIMSDKConfig.shared().shouldSyncUnreadCount = true
+        NIMSDK.shared().register(withAppID: "9c3a406f233dea0d355c6458fb0171b8", cerName: "")
+        NIMKit.shared().registerLayoutConfig(NTESCellLayoutConfig.self)
+        NIMCustomObject.registerCustomDecoder(NTESCustomAttachmentDecoder.init())
+    }
+    
     
     
     // MARK: - 友盟统计

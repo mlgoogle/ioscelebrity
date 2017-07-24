@@ -293,6 +293,7 @@ class APITestCase: XCTestCase {
     func testCheckPayPwd() {
         let exception = expectation(description: "测试校验密码")
         let param = CheckPayPwdModel()
+        param.uid = Int64(185)
         param.paypwd = "123456".md5()
         AppAPIHelper.commen().CheckPayPwd(requestModel: param, complete: { (result) -> ()? in
             if let model = result as? ResultModel {
