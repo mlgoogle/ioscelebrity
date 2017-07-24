@@ -52,7 +52,7 @@ class AppDataHelper: NSObject {
             ShareModelHelper.instance().phone = phone
             UserDefaults.standard.set(phone, forKey: AppConst.UserDefaultKey.phone.rawValue)
         }
-        if let starcode = object.userinfo?.starcode{
+        if  object.userinfo != nil{
             ShareModelHelper.instance().starCode = (object.userinfo?.starcode)!
         }
         ShareModelHelper.instance().token = object.token

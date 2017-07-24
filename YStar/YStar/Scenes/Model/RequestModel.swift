@@ -51,14 +51,14 @@ class ResetPwdReqModel: BaseModel{
 
 // 收益
 class EarningRequestModel : LoginModle {
-    var starcode = "1001"
+    var starcode = ShareModelHelper.instance().starCode
     var stardate : Int64 = 0
     var enddate  : Int64 = 0
 }
 
 // 昨收今开
 class YesterdayAndTodayPriceRequestModel: LoginModle {
-    var starcode = "1001"
+    var starcode = ShareModelHelper.instance().starCode
     var orderdate : Int64 = 0
 }
 
@@ -94,13 +94,18 @@ class WithdrawalListRequetModel: LoginModle {
 // 
 class FansListRquestModel : LoginModle {
 //<<<<<<< HEAD
-//    
-//    var starcode = "1001"
+////<<<<<<< HEAD
+////    
+////    var starcode = "1001"
+////    var starPos : Int32 = 0
+////    var count : Int32 = 10
+////=======
+//    var starcode = "1001"//ShareModelHelper.instance().starCode
 //    var starPos : Int32 = 0
-//    var count : Int32 = 10
 //=======
-    var starcode = "1001"//ShareModelHelper.instance().starCode
-    var starPos : Int32 = 0
+    var starcode = ShareModelHelper.instance().starCode
+    var starPos = 0
+
     var count = 10
 
 }

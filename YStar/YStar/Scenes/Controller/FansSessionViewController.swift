@@ -11,13 +11,7 @@ import SVProgressHUD
 
 class FansSessionViewController: NTESSessionViewController {
     
-//    
-//    let chatSessionConfig = ChatSessionConfig()
-//    
-//    override func sessionConfig() -> NIMSessionConfig! {
-//        
-//        return chatSessionConfig
-//    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

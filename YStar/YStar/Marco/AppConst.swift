@@ -59,7 +59,6 @@ class AppConst {
         static let qiniuHost = "http://ot81955n7.bkt.clouddn.com/"
     }
 
-
     enum Action:UInt {
         case callPhone = 10001
         case handleOrder = 11001

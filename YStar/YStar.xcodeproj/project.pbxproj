@@ -296,7 +296,6 @@
 		8DE4A84B1F259F4E001552E5 /* NIMKitResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8481F259F4E001552E5 /* NIMKitResource.bundle */; };
 		8DE4A84C1F259F4E001552E5 /* NIMKitSettings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE4A8491F259F4E001552E5 /* NIMKitSettings.bundle */; };
 		8DE81DBD1F204F9A007656BC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE81DBC1F204F9A007656BC /* AlertViewController.swift */; };
-		8DF308941F21F89A0028D017 /* ChatSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF308931F21F89A0028D017 /* ChatSessionConfig.swift */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
 		8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
@@ -377,6 +376,7 @@
 		8E8FB0E01F0AA4EA00A7B85C /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB0991F0AA4EA00A7B85C /* city.plist */; };
 		8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */; };
 		8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */; };
+		8E94A0E81F21D18000731757 /* VCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94A0E71F21D18000731757 /* VCTestCase.swift */; };
 		8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */; };
 		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
 		8EFEF56E1F13984A00AD9513 /* YStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEF56D1F13984A00AD9513 /* YStarTests.swift */; };
@@ -955,7 +955,6 @@
 		8DE4A8481F259F4E001552E5 /* NIMKitResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResource.bundle; sourceTree = "<group>"; };
 		8DE4A8491F259F4E001552E5 /* NIMKitSettings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitSettings.bundle; sourceTree = "<group>"; };
 		8DE81DBC1F204F9A007656BC /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
-		8DF308931F21F89A0028D017 /* ChatSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatSessionConfig.swift; sourceTree = "<group>"; };
 		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
 		8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KLineView.swift; path = YStar/Scenes/View/KLineView.swift; sourceTree = SOURCE_ROOT; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
@@ -1042,6 +1041,7 @@
 		8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorcode.plist; sourceTree = "<group>"; };
 		8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testsocket.plist; sourceTree = "<group>"; };
 		8E8FB0B11F0AA4EA00A7B85C /* wp.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = wp.entitlements; sourceTree = "<group>"; };
+		8E94A0E71F21D18000731757 /* VCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTestCase.swift; sourceTree = "<group>"; };
 		8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTransition.swift; sourceTree = "<group>"; };
 		8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		8EFEF56B1F13984A00AD9513 /* YStarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YStarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2413,7 +2413,6 @@
 		8DF308921F21F8570028D017 /* Chatprofile */ = {
 			isa = PBXGroup;
 			children = (
-				8DF308931F21F89A0028D017 /* ChatSessionConfig.swift */,
 			);
 			path = Chatprofile;
 			sourceTree = "<group>";
@@ -2730,6 +2729,7 @@
 		8EFEF56C1F13984A00AD9513 /* YStarTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E94A0E71F21D18000731757 /* VCTestCase.swift */,
 				8EFEF56D1F13984A00AD9513 /* YStarTests.swift */,
 				8EFEF56F1F13984A00AD9513 /* Info.plist */,
 				8EFEF57B1F13A2E100AD9513 /* APITestCase.swift */,
@@ -3052,6 +3052,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E94A0E81F21D18000731757 /* VCTestCase.swift in Sources */,
 				8EFEF57C1F13A2E100AD9513 /* APITestCase.swift in Sources */,
 				8EFEF56E1F13984A00AD9513 /* YStarTests.swift in Sources */,
 			);
@@ -3133,7 +3134,6 @@
 				8E8FB0C81F0AA4EA00A7B85C /* UIFont+Extension.swift in Sources */,
 				8DE4A7D01F258714001552E5 /* NTESGroupedDataCollection.m in Sources */,
 				8DE4A7AE1F258714001552E5 /* NTESFPSLabel.m in Sources */,
-				8DF308941F21F89A0028D017 /* ChatSessionConfig.swift in Sources */,
 				8DE4A80E1F258714001552E5 /* NTESMutiClientsCell.m in Sources */,
 				8DE4A8021F258714001552E5 /* NTESWhiteboardDrawView.m in Sources */,
 				8DE4A74C1F258714001552E5 /* UITableView+NIMScrollToBottom.m in Sources */,

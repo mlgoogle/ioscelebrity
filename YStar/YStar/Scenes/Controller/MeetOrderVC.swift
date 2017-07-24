@@ -28,7 +28,7 @@ class MeetOrderVC: BaseListTableViewController {
                 self?.didRequestComplete(models as AnyObject?)
             }
             return nil
-        }, error: nil)
+        }, error: errorBlockFunc())
     }
     
     override func tableView(_ tableView: UITableView, cellIdentifierForRowAtIndexPath indexPath: IndexPath) -> String? {

@@ -67,6 +67,10 @@ class SocketRequestManage: NSObject {
         objc_sync_exit(self)
         let response:SocketJsonResponse = SocketJsonResponse(packet:packet)
         let statusCode:Int = response.statusCode;
+        if response.result < 0{
+            socketReqeust?.onError(response.result)
+            return
+        }
         if ( statusCode < 0) {
             socketReqeust?.onError(statusCode)
         } else {

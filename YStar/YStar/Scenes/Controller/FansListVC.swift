@@ -90,7 +90,7 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
     
     override func didRequest(_ pageIndex: Int) {
         let requestModel = FansListRquestModel()
-        requestModel.starPos = Int32(pageIndex - 1) * 10 + 1
+        requestModel.starPos = (pageIndex - 1) * 10 + 1
         AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
             if let objects = response as? [FansListModel] {
                 self?.didRequestComplete(objects as AnyObject?)
@@ -104,13 +104,6 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 18657195470   -- "15557198601"
-        // let session = NIMSession("15557198601", type: .P2P)
-        
-        // let fansSessionVC = FansSessionViewController(session: session)
-        // vc?.starcode = starInfoModel.starcode
-        // fansSessionVC?.hidesBottomBarWhenPushed = true
-        // self.navigationController?.pushViewController(fansSessionVC!, animated: true)
         
         
         
