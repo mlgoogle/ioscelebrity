@@ -42,11 +42,12 @@ struct SocketPacketHead {
 #import <objc/runtime.h>
 #import "NIMKit.h"
 
-//#import "Global.h"
-//#import "NTESSessionViewController.h"
-//#import "NSString+NTES.h"
-//#import "NTESCellLayoutConfig.h"
-//#import "NTESSDKConfigDelegate.h"
+#import "Global.h"
+#import "NTESSessionViewController.h"
+#import "NSString+NTES.h"
+#import "NTESCellLayoutConfig.h"
+#import "NTESSDKConfigDelegate.h"
+#import "NTESCustomAttachmentDecoder.h"
 
 //#import <CommonCrypto/CommonCrytor.h>
 /* nineSister_Bridging_Header_h */

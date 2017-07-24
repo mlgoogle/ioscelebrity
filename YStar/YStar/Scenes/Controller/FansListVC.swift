@@ -112,11 +112,16 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
         // fansSessionVC?.hidesBottomBarWhenPushed = true
         // self.navigationController?.pushViewController(fansSessionVC!, animated: true)
         
+        
+        
         let fansListModel = self.dataSource?[indexPath.row] as! FansListModel
         let session = NIMSession(fansListModel.faccid, type: .P2P)
         let fansSessionVC = FansSessionViewController(session: session)
         fansSessionVC?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(fansSessionVC!, animated: true)
+        
+        
+        
         
 //        let nimSeesionVc = NIMSessionViewController(session: session)
 //        nimSeesionVc?.hidesBottomBarWhenPushed = true

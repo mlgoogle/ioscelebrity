@@ -9,24 +9,24 @@
 import UIKit
 import SVProgressHUD
 
-class FansSessionViewController: NIMSessionViewController {
+class FansSessionViewController: NTESSessionViewController {
     
-    
-    let chatSessionConfig = ChatSessionConfig()
-    
-    override func sessionConfig() -> NIMSessionConfig! {
-        
-        return chatSessionConfig
-    }
+//    
+//    let chatSessionConfig = ChatSessionConfig()
+//    
+//    override func sessionConfig() -> NIMSessionConfig! {
+//        
+//        return chatSessionConfig
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
     }
     
-    override func send(_ message: NIMMessage!) {
-        super.send(message)
-    }
+//    override func send(_ message: NIMMessage!) {
+//        super.send(message)
+//    }
 
     
     
