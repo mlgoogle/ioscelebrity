@@ -59,7 +59,8 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                 SVProgressHUD.dismiss()
 
                 if let object = result as? StarUserModel{
-                    if object.userinfo?.starcode.length() == 0{
+                    
+                    if object.userinfo == nil || object.userinfo?.starcode.length() == 0{
                         SVProgressHUD.showErrorMessage(ErrorMessage: "账号或密码错误", ForDuration: 2, completion: nil)
                         return nil
                     }
