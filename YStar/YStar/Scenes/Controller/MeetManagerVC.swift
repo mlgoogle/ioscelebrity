@@ -26,7 +26,8 @@ class MeetManagerVC: BaseTableViewController {
         super.viewDidLoad()
 
         setupUI()
-        // 默认选择第一个[meetTypeButton]
+        
+        // 默认第一个[meetTypeButton]
         titleViewButtonAction(meetTypeButton)
         
     }
@@ -68,14 +69,15 @@ class MeetManagerVC: BaseTableViewController {
     
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if scrollView == scrollView{
+        if scrollView == scrollView {
+            
             let tag  = 10 + scrollView.contentOffset.x / kScreenWidth
-            if let button = view.viewWithTag(Int(tag)) as? UIButton{
+            
+            if let button = view.viewWithTag(Int(tag)) as? UIButton {
                 titleViewButtonAction(button)
             }
         }
     }
-    
 }
 
 

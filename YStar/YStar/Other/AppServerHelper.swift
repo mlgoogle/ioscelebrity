@@ -20,19 +20,10 @@ class AppServerHelper: NSObject , WXApiDelegate{
     
     func initServer() {
         
-        // initYunXin()
-        
-        // initUMengAnalytics()
+        initUMengAnalytics()
     }
 
     // MARK: -云信
-    func initYunXin() {
-        // 1a666f611bc374c3962b16df2a22cb34
-        
-         NIMSDK.shared().register(withAppID: "9c3a406f233dea0d355c6458fb0171b8", cerName: "")
-        
-    }
-    
     func setupNIMSDK(sdkConfigDelegate:NTESSDKConfigDelegate?) {
         NIMSDKConfig.shared().delegate = sdkConfigDelegate
         NIMSDKConfig.shared().shouldSyncUnreadCount = true
@@ -48,8 +39,6 @@ class AppServerHelper: NSObject , WXApiDelegate{
         
         // 开启日志
         MobClick.setLogEnabled(true)
-        
-        // appkey = "595c53077f2c747e0600087a"
         
         UMAnalyticsConfig.sharedInstance().appKey = "595c53077f2c747e0600087a"
         

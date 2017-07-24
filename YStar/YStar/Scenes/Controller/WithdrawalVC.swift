@@ -117,8 +117,6 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                 model.uid = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue) as! Int64
                 model.paypwd = password.md5()
                 
-                print("CheckPayPwdModel======\(model)")
-                
                 // 校验密码
                 AppAPIHelper.commen().CheckPayPwd(requestModel: model, complete: { (response) -> ()? in
                     if let objects = response as? ResultModel {

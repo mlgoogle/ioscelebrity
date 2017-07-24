@@ -970,7 +970,7 @@
 		8E36FE471F15CE44007AEFA6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8E36FE481F15CE44007AEFA6 /* yRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yRuntime.swift; sourceTree = "<group>"; };
 		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
+		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabbarViewController.swift; path = Controller/BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityVC.swift; sourceTree = "<group>"; };
 		8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityDetailVC.swift; sourceTree = "<group>"; };
@@ -2410,13 +2410,6 @@
 			path = Spelling;
 			sourceTree = "<group>";
 		};
-		8DF308921F21F8570028D017 /* Chatprofile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chatprofile;
-			sourceTree = "<group>";
-		};
 		8E338DFE1F0E0C4D006D3C68 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -2486,7 +2479,6 @@
 				8E36FC001F14B10A007AEFA6 /* Benifity */,
 				8E36FBFF1F14B0FF007AEFA6 /* Meet */,
 				8E36FBFE1F14B0EE007AEFA6 /* Fans */,
-				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2718,10 +2710,10 @@
 			isa = PBXGroup;
 			children = (
 				8E435F441F0B440B00FB1976 /* Controller */,
+				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
 				8E435F451F0B440B00FB1976 /* Model */,
 				8DC75D1F1F1DEE9F000A9BB9 /* view */,
 				8DC75D1A1F1DECE3000A9BB9 /* customToolView */,
-				8DF308921F21F8570028D017 /* Chatprofile */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

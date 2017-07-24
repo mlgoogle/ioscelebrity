@@ -11,18 +11,7 @@ import SVProgressHUD
 
 class FansSessionViewController: NTESSessionViewController {
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
-    
-//    override func send(_ message: NIMMessage!) {
-//        super.send(message)
-//    }
-
-    
-    
-    
 }

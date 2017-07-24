@@ -23,19 +23,6 @@ class TokenLoginRequestModel: LoginModle {
     }()
 }
 
-class BindCardRequestModel: LoginModle {
-    var account = "1001"
-    var bankUsername = "1001"
-}
-
-class BankCardListRequestModel: LoginModle {
-    
-}
-
-class BankCardInfoRequestModel : LoginModle {
-    var cardNo = ""
-}
-
 class CheckRegisterRequestModel: BaseModel {
     var phone = ""
 }
@@ -49,7 +36,7 @@ class ResetPwdReqModel: BaseModel{
     var pwd = ""
 }
 
-// 收益
+// MARK: - 收益
 class EarningRequestModel : LoginModle {
     var starcode = ShareModelHelper.instance().starCode
     var stardate : Int64 = 0
@@ -63,6 +50,7 @@ class YesterdayAndTodayPriceRequestModel: LoginModle {
 }
 
 // 重置交易密码
+// type  = 1 重置密码,  type = 0 设置密码
 class ResetPayPwdRequestModel: LoginModle {
     var timestamp : Int64 = 0
     var vCode = ""
@@ -70,6 +58,21 @@ class ResetPayPwdRequestModel: LoginModle {
     var type = 1
     var pwd = ""
     var phone = ""
+}
+
+// 绑定银行卡
+class BindCardRequestModel: LoginModle {
+    var account = "1001"
+    var bankUsername = "1001"
+}
+
+class BankCardListRequestModel: LoginModle {
+    
+}
+
+// 银行卡信息
+class BankCardInfoRequestModel : LoginModle {
+    var cardNo = ""
 }
 
 // 验证交易密码
@@ -91,27 +94,14 @@ class WithdrawalListRequetModel: LoginModle {
     var time = ""
 }
 
-// 
+// 粉丝列表
 class FansListRquestModel : LoginModle {
-//<<<<<<< HEAD
-////<<<<<<< HEAD
-////    
-////    var starcode = "1001"
-////    var starPos : Int32 = 0
-////    var count : Int32 = 10
-////=======
-//    var starcode = "1001"//ShareModelHelper.instance().starCode
-//    var starPos : Int32 = 0
-//=======
+    
     var starcode = ShareModelHelper.instance().starCode
     var starPos = 0
-
     var count = 10
 
 }
-
-
-//MARK: - Circle
 
 class RegisterWYIMRequestModel: LoginModle {
     var name_value = ""
@@ -124,6 +114,7 @@ class RegisterWYIMRequestModel: LoginModle {
     var timeStamp = 100088888
 }
 
+//MARK: - Circle
 class CircleListRequestModel: BaseModel {
     
     var pos:Int64 = 0

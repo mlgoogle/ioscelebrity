@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppDataHelper.instance().initData()
         AppServerHelper.instance().initServer()
         
-        
-        
+        // 云信
         sdkConfigDelegate = NTESSDKConfigDelegate.init()
         NIMSDKConfig.shared().delegate = sdkConfigDelegate
         NIMSDKConfig.shared().shouldSyncUnreadCount = true
