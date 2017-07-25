@@ -15,6 +15,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
 
     // tableHeaderView
     @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var beginTimeButton: UIButton!
     @IBOutlet weak var endTimeButton: UIButton!
     @IBOutlet weak var beginPlaceholderImageView: UIImageView!

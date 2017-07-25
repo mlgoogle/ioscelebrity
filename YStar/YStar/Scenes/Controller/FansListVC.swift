@@ -32,6 +32,9 @@ class FansListCell: OEZTableViewCell {
             self.iconImage.kf.setImage(with: URL.init(string: model.head_url), placeholder: placeholderImage)
             
             self.nameLabel.text = model.nickname
+           
+            self.newsIcon.isHidden = true
+            self.newsCount.isHidden = true
     }
   }
     
@@ -72,8 +75,6 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
     
     func WYIMLoginSuccess(_ IMloginSuccess : NSNotification)  {
         
-        print("登陆成功")
-        
         // 刷新红点
         self.refreshSessionRedDot()
     }
@@ -81,24 +82,7 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
     func refreshSessionRedDot() {
         
     }
-    
-    func didAdd(_ recentSession: NIMRecentSession, totalUnreadCount: Int) {
-        
-        print(" didAdd ++++++ didAdd \(recentSession.unreadCount)")
-    }
-    
-    func didRemove(_ recentSession: NIMRecentSession, totalUnreadCount: Int) {
-        
-        print(" didRemove ====== didRemove \(recentSession.unreadCount)")
-    }
-    
-    
-    func didUpdate(_ recentSession: NIMRecentSession, totalUnreadCount: Int) {
-        
-        print("didUpdate ------ didUpdate \(recentSession.unreadCount) ")
-        
-    }
-    
+
     // 请求刷新数据
     override func didRequest(_ pageIndex: Int) {
         let requestModel = FansListRquestModel()
