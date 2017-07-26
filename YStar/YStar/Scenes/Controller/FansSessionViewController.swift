@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 
-class FansSessionViewController: NTESSessionViewController {
+class FansSessionViewController: NIMSessionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
