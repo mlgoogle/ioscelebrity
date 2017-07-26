@@ -15,19 +15,26 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
 
     // tableHeaderView
     @IBOutlet weak var contentView: UIView!
+    
     @IBOutlet weak var beginTimeButton: UIButton!
     @IBOutlet weak var endTimeButton: UIButton!
     @IBOutlet weak var beginPlaceholderImageView: UIImageView!
     @IBOutlet weak var endPlaceholderImageView: UIImageView!
+    
+    // 折线图
     @IBOutlet weak var lineView: KLineView!
     
+    // 收益信息
     var earningData : [EarningInfoModel]?
     
-    // 标识
+    // 点击时间标识
     var beginOrEnd : Bool = true
 
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
+        
+        checkLogin()
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
@@ -41,10 +48,8 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         super.viewDidLoad()
         
         setupUI()
-        
-        setupInitResponse()
     
-        checkLogin()
+        setupInitResponse()
     }
     
     
@@ -61,6 +66,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         self.tableView.separatorStyle = .none
     }
     
+    // 默认数据
     func setupInitResponse() {
         
         let cureentDate = NSDate()
@@ -77,48 +83,25 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         self.beginTimeButton.setTitle(beginDateStr, for: .normal)
         self.endTimeButton.setTitle(endDateStr, for: .normal)
         
-        // 转换成Int
+        // 转换成没有分割线
         let beginDateString = beforeWeekDay.string_from(formatter: "yyyyMMdd")
         let endDateString = beforeDay.string_from(formatter: "yyyyMMdd")
         
         // print("----\(endDateString) ----\(beginDateString)")
         
-        var beginDateInt : Int = 0
+        // 转换成Int
+        var beginDateInt : Int64 = 0
         if beginDateStr.length() != 0 {
-            beginDateInt = Int(beginDateString)!
+            beginDateInt = Int64(beginDateString)!
         }
-        var endDateInt : Int = 0
+        var endDateInt : Int64 = 0
         if endDateString.length() != 0 {
-            endDateInt = Int(endDateString)!
+            endDateInt = Int64(endDateString)!
         }
         
         let model = EarningRequestModel()
-        // model.stardate = Int64(beginDateString)
-        // model.enddate = Int64(endDateString)
-        
-        model.stardate = 20170601
-        model.enddate = 20170630
-        
-        // print("====\(model)")
-        
-//        AppAPIHelper.commen().requestEarningInfo(model: model, complete: { (response) -> ()? in
-//            
-//            // print("====\(String(describing: response))")
-//            if let objects = response as? [EarningInfoModel] {
-//                
-//                self.earningData = objects
-//                self.lineView.refreshLineChartData(models: objects)
-//            }
-//            self.tableView.reloadData()
-//            return nil
-//        }) { (error) -> ()? in
-//            
-//            self.didRequestError(error)
-//            self.tableView.reloadData()
-//            print("====\(error)")
-//            
-//            return nil
-//        }
+        model.stardate = beginDateInt
+        model.enddate = endDateInt
         
         requestInitResponse(stardate: model.stardate, enddate: model.enddate)
     
@@ -150,7 +133,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             self.beginTimeButton.setTitle(dateString, for: .normal)
             self.endTimeButton.setTitle(afterWeekStr, for: .normal)
             
-            // 转换成没有分割线
             let beginDateString = date.string_from(formatter: "yyyyMMdd")
             let endDateString = afterWeekDate.string_from(formatter: "yyyyMMdd")
             
@@ -209,13 +191,8 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // let cell = tableView.dequeueReusableCell(withIdentifier: "CellID", for: indexPath)
-        // cell.textLabel?.text = String.init(format: "这个第 %d 行." ,indexPath.row)
-        // return cell
-        
         let benifityCell = tableView.dequeueReusableCell(withIdentifier: KBenifityCellID, for: indexPath) as! BenifityCell
        
-        // TODO: - 待处理数据
         if earningData != nil {
             
             benifityCell.setBenifity(model: earningData![indexPath.row])
@@ -252,6 +229,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
             AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self] (response) -> ()? in
                 if let objects = response as? BankListModel {
                     if objects.cardNo.length() != 0 {
+                        
                         // 已绑定
                         // let bankCardVC  = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BankCardVC") as! BankCardVC
                         // bankCardVC.bankCardNO = objects.cardNo

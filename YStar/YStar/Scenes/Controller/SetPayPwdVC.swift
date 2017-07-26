@@ -48,17 +48,18 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupUI()
         initUI()
+        
+        setupUI()
     }
 
-    func setupUI() {
+    func initUI() {
         doSetPwdButton.setTitle(setPass == false ? "下一步" :"确定", for: .normal)
         self.title = setPass == true ? "请确认交易密码" :  "设置交易密码"
         self.doSetPwdButton.backgroundColor = UIColor.gray
     }
     
-    func initUI() {
+    func setupUI() {
         
         textField = UITextField(frame: CGRect(x: 0,y: 60, width: view.frame.size.width, height: 35))
         textField.delegate = self
@@ -181,7 +182,7 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
         }
     }
     
-    // Mark: 输入变成点
+    // MARK: - 输入变成点
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if(textField.text?.characters.count > 5 && string.characters.count > 0) {
             return false

@@ -28,27 +28,8 @@ class BenifityCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // 随机颜色测试
-        // let red = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
-        // let green = CGFloat( arc4random_uniform(255))/CGFloat(255.0)
-        // let blue = CGFloat(arc4random_uniform(255))/CGFloat(255.0)
-        // let colorRun = UIColor.init(red:red, green:green, blue:blue , alpha: 1)
-        
-        // self.dateLabel.backgroundColor = colorRun
-        // self.totalLabel.backgroundColor = colorRun
-        // self.timeLabel.backgroundColor = colorRun
-        // self.orderPriceLabel.backgroundColor = colorRun
 
     }
-    
-    // FIXME: - 提醒
-//    func setBenifity() {
-//        self.dateLabel.text = "2017-12-24"
-//        self.totalLabel.text = "1242"
-//        self.timeLabel.text = "100021.00"
-//        self.orderPriceLabel.text = "10002300.00"
-//    }
     
     func setBenifity(model : EarningInfoModel) {
         

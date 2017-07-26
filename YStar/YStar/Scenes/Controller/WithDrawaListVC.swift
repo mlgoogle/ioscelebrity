@@ -25,8 +25,6 @@ class WithDrawaListVCCell: OEZTableViewCell {
 
         let model : WithdrawModel = data as! WithdrawModel
         
-        // let timesp : Int = Date.stringToTimeStamp(stringTime: model.withdrawTime)
-        // timeLabel.text = Date.yt_convertDateStrWithTimestempWithSecond(timesp, format: "yyyy-MM-dd")
         timeLabel.text = model.withdrawTime
         
         let indexTail = model.cardNo.index(model.cardNo.startIndex,  offsetBy: model.cardNo.length()-4)
@@ -54,7 +52,10 @@ class WithDrawaListVC: BasePageListTableViewController {
         
         AppAPIHelper.commen().withDrawList(requestModel: requestModel, complete: { (response) -> ()? in
             if let objects = response as? WithdrawListModel {
+                
                 self.didRequestComplete(objects.withdrawList as AnyObject)
+            } else {
+                self.didRequestComplete(nil)
             }
             return nil
         }) { (error) -> ()? in

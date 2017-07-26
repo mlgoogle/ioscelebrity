@@ -38,6 +38,7 @@ class UserBalance: BaseModel {
 }
 
 
+// 验证码
 class verifyCodeModel: BaseModel {
     var result : Int64 = 0
     var timeStamp = ""
@@ -62,6 +63,7 @@ class BankModel: BaseModel {
     
 }
 
+// 银行卡详细信息
 class BankInfoModel: BaseModel {
     
     var bankId: Int64 = 0
@@ -129,6 +131,7 @@ class CircleCommentModel: Object {
     dynamic var priority = 0
 }
 
+// 收益
 class EarningInfoModel: Object {
     
     dynamic var max_price : Double = 45.21      // 最高价
@@ -141,6 +144,7 @@ class EarningInfoModel: Object {
     dynamic var starcode : String = "1013"          // 明星id
 }
 
+// 今开昨收
 class YesterdayAndTodayPriceModel: Object {
     
     dynamic var max_price : Double = 25.29  //  昨收
@@ -199,6 +203,7 @@ class MeetOrderModel: BaseModel{
     var uid = 0
 }
 
+// 提现返回Model
 class WithdrawModel: BaseModel {
     
     var wid: Int64 = 0           // 提现订单流水号

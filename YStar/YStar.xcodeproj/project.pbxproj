@@ -20,6 +20,7 @@
 		8D1CC7211F0BAE5E009B1A1B /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7201F0BAE5E009B1A1B /* VideoToolbox.framework */; };
 		8D1CC7221F0BAE6C009B1A1B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B08673431DE5C4B6008DD8A1 /* libc++.tbd */; };
 		8D1CC7241F0BAE74009B1A1B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7231F0BAE74009B1A1B /* libsqlite3.0.tbd */; };
+		8D21977B1F273075004B5789 /* UITabBar+badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21977A1F273075004B5789 /* UITabBar+badge.swift */; };
 		8D407E561F1F52B400211E2C /* FansSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D407E551F1F52B400211E2C /* FansSessionViewController.swift */; };
 		8DA7E8A11F2196580059268B /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA7E8A01F2196580059268B /* iconfont.ttf */; };
 		8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */; };
@@ -424,6 +425,7 @@
 		8D1CC71E1F0BAE57009B1A1B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8D1CC7201F0BAE5E009B1A1B /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		8D1CC7231F0BAE74009B1A1B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		8D21977A1F273075004B5789 /* UITabBar+badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+badge.swift"; sourceTree = "<group>"; };
 		8D407E551F1F52B400211E2C /* FansSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansSessionViewController.swift; sourceTree = "<group>"; };
 		8DA7E8A01F2196580059268B /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetTradePassVC.swift; sourceTree = "<group>"; };
@@ -970,7 +972,7 @@
 		8E36FE471F15CE44007AEFA6 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		8E36FE481F15CE44007AEFA6 /* yRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yRuntime.swift; sourceTree = "<group>"; };
 		8E435F461F0B440B00FB1976 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
-		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabbarViewController.swift; sourceTree = "<group>"; };
+		8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTabbarViewController.swift; path = Controller/BaseTabbarViewController.swift; sourceTree = "<group>"; };
 		8E435F4B1F0B449F00FB1976 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		8E435F4D1F0B44C500FB1976 /* BenifityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityVC.swift; sourceTree = "<group>"; };
 		8E435F4F1F0B44E800FB1976 /* BenifityDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenifityDetailVC.swift; sourceTree = "<group>"; };
@@ -2410,13 +2412,6 @@
 			path = Spelling;
 			sourceTree = "<group>";
 		};
-		8DF308921F21F8570028D017 /* Chatprofile */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chatprofile;
-			sourceTree = "<group>";
-		};
 		8E338DFE1F0E0C4D006D3C68 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -2486,7 +2481,6 @@
 				8E36FC001F14B10A007AEFA6 /* Benifity */,
 				8E36FBFF1F14B0FF007AEFA6 /* Meet */,
 				8E36FBFE1F14B0EE007AEFA6 /* Fans */,
-				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2600,6 +2594,7 @@
 		8E8FB0601F0AA4EA00A7B85C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8D21977A1F273075004B5789 /* UITabBar+badge.swift */,
 				8E36FE451F15CE44007AEFA6 /* UIBarExtension.swift */,
 				8E36FE461F15CE44007AEFA6 /* UIButton+Extension.swift */,
 				8E36FE471F15CE44007AEFA6 /* UIView.swift */,
@@ -2718,10 +2713,10 @@
 			isa = PBXGroup;
 			children = (
 				8E435F441F0B440B00FB1976 /* Controller */,
+				8E435F491F0B444700FB1976 /* BaseTabbarViewController.swift */,
 				8E435F451F0B440B00FB1976 /* Model */,
 				8DC75D1F1F1DEE9F000A9BB9 /* view */,
 				8DC75D1A1F1DECE3000A9BB9 /* customToolView */,
-				8DF308921F21F8570028D017 /* Chatprofile */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -3125,6 +3120,7 @@
 				8DE4A7A81F258714001552E5 /* UIViewController+Swizzling.m in Sources */,
 				8DE4A7831F258714001552E5 /* NIMKitMessageAtModel.m in Sources */,
 				8DE4A7ED1F258714001552E5 /* NTESSearchMessageContentCell.m in Sources */,
+				8D21977B1F273075004B5789 /* UITabBar+badge.swift in Sources */,
 				8DE4A7D11F258714001552E5 /* NTESContactUtilCell.m in Sources */,
 				8DE4A7541F258714001552E5 /* NIMKit.m in Sources */,
 				8DE4A7F41F258714001552E5 /* NTESAudio2TextViewController.m in Sources */,

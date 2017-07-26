@@ -32,6 +32,7 @@ class BenifityDetailCell: UITableViewCell {
     }
     
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         
         self.dealImageView.image = UIImage.imageWith(AppConst.iconFontName.dealTotalIcon.rawValue, fontSize: dealImageView.frame.size, fontColor: UIColor.init(rgbHex: 0xFB9938))
