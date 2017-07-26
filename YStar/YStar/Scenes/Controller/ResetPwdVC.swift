@@ -91,7 +91,7 @@ class ResetPwdVC: BaseTableViewController {
             model.phone = phoneText.text!
             model.pwd = pwdText.text!.md5()
             AppAPIHelper.commen().Resetpwd(model: model,  complete: { (result)  in
-                if let response = result{
+                if let response = result {
                     if response["result"] as! Int == 1{
                         // 重置成功
                         SVProgressHUD.showSuccessMessage(SuccessMessage: "重置成功", ForDuration: 2.0, completion: {
