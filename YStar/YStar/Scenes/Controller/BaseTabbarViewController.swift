@@ -10,7 +10,8 @@ import UIKit
 
 class BaseTabbarViewController: UITabBarController,NIMLoginManagerDelegate,NIMConversationManagerDelegate,NIMSystemNotificationManagerDelegate {
 
-    var sessionUnreadCount : Int = 0
+    // 未读消息
+    private var sessionUnreadCount : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
