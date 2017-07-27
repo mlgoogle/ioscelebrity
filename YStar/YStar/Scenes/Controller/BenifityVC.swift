@@ -46,12 +46,9 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-    
         setupInitResponse()
     }
-    
     
     func setupUI() {
         
@@ -166,6 +163,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         let requestModel = EarningRequestModel()
         requestModel.stardate = stardate
         requestModel.enddate = enddate
+        
         AppAPIHelper.commen().requestEarningInfo(model: requestModel, complete: { (response) -> ()? in
             if self.earningData != nil {
                self.earningData?.removeAll()
