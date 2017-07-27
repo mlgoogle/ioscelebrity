@@ -21,6 +21,7 @@ class ShareModelHelper: BaseModel {
     var phone  = ""
     var token = ""
     var userinfo = UserBalance()
+    var voiceSwitch = false
     
     
 }

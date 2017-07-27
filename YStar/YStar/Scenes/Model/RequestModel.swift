@@ -116,7 +116,7 @@ class RegisterWYIMRequestModel: LoginModle {
 
 //MARK: - Circle
 class CircleListRequestModel: BaseModel {
-    
+    var star_code = ShareModelHelper.instance().starCode
     var pos:Int64 = 0
     var count:Int32 = 10
 }
