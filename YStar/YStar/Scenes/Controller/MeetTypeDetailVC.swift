@@ -29,11 +29,11 @@ class MeetTypeDetailVC: BaseListTableViewController {
         let param = ChangerMeetTypeRequest()
         param.mid = model.mid
         param.type = model.status == 0 ? 1 :0
-        AppAPIHelper.commen().changeOrderType(requestModel: param, complete: { (result) in
+        AppAPIHelper.commen().changeOrderType(requestModel: param, complete: {[weak self] (result) in
             if let response = result as? ResultModel{
                 if response.result == 1{
                     model.status = model.status == 0 ? 1 :0
-                    self.items[indexPath.row].status = model.status == 0 ? 1 :0
+                    self?.items[indexPath.row].status = model.status == 0 ? 1 :0
                 }
             }
             return nil
