@@ -239,29 +239,22 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     
     // MARK: - 点击了提现
     @IBAction func rightItemAction(_ sender: UIBarButtonItem) {
-        
+
         if isLogin() {
             let model = BankCardListRequestModel()
-            AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self] (response) -> ()? in
+            AppAPIHelper.commen().bankCardList(model: model, complete: {[weak self]  (response) -> ()? in
                 if let objects = response as? BankListModel {
                     if objects.cardNo.length() != 0 {
-                        
-                        // 已绑定
-                        // let bankCardVC  = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BankCardVC") as! BankCardVC
-                        // bankCardVC.bankCardNO = objects.cardNo
-                        // self?.navigationController?.pushViewController(bankCardVC, animated: true)
-                        
-                        let withdrawalVC = UIStoryboard.init(name:"Benifity",bundle: nil).instantiateViewController(withIdentifier: "WithdrawalVC") as! WithdrawalVC
+                       // 已绑定
+                       let withdrawalVC = UIStoryboard.init(name:"Benifity",bundle: nil).instantiateViewController(withIdentifier: "WithdrawalVC") as! WithdrawalVC
                         self?.navigationController?.pushViewController(withdrawalVC, animated: true)
-                        
                     } else {
                         // 未绑定
                         let alertVC = AlertViewController()
                         alertVC.showAlertVc(imageName: "tangkuang_kaitongzhifu",
                                             titleLabelText: "绑定银行卡",
                                             subTitleText: "提现操作需先绑定银行卡才能进行操作",
-                                            completeButtonTitle: "我 知 道 了",
-                                            action: {[weak alertVC] (completeButton) in
+                                            completeButtonTitle: "我 知 道 了", action: {[weak alertVC] (completeButton) in
                                                 alertVC?.dismissAlertVc()
                                                 let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
                                                 self?.navigationController?.pushViewController(bindBankCardVC, animated: true)
@@ -269,10 +262,26 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
                     }
                 }
                 return nil
-                
-                }, error: errorBlockFunc())
+            }, error: { (error) -> ()? in
+                // 未绑定
+                if error.code == -801 {
+                    let alertVC = AlertViewController()
+                    alertVC.showAlertVc(imageName: "tangkuang_kaitongzhifu",
+                                        titleLabelText: "绑定银行卡",
+                                        subTitleText: "提现操作需先绑定银行卡才能进行操作",
+                                        completeButtonTitle: "我 知 道 了", action: {[weak alertVC] (completeButton) in
+                                            alertVC?.dismissAlertVc()
+                                            let bindBankCardVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "BindBankCardVC")
+                                            self.navigationController?.pushViewController(bindBankCardVC, animated: true)
+                    })
+                    
+                } else {
+                    self.didRequestError(error)
+                }
+                return nil
+            })
         }
 
-        }
+    }
 
 }
