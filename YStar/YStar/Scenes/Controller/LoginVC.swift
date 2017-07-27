@@ -84,6 +84,8 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                     UserDefaults.standard.synchronize()
                     self?.LoginToYunxin()
                     self?.dismissController()
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil, userInfo: nil)
                 }
                 return nil
             }, error: errorBlockFunc())

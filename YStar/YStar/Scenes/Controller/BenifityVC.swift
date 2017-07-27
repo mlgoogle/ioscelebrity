@@ -35,7 +35,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         super.viewWillAppear(animated)
         
         checkLogin()
-        
+
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
@@ -48,8 +48,19 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         super.viewDidLoad()
         
         setupUI()
+
+        // setupInitResponse()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginSuccess(_ :)), name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil)
+    }
     
+    
+    func LoginSuccess(_ note : NSNotification) {
+     
         setupInitResponse()
+        
+        self.tableView.reloadData()
+        
     }
     
     
@@ -102,6 +113,9 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         let model = EarningRequestModel()
         model.stardate = beginDateInt
         model.enddate = endDateInt
+        
+        // model.stardate = 20170601
+        // model.enddate = 20170631
         
         requestInitResponse(stardate: model.stardate, enddate: model.enddate)
     
