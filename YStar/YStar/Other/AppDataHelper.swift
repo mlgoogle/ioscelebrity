@@ -68,8 +68,8 @@ class AppDataHelper: NSObject {
         AppAPIHelper.commen().tokenLogin(requestModel: requestModel, complete: {[weak self] (result) in
             if let model = result as? StarUserModel {
                 self?.cacheUserInfo(object: model)
-                
                 self?.LoginToYunxin()
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil, userInfo: nil)
             }
             return nil
         }) {[weak self] (error ) in

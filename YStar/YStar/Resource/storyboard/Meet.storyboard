@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VNs-BP-Wie">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VNs-BP-Wie">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -308,7 +308,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="田馥甄" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6t-Tp-yFV">
-                                            <rect key="frame" x="78" y="22" width="43" height="17"/>
+                                            <rect key="frame" x="78" y="10" width="43" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -323,23 +323,23 @@
                                             <color key="textColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="下午茶, 2017.6.20 ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Non-ZT-p6d">
-                                            <rect key="frame" x="136" y="22" width="130" height="17"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下午茶, 2017.6.20 ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Non-ZT-p6d">
+                                            <rect key="frame" x="78" y="34" width="120.5" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Non-ZT-p6d" firstAttribute="leading" secondItem="u9X-Vx-Iuo" secondAttribute="trailing" constant="70" id="04m-eM-YCc"/>
                                         <constraint firstItem="u9X-Vx-Iuo" firstAttribute="centerY" secondItem="bfN-2v-wZf" secondAttribute="centerY" id="EDD-VS-qBQ"/>
-                                        <constraint firstItem="k6t-Tp-yFV" firstAttribute="centerY" secondItem="u9X-Vx-Iuo" secondAttribute="centerY" id="RPa-vd-SDr"/>
+                                        <constraint firstItem="k6t-Tp-yFV" firstAttribute="top" secondItem="u9X-Vx-Iuo" secondAttribute="top" id="EUu-p5-puH"/>
+                                        <constraint firstItem="Non-ZT-p6d" firstAttribute="bottom" secondItem="u9X-Vx-Iuo" secondAttribute="bottom" id="Kft-94-gbN"/>
                                         <constraint firstItem="u9X-Vx-Iuo" firstAttribute="leading" secondItem="bfN-2v-wZf" secondAttribute="leading" constant="26" id="RoL-8M-qKy"/>
                                         <constraint firstItem="7cs-ig-jSA" firstAttribute="centerY" secondItem="u9X-Vx-Iuo" secondAttribute="centerY" id="S1o-vT-nDK"/>
+                                        <constraint firstItem="k6t-Tp-yFV" firstAttribute="leading" secondItem="u9X-Vx-Iuo" secondAttribute="trailing" constant="12" id="ZHA-ky-opU"/>
                                         <constraint firstAttribute="trailing" secondItem="7cs-ig-jSA" secondAttribute="trailing" constant="24" id="ohR-3I-abr"/>
-                                        <constraint firstItem="k6t-Tp-yFV" firstAttribute="leading" secondItem="bfN-2v-wZf" secondAttribute="leading" constant="78" id="rdi-tb-bqD"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="7cs-ig-jSA" secondAttribute="trailing" constant="16" id="tZZ-i5-uSD"/>
-                                        <constraint firstItem="Non-ZT-p6d" firstAttribute="centerY" secondItem="u9X-Vx-Iuo" secondAttribute="centerY" id="yl9-Rb-kxd"/>
+                                        <constraint firstItem="Non-ZT-p6d" firstAttribute="leading" secondItem="k6t-Tp-yFV" secondAttribute="leading" id="xqA-di-pee"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
@@ -490,7 +490,7 @@
             <objects>
                 <navigationController id="VNs-BP-Wie" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="联系粉丝" image="tour_item_normal" selectedImage="tour_item_selected" id="649-pP-MFu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eUN-q5-EYQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eUN-q5-EYQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -511,7 +511,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="hNT-9C-cBj" userLabel="titleView">
-                            <rect key="frame" x="0.0" y="64" width="375" height="72"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-Co-2VF">
@@ -565,7 +565,7 @@
                             </constraints>
                         </view>
                         <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Y2g-ob-icN">
-                            <rect key="frame" x="0.0" y="136" width="375" height="497"/>
+                            <rect key="frame" x="0.0" y="72" width="375" height="497"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <outlet property="delegate" destination="ZBB-J8-SZb" id="lUa-RO-GGx"/>
