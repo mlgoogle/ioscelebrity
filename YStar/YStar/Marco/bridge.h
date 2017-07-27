@@ -36,6 +36,7 @@ struct SocketPacketHead {
 #import "UMMobClick/MobClick.h"
 #import <objc/runtime.h>
 #import "NIMKit.h"
+#import <Bugout/Bugout.h>
 
 //#import <CommonCrypto/CommonCrytor.h>
 /* nineSister_Bridging_Header_h */

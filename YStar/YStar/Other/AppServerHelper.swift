@@ -22,6 +22,7 @@ class AppServerHelper: NSObject , WXApiDelegate{
         
         initUMengAnalytics()
         setupNIMSDK()
+        setupBugout()
     }
 
     // MARK: -云信
@@ -41,7 +42,15 @@ class AppServerHelper: NSObject , WXApiDelegate{
         UMAnalyticsConfig.sharedInstance().appKey = "595c53077f2c747e0600087a"
         
         MobClick.start(withConfigure: UMAnalyticsConfig.sharedInstance())
+    }
+    
+    // MARK: -Bugout
+    func setupBugout() {
         
+        let config = BugoutConfig.default()
+        config?.enabledShakeFeedback = true
+        config?.enabledMonitorException = true
+        Bugout.init("aebdfa2eada182ab8dc7d44fd02a8c50", channel: "channel", config: config)
     }
     
     

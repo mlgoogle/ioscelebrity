@@ -31,10 +31,10 @@ class MeetOrderDetailVC: BaseTableViewController {
     func initUI() {
         headerImage.kf.setImage(with: URL.init(string: model.headurl), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
         nameLabel.text = model.nickname
-        timeLabel.text = "时间：\(model.appoint_time)"
-        locationLabel.text = "地点：\(model.meet_city)"
-        typeLabel.text = "约见类型:\(model.meet_type)"
-        contentLabel.text = model.comment
+        timeLabel.text = "时间： \(model.appoint_time)"
+        locationLabel.text = "地点： \(model.meet_city)"
+        typeLabel.text = "约见类型： \(model.meet_type)"
+        contentLabel.text = "约见备注： \(model.comment)"
         agreeButton.isHidden = model.meet_type == 4
         
     }

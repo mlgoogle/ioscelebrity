@@ -28,7 +28,7 @@ class MeetOrderCell: OEZTableViewCell {
         if let model = data as? MeetOrderModel{
             self.iconImageView.kf.setImage(with: URL.init(string: model.headurl), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
             self.nameLabel.text = model.nickname
-            self.thingLabel.text = "\(model.name)\(model.appoint_time)"
+            self.thingLabel.text = String.init(format: "%@   %@", model.name , model.appoint_time)
             self.isSureLabel.text = model.meet_type == 4 ? " 同意 ":" 未确定 "
             self.isSureLabel.backgroundColor = model.meet_type == 4 ? UIColor.init(hexString: "#FB9938") : UIColor.init(rgbHex: 0x999999)
             isSureLabel.layer.cornerRadius = 3

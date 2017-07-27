@@ -36,6 +36,12 @@
 		8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */; };
 		8DD2FC101F137B8600F2FA04 /* MeetOrderDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */; };
 		8DE81DBD1F204F9A007656BC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE81DBC1F204F9A007656BC /* AlertViewController.swift */; };
+		8DE975D61F29D73800541E07 /* FansSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE975D51F29D73800541E07 /* FansSessionConfig.swift */; };
+		8DE975D81F29E5F300541E07 /* Bugout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975D71F29E5F300541E07 /* Bugout.framework */; };
+		8DE975DA1F29E62300541E07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975D91F29E62300541E07 /* CoreLocation.framework */; };
+		8DE975DC1F29E62A00541E07 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DB1F29E62A00541E07 /* ImageIO.framework */; };
+		8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DD1F29E63800541E07 /* CoreMotion.framework */; };
+		8DE975E01F29E64100541E07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DF1F29E64100541E07 /* Security.framework */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
 		8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
@@ -292,6 +298,12 @@
 		8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetTypeDetailVC.swift; sourceTree = "<group>"; };
 		8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetOrderDetailVC.swift; sourceTree = "<group>"; };
 		8DE81DBC1F204F9A007656BC /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		8DE975D51F29D73800541E07 /* FansSessionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansSessionConfig.swift; sourceTree = "<group>"; };
+		8DE975D71F29E5F300541E07 /* Bugout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugout.framework; sourceTree = "<group>"; };
+		8DE975D91F29E62300541E07 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8DE975DB1F29E62A00541E07 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		8DE975DD1F29E63800541E07 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		8DE975DF1F29E64100541E07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
 		8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KLineView.swift; path = YStar/Scenes/View/KLineView.swift; sourceTree = SOURCE_ROOT; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
@@ -668,15 +680,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE975E01F29E64100541E07 /* Security.framework in Frameworks */,
+				8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */,
+				8D1CC71F1F0BAE57009B1A1B /* AudioToolbox.framework in Frameworks */,
+				8DE975DC1F29E62A00541E07 /* ImageIO.framework in Frameworks */,
+				8DE975DA1F29E62300541E07 /* CoreLocation.framework in Frameworks */,
+				A0EA2D531E481BD600DD3158 /* SystemConfiguration.framework in Frameworks */,
+				BF87C3741E023A180074D696 /* CoreTelephony.framework in Frameworks */,
 				A0EA2D551E481BF900DD3158 /* libz.tbd in Frameworks */,
 				8D1CC7241F0BAE74009B1A1B /* libsqlite3.0.tbd in Frameworks */,
+				8DE975D81F29E5F300541E07 /* Bugout.framework in Frameworks */,
 				8D1CC7221F0BAE6C009B1A1B /* libc++.tbd in Frameworks */,
 				8D1CC7211F0BAE5E009B1A1B /* VideoToolbox.framework in Frameworks */,
-				8D1CC71F1F0BAE57009B1A1B /* AudioToolbox.framework in Frameworks */,
 				8D1CC71D1F0BAE4E009B1A1B /* CoreMedia.framework in Frameworks */,
-				BF87C3741E023A180074D696 /* CoreTelephony.framework in Frameworks */,
 				8D1CC71B1F0BAE3F009B1A1B /* AVFoundation.framework in Frameworks */,
-				A0EA2D531E481BD600DD3158 /* SystemConfiguration.framework in Frameworks */,
 				8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */,
 				B02DB25C1DF985B70044F910 /* libsqlite3.tbd in Frameworks */,
 				8E8FB0D31F0AA4EA00A7B85C /* libWeChatSDK.a in Frameworks */,
@@ -696,6 +713,10 @@
 		10CEA088AA8041FD84B55B62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DE975DF1F29E64100541E07 /* Security.framework */,
+				8DE975DD1F29E63800541E07 /* CoreMotion.framework */,
+				8DE975DB1F29E62A00541E07 /* ImageIO.framework */,
+				8DE975D91F29E62300541E07 /* CoreLocation.framework */,
 				8EFEF5791F139E6300AD9513 /* UMMobClick.framework */,
 				8D1CC7231F0BAE74009B1A1B /* libsqlite3.0.tbd */,
 				8D1CC7201F0BAE5E009B1A1B /* VideoToolbox.framework */,
@@ -751,6 +772,14 @@
 				8DC75D251F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		8DE975D11F29D6C200541E07 /* chatSessionConfig */ = {
+			isa = PBXGroup;
+			children = (
+				8DE975D51F29D73800541E07 /* FansSessionConfig.swift */,
+			);
+			path = chatSessionConfig;
 			sourceTree = "<group>";
 		};
 		8E338DFE1F0E0C4D006D3C68 /* storyboard */ = {
@@ -1472,6 +1501,7 @@
 		8E8FB0701F0AA4EA00A7B85C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				8DE975D71F29E5F300541E07 /* Bugout.framework */,
 				8E397BAE1F289D2700847CCB /* NIMKit */,
 				8E4455911F19FE0E0059CEEC /* EmojiKeyboard */,
 				8E8FB0711F0AA4EA00A7B85C /* MJRefresh */,
@@ -1563,6 +1593,7 @@
 				8E435F451F0B440B00FB1976 /* Model */,
 				8DC75D1F1F1DEE9F000A9BB9 /* view */,
 				8DC75D1A1F1DECE3000A9BB9 /* customToolView */,
+				8DE975D11F29D6C200541E07 /* chatSessionConfig */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1666,7 +1697,7 @@
 					};
 					B0CF59DC1DE5BEC300C40C9C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 96YGS7NXK5;
+						DevelopmentTeam = GED83X9MRE;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -1938,6 +1969,7 @@
 				8E435F481F0B440B00FB1976 /* BaseModel.swift in Sources */,
 				8E8FB0C21F0AA4EA00A7B85C /* BankLogoColor.swift in Sources */,
 				8E397CCD1F289D2800847CCB /* UIImage+NIMKit.m in Sources */,
+				8DE975D61F29D73800541E07 /* FansSessionConfig.swift in Sources */,
 				8E8FB0D51F0AA4EA00A7B85C /* AppConst.swift in Sources */,
 				8E44559D1F19FE0E0059CEEC /* HHCollectionViewFlowLayout.swift in Sources */,
 				8DC75D2B1F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift in Sources */,
@@ -2180,7 +2212,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yong ming lu (FD5S65ADL4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 96YGS7NXK5;
+				DEVELOPMENT_TEAM = GED83X9MRE;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2215,10 +2247,10 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.redsky.starshare.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redsky.starshare;
 				PRODUCT_NAME = YStar;
-				PROVISIONING_PROFILE = "8885437b-99b9-416e-b5ff-89157b4d0d85";
-				PROVISIONING_PROFILE_SPECIFIER = xingyueDevelop;
+				PROVISIONING_PROFILE = "cd195ddb-4108-484e-831b-01ad9e86dada";
+				PROVISIONING_PROFILE_SPECIFIER = com.starShare.Develop;
 				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";
@@ -2263,7 +2295,7 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.redsky.starshare.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.redsky.starshare;
 				PRODUCT_NAME = YStar;
 				PROVISIONING_PROFILE = "f9340b2d-a4e3-492e-91f6-09a3bfc695e4";
 				PROVISIONING_PROFILE_SPECIFIER = xingyueDistribution;
