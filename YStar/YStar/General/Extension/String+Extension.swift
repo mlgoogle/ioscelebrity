@@ -140,4 +140,19 @@ extension String {
 //        }
         return ""
     }
+    
+    func removeUnescapedCharacter() -> String {
+        let str = NSString.init(string: self)
+        let controlChars = NSCharacterSet.controlCharacters
+        var range = str.rangeOfCharacter(from: controlChars)
+        if range.location != NSNotFound{
+            let mutable = NSMutableString.init(string: self)
+            while range.location != NSNotFound {
+                mutable.deleteCharacters(in: range)
+                range = mutable.rangeOfCharacter(from: controlChars)
+            }
+            return mutable as String
+        }
+        return str as String
+    }
 }

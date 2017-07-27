@@ -515,7 +515,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-Co-2VF">
-                                    <rect key="frame" x="77" y="23" width="83" height="26"/>
+                                    <rect key="frame" x="55" y="23" width="105" height="26"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="26" id="WoQ-S6-TTI"/>
@@ -535,7 +535,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2g-jN-Sa7">
-                                    <rect key="frame" x="215" y="23" width="83" height="26"/>
+                                    <rect key="frame" x="215" y="23" width="105" height="26"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="26" id="Y4a-JD-5Mf"/>
                                     </constraints>
@@ -560,8 +560,8 @@
                                 <constraint firstItem="w2g-jN-Sa7" firstAttribute="leading" secondItem="Tgg-Co-2VF" secondAttribute="trailing" constant="55" id="5sr-uT-DDz"/>
                                 <constraint firstItem="w2g-jN-Sa7" firstAttribute="centerY" secondItem="hNT-9C-cBj" secondAttribute="centerY" id="EU1-g4-kkI"/>
                                 <constraint firstItem="Tgg-Co-2VF" firstAttribute="width" secondItem="w2g-jN-Sa7" secondAttribute="width" id="VnS-nY-cLM"/>
-                                <constraint firstItem="Tgg-Co-2VF" firstAttribute="leading" secondItem="hNT-9C-cBj" secondAttribute="leading" constant="77" id="dAY-nM-bjg"/>
-                                <constraint firstAttribute="trailing" secondItem="w2g-jN-Sa7" secondAttribute="trailing" constant="77" id="rH4-r8-tXc"/>
+                                <constraint firstItem="Tgg-Co-2VF" firstAttribute="leading" secondItem="hNT-9C-cBj" secondAttribute="leading" constant="55" id="dAY-nM-bjg"/>
+                                <constraint firstAttribute="trailing" secondItem="w2g-jN-Sa7" secondAttribute="trailing" constant="55" id="rH4-r8-tXc"/>
                             </constraints>
                         </view>
                         <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Y2g-ob-icN">

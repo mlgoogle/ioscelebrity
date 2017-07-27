@@ -1,12 +1,10 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 target 'YStar' do
     # Comment this line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
     
     # Pods for YStar
-    
-    use_frameworks! # Add this if you are targeting iOS 8+ or using Swift
     pod 'Alamofire', '~> 4.2.0'
     pod 'CocoaAsyncSocket', '~> 7.5.0'
     pod 'SVProgressHUD', '~> 2.0.3'
@@ -14,7 +12,7 @@ target 'YStar' do
     pod 'Qiniu'
     pod 'FMDB', '~> 2.6.2'
     #pod 'GTSDK', '~> 1.4.3'
-    pod 'SideMenuController'
+    #pod 'SideMenuController'
     pod 'Fabric'
     pod 'Crashlytics'
     #pod 'UMengAnalytics-NO-IDFA'
@@ -25,20 +23,21 @@ target 'YStar' do
     pod 'Reachability', '~> 3.1.1'
     pod 'SnapKit'
     pod 'RealmSwift'
-    pod "DKNightVersion"
+    #pod "DKNightVersion"
     #pod 'ReactiveCocoa'
-    pod 'iCarousel'
+    #pod 'iCarousel'
     #pod 'WechatOpenSDK'
-    pod 'NIMSDK'
+    #pod 'NIMSDK'
+    pod 'NIMSDK_LITE', '~> 4.0.0'
     pod 'SDWebImage', '~> 3.8.2'
     pod 'Toast', '~> 3.0'
-#    pod 'SVProgressHUD', '~> 2.0.3'
+    pod 'SVProgressHUD', '~> 2.0.3'
     pod 'M80AttributedLabel', '~> 1.6.3'
     pod 'TZImagePickerController', '~> 1.7.7'
     pod 'UMengAnalytics'
     pod 'YYText'
     pod 'MJRefresh', '~> 3.1.12'
-    target 'YStarTests' do
-        inherit! :search_paths
-    end
+#    target 'YStarTests' do
+#        inherit! :search_paths
+#    end
 end

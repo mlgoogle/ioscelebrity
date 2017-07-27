@@ -173,7 +173,7 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate {
     func requestCycleData(_ position: Int) {
         let param = CircleListRequestModel()
         param.pos = Int64(position)
-        AppAPIHelper.commen().requestCircleList(requestModel: param, complete: { [weak self](result) in
+        AppAPIHelper.commen().requestStarCircleList(requestModel: param, complete: { [weak self](result) in
             if let data = result as? [CircleListModel]{
                 if position == 0{
                     self?.tableData = data

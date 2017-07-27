@@ -46,10 +46,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupUI()
-
-        // setupInitResponse()
         
         NotificationCenter.default.addObserver(self, selector: #selector(LoginSuccess(_ :)), name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil)
     }
@@ -67,7 +64,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
         NotificationCenter.default.removeObserver(self)
     }
-    
     
     func setupUI() {
         
@@ -185,6 +181,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         let requestModel = EarningRequestModel()
         requestModel.stardate = stardate
         requestModel.enddate = enddate
+        
         AppAPIHelper.commen().requestEarningInfo(model: requestModel, complete: { (response) -> ()? in
             if self.earningData != nil {
                self.earningData?.removeAll()

@@ -31,7 +31,7 @@ class AppConst {
     
     static let pwdKey = "yd1742653sd"
     static let imageTokenUrl = "http://122.144.169.219:3378/imageToken"
-    
+    	
     enum KVOKey: String {
         case selectProduct = "selectProduct"
         case allProduct = "allProduct"
