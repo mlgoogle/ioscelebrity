@@ -13,6 +13,14 @@ class FansSessionViewController: NIMSessionViewController {
     
     var isbool : Bool = false
     var starcode = ""
+    
+    let fansSessionConfig = FansSessionConfig()
+    
+    override func sessionConfig() -> NIMSessionConfig! {
+        
+        return fansSessionConfig
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor.init(hexString: "FAFAFA")
