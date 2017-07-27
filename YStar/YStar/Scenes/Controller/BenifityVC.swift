@@ -63,6 +63,11 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
     }
     
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     
     func setupUI() {
         
