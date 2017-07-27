@@ -128,7 +128,7 @@ extension BindBankCardVC {
             
             if (response as? BindBankModel) != nil{
                 SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: { 
-                    self?.navigationController?.popViewController(animated: true)
+                    _ = self?.navigationController?.popViewController(animated: true)
                 })
             }
             return nil

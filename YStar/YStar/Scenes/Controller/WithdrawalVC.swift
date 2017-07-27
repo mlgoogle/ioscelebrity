@@ -30,11 +30,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         
         inputMoney.delegate = self
         inputMoney.becomeFirstResponder()
-        
         requestGetBankInfo()
-        
-        // requestUseBalance()
-        
     }
     
     // 获取银行卡信息
@@ -129,7 +125,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                                 if let resultObj = responseObject as? ResultModel {
                                     if resultObj.result == 1 {
                                         SVProgressHUD.showSuccessMessage(SuccessMessage: "提现成功", ForDuration: 1.0, completion: {
-                                            self?.navigationController?.popViewController(animated: true)
+                                            _ = self?.navigationController?.popViewController(animated: true)
                                         })
                                     }
                                 }

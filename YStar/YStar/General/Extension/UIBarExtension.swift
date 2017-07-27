@@ -40,7 +40,7 @@ extension UIToolbar {
         navigationBarImageView!.isHidden = false
     }
     private func hairlineImageViewInToolbar(view: UIView) -> UIImageView? {
-        if view.isKind(of:  UIImageView()  as! AnyClass) && view.bounds.height <= 1.0 {
+        if view.isKind(of:UIImageView.self) && view.bounds.height <= 1.0 {
             return (view as! UIImageView)
         }
         let subviews = (view.subviews as [UIView])
