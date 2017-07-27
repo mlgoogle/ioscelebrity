@@ -8,28 +8,19 @@
 
 import UIKit
 import SVProgressHUD
-import DKNightVersion
 
 @UIApplicationMain
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    var sdkConfigDelegate: NTESSDKConfigDelegate?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //URL types
         appearance()
         AppDataHelper.instance().initData()
         AppServerHelper.instance().initServer()
-        
-        // 云信
-        sdkConfigDelegate = NTESSDKConfigDelegate.init()
-        NIMSDKConfig.shared().delegate = sdkConfigDelegate
-        NIMSDKConfig.shared().shouldSyncUnreadCount = true
-        AppServerHelper.instance().setupNIMSDK(sdkConfigDelegate:sdkConfigDelegate)
-        
+    
         return true
     }
 

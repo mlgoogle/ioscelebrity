@@ -31,6 +31,8 @@ protocol CommenApi {
     func Resetpwd(model: ResetPwdReqModel, complete: CompleteBlock?, error: ErrorBlock?)
     // 获取朋友圈
     func requestCircleList(requestModel:CircleListRequestModel,complete: CompleteBlock?, error: ErrorBlock?)
+    //个人朋友圈
+    func requestStarCircleList(requestModel:CircleListRequestModel,complete: CompleteBlock?, error: ErrorBlock?)
     // 评论朋友圈
     func commentCircle(requestModel:CommentCircleModel,complete: CompleteBlock?, error: ErrorBlock?)
     // 点赞朋友圈

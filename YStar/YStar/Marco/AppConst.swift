@@ -31,7 +31,7 @@ class AppConst {
     
     static let pwdKey = "yd1742653sd"
     static let imageTokenUrl = "http://122.144.169.219:3378/imageToken"
-    
+    	
     enum KVOKey: String {
         case selectProduct = "selectProduct"
         case allProduct = "allProduct"
@@ -46,7 +46,7 @@ class AppConst {
     }
     
     class Network {
-        #if true //是否是开发环境
+        #if false //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22"
         static let TcpServerPort:UInt16 = 16060
         static let TttpHostUrl:String = "http://139.224.34.22"

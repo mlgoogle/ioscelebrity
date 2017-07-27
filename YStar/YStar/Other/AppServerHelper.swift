@@ -21,19 +21,17 @@ class AppServerHelper: NSObject , WXApiDelegate{
     func initServer() {
         
         initUMengAnalytics()
+        setupNIMSDK()
     }
 
     // MARK: -云信
-    func setupNIMSDK(sdkConfigDelegate:NTESSDKConfigDelegate?) {
-        NIMSDKConfig.shared().delegate = sdkConfigDelegate
+    func setupNIMSDK() {
+
         NIMSDKConfig.shared().shouldSyncUnreadCount = true
         NIMSDK.shared().register(withAppID: "9c3a406f233dea0d355c6458fb0171b8", cerName: "")
-        NIMKit.shared().registerLayoutConfig(NTESCellLayoutConfig.self)
-        NIMCustomObject.registerCustomDecoder(NTESCustomAttachmentDecoder.init())
     }
     
-    
-    
+
     // MARK: - 友盟统计
     func initUMengAnalytics() {
         
