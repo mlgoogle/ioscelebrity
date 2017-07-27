@@ -33,6 +33,7 @@ class MeetTypeDetailVC: BaseListTableViewController {
             if let response = result as? ResultModel{
                 if response.result == 1{
                     model.status = model.status == 0 ? 1 :0
+                    self.items[indexPath.row].status = model.status == 0 ? 1 :0
                 }
             }
             return nil
