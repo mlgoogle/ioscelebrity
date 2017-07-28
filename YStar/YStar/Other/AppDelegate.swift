@@ -17,10 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //URL types
-        appearance()
         AppDataHelper.instance().initData()
         AppServerHelper.instance().initServer()
-    
         return true
     }
 
@@ -64,13 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    fileprivate func appearance() {
-        
 
-        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.dark)
-        SVProgressHUD.setMinimumDismissTimeInterval(2)
-    }
-    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.window?.endEditing(true)
     }
