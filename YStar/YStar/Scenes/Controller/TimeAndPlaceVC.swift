@@ -73,12 +73,14 @@ class TimeAndPlaceVC: BaseTableViewController,DateSelectorViewDelegate {
         }
         if indexPath.row == 1 {
             let datePickerView = DateSelectorView(delegate: self)
+            datePickerView.datePicker.minimumDate = NSDate() as Date
             startOrEnd = true
             datePickerView.showPicker()
         }
         
         if indexPath.row == 2 {
             let datePickerView = DateSelectorView(delegate: self)
+            datePickerView.datePicker.minimumDate = NSDate() as Date
             startOrEnd = false
             datePickerView.showPicker()
         }
