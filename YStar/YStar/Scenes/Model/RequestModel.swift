@@ -160,3 +160,11 @@ class ChangerMeetTypeRequest: MeetOrderListRequest{
     var type = 0
     
 }
+
+class placeAndDateRequestModel: LoginModle {
+    
+    var starcode = ShareModelHelper.instance().starCode
+    var meet_city = ""
+    var startdate = ""
+    var enddate = ""
+}

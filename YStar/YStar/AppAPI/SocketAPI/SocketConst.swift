@@ -176,6 +176,9 @@ class SocketConst: NSObject {
         // 粉丝列表
         case fansLists = 16019
         
+        // 修改约见地点时间
+        case placeAndDate = 16021
+        
     }
     
     

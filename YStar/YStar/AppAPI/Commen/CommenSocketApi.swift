@@ -9,7 +9,7 @@
 import UIKit
 
 class CommenSocketApi: BaseSocketAPI, CommenApi {
-    
+
     // MARK: - 登录(模型)
     func login(model: LoginRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet : SocketDataPacket = SocketDataPacket.init(opcode: .login, model: model)
@@ -205,6 +205,13 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     func requestFansList(model: FansListRquestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet = SocketDataPacket(opcode: .fansLists, model: model)
         startModelsRequest(packet, listName: "OrderList", modelClass: FansListModel.self, complete: complete, error: error)
+        
+    }
+    
+    // 修改约见地点时间限制
+    func requestPlaceAndDate(model: placeAndDateRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .placeAndDate, model: model)
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
         
     }
 
