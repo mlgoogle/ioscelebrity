@@ -69,5 +69,7 @@ protocol CommenApi {
     func registWYIM(model:RegisterWYIMRequestModel,complete:CompleteBlock?,error:ErrorBlock?)
     // 获取粉丝列表
     func requestFansList(model:FansListRquestModel,complete:CompleteBlock?,error:ErrorBlock?)
+    // 明星约见地点时间修改
+    func requestPlaceAndDate(model:placeAndDateRequestModel,complete:CompleteBlock?,error:ErrorBlock?)
 }
 

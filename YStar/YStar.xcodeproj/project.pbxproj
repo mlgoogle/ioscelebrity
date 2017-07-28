@@ -23,6 +23,8 @@
 		8D21977B1F273075004B5789 /* UITabBar+badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21977A1F273075004B5789 /* UITabBar+badge.swift */; };
 		8D407E561F1F52B400211E2C /* FansSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D407E551F1F52B400211E2C /* FansSessionViewController.swift */; };
 		8DA7E8A11F2196580059268B /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA7E8A01F2196580059268B /* iconfont.ttf */; };
+		8DAEF2CE1F2B07F600A85EF0 /* TimeAndPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEF2CD1F2B07F600A85EF0 /* TimeAndPlaceVC.swift */; };
+		8DAEF2D01F2B153500A85EF0 /* ChoosePlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEF2CF1F2B153500A85EF0 /* ChoosePlaceVC.swift */; };
 		8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */; };
 		8DC75D191F1DB7BA000A9BB9 /* SetPayPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */; };
 		8DC75D1C1F1DECFD000A9BB9 /* PayPwdAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */; };
@@ -285,6 +287,8 @@
 		8D21977A1F273075004B5789 /* UITabBar+badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+badge.swift"; sourceTree = "<group>"; };
 		8D407E551F1F52B400211E2C /* FansSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansSessionViewController.swift; sourceTree = "<group>"; };
 		8DA7E8A01F2196580059268B /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		8DAEF2CD1F2B07F600A85EF0 /* TimeAndPlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAndPlaceVC.swift; sourceTree = "<group>"; };
+		8DAEF2CF1F2B153500A85EF0 /* ChoosePlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceVC.swift; sourceTree = "<group>"; };
 		8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetTradePassVC.swift; sourceTree = "<group>"; };
 		8DC75D181F1DB7BA000A9BB9 /* SetPayPwdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPayPwdVC.swift; sourceTree = "<group>"; };
 		8DC75D1B1F1DECFD000A9BB9 /* PayPwdAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayPwdAlertView.swift; sourceTree = "<group>"; };
@@ -815,6 +819,8 @@
 				8DD2FC0D1F137B0C00F2FA04 /* MeetTypeDetailVC.swift */,
 				8E435F571F0B455D00FB1976 /* MeetOrderVC.swift */,
 				8DD2FC0F1F137B8600F2FA04 /* MeetOrderDetailVC.swift */,
+				8DAEF2CD1F2B07F600A85EF0 /* TimeAndPlaceVC.swift */,
+				8DAEF2CF1F2B153500A85EF0 /* ChoosePlaceVC.swift */,
 			);
 			name = Meet;
 			sourceTree = "<group>";
@@ -1978,6 +1984,7 @@
 				8E397CC91F289D2800847CCB /* M80AttributedLabel+NIMKit.m in Sources */,
 				8E8FB0B91F0AA4EA00A7B85C /* SocketDataPacket.swift in Sources */,
 				8E397D2D1F289D2800847CCB /* NIMAdvancedTeamMemberCell.m in Sources */,
+				8DAEF2CE1F2B07F600A85EF0 /* TimeAndPlaceVC.swift in Sources */,
 				8E435F501F0B44E800FB1976 /* BenifityDetailVC.swift in Sources */,
 				8E397D1B1F289D2800847CCB /* NIMSessionUnknowContentView.m in Sources */,
 				8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */,
@@ -1991,6 +1998,7 @@
 				8E397D1F1F289D2800847CCB /* NIMSessionListDefaultConfig.m in Sources */,
 				8E8FB0BF1F0AA4EA00A7B85C /* BaseNavigationController.swift in Sources */,
 				8E397CE71F289D2800847CCB /* NIMGrowingInternalTextView.m in Sources */,
+				8DAEF2D01F2B153500A85EF0 /* ChoosePlaceVC.swift in Sources */,
 				8E397CED1F289D2800847CCB /* NIMInputEmoticonManager.m in Sources */,
 				8E397D131F289D2800847CCB /* NIMSessionFileTransContentView.m in Sources */,
 				8E397CFC1F289D2800847CCB /* NIMImageContentConfig.m in Sources */,

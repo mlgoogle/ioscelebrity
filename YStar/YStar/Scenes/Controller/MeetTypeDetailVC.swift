@@ -18,6 +18,8 @@ class MeetTypeDetailVC: BaseListTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "约见类型管理"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "地点", style: .done, target: self, action: #selector(rightItemButtonClick))
     }
     
     override func didRequest() {
@@ -47,6 +49,19 @@ class MeetTypeDetailVC: BaseListTableViewController {
         return MeetTypeDetailCell.className()
     }
 
+    
+    
+    func rightItemButtonClick() {
+        // 已绑定
+        let timeAndPlaceVC = UIStoryboard.init(name:"Meet",bundle: nil).instantiateViewController(withIdentifier: "TimeAndPlaceVC") as! TimeAndPlaceVC
+        self.navigationController?.pushViewController(timeAndPlaceVC, animated: true)
+    }
+    
+    
+    
+    
+    
+    
     @IBAction func completeButtonAction(_ sender: UIButton) {
         
     }
