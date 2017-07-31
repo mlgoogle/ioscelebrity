@@ -102,8 +102,10 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let fansListModel = self.dataSource?[indexPath.row] as! FansListModel
+        
         let session = NIMSession(fansListModel.faccid, type: .P2P)
         let fansSessionVC = FansSessionViewController(session: session)
+        fansSessionVC?.fansNickName = fansListModel.nickname
         fansSessionVC?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(fansSessionVC!, animated: true)
     }
