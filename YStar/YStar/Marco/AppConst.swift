@@ -47,12 +47,12 @@ class AppConst {
     }
     
     class Network {
-        #if true //是否是开发环境
+        #if false //是否是开发环境
         static let TcpServerIP:String = "139.224.34.22"
         static let TcpServerPort:UInt16 = 16060
         static let TttpHostUrl:String = "http://139.224.34.22"
         #else
-        static let TcpServerIP:String = "122.144.169.214"
+        static let TcpServerIP:String = "tapi.smartdata-x.com"
         static let TcpServerPort:UInt16 = 16016
         static let HttpHostUrl:String = "122.144.169.214"
         #endif
