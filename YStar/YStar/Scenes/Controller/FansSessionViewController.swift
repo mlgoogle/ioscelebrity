@@ -13,6 +13,7 @@ class FansSessionViewController: NIMSessionViewController {
     
     var isbool : Bool = false
     var starcode = ""
+    var fansNickName = ""
     
     let fansSessionConfig = FansSessionConfig()
     
@@ -33,7 +34,7 @@ class FansSessionViewController: NIMSessionViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.imageWith("\u{e61a}", fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)), style: .plain, target: self, action: #selector(leftItemTapped))
         navigationItem.leftBarButtonItem?.tintColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
         navigationItem.leftItemsSupplementBackButton = false
-        titleLabel.text = starcode
+        titleLabel.text = fansNickName
         titleLabel.textColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
     }
     
