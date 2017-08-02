@@ -11,6 +11,9 @@ import SVProgressHUD
 import Alamofire
 
 class AppDataHelper: NSObject {
+    
+    var updateModel:UpdateParam?
+    
     fileprivate static var helper = AppDataHelper()
     class func instance() -> AppDataHelper{
         return helper
@@ -101,15 +104,35 @@ class AppDataHelper: NSObject {
                 
                 NIMSDK.shared().loginManager.login(phoneNum, token: token_value, completion: { (error) in
                     if error == nil {
-                        // 登陆成功
-                        print("---- 网易云信登陆成功 ----");
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
                     }
                 })
             }
             return nil
-        }) { (error) -> ()? in
+        },error: nil)
+    }
+    
+    //MARK: - 查询是否有新版本更新
+    func updateUpdateInfo() {
+        AppAPIHelper.commen().update(complete: { (response) in
+            if let model = response as? UpdateParam {
+                self.updateModel = model
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: AppConst.NoticeKey.checkUpdte.rawValue), object: nil)
+            }
             return nil
+        },error: nil)
+    }
+    
+    func checkUpdate() -> Bool {
+        let versionCode = Bundle.main.infoDictionary![AppConst.BundleInfo.CFBundleVersion.rawValue] as! String
+        if updateModel == nil {
+            return false
         }
+        if  Double(versionCode) != nil {
+            if updateModel!.newAppVersionCode >  Double(versionCode)! {
+                return true
+            }
+        }
+        return false
     }
 }

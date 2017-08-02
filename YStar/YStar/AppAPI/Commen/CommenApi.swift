@@ -71,5 +71,7 @@ protocol CommenApi {
     func requestFansList(model:FansListRquestModel,complete:CompleteBlock?,error:ErrorBlock?)
     // 明星约见地点时间修改
     func requestPlaceAndDate(model:placeAndDateRequestModel,complete:CompleteBlock?,error:ErrorBlock?)
+    // 版本更新提醒
+    func update(complete: CompleteBlock?, error: ErrorBlock?)
 }
 

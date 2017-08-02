@@ -31,6 +31,8 @@ class BaseTabbarViewController: UITabBarController,NIMLoginManagerDelegate,NIMCo
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(WYIMLoginSuccess( _ :)), name: Notification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil)
+    
+        NotificationCenter.default.addObserver(self, selector: #selector(showUpdateInfo), name: NSNotification.Name(rawValue: AppConst.NoticeKey.checkUpdte.rawValue), object: nil)
     }
     
     func WYIMLoginSuccess(_ IMloginSuccess : NSNotification)  {
