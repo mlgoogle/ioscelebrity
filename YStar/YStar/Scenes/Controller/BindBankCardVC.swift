@@ -125,12 +125,20 @@ extension BindBankCardVC {
         model.bankUsername = starNameTextField.text!
         model.account = starCardNumTextField.text!
         AppAPIHelper.commen().bindCard(model: model, complete: {[weak self] (response) -> ()? in
-            
-            if (response as? BindBankModel) != nil{
-                SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: { 
-                    _ = self?.navigationController?.popViewController(animated: true)
-                })
+            if let objects = response as? BindBankModel {
+                if objects.cardNO.length() != 0 {
+                    SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: {
+                         _ = self?.navigationController?.popViewController(animated: true)
+                    })
+                } else {
+                    SVProgressHUD.showErrorMessage(ErrorMessage: "绑定失败", ForDuration: 2.0, completion: nil)
+                }
             }
+//            if (response as? BindBankModel) != nil{
+//                SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: { 
+//                    _ = self?.navigationController?.popViewController(animated: true)
+//                })
+//            }
             return nil
         }, error: errorBlockFunc())
         
