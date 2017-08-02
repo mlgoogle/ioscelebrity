@@ -72,7 +72,15 @@ extension UIViewController {
         }
     }
     
-    
+    func showUpdateInfo() {
+        if AppDataHelper.instance().checkUpdate() {
+            let homeStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+            let controller = homeStoryboard.instantiateViewController(withIdentifier: UpdateVC.className()) as! UpdateVC
+            controller.modalPresentationStyle = .custom
+            controller.modalTransitionStyle = .crossDissolve
+            present(controller, animated: true, completion:nil)
+        }
+    }
     
     //退出登录
     func userLogout() {

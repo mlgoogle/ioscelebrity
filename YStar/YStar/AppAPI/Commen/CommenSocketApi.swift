@@ -212,7 +212,12 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     func requestPlaceAndDate(model: placeAndDateRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
         let packet = SocketDataPacket(opcode: .placeAndDate, model: model)
         startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
-        
+    }
+    
+    // 版本更新提醒
+    func update(complete: CompleteBlock?, error: ErrorBlock?){
+        let packet: SocketDataPacket = SocketDataPacket.init(opcode: .update, dict: ["ttype": 2 as AnyObject], type: .user)
+        startModelRequest(packet, modelClass: UpdateParam.self, complete: complete, error: error)
     }
 
 }
