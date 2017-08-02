@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */; };
 		8D0090ED1F0DE64000AB9C05 /* BindBankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */; };
 		8D0090EF1F0E11BB00AB9C05 /* Benifity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */; };
 		8D0090F21F0E14E100AB9C05 /* WithDrawaListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */; };
@@ -40,8 +39,6 @@
 		8DE81DBD1F204F9A007656BC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE81DBC1F204F9A007656BC /* AlertViewController.swift */; };
 		8DE975D61F29D73800541E07 /* FansSessionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE975D51F29D73800541E07 /* FansSessionConfig.swift */; };
 		8DE975D81F29E5F300541E07 /* Bugout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975D71F29E5F300541E07 /* Bugout.framework */; };
-		8DE975DA1F29E62300541E07 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975D91F29E62300541E07 /* CoreLocation.framework */; };
-		8DE975DC1F29E62A00541E07 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DB1F29E62A00541E07 /* ImageIO.framework */; };
 		8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DD1F29E63800541E07 /* CoreMotion.framework */; };
 		8DE975E01F29E64100541E07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DF1F29E64100541E07 /* Security.framework */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
@@ -200,6 +197,7 @@
 		8E44559F1F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455971F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift */; };
 		8E4455A01F19FE0E0059CEEC /* HHEmojiManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455981F19FE0E0059CEEC /* HHEmojiManage.swift */; };
 		8E4455A11F19FE0E0059CEEC /* HHImageKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455991F19FE0E0059CEEC /* HHImageKeyboardCell.swift */; };
+		8E73BEB71F2F59AE008E21EC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DB1F29E62A00541E07 /* ImageIO.framework */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
 		8E8FB0B61F0AA4EA00A7B85C /* SocketConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB0511F0AA4EA00A7B85C /* SocketConst.swift */; };
@@ -243,6 +241,7 @@
 		8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */; };
 		8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */; };
 		8E94A0E81F21D18000731757 /* VCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94A0E71F21D18000731757 /* VCTestCase.swift */; };
+		8EAE0AB61F31F2FA007B8AF2 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */; };
 		8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */; };
 		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
 		8EFEF56E1F13984A00AD9513 /* YStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEF56D1F13984A00AD9513 /* YStarTests.swift */; };
@@ -646,6 +645,7 @@
 		8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorcode.plist; sourceTree = "<group>"; };
 		8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testsocket.plist; sourceTree = "<group>"; };
 		8E94A0E71F21D18000731757 /* VCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTestCase.swift; sourceTree = "<group>"; };
+		8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 		8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTransition.swift; sourceTree = "<group>"; };
 		8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		8EFEF56B1F13984A00AD9513 /* YStarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YStarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -668,8 +668,10 @@
 		BF87C3731E023A180074D696 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BFA9FAB01DF6AEAE00E2A67C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Pods/Fabric/Fabric.framework; sourceTree = "<group>"; };
 		BFA9FAB21DF6AEBF00E2A67C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Pods/Crashlytics/Crashlytics.framework; sourceTree = "<group>"; };
+
 		BFC81E9D1DFA9E6600ADC291 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = "Pods/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.1.5/UMMobClick.framework"; sourceTree = "<group>"; };
 		C91D908A1E2E464C1C249CF5 /* Pods_YStarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YStarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+
 		E225FA6D7F593209964802D3 /* Pods_YStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F406DC4604C979FC9CD92E45 /* Pods-YStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStar.release.xcconfig"; path = "Pods/Target Support Files/Pods-YStar/Pods-YStar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -689,11 +691,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E73BEB71F2F59AE008E21EC /* ImageIO.framework in Frameworks */,
 				8DE975E01F29E64100541E07 /* Security.framework in Frameworks */,
 				8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */,
 				8D1CC71F1F0BAE57009B1A1B /* AudioToolbox.framework in Frameworks */,
-				8DE975DC1F29E62A00541E07 /* ImageIO.framework in Frameworks */,
-				8DE975DA1F29E62300541E07 /* CoreLocation.framework in Frameworks */,
 				A0EA2D531E481BD600DD3158 /* SystemConfiguration.framework in Frameworks */,
 				BF87C3741E023A180074D696 /* CoreTelephony.framework in Frameworks */,
 				A0EA2D551E481BF900DD3158 /* libz.tbd in Frameworks */,
@@ -710,7 +711,6 @@
 				BFA9FAB31DF6AEBF00E2A67C /* Crashlytics.framework in Frameworks */,
 				BFA9FAB11DF6AEAE00E2A67C /* Fabric.framework in Frameworks */,
 				B08673461DE5C4C0008DD8A1 /* libstdc++.tbd in Frameworks */,
-				2FFBC4EC1DF8EF190039A0E6 /* MapKit.framework in Frameworks */,
 				8E8FB0D21F0AA4EA00A7B85C /* OEZCommSDK.framework in Frameworks */,
 				BF9EF4285D4C60EDFE739685 /* Pods_YStar.framework in Frameworks */,
 			);
@@ -739,7 +739,6 @@
 				A0EA2D4C1E481B8000DD3158 /* paysdk */,
 				BF87C3731E023A180074D696 /* CoreTelephony.framework */,
 				2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */,
-				BFC81E9D1DFA9E6600ADC291 /* UMMobClick.framework */,
 				B02DB25B1DF985B70044F910 /* libsqlite3.tbd */,
 				BFA9FAB21DF6AEBF00E2A67C /* Crashlytics.framework */,
 				BFA9FAB01DF6AEAE00E2A67C /* Fabric.framework */,
@@ -1367,6 +1366,7 @@
 		8E435F441F0B440B00FB1976 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */,
 				8E36FC011F14B116007AEFA6 /* Login */,
 				8E36FC001F14B10A007AEFA6 /* Benifity */,
 				8E36FBFF1F14B0FF007AEFA6 /* Meet */,
@@ -1820,7 +1820,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7216018706741901D5FE5A13 /* [CP] Copy Pods Resources */ = {
@@ -1946,6 +1946,7 @@
 				8E397CD21F289D2800847CCB /* NIMKitColorButtonCell.m in Sources */,
 				8E397D3B1F289D2800847CCB /* NIMPinyinConverter.m in Sources */,
 				8E44558C1F19F7A80059CEEC /* CommenSocketApi.swift in Sources */,
+				8EAE0AB61F31F2FA007B8AF2 /* UpdateVC.swift in Sources */,
 				8E397CDE1F289D2800847CCB /* NIMPageView.m in Sources */,
 				8E397CFF1F289D2800847CCB /* NIMRobotContentConfig.m in Sources */,
 				8E44559F1F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift in Sources */,
