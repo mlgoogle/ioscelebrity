@@ -45,7 +45,8 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkLogin()
+//        checkLogin()
+        if isLogin() {}
         
         setupUI()
         
@@ -231,13 +232,30 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
     }
     
+    // MARK: - 注销账号
     func ExitleftButtonClick() {
-
-         AppDataHelper.instance().clearUserInfo()
         
-         checkLogin()
+        logout()
     }
     
+    func logout() {
+        
+        let alertController = UIAlertController(title: "提示", message: "你确定要退出吗？", preferredStyle:.alert)
+        // 设置2个UIAlertAction
+        let cancelAction = UIAlertAction(title: "取消", style:.cancel, handler: nil)
+        let completeAction = UIAlertAction(title: "确定", style:.default) { (UIAlertAction) in
+            // 退出
+            AppDataHelper.instance().clearUserInfo()
+            self.checkLogin()
+        }
+        
+        // 添加
+        alertController.addAction(cancelAction)
+        alertController.addAction(completeAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+
     // MARK: - 点击了提现
     @IBAction func rightItemAction(_ sender: UIBarButtonItem) {
 

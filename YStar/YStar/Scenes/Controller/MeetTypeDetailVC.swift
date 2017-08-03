@@ -52,7 +52,7 @@ class MeetTypeDetailVC: BaseListTableViewController {
     
     
     func rightItemButtonClick() {
-        // 已绑定
+        // 选择时间地点
         let timeAndPlaceVC = UIStoryboard.init(name:"Meet",bundle: nil).instantiateViewController(withIdentifier: "TimeAndPlaceVC") as! TimeAndPlaceVC
         self.navigationController?.pushViewController(timeAndPlaceVC, animated: true)
     }

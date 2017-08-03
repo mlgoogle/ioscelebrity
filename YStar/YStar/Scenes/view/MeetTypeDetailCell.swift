@@ -32,7 +32,8 @@ class MeetTypeDetailCell: OEZTableViewCell {
             meetTypeLabel.text = model.name
             meetTypePriceLabel.text = "时间消耗：\(model.price)秒"
             let colorKey = model.status == 0 ? UIColor.init(rgbHex: 0x999999)  : UIColor.init(rgbHex: 0xfb9938)
-            meetTypeIsSelectedImageView.image = UIImage.imageWith(AppConst.iconFontName.selectIcon.rawValue, fontSize: CGSize.init(width: 18, height: 18), fontColor: colorKey)
+//            meetTypeIsSelectedImageView.image = UIImage.imageWith(AppConst.iconFontName.selectIcon.rawValue, fontSize: CGSize.init(width: 18, height: 18), fontColor: colorKey)
+            meetTypeIsSelectedImageView.image = model.status == 0 ? UIImage.imageWith(AppConst.iconFontName.notselectIcon.rawValue, fontSize: CGSize.init(width: 18, height: 18), fontColor: colorKey) : UIImage.imageWith(AppConst.iconFontName.selectIcon.rawValue, fontSize: CGSize.init(width: 18, height: 18), fontColor: colorKey)
         }
     }
     
