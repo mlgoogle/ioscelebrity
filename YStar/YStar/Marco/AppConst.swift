@@ -98,7 +98,10 @@ class AppConst {
         case dealTotalIcon = "\u{e604}"
         case timeTotalIcon = "\u{e603}"
         case priceTotalIcon = "\u{e601}"
-        case selectIcon = "\u{e623}"
+//        case selectIcon = "\u{e623}"
+//        case selectIcon = "\u{e65f}"
+        case selectIcon = "\u{e660}"
+        case notselectIcon = "\u{e65f}"
         
     }
     

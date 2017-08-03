@@ -33,7 +33,7 @@ class MeetOrderDetailVC: BaseTableViewController {
         nameLabel.text = model.nickname
         timeLabel.text = "时间： \(model.appoint_time)"
         locationLabel.text = "地点： \(model.meet_city)"
-        typeLabel.text = "约见类型： \(model.meet_type)"
+        typeLabel.text = "约见类型： \(model.name)"
         contentLabel.text = "约见备注： \(model.comment)"
         agreeButton.isHidden = model.meet_type == 4
         

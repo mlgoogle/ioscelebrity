@@ -21,7 +21,7 @@
 		8D1CC7241F0BAE74009B1A1B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7231F0BAE74009B1A1B /* libsqlite3.0.tbd */; };
 		8D21977B1F273075004B5789 /* UITabBar+badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D21977A1F273075004B5789 /* UITabBar+badge.swift */; };
 		8D407E561F1F52B400211E2C /* FansSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D407E551F1F52B400211E2C /* FansSessionViewController.swift */; };
-		8DA7E8A11F2196580059268B /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8DA7E8A01F2196580059268B /* iconfont.ttf */; };
+		8D4AE2451F32F75E00EE45F6 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D4AE2441F32F75E00EE45F6 /* iconfont.ttf */; };
 		8DAEF2CE1F2B07F600A85EF0 /* TimeAndPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEF2CD1F2B07F600A85EF0 /* TimeAndPlaceVC.swift */; };
 		8DAEF2D01F2B153500A85EF0 /* ChoosePlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEF2CF1F2B153500A85EF0 /* ChoosePlaceVC.swift */; };
 		8DC75D171F1DA238000A9BB9 /* ResetTradePassVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */; };
@@ -258,6 +258,7 @@
 		BF9EF4285D4C60EDFE739685 /* Pods_YStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E225FA6D7F593209964802D3 /* Pods_YStar.framework */; };
 		BFA9FAB11DF6AEAE00E2A67C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA9FAB01DF6AEAE00E2A67C /* Fabric.framework */; };
 		BFA9FAB31DF6AEBF00E2A67C /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA9FAB21DF6AEBF00E2A67C /* Crashlytics.framework */; };
+		C7F167874F4D19DC57740929 /* Pods_YStarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C91D908A1E2E464C1C249CF5 /* Pods_YStarTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -272,6 +273,7 @@
 
 /* Begin PBXFileReference section */
 		2FFBC4EB1DF8EF190039A0E6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3387FB1E78DE619ED41F37C6 /* Pods-YStarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D0090EC1F0DE64000AB9C05 /* BindBankCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindBankCardVC.swift; sourceTree = "<group>"; };
 		8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Benifity.storyboard; sourceTree = "<group>"; };
 		8D0090F01F0E14E100AB9C05 /* WithDrawaListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WithDrawaListVC.swift; sourceTree = "<group>"; };
@@ -285,7 +287,7 @@
 		8D1CC7231F0BAE74009B1A1B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		8D21977A1F273075004B5789 /* UITabBar+badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+badge.swift"; sourceTree = "<group>"; };
 		8D407E551F1F52B400211E2C /* FansSessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansSessionViewController.swift; sourceTree = "<group>"; };
-		8DA7E8A01F2196580059268B /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		8D4AE2441F32F75E00EE45F6 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		8DAEF2CD1F2B07F600A85EF0 /* TimeAndPlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAndPlaceVC.swift; sourceTree = "<group>"; };
 		8DAEF2CF1F2B153500A85EF0 /* ChoosePlaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePlaceVC.swift; sourceTree = "<group>"; };
 		8DC75D161F1DA238000A9BB9 /* ResetTradePassVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetTradePassVC.swift; sourceTree = "<group>"; };
@@ -661,10 +663,12 @@
 		B08673431DE5C4B6008DD8A1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B08673451DE5C4C0008DD8A1 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		B0CF59DD1DE5BEC300C40C9C /* YStar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YStar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4CB0F45ADF0DB486B728417 /* Pods-YStarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests.release.xcconfig"; sourceTree = "<group>"; };
 		B78D9EE8CD4277E28B8C22A1 /* Pods-YStar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YStar/Pods-YStar.debug.xcconfig"; sourceTree = "<group>"; };
 		BF87C3731E023A180074D696 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		BFA9FAB01DF6AEAE00E2A67C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = Pods/Fabric/Fabric.framework; sourceTree = "<group>"; };
 		BFA9FAB21DF6AEBF00E2A67C /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = Pods/Crashlytics/Crashlytics.framework; sourceTree = "<group>"; };
+		C91D908A1E2E464C1C249CF5 /* Pods_YStarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YStarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E225FA6D7F593209964802D3 /* Pods_YStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F406DC4604C979FC9CD92E45 /* Pods-YStar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YStar.release.xcconfig"; path = "Pods/Target Support Files/Pods-YStar/Pods-YStar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -676,6 +680,7 @@
 			files = (
 				8EFEF57A1F139E6300AD9513 /* UMMobClick.framework in Frameworks */,
 				8EFEF5751F139D7100AD9513 /* OEZCommSDK.framework in Frameworks */,
+				C7F167874F4D19DC57740929 /* Pods_YStarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +742,7 @@
 				B08673451DE5C4C0008DD8A1 /* libstdc++.tbd */,
 				B08673431DE5C4B6008DD8A1 /* libc++.tbd */,
 				E225FA6D7F593209964802D3 /* Pods_YStar.framework */,
+				C91D908A1E2E464C1C249CF5 /* Pods_YStarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -747,6 +753,8 @@
 				A02722AC1E49C23000801A44 /* DKColorTable.txt */,
 				B78D9EE8CD4277E28B8C22A1 /* Pods-YStar.debug.xcconfig */,
 				F406DC4604C979FC9CD92E45 /* Pods-YStar.release.xcconfig */,
+				3387FB1E78DE619ED41F37C6 /* Pods-YStarTests.debug.xcconfig */,
+				B4CB0F45ADF0DB486B728417 /* Pods-YStarTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1568,7 +1576,7 @@
 		8E8FB0881F0AA4EA00A7B85C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				8DA7E8A01F2196580059268B /* iconfont.ttf */,
+				8D4AE2441F32F75E00EE45F6 /* iconfont.ttf */,
 				8E338DFE1F0E0C4D006D3C68 /* storyboard */,
 				8E8FB0891F0AA4EA00A7B85C /* Assets.xcassets */,
 				8E8FB0971F0AA4EA00A7B85C /* plist */,
@@ -1648,9 +1656,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8EFEF5741F13984A00AD9513 /* Build configuration list for PBXNativeTarget "YStarTests" */;
 			buildPhases = (
+				D55B825BAB8D61DC7414456F /* [CP] Check Pods Manifest.lock */,
 				8EFEF5671F13984A00AD9513 /* Sources */,
 				8EFEF5681F13984A00AD9513 /* Frameworks */,
 				8EFEF5691F13984A00AD9513 /* Resources */,
+				726A6F7048B1D3FCBD27EC1D /* [CP] Embed Pods Frameworks */,
+				886C3B8FD819E979094D3B22 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1767,9 +1778,9 @@
 				8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */,
 				8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */,
 				8E338E061F0E0C4D006D3C68 /* Meet.storyboard in Resources */,
-				8DA7E8A11F2196580059268B /* iconfont.ttf in Resources */,
 				8E44559C1F19FE0E0059CEEC /* EmojisList.plist in Resources */,
 				8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */,
+				8D4AE2451F32F75E00EE45F6 /* iconfont.ttf in Resources */,
 				8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */,
 				A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */,
 				8E8FB0DC1F0AA4EA00A7B85C /* Assets.xcassets in Resources */,
@@ -1824,6 +1835,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YStar/Pods-YStar-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		726A6F7048B1D3FCBD27EC1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		886C3B8FD819E979094D3B22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BFEC3F231DF6A73600B36A0E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1836,6 +1877,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 13b0dd85b007ad78249b02fc26fa3972dff8da79 09fbffcee88c3bfa1086819566cdaf4b4c0f451fe57b9699cd9525804778308d";
+		};
+		D55B825BAB8D61DC7414456F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2072,6 +2128,7 @@
 /* Begin XCBuildConfiguration section */
 		8EFEF5721F13984A00AD9513 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3387FB1E78DE619ED41F37C6 /* Pods-YStarTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2099,6 +2156,7 @@
 		};
 		8EFEF5731F13984A00AD9513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4CB0F45ADF0DB486B728417 /* Pods-YStarTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;

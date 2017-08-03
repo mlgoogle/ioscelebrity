@@ -37,7 +37,7 @@ target 'YStar' do
     pod 'UMengAnalytics'
     pod 'YYText'
     pod 'MJRefresh', '~> 3.1.12'
-#    target 'YStarTests' do
-#        inherit! :search_paths
-#    end
+    target 'YStarTests' do
+        inherit! :search_paths
+    end
 end
