@@ -310,7 +310,7 @@
             <objects>
                 <navigationController id="4ie-fC-b5d" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="粉丝管理" image="user_item_normal" selectedImage="user_item_selected" id="ZhL-fm-8fo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="48n-VO-vM3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="48n-VO-vM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -516,6 +516,7 @@
                                             </constraints>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="Jk6-bb-byN" firstAttribute="top" secondItem="Qyp-Q4-vSR" secondAttribute="top" id="Mpp-lz-YCD"/>
                                         <constraint firstItem="Jk6-bb-byN" firstAttribute="leading" secondItem="Qyp-Q4-vSR" secondAttribute="leading" constant="64" id="NBG-3k-Ff0"/>
@@ -523,6 +524,7 @@
                                         <constraint firstAttribute="trailing" secondItem="Jk6-bb-byN" secondAttribute="trailing" constant="16" id="jzR-iT-DS1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="iconImage" destination="d0f-0B-GIB" id="Kxn-xH-ika"/>
                                     <outlet property="thumbUpHeight" destination="RMZ-Qj-Tmp" id="TDP-1w-g5x"/>
@@ -574,6 +576,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="N8f-zW-cBg" firstAttribute="leading" secondItem="fCZ-zI-iwb" secondAttribute="leading" constant="64" id="DxR-zg-P4U"/>
                                         <constraint firstAttribute="trailing" secondItem="N8f-zW-cBg" secondAttribute="trailing" constant="16" id="K5b-fG-yc0"/>
@@ -581,6 +584,7 @@
                                         <constraint firstAttribute="bottom" secondItem="N8f-zW-cBg" secondAttribute="bottom" id="e8d-IY-AaY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="commentHeight" destination="lMk-36-opU" id="WxQ-U2-2rO"/>
                                     <outlet property="commentLabel" destination="OOl-A1-DrY" id="yst-SQ-V5z"/>
