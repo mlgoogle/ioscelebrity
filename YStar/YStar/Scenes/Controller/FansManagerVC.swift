@@ -25,10 +25,16 @@ class FansManagerVC: BaseTableViewController {
     
     @IBAction func chatOrNewsBtnTapped(_ sender: UIButton) {
     
-        lastBtn?.isSelected = false
-        lastBtn?.backgroundColor = UIColor.clear
-        sender.backgroundColor = UIColor.init(rgbHex: 0xececec)
-        lastBtn = sender
+//        lastBtn?.isSelected = false
+//        lastBtn?.backgroundColor = UIColor.clear
+//        sender.backgroundColor = UIColor.init(rgbHex: 0xececec)
+//        lastBtn = sender
+        
+        self.lastBtn?.isSelected = false
+        self.lastBtn?.backgroundColor = UIColor.clear
+        sender.backgroundColor = UIColor.init(rgbHex: 0xECECEC)
+        self.lastBtn = sender
+        
         contentSV.setContentOffset(CGPoint.init(x: kScreenWidth*CGFloat(sender.tag-100), y: 0), animated: true)
         contentSV.isPagingEnabled = true
     }

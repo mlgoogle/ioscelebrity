@@ -414,6 +414,24 @@ class APITestCase: XCTestCase {
         waitForExpectations(timeout: 15, handler: nil)
     }
     
+    // MARK: - 约见地点时间修改
+    func testFixTimaAndPlace() {
+        let exception = expectation(description: "测试约见时间地点修改")
+        let param = placeAndDateRequestModel()
+        param.meet_city = "上海市"
+        param.startdate = "2017-08-01"
+        param.enddate = "2017-08-31"
+        AppAPIHelper.commen().requestPlaceAndDate(model: param, complete: { (result) -> ()? in
+            if let model = result as? ResultModel {
+                if model.result == 1 {
+                    exception.fulfill()
+                }
+            }
+            return nil
+        }, error: nil)
+        waitForExpectations(timeout: 15, handler: nil)
+    }
+
     //  MARK: - 性能测试：测试登录功能和Add方法性能表现
     func testPerformanceExample() {
         // This is an example of a performance test case.

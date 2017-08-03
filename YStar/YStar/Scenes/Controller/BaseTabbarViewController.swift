@@ -17,7 +17,8 @@ class BaseTabbarViewController: UITabBarController,NIMLoginManagerDelegate,NIMCo
         super.viewDidLoad()
         
         let storyboardNames = ["Benifity","Fans","Meet"]
-        let itemIconNames = ["\u{e651}","\u{e60e}","\u{e60b}"]
+        
+        let itemIconNames = ["\u{e65e}","\u{e65b}","\u{e609}"]
         let titles = ["收益管理","粉丝管理","约见管理"]
         
         for (index, name) in storyboardNames.enumerated() {
