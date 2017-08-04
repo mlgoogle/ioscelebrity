@@ -241,6 +241,7 @@
 		8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */; };
 		8E8FB0E21F0AA4EA00A7B85C /* testsocket.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */; };
 		8E94A0E81F21D18000731757 /* VCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94A0E71F21D18000731757 /* VCTestCase.swift */; };
+		8E99C78D1F344BEA00ED1EC5 /* PhotoBrowserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E99C78C1F344BEA00ED1EC5 /* PhotoBrowserVC.swift */; };
 		8EAE0AB61F31F2FA007B8AF2 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */; };
 		8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */; };
 		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
@@ -645,6 +646,7 @@
 		8E8FB09A1F0AA4EA00A7B85C /* errorcode.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = errorcode.plist; sourceTree = "<group>"; };
 		8E8FB09B1F0AA4EA00A7B85C /* testsocket.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = testsocket.plist; sourceTree = "<group>"; };
 		8E94A0E71F21D18000731757 /* VCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTestCase.swift; sourceTree = "<group>"; };
+		8E99C78C1F344BEA00ED1EC5 /* PhotoBrowserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserVC.swift; sourceTree = "<group>"; };
 		8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 		8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTransition.swift; sourceTree = "<group>"; };
 		8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
@@ -1363,7 +1365,7 @@
 		8E435F441F0B440B00FB1976 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */,
+				8E99C78B1F344BCE00ED1EC5 /* Base */,
 				8E36FC011F14B116007AEFA6 /* Login */,
 				8E36FC001F14B10A007AEFA6 /* Benifity */,
 				8E36FBFF1F14B0FF007AEFA6 /* Meet */,
@@ -1609,6 +1611,15 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		8E99C78B1F344BCE00ED1EC5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8E99C78C1F344BEA00ED1EC5 /* PhotoBrowserVC.swift */,
+				8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
 		8EFEF56C1F13984A00AD9513 /* YStarTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -1738,6 +1749,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B0CF59D41DE5BEC300C40C9C;
 			productRefGroup = B0CF59DE1DE5BEC300C40C9C /* Products */;
@@ -1960,6 +1972,7 @@
 				8E435F5E1F0B4ACE00FB1976 /* ResponseModel.swift in Sources */,
 				8E8FB0C51F0AA4EA00A7B85C /* NSObject+GCD.swift in Sources */,
 				8E397D331F289D2800847CCB /* NIMKitDevice.m in Sources */,
+				8E99C78D1F344BEA00ED1EC5 /* PhotoBrowserVC.swift in Sources */,
 				8E397CF11F289D2800847CCB /* NIMInputToolBar.m in Sources */,
 				8E36FE4C1F15CE44007AEFA6 /* yRuntime.swift in Sources */,
 				8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */,
@@ -2274,6 +2287,7 @@
 			baseConfigurationReference = B78D9EE8CD4277E28B8C22A1 /* Pods-YStar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yong ming lu (FD5S65ADL4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = GED83X9MRE;
@@ -2287,6 +2301,17 @@
 					"$(PROJECT_DIR)/YStar/Library",
 					"$(PROJECT_DIR)/Pods/",
 					"$(PROJECT_DIR)/Pods/NIMSDK",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Library",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Marco",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/AliPay",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Crashlytics",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Crashlytics/iOS",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Fabric",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Fabric/iOS",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/NIMSDK_LITE/NIMSDK",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.2.5",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDK",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialUI",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2300,6 +2325,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YStar/Library/WeChatSDK1.7.4",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Library/WeChatSDK1.7.4",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Resource/alipay",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/GTSDK",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/NIMSDK_LITE/NIMSDK/Libs",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Realm/core",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDKPlugin",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -2326,6 +2360,7 @@
 			baseConfigurationReference = F406DC4604C979FC9CD92E45 /* Pods-YStar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yong ming lu (FD5S65ADL4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
@@ -2335,6 +2370,17 @@
 					"$(PROJECT_DIR)/Pods/Fabric",
 					"$(PROJECT_DIR)/Pods/Crashlytics",
 					"$(PROJECT_DIR)/YStar/Library",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Library",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Marco",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/AliPay",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Crashlytics",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Crashlytics/iOS",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Fabric",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Fabric/iOS",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/NIMSDK_LITE/NIMSDK",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.2.5",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDK",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialUI",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2348,6 +2394,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/YStar/Library/WeChatSDK1.7.4",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Library/WeChatSDK1.7.4",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/iOSStar/Resource/alipay",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/GTSDK",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/NIMSDK_LITE/NIMSDK/Libs",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/Realm/core",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/QQ",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/Sina",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/WeChat",
+					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDKPlugin",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
