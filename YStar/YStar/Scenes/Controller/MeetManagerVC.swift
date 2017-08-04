@@ -27,6 +27,8 @@ class MeetManagerVC: BaseTableViewController {
 
         setupUI()
         
+        self.tableView.isScrollEnabled = false
+        
         // 默认第一个[meetTypeButton]
         titleViewButtonAction(meetTypeButton)
         

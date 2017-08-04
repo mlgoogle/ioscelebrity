@@ -104,6 +104,9 @@ class AppDataHelper: NSObject {
                 
                 NIMSDK.shared().loginManager.login(phoneNum, token: token_value, completion: { (error) in
                     if error == nil {
+                        
+                        print("token登陆成功")
+                        
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
                     }
                 })
