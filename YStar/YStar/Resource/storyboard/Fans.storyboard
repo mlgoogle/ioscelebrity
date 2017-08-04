@@ -157,7 +157,7 @@
                             <outlet property="delegate" destination="GzK-Gs-cDK" id="gUs-1B-LBX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="粉丝管理" id="wmh-56-LYA">
+                    <navigationItem key="navigationItem" title="联系粉丝" id="wmh-56-LYA">
                         <barButtonItem key="rightBarButtonItem" title="发布动态" id="DqC-Pa-vaZ">
                             <connections>
                                 <segue destination="4nS-Kn-QaH" kind="push" id="thh-ze-Jqy"/>

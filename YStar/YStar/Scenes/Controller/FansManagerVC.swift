@@ -18,18 +18,16 @@ class FansManagerVC: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "粉丝列表"
+        
         initUI()
+        
+        self.tableView.isScrollEnabled = false
+        
         chatOrNewsBtnTapped(chatBtn)
     }
     
     @IBAction func chatOrNewsBtnTapped(_ sender: UIButton) {
     
-//        lastBtn?.isSelected = false
-//        lastBtn?.backgroundColor = UIColor.clear
-//        sender.backgroundColor = UIColor.init(rgbHex: 0xececec)
-//        lastBtn = sender
-        
         self.lastBtn?.isSelected = false
         self.lastBtn?.backgroundColor = UIColor.clear
         sender.backgroundColor = UIColor.init(rgbHex: 0xECECEC)
