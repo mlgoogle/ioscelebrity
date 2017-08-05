@@ -27,6 +27,9 @@ class MeetTypeVC: BaseTableViewController {
     
     func requestAllTypes() {
         let param = MeetTypesRequest()
+        if self.starOrders != nil {
+            self.starOrders.removeAll()
+        }
         AppAPIHelper.commen().allOrderTypes(requestModel: param, complete: { [weak self](result) in
             if let models = result as? [MeetTypeModel]{
                 self?.allOrders = models
@@ -54,9 +57,35 @@ class MeetTypeVC: BaseTableViewController {
                     }
                 }
                 self?.typeCell.setMeetType(models)
+                self?.tableView.reloadData()
             }
             return nil
         }, error: nil)
+        
+//        let param = MeetTypesRequest()
+//        AppAPIHelper.commen().starOrderTypes(requestModel: param, complete: {[weak self] (result) -> ()? in
+//            if let models = result as? [MeetTypeModel] {
+//                self?.starOrders = models
+//                for model in models {
+//                    if let index = self?.ordersDic[model.name] {
+//                        if let order = self?.allOrders[index] {
+//                            order.status = 1
+//                            model.showpic_url = order.showpic_url
+//                            model.price = order.price
+//                        }
+//                    }
+//                }
+//                self?.typeCell.setMeetType(models)
+//                self?.tableView.reloadData()
+//                
+//            }
+//            return nil
+//        }) { (error) -> ()? in
+//            self.didRequestError(error)
+//            self.starOrders.removeAll()
+//            self.tableView.reloadData()
+//            return nil
+//        }
     }
     
     @IBAction func AddMeetTypeAction(_ sender: UIButton) {

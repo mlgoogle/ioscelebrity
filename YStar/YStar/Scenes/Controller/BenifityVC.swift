@@ -116,7 +116,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         let model = EarningRequestModel()
         model.stardate = beginDateInt
         model.enddate = endDateInt
-        
         // model.stardate = 20170601
         // model.enddate = 20170631
         
