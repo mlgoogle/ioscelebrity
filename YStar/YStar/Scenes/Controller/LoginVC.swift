@@ -112,10 +112,9 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                 
                 NIMSDK.shared().loginManager.login(phoneNum!, token: token_value, completion: { (error) in
                     if error == nil {
-                        // 登陆成功
-                        print(" loginVc---- 登陆成功 ----")
-                        
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
+                    }else{
+                        print(error)
                     }
             })
         }

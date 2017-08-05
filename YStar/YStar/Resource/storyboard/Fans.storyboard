@@ -39,30 +39,28 @@
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kKj-6M-iBd">
-                                            <rect key="frame" x="334" y="8" width="29" height="24"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="29" id="I1c-WM-oKf"/>
-                                                <constraint firstAttribute="height" constant="24" id="X8G-kl-DfG"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99+" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRE-qw-Qs8">
-                                            <rect key="frame" x="339" y="3" width="24" height="15"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  0  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRE-qw-Qs8">
+                                            <rect key="frame" x="329.5" y="13" width="21.5" height="15"/>
+                                            <color key="backgroundColor" red="0.63412415981292725" green="0.23899871110916138" blue="0.22655031085014343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" red="0.5490196078431373" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="kKj-6M-iBd" firstAttribute="top" secondItem="cRE-qw-Qs8" secondAttribute="top" constant="5" id="25e-mc-5vg"/>
                                         <constraint firstItem="2a1-p6-cPb" firstAttribute="leading" secondItem="K5G-Gu-aKm" secondAttribute="leading" constant="12" id="H0K-yO-jd1"/>
                                         <constraint firstItem="9ke-oR-Z32" firstAttribute="leading" secondItem="2a1-p6-cPb" secondAttribute="trailing" constant="12" id="If6-RY-W2D"/>
+                                        <constraint firstItem="cRE-qw-Qs8" firstAttribute="centerY" secondItem="9ke-oR-Z32" secondAttribute="centerY" id="J2o-Bg-f5j"/>
                                         <constraint firstItem="2a1-p6-cPb" firstAttribute="top" secondItem="K5G-Gu-aKm" secondAttribute="top" id="JbC-bn-Qkw"/>
                                         <constraint firstItem="9ke-oR-Z32" firstAttribute="centerY" secondItem="2a1-p6-cPb" secondAttribute="centerY" id="Oqu-Bp-hmq"/>
-                                        <constraint firstAttribute="trailing" secondItem="kKj-6M-iBd" secondAttribute="trailing" constant="12" id="fKn-AJ-w5U"/>
-                                        <constraint firstItem="kKj-6M-iBd" firstAttribute="centerY" secondItem="2a1-p6-cPb" secondAttribute="centerY" id="mno-j3-dBP"/>
-                                        <constraint firstItem="kKj-6M-iBd" firstAttribute="trailing" secondItem="cRE-qw-Qs8" secondAttribute="trailing" id="zNq-qC-qfp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="cRE-qw-Qs8" secondAttribute="trailing" constant="16" id="VuJ-S8-hnD"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -70,7 +68,6 @@
                                     <outlet property="iconImage" destination="2a1-p6-cPb" id="k4X-PV-RCR"/>
                                     <outlet property="nameLabel" destination="9ke-oR-Z32" id="I3u-QI-XEx"/>
                                     <outlet property="newsCount" destination="cRE-qw-Qs8" id="C5D-WP-Jx0"/>
-                                    <outlet property="newsIcon" destination="kKj-6M-iBd" id="MtS-ZS-Qzb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -82,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGN-du-7tf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="-690"/>
+            <point key="canvasLocation" x="1020" y="-690.40479760119945"/>
         </scene>
         <!--粉丝管理-->
         <scene sceneID="8cZ-r5-c4Z">
@@ -311,7 +308,7 @@
             <objects>
                 <navigationController id="4ie-fC-b5d" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="粉丝管理" image="user_item_normal" selectedImage="user_item_selected" id="ZhL-fm-8fo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="48n-VO-vM3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="48n-VO-vM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

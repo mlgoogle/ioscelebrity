@@ -163,6 +163,7 @@ class FansListModel : Object {
     dynamic var ownseconds : Int = 0
     dynamic var appoint : Int = 0
     dynamic var uid  : Int = 0
+    dynamic var unreadCount = 0
 }
 
 
