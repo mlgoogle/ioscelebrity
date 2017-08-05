@@ -19,7 +19,7 @@ class FansListCell: OEZTableViewCell {
     @IBOutlet weak var newsCount: UILabel!
     
     override func awakeFromNib() {
-        newsIcon.image = UIImage.imageWith(AppConst.iconFontName.newsIcon.rawValue, fontSize: newsIcon.frame.size, fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
+//        newsIcon.image = UIImage.imageWith(AppConst.iconFontName.newsIcon.rawValue, fontSize: newsIcon.frame.size, fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
     }
     
     
@@ -30,11 +30,9 @@ class FansListCell: OEZTableViewCell {
             let placeholderImage = UIImage.imageWith(AppConst.iconFontName.userPlaceHolder.rawValue, fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
             
             self.iconImage.kf.setImage(with: URL.init(string: model.head_url), placeholder: placeholderImage)
-            
             self.nameLabel.text = model.nickname
-           
-            self.newsIcon.isHidden = true
-            self.newsCount.isHidden = true
+            self.newsCount.isHidden = model.unreadCount == 0
+            newsCount.text = "  \(model.unreadCount)  "
     }
   }
     
@@ -42,7 +40,6 @@ class FansListCell: OEZTableViewCell {
 
 
 class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMConversationManagerDelegate,NIMSystemNotificationManagerDelegate {
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +74,7 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
         
         // 刷新红点
         self.refreshSessionRedDot()
+        didRequest()
     }
     
     func refreshSessionRedDot() {
@@ -89,13 +87,19 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
         requestModel.starPos = (pageIndex - 1) * 10 + 1
         AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
             if let objects = response as? [FansListModel] {
+                let unreadCountDic = self?.getUnreadDic()
+                for info in objects{
+                    if let unreadCount = unreadCountDic?[info.faccid]{
+                        info.unreadCount = unreadCount
+                    }
+                }
                 self?.didRequestComplete(objects as AnyObject?)
             } else {
                 self?.didRequestComplete(nil)
             }
             self?.tableView.reloadData()
             return nil
-            }, error: errorBlockFunc())
+        }, error: errorBlockFunc())
     }
     
     
@@ -112,5 +116,17 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
     
     override func tableView(_ tableView: UITableView, cellIdentifierForRowAtIndexPath indexPath: IndexPath) -> String? {
         return FansListCell.className()
+    }
+    
+    func getUnreadDic() ->  [String: Int]{
+        var sessionIdDic: [String: Int] = [:]
+        if let sessions = NIMSDK.shared().conversationManager.allRecentSessions(){
+            for session in sessions{
+                if let sessionId = session.session?.sessionId{
+                    sessionIdDic[sessionId] = session.unreadCount
+                }
+            }
+        }
+        return sessionIdDic
     }
 }
