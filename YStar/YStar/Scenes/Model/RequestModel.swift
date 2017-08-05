@@ -109,7 +109,7 @@ class RegisterWYIMRequestModel: LoginModle {
     var uid  = 0
     var phone = ""
     var memberId = 1001
-    var agentId = "186681261"
+    var agentId = ""
     var recommend = "3tewe"
     var timeStamp = 100088888
 }

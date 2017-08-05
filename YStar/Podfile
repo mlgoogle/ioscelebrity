@@ -5,6 +5,7 @@ target 'YStar' do
     use_frameworks!
     
     # Pods for YStar
+    pod 'MWPhotoBrowser'
     pod 'Alamofire', '~> 4.2.0'
     pod 'CocoaAsyncSocket', '~> 7.5.0'
     pod 'SVProgressHUD', '~> 2.0.3'

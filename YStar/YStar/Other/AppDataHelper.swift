@@ -22,6 +22,7 @@ class AppDataHelper: NSObject {
     
     func initData() {
         tokenLogin()
+        updateUpdateInfo()
     }
     //检查是否登录
     func checkLogin() -> Bool {
