@@ -24,7 +24,6 @@ class FansSessionViewController: NIMSessionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = UIColor.init(hexString: "FAFAFA")
         setupNavbar()
     }
     
