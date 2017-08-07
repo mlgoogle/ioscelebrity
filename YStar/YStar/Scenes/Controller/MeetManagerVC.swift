@@ -21,6 +21,7 @@ class MeetManagerVC: BaseTableViewController {
     
     private var selectedButton: UIButton?
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -53,7 +54,7 @@ class MeetManagerVC: BaseTableViewController {
         }
     }
     
-    
+    // MARK: - 点击标题按钮Action
     @IBAction func titleViewButtonAction(_ sender: UIButton) {
         
         self.selectedButton?.isSelected = false
@@ -69,7 +70,7 @@ class MeetManagerVC: BaseTableViewController {
         
     }
     
-    
+    // MARK: - UIScrollViewDelegate
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == scrollView {
             

@@ -13,7 +13,6 @@ protocol DateSelectorViewDelegate {
     func chooseDate(datePickerView : DateSelectorView , date : Date)
 }
 
-// 时间选择器View
 class DateSelectorView: UIView {
 
     var pickerDelegate : DateSelectorViewDelegate?
@@ -24,6 +23,7 @@ class DateSelectorView: UIView {
     
     private var backgroundBtn: UIButton = UIButton()
     
+    // MARK: - 初始化
     init(delegate: DateSelectorViewDelegate) {
        
         pickerDelegate = delegate
@@ -63,15 +63,16 @@ class DateSelectorView: UIView {
         self.addSubview(self.datePicker)
     }
     
-    func dateChoosePressed(datePicker: UIDatePicker) {
-    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
+    func dateChoosePressed(datePicker: UIDatePicker) {}
+    
+    // MARK: - 按钮相关[确定 取消]
     func doneButtonClick() {
-        
         pickerDelegate?.chooseDate(datePickerView: self, date: datePicker.date)
         self.hiddenPicker()
-        
     }
     
     func cancelButtonClick(btn:UIButton) {
@@ -79,6 +80,7 @@ class DateSelectorView: UIView {
         self.hiddenPicker()
     }
     
+    // MARK: - 显示隐藏 [show hide]
     public func showPicker() {
         UIApplication.shared.keyWindow?.addSubview(self.backgroundBtn)
         UIApplication.shared.keyWindow?.addSubview(self)
@@ -100,10 +102,6 @@ class DateSelectorView: UIView {
             self.removeFromSuperview()
             self.backgroundBtn.removeFromSuperview()
         }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     deinit {

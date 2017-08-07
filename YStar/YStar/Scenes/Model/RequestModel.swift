@@ -62,10 +62,13 @@ class ResetPayPwdRequestModel: LoginModle {
 
 // 绑定银行卡
 class BindCardRequestModel: LoginModle {
-    var account = "1001"
-    var bankUsername = "1001"
+    // 银行卡号
+    var account = ""
+    // 持卡人姓名
+    var bankUsername = ""
 }
 
+// 银行号列表
 class BankCardListRequestModel: LoginModle {
     
 }
@@ -103,6 +106,7 @@ class FansListRquestModel : LoginModle {
 
 }
 
+// 网易云注册
 class RegisterWYIMRequestModel: LoginModle {
     var name_value = ""
     var user_type = 0
@@ -114,7 +118,7 @@ class RegisterWYIMRequestModel: LoginModle {
     var timeStamp = 100088888
 }
 
-//MARK: - Circle
+//MARK: - Circle 朋友圈
 class CircleListRequestModel: BaseModel {
     var star_code = ShareModelHelper.instance().starCode
     var pos:Int64 = 0
@@ -141,7 +145,7 @@ class DeleteCircle: BaseModel {
     dynamic var circle_id = 0
 }
 
-//MARK: - Meet
+// MARK: - Meet 约见类型
 class MeetTypesRequest: LoginModle{
     var starcode = ShareModelHelper.instance().starCode
 }
@@ -162,7 +166,6 @@ class ChangerMeetTypeRequest: MeetOrderListRequest{
 }
 
 class placeAndDateRequestModel: LoginModle {
-    
     var starcode = ShareModelHelper.instance().starCode
     var meet_city = ""
     var startdate = ""

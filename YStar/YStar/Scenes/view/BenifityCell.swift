@@ -31,6 +31,7 @@ class BenifityCell: UITableViewCell {
 
     }
     
+    // 设置BenifityCell数据
     func setBenifity(model : EarningInfoModel) {
         
         let stringDate = String.init(format: "%d", model.orderdate)

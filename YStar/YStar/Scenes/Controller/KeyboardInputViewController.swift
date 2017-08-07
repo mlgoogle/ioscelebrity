@@ -45,7 +45,7 @@ class YParser: YYTextSimpleEmoticonParser {
     }
 }
 
-//辅助视图toolbar
+// MARK: - 辅助视图toolbar(输入框)
 class YInputToolbar: UIView{
     let sw = UIScreen.main.bounds.width
     
@@ -84,7 +84,7 @@ class YInputToolbar: UIView{
     }
 }
 
-//辅助视图toolbar
+// MARK: - 辅助视图toolbar(表情)
 class YEmojiInputToolbar: UIView{
     let sw = UIScreen.main.bounds.width
 

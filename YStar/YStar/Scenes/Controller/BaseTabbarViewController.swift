@@ -13,6 +13,7 @@ class BaseTabbarViewController: UITabBarController,NIMLoginManagerDelegate,NIMCo
     // 未读消息
     private var sessionUnreadCount : Int = 0
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +44,7 @@ class BaseTabbarViewController: UITabBarController,NIMLoginManagerDelegate,NIMCo
         NotificationCenter.default.addObserver(self, selector: #selector(showUpdateInfo), name: NSNotification.Name(rawValue: AppConst.NoticeKey.checkUpdte.rawValue), object: nil)
     }
     
+    // MARK: - 网易云登录成功
     func WYIMLoginSuccess(_ IMloginSuccess : NSNotification)  {
         
         print("登陆成功")

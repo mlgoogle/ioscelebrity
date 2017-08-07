@@ -46,7 +46,6 @@ class verifyCodeModel: BaseModel {
 }
 
 class BankModel: BaseModel {
-    
     //返回的列表的key
     var cardList : [BankListModel]?
     
@@ -59,21 +58,16 @@ class BankModel: BaseModel {
     class func cardInfoModelClass() -> AnyClass {
         return BankInfoModel.classForCoder()
     }
-    
-    
 }
 
 // 银行卡详细信息
 class BankInfoModel: BaseModel {
     
     var bankId: Int64 = 0
-
     // 银行名称 : "招商银行"
     var bankName:  String = ""
-    
     // 卡号: "**** **** **** 2345"
     var cardNO: String = ""
-    
     // "招商银行·银联IC普卡"
     var cardName:  String = ""
     
@@ -197,7 +191,7 @@ class MeetOrderModel: BaseModel{
     var meet_city = ""
     var meet_type = 1
     var mid = 1
-    var name = "ÅÄmv"
+    var name = ""
     var nickname = ""
     var order_time = ""
     var starcode = ""

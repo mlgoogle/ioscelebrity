@@ -22,6 +22,7 @@ class TimeAndPlaceVC: BaseTableViewController,DateSelectorViewDelegate {
     // 点击时间标识
     var startOrEnd : Bool = true
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -30,7 +31,8 @@ class TimeAndPlaceVC: BaseTableViewController,DateSelectorViewDelegate {
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
     }
-        
+    
+    // MARK: - UITableViewDataSource,UITableViewDelegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return 3
@@ -87,6 +89,7 @@ class TimeAndPlaceVC: BaseTableViewController,DateSelectorViewDelegate {
     }
     
     
+    // MARK: - DateSelectorViewDelegate
     func chooseDate(datePickerView: DateSelectorView, date: Date) {
         
         if startOrEnd == true {
@@ -101,10 +104,8 @@ class TimeAndPlaceVC: BaseTableViewController,DateSelectorViewDelegate {
     }
     
     
-    // 确定修改按钮
+    // MARK: - 确定修改按钮Action
     @IBAction func sureToModifyAction(_ sender: UIButton) {
-        
-        // print(" === sureToModifyAction === \(self.beginDateString) \(self.endDatrString),\(self.placeString)")
         
         if self.placeString == "" {
             SVProgressHUD.showErrorMessage(ErrorMessage: "约见城市不允许为空", ForDuration: 2.0, completion: nil)

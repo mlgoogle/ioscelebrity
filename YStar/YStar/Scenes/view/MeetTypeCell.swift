@@ -8,7 +8,7 @@
 
 import UIKit
 
-// 自定义布局数据源方法
+// MARK: - 自定义布局数据源方法
 protocol CustomLayoutDataSource: class {
     func numberOfCols(_ customLayout: CustomLayout) -> Int
     func numberOfRols(_ customLayout: CustomLayout) -> Int
@@ -118,7 +118,7 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         setupInit()
     }
     
-    // FIXME: - 提醒
+    // 设置约见类型
     func setMeetType(_ data: [MeetTypeModel]) {
         types = data
         meetTypeArryCount = data.count
@@ -165,7 +165,6 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         
         let meetTypeItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: KMeetTypeItemCellID, for: indexPath) as! MeetTypeItemCell
         
-        // TODO: - 待处理数据
         let model = types[indexPath.row]
         meetTypeItemCell.setMeetTypeItem(model)
         
@@ -187,7 +186,7 @@ class MeetTypeCell: UITableViewCell,CustomLayoutDataSource,UICollectionViewDataS
         return view
     }
     
-    // CustomLayoutDataSource
+    // MRAK: -CustomLayoutDataSource
     func numberOfCols(_ customLayout: CustomLayout) -> Int {
         return 4
     }

@@ -43,6 +43,7 @@ class WithDrawaListVC: BasePageListTableViewController {
         super.viewDidLoad()
         title = "提现记录"
     }
+    
     //  请求接口刷新数据
     override func didRequest(_ pageIndex : Int) {
 
@@ -64,6 +65,7 @@ class WithDrawaListVC: BasePageListTableViewController {
             return nil
         }
     }
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

@@ -43,6 +43,7 @@ class PayPwdAlertView: UIView,UITextFieldDelegate {
     
     fileprivate var pwdCircleArr = [UILabel]()
     
+    // MARK: - 初始化
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -123,6 +124,7 @@ class PayPwdAlertView: UIView,UITextFieldDelegate {
         
     }
     
+    // MARK: - UITextFieldDelegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if(textField.text?.characters.count > 6) {
             return false
@@ -153,6 +155,8 @@ class PayPwdAlertView: UIView,UITextFieldDelegate {
         }
     }
     
+    
+    // MARK: - 显示与隐藏[show close]
     func show(_ view:UIView){
         
         let window: UIWindow = UIApplication.shared.keyWindow!
@@ -172,10 +176,6 @@ class PayPwdAlertView: UIView,UITextFieldDelegate {
     func close(){
         self.removeFromSuperview()
     }
-    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        close()
-//    }
     
     deinit {
         print("delloc ------ PayPwdAlertView ")

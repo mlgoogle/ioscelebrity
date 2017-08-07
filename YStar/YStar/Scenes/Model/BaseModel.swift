@@ -8,6 +8,7 @@
 
 import UIKit
 //import XCGLogger
+
 class BaseModel: OEZModel {
     override class func jsonKeyPostfix(_ name: String!) -> String! {
         return "";
@@ -17,11 +18,8 @@ class BaseModel: OEZModel {
     }
 }
 
-
-
 class BaseDBModel: BaseModel {
     var id:Int = 0
-    
     
     func primaryKeyValue() ->AnyObject! {
         return id as AnyObject!
@@ -30,7 +28,6 @@ class BaseDBModel: BaseModel {
     class func tableName() ->String {
         return self.className()
     }
-    
 }
 
 

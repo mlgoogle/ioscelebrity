@@ -24,6 +24,7 @@ class MeetOrderCell: OEZTableViewCell {
         // Initialization code
     }
   
+    // 请求刷新数据
     override func update(_ data: Any!) {
         if let model = data as? MeetOrderModel{
             self.iconImageView.kf.setImage(with: URL.init(string: model.headurl), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))

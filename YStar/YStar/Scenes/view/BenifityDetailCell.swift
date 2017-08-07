@@ -24,6 +24,7 @@ class BenifityDetailCell: UITableViewCell {
     @IBOutlet weak var orderPriceLabel: UILabel!
     
     
+    // 设置BenifityDetailCell
     func setBenifityDetail(model : EarningInfoModel) {
         
         self.dealLabel.text = String.init(format: "%d", model.order_count)

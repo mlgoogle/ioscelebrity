@@ -56,6 +56,7 @@ class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
     
     var dataBankInfoModle : BankInfoModel?
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -73,7 +74,7 @@ class BankCardVC : BaseTableViewController,OEZTableViewDelegate {
         self.tableView.tableFooterView = UIView()
     }
     
-
+    // MARK: - 获取绑定的银行卡信息
     func requestBankInfo() {
         
         let model = BankCardInfoRequestModel()

@@ -29,7 +29,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         
     }
     
-    //忘记密码
+    // MARK: - 忘记密码
     @IBAction func forgetBtnTapped(_ sender: UIButton) {
         
         if let vc  = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier:
@@ -39,7 +39,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         }
     }
     
-    //登录
+    // MARK: - 登录
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         if checkTextFieldEmpty([phoneText, pwdText]){
             if !isTelNumber(num: phoneText.text!) {
@@ -93,17 +93,15 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         
     }
     
+    // // MARK: - 云信登录
     func LoginToYunxin() {
-        
         let requestModel = RegisterWYIMRequestModel()
         requestModel.name_value = self.phoneText.text!
         requestModel.phone = self.phoneText.text!
         requestModel.uid = self.uid
         
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: {[weak self] (response) -> ()? in
-            
             if let objects = response as? WYIMModel {
-                
                 UserDefaults.standard.set(objects.token_value, forKey: AppConst.UserDefaultKey.token_value.rawValue)
                 UserDefaults.standard.synchronize()
                 
@@ -113,8 +111,8 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                 NIMSDK.shared().loginManager.login(phoneNum!, token: token_value, completion: { (error) in
                     if error == nil {
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
-                    }else{
-                        print(error)
+                    } else {
+                        print("error ====\(error)")
                     }
             })
         }

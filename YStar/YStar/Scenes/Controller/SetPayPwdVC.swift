@@ -44,7 +44,8 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
     fileprivate var pwdCircleArr = [UILabel]()
     
     fileprivate var textField:UITextField!
-    
+
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -103,7 +104,7 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
         view.addSubview(btn)
     }
     
-    // 显示键盘
+    // MARK: - 显示键盘
     @IBAction func showKeyBordButtonAction(_ sender: UIButton) {
         
         if showKeyBoard == true {
@@ -114,7 +115,7 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
         showKeyBoard = !showKeyBoard
     }
 
-    // 下一步按钮
+    // MARK: - 下一步按钮
     @IBAction func doSetPwdButtonAction(_ sender: UIButton) {
         
         let phoneNum = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.phone.rawValue) as! String
@@ -163,25 +164,6 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
         }
     }
     
-    
-    func setCircleShow(_ count:NSInteger) {
-        
-        for circle in pwdCircleArr {
-            let supView = circle.superview
-            supView?.layer.borderColor = UIColor.gray.cgColor
-            supView?.layer.borderWidth = 1
-            circle.isHidden = true;
-        }
-        
-        for i in 0 ..< count {
-            pwdCircleArr[i].isHidden = false
-            let view = pwdCircleArr[i]
-            let supView = view.superview
-            supView?.layer.borderColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue).cgColor
-            supView?.layer.borderWidth = 2
-        }
-    }
-    
     // MARK: - 输入变成点
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if(textField.text?.characters.count > 5 && string.characters.count > 0) {
@@ -200,7 +182,7 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
         }
         passString = ""
         self.doSetPwdButton.backgroundColor = UIColor.gray
-        self .setCircleShow(password.characters.count)
+        self.setCircleShow(password.characters.count)
         
         if(password.characters.count == 6) {
             passString = password
@@ -208,6 +190,24 @@ class SetPayPwdVC: BaseTableViewController,UITextFieldDelegate {
             
         }
         return true;
+    }
+    
+    func setCircleShow(_ count:NSInteger) {
+        
+        for circle in pwdCircleArr {
+            let supView = circle.superview
+            supView?.layer.borderColor = UIColor.gray.cgColor
+            supView?.layer.borderWidth = 1
+            circle.isHidden = true;
+        }
+        
+        for i in 0 ..< count {
+            pwdCircleArr[i].isHidden = false
+            let view = pwdCircleArr[i]
+            let supView = view.superview
+            supView?.layer.borderColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue).cgColor
+            supView?.layer.borderWidth = 2
+        }
     }
 
 }

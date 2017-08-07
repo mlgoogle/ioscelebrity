@@ -16,6 +16,7 @@ class FansSessionConfig: NSObject,NIMSessionConfig {
     }
     
     
+    // 禁用贴图表情
     func disableCharlet() -> Bool {
         
         return true

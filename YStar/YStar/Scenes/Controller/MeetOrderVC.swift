@@ -10,17 +10,19 @@ import UIKit
 
 class MeetOrderVC: BaseListTableViewController {
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        didRequest()
+    }
+    
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49, 0)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        didRequest()
-    }
-    
+    // 请求刷新数据
     override func didRequest() {
         let param = MeetOrderListRequest()
         AppAPIHelper.commen().allOrder(requestModel: param, complete: { [weak self](result) in
@@ -31,6 +33,7 @@ class MeetOrderVC: BaseListTableViewController {
         }, error: nil)
     }
     
+    // MARK: - UITableViewDataSource,UITableViewDelegate
     override func tableView(_ tableView: UITableView, cellIdentifierForRowAtIndexPath indexPath: IndexPath) -> String? {
         return MeetOrderCell.className()
     }
