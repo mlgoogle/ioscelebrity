@@ -42,10 +42,10 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         super.viewWillDisappear(animated)
     }
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        checkLogin()
         if isLogin() {}
         
         setupUI()
@@ -53,19 +53,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(LoginSuccess(_ :)), name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil)
     }
     
-    
-    func LoginSuccess(_ note : NSNotification) {
-     
-        setupInitResponse()
-        
-        self.tableView.reloadData()
-        
-    }
-    
-    deinit {
-        
-        NotificationCenter.default.removeObserver(self)
-    }
     
     func setupUI() {
         
@@ -80,13 +67,31 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         self.tableView.separatorStyle = .none
     }
     
-    // 默认数据
+    
+    // MARK: - 移除通知
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    // MARK: - 登录成功的通知方法
+    func LoginSuccess(_ note : NSNotification) {
+        
+        setupInitResponse()
+        
+        self.tableView.reloadData()
+    }
+    
+    
+    // MARK: - 默认一周交易数据
     func setupInitResponse() {
         
         let cureentDate = NSDate()
+        // 一天前
         let oneDayTimeInterval : TimeInterval = 24 * 60 * 60 * 1
-        let weekDayTimeInterval : TimeInterval = 24 * 60 * 60 * 6
         let beforeDay = cureentDate.addingTimeInterval(-oneDayTimeInterval)
+        // 七天前
+        let weekDayTimeInterval : TimeInterval = 24 * 60 * 60 * 6
         let beforeWeekDay = beforeDay.addingTimeInterval(-weekDayTimeInterval)
         
         // print("=====现在的日期是\(cureentDate) 一天前的日期====\(beforeDay) ===一周前的日期===\(beforeWeekDay)")
@@ -97,7 +102,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         self.beginTimeButton.setTitle(beginDateStr, for: .normal)
         self.endTimeButton.setTitle(endDateStr, for: .normal)
         
-        // 转换成没有分割线
+        // 转换成没有分割线的日期
         let beginDateString = beforeWeekDay.string_from(formatter: "yyyyMMdd")
         let endDateString = beforeDay.string_from(formatter: "yyyyMMdd")
         
@@ -116,7 +121,6 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         let model = EarningRequestModel()
         model.stardate = beginDateInt
         model.enddate = endDateInt
-        
         // model.stardate = 20170601
         // model.enddate = 20170631
         
@@ -124,7 +128,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
     
     }
     
-    // 点击时间选择
+    // MARK: - 点击时间选择
     func timeButtonClick(_ sender : UIButton) {
         
         if sender == beginTimeButton {
@@ -138,6 +142,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         }
     }
     
+    // MARK: - DateSelectorViewDelegate
     func chooseDate(datePickerView: DateSelectorView, date: Date) {
         
         let weekTimeInterval : TimeInterval = 24 * 60 * 60 * 6
@@ -177,7 +182,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         }
     }
     
-    // 请求收益列表信息
+    // MARK: - 请求收益列表信息
     func requestInitResponse(stardate: Int64 , enddate : Int64) {
         
         let requestModel = EarningRequestModel()
@@ -201,7 +206,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         }
     }
     
-
+    // MARK: - tableViewDataSource And tableViewDelegate
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return earningData?.count ?? 0
@@ -232,7 +237,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         
     }
     
-    // MARK: - 注销账号
+    // MARK: - 点击了退出账号
     func ExitleftButtonClick() {
         
         logout()

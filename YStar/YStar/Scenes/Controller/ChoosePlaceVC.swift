@@ -10,8 +10,8 @@ import UIKit
 
 private let KnomalCellID = "nomalCell"
 
+// 选择的城市block
 typealias ChoosePlaceBlock = (_ placeCity:String) -> Void
-
 
 class ChoosePlaceVC: BaseTableViewController {
     
@@ -44,6 +44,7 @@ class ChoosePlaceVC: BaseTableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -58,7 +59,7 @@ class ChoosePlaceVC: BaseTableViewController {
         
     }
     
-    // MARK: - 多少组
+    // MARK: - UITableViewDataSource,UITableViewDelegate
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return titleArray.count

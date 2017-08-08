@@ -22,6 +22,7 @@ class MeetOrderDetailVC: BaseTableViewController {
     
     var model:MeetOrderModel = MeetOrderModel()
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "约见订单详情"
@@ -40,6 +41,7 @@ class MeetOrderDetailVC: BaseTableViewController {
     }
     
     
+    // MARK: - 点击同意按钮Action
     @IBAction func agreeButtonAction(_ sender: UIButton) {
         let param = AgreeOrderRequest()
         param.starcode = model.starcode

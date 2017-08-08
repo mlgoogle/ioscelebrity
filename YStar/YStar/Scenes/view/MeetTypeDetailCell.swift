@@ -22,10 +22,9 @@ class MeetTypeDetailCell: OEZTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
-   
+    // 请求刷新数据
     override func update(_ data: Any!) {
         if let model = data as? MeetTypeModel{
             meetTypeImageView.kf.setImage(with: URL.init(string: model.showpic_url), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))

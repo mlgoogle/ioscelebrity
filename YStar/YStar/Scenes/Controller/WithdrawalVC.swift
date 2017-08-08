@@ -10,8 +10,9 @@ import UIKit
 import SVProgressHUD
 class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
     
+    // 可提现金额
     @IBOutlet var withDrawMoney: UILabel!
-    //收款账户
+    // 收款账户
     @IBOutlet var account: UILabel!
     
     @IBOutlet var inputMoney: UITextField!
@@ -25,6 +26,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         requestUseBalance()
     }
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +35,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         requestGetBankInfo()
     }
     
-    // 获取银行卡信息
+    // MARK: - 获取银行卡信息
     func requestGetBankInfo(){
         let model = BankCardListRequestModel()
         AppAPIHelper.commen().bankCardList(model: model, complete: { [weak self](result) in
@@ -52,7 +54,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         }, error:errorBlockFunc())
     }
     
-    // 获取金额,及是否设置了交易密码
+    // MARK: - 获取金额,及是否设置了交易密码
     func requestUseBalance() {
         let model = LoginModle()
         AppAPIHelper.commen().userinfo(model: model, complete: {[weak self] (response) -> ()? in
@@ -66,11 +68,12 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
     }
 
  
-    // 全部提现
+    // MARK: - 全部提现
     @IBAction func withDrawAll(_ sender: Any) {
         inputMoney.text = String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance)
     }
-    // 提现
+    
+    // MARK: - 提现
     @IBAction func withDraw(_ sender: Any) {
         
         if inputMoney.text?.length() == 0 {
@@ -150,13 +153,14 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         }
     }
     
-    // 忘记密码
+    // MARK: - 忘记密码
     @IBAction func forgetPwdAction(_ sender: UIButton) {
         let resetTradePassVC = UIStoryboard.init(name: "Benifity", bundle: nil).instantiateViewController(withIdentifier: "ResetTradePassVC")
         self.navigationController?.pushViewController(resetTradePassVC, animated: true)
         
     }
-
+    
+    // MARK: - UITextFieldDelegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let resultStr = textField.text?.replacingCharacters(in: (textField.text?.range(from: range))!, with: string)
         return resultStr!.isMoneyString()

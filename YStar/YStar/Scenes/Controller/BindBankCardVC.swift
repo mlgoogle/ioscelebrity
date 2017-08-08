@@ -84,7 +84,7 @@ extension BindBankCardVC {
         }
     }
     
-    // 更新sendCodeButton秒数
+    // MARK: - 更新sendCodeButton秒数
     func updateSendCodeButtonTitle() {
         if codeTimer == 0 {
             sendCodeButton.isEnabled = true
@@ -103,7 +103,7 @@ extension BindBankCardVC {
         sendCodeButton.backgroundColor = UIColor(hexString: "ECECEC")
     }
     
-    // 绑定银行卡Action
+    // MARK: - 绑定银行卡Action
     @IBAction func bindBankAction(_ sender: UIButton) {
         
         if !checkTextFieldEmpty([starNameTextField,starCardNumTextField,starPhoneNumTextField,verificationCodeTextField]) {
@@ -134,11 +134,6 @@ extension BindBankCardVC {
                     SVProgressHUD.showErrorMessage(ErrorMessage: "绑定失败", ForDuration: 2.0, completion: nil)
                 }
             }
-//            if (response as? BindBankModel) != nil{
-//                SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: { 
-//                    _ = self?.navigationController?.popViewController(animated: true)
-//                })
-//            }
             return nil
         }, error: errorBlockFunc())
         

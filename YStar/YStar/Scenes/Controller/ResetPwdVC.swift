@@ -32,7 +32,8 @@ class ResetPwdVC: BaseTableViewController {
         headerView.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
         closeBtn.setImage(UIImage.imageWith(AppConst.iconFontName.closeIcon.rawValue, fontSize: CGSize.init(width: 33, height: 33), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.label9.rawValue)), for: .normal)
     }
-    // 获取验证码
+    
+    // MARK: - 获取验证码
     @IBAction func codeBtnTapped(_ sender: UIButton) {
         if checkTextFieldEmpty([phoneText]) && isTelNumber(num: phoneText.text!) {
             let checkRegisterRequestModel = CheckRegisterRequestModel()
@@ -64,6 +65,8 @@ class ResetPwdVC: BaseTableViewController {
             }, error: errorBlockFunc())
         }
     }
+    
+    // MARK: - 更新秒数
     func updatecodeBtnTitle() {
         if codeTime == 0 {
             vaildCodeBtn.isEnabled = true
@@ -79,7 +82,8 @@ class ResetPwdVC: BaseTableViewController {
         vaildCodeBtn.setTitle(title, for: .normal)
         vaildCodeBtn.backgroundColor = UIColor(hexString: "ECECEC")
     }
-    // 重置密码
+    
+    // MARK: - 重置密码
     @IBAction func resetBtnTapped(_ sender: UIButton) {
         if checkTextFieldEmpty([phoneText,codeText,pwdText]){
             let string = AppConst.pwdKey + self.timeStamp + codeText.text! + phoneText.text!
@@ -104,7 +108,7 @@ class ResetPwdVC: BaseTableViewController {
         }
     }
     
-    //
+    // MARK: - 返回
     @IBAction func closeBtnTapped(_ sender: UIButton) {
         _ = navigationController?.popToRootViewController(animated: true)
     }

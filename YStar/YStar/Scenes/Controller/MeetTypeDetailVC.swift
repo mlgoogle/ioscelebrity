@@ -15,17 +15,21 @@ class MeetTypeDetailVC: BaseListTableViewController {
     
     var items:[MeetTypeModel] = []
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = "约见类型管理"
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "地点", style: .done, target: self, action: #selector(rightItemButtonClick))
     }
     
+    // 请求刷新数据
     override func didRequest() {
         didRequestComplete(items as AnyObject?)
     }
     
+    // MARK: - UITableViewDataSource,UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = items[indexPath.row]
         let param = ChangerMeetTypeRequest()
@@ -50,9 +54,8 @@ class MeetTypeDetailVC: BaseListTableViewController {
     }
 
     
-    
+    // MARK: - 点击时间地点管理Action
     func rightItemButtonClick() {
-        // 选择时间地点
         let timeAndPlaceVC = UIStoryboard.init(name:"Meet",bundle: nil).instantiateViewController(withIdentifier: "TimeAndPlaceVC") as! TimeAndPlaceVC
         self.navigationController?.pushViewController(timeAndPlaceVC, animated: true)
     }

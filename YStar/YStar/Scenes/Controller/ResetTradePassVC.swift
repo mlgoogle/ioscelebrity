@@ -41,6 +41,7 @@ class ResetTradePassVC: BaseTableViewController,UITextFieldDelegate{
     // token
     var vToken = ""
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -61,12 +62,13 @@ class ResetTradePassVC: BaseTableViewController,UITextFieldDelegate{
         NotificationCenter.default.addObserver(self , selector: #selector(valueChange(_:)), name:NSNotification.Name.UITextFieldTextDidChange, object: secondPwdTextField)
     }
     
+    // MARK: - 移除通知
     deinit {
         
         NotificationCenter.default.removeObserver(self)
     }
     
-    // MARK: 监听输入址变化
+    // MARK: - 监听输入址变化
     func valueChange(_ textFiled : Notification){
         if phoneNumTextField.text != "" && verificationCodeTextField.text != "" && firstPwdTextField.text != "" && secondPwdTextField.text != "" {
             
@@ -78,6 +80,7 @@ class ResetTradePassVC: BaseTableViewController,UITextFieldDelegate{
         }
     }
     
+    // MARK: - UITextFieldDelegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if((textField.text?.characters.count)! > 5 && string.characters.count > 0){
             return false
@@ -85,7 +88,7 @@ class ResetTradePassVC: BaseTableViewController,UITextFieldDelegate{
         return true;
     }
 
-    // 发送验证码
+    // MARK: - 发送验证码
     @IBAction func sendCodeAction(_ sender: UIButton) {
         
         if !checkTextFieldEmpty([phoneNumTextField]) {
@@ -117,7 +120,7 @@ class ResetTradePassVC: BaseTableViewController,UITextFieldDelegate{
         }
     }
     
-    // 更新sendCodeButton秒数
+    // MARK: - 更新sendCodeButton秒数
     func updateSendCodeButtonTitle() {
         if codeTimer == 0 {
             sendCodeButton.isEnabled = true
@@ -136,7 +139,7 @@ class ResetTradePassVC: BaseTableViewController,UITextFieldDelegate{
         sendCodeButton.backgroundColor = UIColor(hexString: "ECECEC")
     }
 
-    // 重置密码
+    // MARK: - 重置密码Action
     @IBAction func resetPwdButtonAction(_ sender: UIButton) {
         
         if firstPwdTextField.text != secondPwdTextField.text {

@@ -75,7 +75,7 @@ class KLineView: LineChartView, ChartViewDelegate, UIScrollViewDelegate {
         self.animate(xAxisDuration: 1)
     }
     
-    //刷新折线
+    // MARK: -刷新折线
     func refreshLineChartData(models: [EarningInfoModel]) {
         chartData = models
         var entrys: [ChartDataEntry] = []
@@ -96,7 +96,7 @@ class KLineView: LineChartView, ChartViewDelegate, UIScrollViewDelegate {
         self.xAxis.axisMaximum = Double(entrys.count)
     }
     
-    //Mark: --delegate
+    // MARK: - delegate
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
        
         let index =  Int(entry.x)

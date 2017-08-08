@@ -40,6 +40,7 @@ class BenifityDetailVC: BaseTableViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +60,7 @@ class BenifityDetailVC: BaseTableViewController {
         self.backItemButton.setBackgroundImage(backImage, for: .normal)
     }
     
+    // MARK: - 获取数据
     func setupData() {
         
         if self.earningModel != nil {
@@ -93,6 +95,7 @@ class BenifityDetailVC: BaseTableViewController {
         }
     }
     
+    // MARK: - UITableViewDataSource,UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 124
@@ -117,7 +120,7 @@ class BenifityDetailVC: BaseTableViewController {
         return benifityDetailCell
     }
     
-    // 返回
+    // MARK: - 返回
     @IBAction func backItemAction(_ sender: UIButton) {
         
         self.navigationController?.popViewController(animated: true)
