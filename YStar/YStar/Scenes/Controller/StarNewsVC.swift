@@ -11,17 +11,25 @@ import YYText
 import SVProgressHUD
 import MJRefresh
 import MWPhotoBrowser
+
+// MARK: - 朋友圈信息CELL
 class NewsCell: OEZTableViewCell {
-    @IBOutlet var iconImage: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet weak var newsPic: UIImageView!
-    @IBOutlet weak var newsLabel: YYLabel!
-    @IBOutlet weak var timeLabel: UILabel!
+    
+    @IBOutlet var iconImage: UIImageView!   // 头像icon
+    
+    @IBOutlet var nameLabel: UILabel!       // 名称
+    
+    @IBOutlet weak var newsPic: UIImageView! // 个人朋友圈配图
+    
+    @IBOutlet weak var newsLabel: YYLabel!  //  个人朋友圈内容
+    
+    @IBOutlet weak var timeLabel: UILabel!  // 发布时间
+    
     @IBOutlet weak var showBtn: UIButton!
-    @IBOutlet weak var thumbUpBtn: UIButton!
-    @IBOutlet weak var CommentBtn: UIButton!
+    @IBOutlet weak var thumbUpBtn: UIButton!    // 点赞
+    @IBOutlet weak var CommentBtn: UIButton!    // 评论
     @IBOutlet weak var showView: UIView!
-    @IBOutlet weak var contentHeight: NSLayoutConstraint!
+    @IBOutlet weak var contentHeight: NSLayoutConstraint! // 个人朋友圈内容高度
     
     var newsPicUrl = ""
     
@@ -76,6 +84,7 @@ class NewsCell: OEZTableViewCell {
     }
 }
 
+// MARK: - 朋友圈点赞Cell
 class ThumbupCell: OEZTableViewCell {
     @IBOutlet var iconImage: UIImageView!
     @IBOutlet var thumbupNames: UILabel!
@@ -101,6 +110,7 @@ class ThumbupCell: OEZTableViewCell {
     }
 }
 
+// MARK: - 朋友圈评论Cell
 class CommentCell: OEZTableViewCell {
     @IBOutlet var commentLabel: YYLabel!
     @IBOutlet weak var commentHeight: NSLayoutConstraint!
@@ -147,11 +157,20 @@ class CommentCell: OEZTableViewCell {
     }
 }
 
+
 class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserDelegate {
     
     var tableData: [CircleListModel] = []
     var newsPicUrl = ""
     
+    enum cellAction: Int {
+        case thumbUp = 100
+        case comment = 101
+        case reply = 102    // 回复
+        case showPic = 103  // 点开查看大图
+    }
+    
+    // MARK: - 初始化
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "发现明星"
@@ -166,22 +185,7 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserD
         requestCycleData(0)
     }
     
-    enum cellAction: Int {
-        case thumbUp = 100
-        case comment = 101
-        case reply = 102
-        case showPic = 103
-    }
-    
-    func endRefresh() {
-        if tableView.mj_header.state == .refreshing {
-            tableView.mj_header.endRefreshing()
-        }
-        if tableView.mj_footer.state == .refreshing {
-            tableView.mj_footer.endRefreshing()
-        }
-    }
-    
+    // MARK: - 请求明星个人朋友圈
     func requestCycleData(_ position: Int) {
         let param = CircleListRequestModel()
         param.pos = Int64(position)
@@ -199,6 +203,17 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserD
         }, error: errorBlockFunc())
     }
     
+    // 结束刷新
+    func endRefresh() {
+        if tableView.mj_header.state == .refreshing {
+            tableView.mj_header.endRefreshing()
+        }
+        if tableView.mj_footer.state == .refreshing {
+            tableView.mj_footer.endRefreshing()
+        }
+    }
+    
+    // MARK: - UITableViewDataSource,UITableViewDelegate
     override func numberOfSections(in tableView: UITableView) -> Int {
         return tableData.count
     }
