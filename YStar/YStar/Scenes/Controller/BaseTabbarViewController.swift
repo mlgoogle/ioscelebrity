@@ -87,6 +87,11 @@ class BaseTabbarViewController: UITabBarController,NIMLoginManagerDelegate,NIMCo
         self.refreshSessionRedDot()
     }
     
+    func onKick(_ code: NIMKickReason, clientType: NIMLoginClientType) {
+        AppDataHelper.instance().clearUserInfo()
+        checkLogin()
+    }
+    
     deinit {
         
         NIMSDK.shared().loginManager.remove(self)

@@ -45,6 +45,7 @@ class AppConst {
         case WYIMLoginSuccess = "WYIMLoginSuccess"
         case LoginSuccess = "LoginSuccess"
         case checkUpdte = "checkUpdte"
+        case LoginFaild = "LoginFaild"
     }
     
     class Network {
