@@ -13,7 +13,6 @@
 		8D0090F31F0E14E100AB9C05 /* WithdrawalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F11F0E14E100AB9C05 /* WithdrawalVC.swift */; };
 		8D0090F51F0E2A7100AB9C05 /* BankCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0090F41F0E2A7100AB9C05 /* BankCardVC.swift */; };
 		8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7181F0BAE2F009B1A1B /* MobileCoreServices.framework */; };
-		8D1CC71B1F0BAE3F009B1A1B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */; };
 		8D1CC71D1F0BAE4E009B1A1B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71C1F0BAE4E009B1A1B /* CoreMedia.framework */; };
 		8D1CC71F1F0BAE57009B1A1B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71E1F0BAE57009B1A1B /* AudioToolbox.framework */; };
 		8D1CC7211F0BAE5E009B1A1B /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC7201F0BAE5E009B1A1B /* VideoToolbox.framework */; };
@@ -244,6 +243,7 @@
 		8E99C78D1F344BEA00ED1EC5 /* PhotoBrowserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E99C78C1F344BEA00ED1EC5 /* PhotoBrowserVC.swift */; };
 		8EAE0AB61F31F2FA007B8AF2 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */; };
 		8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */; };
+		8ED4E92E1F3DA4AD009F5AE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */; };
 		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
 		8EFEF56E1F13984A00AD9513 /* YStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEF56D1F13984A00AD9513 /* YStarTests.swift */; };
 		8EFEF5751F139D7100AD9513 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8FB0761F0AA4EA00A7B85C /* OEZCommSDK.framework */; };
@@ -691,6 +691,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ED4E92E1F3DA4AD009F5AE8 /* AVFoundation.framework in Frameworks */,
 				8E73BEB71F2F59AE008E21EC /* ImageIO.framework in Frameworks */,
 				8DE975E01F29E64100541E07 /* Security.framework in Frameworks */,
 				8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */,
@@ -703,7 +704,6 @@
 				8D1CC7221F0BAE6C009B1A1B /* libc++.tbd in Frameworks */,
 				8D1CC7211F0BAE5E009B1A1B /* VideoToolbox.framework in Frameworks */,
 				8D1CC71D1F0BAE4E009B1A1B /* CoreMedia.framework in Frameworks */,
-				8D1CC71B1F0BAE3F009B1A1B /* AVFoundation.framework in Frameworks */,
 				8D1CC7191F0BAE2F009B1A1B /* MobileCoreServices.framework in Frameworks */,
 				B02DB25C1DF985B70044F910 /* libsqlite3.tbd in Frameworks */,
 				8E8FB0D31F0AA4EA00A7B85C /* libWeChatSDK.a in Frameworks */,
