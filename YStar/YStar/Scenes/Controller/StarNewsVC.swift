@@ -43,6 +43,7 @@ class NewsCell: OEZTableViewCell {
             newsLabel.text = model.content
             newsPic.kf.setImage(with: URL.init(string: model.pic_url), placeholder: nil)
             newsPicUrl = model.pic_url
+            timeLabel.text = Date.marginDateStr(Int(model.create_time))
         }
     }
     
@@ -73,7 +74,7 @@ class ThumbupCell: OEZTableViewCell {
     }
     override func update(_ data: Any!) {
         if let model = data as? CircleListModel{
-            iconImage.isHidden = model.approve_list.count == 0
+            contentView.isHidden = model.approve_list.count == 0
             thumbupNames.text = model.approveName
         }
     }
@@ -179,10 +180,8 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserD
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let model = tableData[section] as? CircleListModel{
-            return model.comment_list.count+2
-        }
-        return 0
+        let model = tableData[section]
+        return model.comment_list.count+2
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -226,10 +225,8 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserD
         if indexPath.row == 1{
             return model.thumbUpHeight
         }
-        if let commentModel = model.comment_list[indexPath.row - 2] as? CircleCommentModel{
-            return commentModel.circleHeight
-        }
-        return 0
+        let commentModel = model.comment_list[indexPath.row - 2]
+        return commentModel.circleHeight
     }
     
     override func isSections() -> Bool {

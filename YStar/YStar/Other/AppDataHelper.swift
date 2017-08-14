@@ -91,10 +91,7 @@ class AppDataHelper: NSObject {
         let requestModel = RegisterWYIMRequestModel()
         requestModel.name_value = phone
         requestModel.phone = phone
-        requestModel.uid = uid
-        
-        // print("model ===== \(requestModel)")
-        
+        requestModel.uid = uid        
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: { (response) -> ()? in
             
             if let objects = response as? WYIMModel {

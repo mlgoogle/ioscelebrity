@@ -47,7 +47,6 @@ class verifyCodeModel: BaseModel {
 }
 
 class BankModel: BaseModel {
-    
     //返回的列表的key
     var cardList : [BankListModel]?
     
