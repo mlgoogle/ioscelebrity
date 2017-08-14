@@ -57,8 +57,8 @@ class FansManagerVC: BaseTableViewController {
     
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == contentSV{
-            let tag  = 100 + contentSV.contentOffset.x / kScreenWidth
-            if let btn = view.viewWithTag(Int(tag)) as? UIButton{
+            let tag  = 100 + contentSV.contentOffset.x/kScreenWidth
+            if let btn = choseView.viewWithTag(Int(tag)) as? UIButton{
                 chatOrNewsBtnTapped(btn)
             }
         }
