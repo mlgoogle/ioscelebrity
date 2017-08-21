@@ -66,8 +66,8 @@ class ResetPayPwdRequestModel: LoginModle {
 
 // 绑定银行卡
 class BindCardRequestModel: LoginModle {
-    var account = "1001"
-    var bankUsername = "1001"
+    var account = ""
+    var bankUsername = ""
 }
 
 class BankCardListRequestModel: LoginModle {
@@ -112,10 +112,10 @@ class RegisterWYIMRequestModel: LoginModle {
     var user_type = 0
     var uid  = 0
     var phone = ""
-    var memberId = 1001
+    var memberId = 0
     var agentId = ""
-    var recommend = "3tewe"
-    var timeStamp = 100088888
+    var recommend = ""
+    var timeStamp = 0
 }
 
 //MARK: - Circle
@@ -127,21 +127,21 @@ class CircleListRequestModel: BaseModel {
 
 class ApproveCircleModel: BaseModel {
     var star_code = ShareModelHelper.instance().starCode
-    var circle_id:Int64 = 10001
+    var circle_id:Int64 = 0
     var uid:Int64 = Int64(ShareModelHelper.instance().uid)
 }
 class CommentCircleModel: ApproveCircleModel {
     var direction = 0
-    var content = "111111111"
+    var content = ""
     
 }
 class SendCircleRequestModel: BaseModel {
     var star_code = ShareModelHelper.instance().starCode
-    var content = "d隧道掘进机爱迪生的卡死了；打开了；奥斯卡了；奥斯卡；懒得看洒了；的卡萨；离苦得乐；萨克的；拉斯柯达；拉卡死了；打卡；塑料颗粒；打开了"
-    var picurl = "http://p3.img.cctvpic.com/nettv/newgame/2011/0519/20110519071618926.jpg"
+    var content = ""
+    var picurl = ""
 }
 class DeleteCircle: BaseModel {
-    dynamic var star_code = "1001"
+    dynamic var star_code = ""
     dynamic var circle_id = 0
 }
 

@@ -51,6 +51,7 @@ class BenifityVC: BaseTableViewController,DateSelectorViewDelegate {
         setupUI()
         
         NotificationCenter.default.addObserver(self, selector: #selector(LoginSuccess(_ :)), name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(checkLogin), name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginFaild.rawValue), object: nil)
     }
     
     

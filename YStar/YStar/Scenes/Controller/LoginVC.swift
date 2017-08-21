@@ -42,10 +42,10 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
     //登录
     @IBAction func loginBtnTapped(_ sender: UIButton) {
         if checkTextFieldEmpty([phoneText, pwdText]){
-            if !isTelNumber(num: phoneText.text!) {
-                SVProgressHUD.showErrorMessage(ErrorMessage: "手机号码格式错误", ForDuration: 2.0, completion: nil)
-                return
-            }
+//            if !isTelNumber(num: phoneText.text!) {
+//                SVProgressHUD.showErrorMessage(ErrorMessage: "手机号码格式错误", ForDuration: 2.0, completion: nil)
+//                return
+//            }
             if !isPassWord(pwd: pwdText.text!) {
                 SVProgressHUD.showErrorMessage(ErrorMessage: "请输入6位字符以上密码", ForDuration: 2.0, completion: nil)
                 return

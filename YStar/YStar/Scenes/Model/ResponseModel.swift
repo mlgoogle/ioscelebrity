@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import YYText
 
 class UserInfo: Object {
     dynamic var agentName = ""
@@ -46,7 +47,6 @@ class verifyCodeModel: BaseModel {
 }
 
 class BankModel: BaseModel {
-    
     //返回的列表的key
     var cardList : [BankListModel]?
     
@@ -105,7 +105,6 @@ class BindBankModel: BaseModel {
 }
 
 
-
 class CircleListModel: Object {
     dynamic var symbol = ""
     dynamic var symbol_name = ""
@@ -114,41 +113,87 @@ class CircleListModel: Object {
     dynamic var create_time:Int64 = 0
     dynamic var content = ""
     dynamic var pic_url = ""
+    dynamic var approve_dec_time = 0
+    dynamic var comment_dec_time = 0
     let approve_list = List<ApproveModel>()
     let comment_list = List<CircleCommentModel>()
+    
+    var headerHeight: CGFloat = 0.0
+    var thumbUpHeight: CGFloat = 0.0
+    var approveName = ""
+    
+    func caclulateHeight() {
+        //计算顶部文案高度
+        let contentAttribute = NSMutableAttributedString.init(string: content)
+        contentAttribute.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 14), range: NSRange.init(location: 0, length: content.length()))
+        let size  = CGSize.init(width: kScreenWidth - 80, height: CGFloat.greatestFiniteMagnitude)
+        let layout = YYTextLayout.init(containerSize: size, text: contentAttribute)
+        headerHeight =  layout!.textBoundingSize.height + 300
+        //计算点赞文案高度
+        for approve in approve_list{
+            approveName += "\(approve.user_name),"
+        }
+        let approveAttribute = NSMutableAttributedString.init(string: approveName)
+        approveAttribute.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 14), range: NSRange.init(location: 0, length: approveName.length()))
+        let approveSize  = CGSize.init(width: kScreenWidth - 112, height: CGFloat.greatestFiniteMagnitude)
+        let approveLayout = YYTextLayout.init(containerSize: approveSize, text: approveAttribute)
+        thumbUpHeight = approveLayout!.textBoundingSize.height + 20
+        for model in comment_list{
+            model.calculateHeight()
+            model.symbol_name = symbol_name
+        }
+        
+    }
 }
-
 class ApproveModel: Object {
     dynamic var user_name = ""
     dynamic var uid:Int64 = 0
 }
-
 class CircleCommentModel: Object {
     dynamic var uid = 0
     dynamic var user_name = ""
     dynamic var direction = 0
     dynamic var content = ""
     dynamic var priority = 0
+    
+    var symbol_name = ""
+    var circleHeight: CGFloat = 0
+    
+    func calculateHeight() {
+        //计算顶部文案高度
+        var comment = "\(user_name):\(content)"
+        if direction == 1{
+            comment = "\(symbol_name)回复\(user_name):\(content)"
+        }
+        if direction == 2{
+            comment = "\(user_name)回复\(symbol_name):\(content)"
+        }
+        let contentAttribute = NSMutableAttributedString.init(string: comment)
+        contentAttribute.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 14), range: NSRange.init(location: 0, length: comment.length()))
+        let size  = CGSize.init(width: kScreenWidth - 80, height: CGFloat.greatestFiniteMagnitude)
+        let layout = YYTextLayout.init(containerSize: size, text: contentAttribute)
+        circleHeight =  layout!.textBoundingSize.height + 16
+    }
 }
 
 // 收益
 class EarningInfoModel: Object {
     
-    dynamic var max_price : Double = 45.21      // 最高价
-    dynamic var min_price : Double = 45.21      // 最低价
-    dynamic var order_count : Int = 1          // 订单总笔数
-    dynamic var order_num : Int = 1             // 订单总时间
-    dynamic var orderdate : Int64 =  20170626      // 日期
-    dynamic var price  : Double = 45.21            // 订单总金额
-    dynamic var profit : Double = 38.4285            // 收益
-    dynamic var starcode : String = "1013"          // 明星id
+    dynamic var max_price : Double = 0.0      // 最高价
+    dynamic var min_price : Double = 0.0      // 最低价
+    dynamic var order_count : Int = 0          // 订单总笔数
+    dynamic var order_num : Int = 0             // 订单总时间
+    dynamic var orderdate : Int64 =  0      // 日期
+    dynamic var price  : Double = 0.0            // 订单总金额
+    dynamic var profit : Double = 0.0            // 收益
+    dynamic var starcode : String = ""          // 明星id
 }
 
 // 今开昨收
 class YesterdayAndTodayPriceModel: Object {
     
-    dynamic var max_price : Double = 25.29  //  昨收
-    dynamic var min_price : Double = 19.4   // 今开
+    dynamic var max_price : Double = 0.0  //  昨收
+    dynamic var min_price : Double = 0.0   // 今开
     dynamic var price : Double = 0.0
 }
 
@@ -156,8 +201,8 @@ class YesterdayAndTodayPriceModel: Object {
 // 粉丝列表 
 class FansListModel : Object {
     
-    dynamic var starcode : String = "1004"
-    dynamic var faccid : String = "15800879645"
+    dynamic var starcode : String = ""
+    dynamic var faccid : String = ""
     dynamic var head_url : String = ""
     dynamic var nickname : String = ""
     dynamic var ownseconds : Int = 0
@@ -186,22 +231,22 @@ class WYIMModel: BaseModel {
 
 class MeetTypeModel: BaseModel{
     
-    var mid = 3
-    var name = "录制节目"
-    var price = 100.0
+    var mid = 0
+    var name = ""
+    var price = 0.0
     var showpic_url = ""
     var status = 0
 }
 
 class MeetOrderModel: BaseModel{
     var appoint_time = ""
-    var comment = "sdf.."
+    var comment = ""
     var headurl = ""
-    var id = 1
+    var id = 0
     var meet_city = ""
-    var meet_type = 1
-    var mid = 1
-    var name = "ÅÄmv"
+    var meet_type = 0
+    var mid = 0
+    var name = "0"
     var nickname = ""
     var order_time = ""
     var starcode = ""
@@ -217,13 +262,13 @@ class WithdrawModel: BaseModel {
     var charge: Int64 = 0        // 提现手续费
     var withdrawTime : String = ""  // 提现时间
     var handleTime: Int64 = 0    //提现时间
-    var bank: String!            // 银行名称
-    var branchBank: String!      //支行名称
-    var province: String!        // 	省
-    var city: String!            // 	城市
-    var cardNo: String!          // 	银行卡号
-    var name: String!            // 姓名
-    var comment: String!         //	备注
+    var bank: String = ""            // 银行名称
+    var branchBank: String = ""     //支行名称
+    var province: String = ""        // 	省
+    var city: String = ""            // 	城市
+    var cardNo: String = ""          // 	银行卡号
+    var name: String = ""            // 姓名
+    var comment: String = ""         //	备注
     var status: Int8 = 0        // 状态	1-处理中，2-成功，3-失败
     var expectTime: String!        // 	省
 }

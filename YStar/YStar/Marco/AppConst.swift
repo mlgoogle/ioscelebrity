@@ -45,6 +45,7 @@ class AppConst {
         case WYIMLoginSuccess = "WYIMLoginSuccess"
         case LoginSuccess = "LoginSuccess"
         case checkUpdte = "checkUpdte"
+        case LoginFaild = "LoginFaild"
     }
     
     class Network {
@@ -58,7 +59,7 @@ class AppConst {
         static let HttpHostUrl:String = "122.144.169.214"
         #endif
         static let TimeoutSec:UInt16 = 10
-        static let qiniuHost = "http://ot81955n7.bkt.clouddn.com/"
+        static let qiniuHost = "http://ouim6qew1.bkt.clouddn.com/"
     }
 
     enum Action:UInt {

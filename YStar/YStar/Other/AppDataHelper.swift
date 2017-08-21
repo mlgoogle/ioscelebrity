@@ -78,6 +78,7 @@ class AppDataHelper: NSObject {
             return nil
         }) {[weak self] (error ) in
             self?.clearUserInfo()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginFaild.rawValue), object: nil, userInfo: nil)
             return nil
         }
     }
@@ -90,10 +91,7 @@ class AppDataHelper: NSObject {
         let requestModel = RegisterWYIMRequestModel()
         requestModel.name_value = phone
         requestModel.phone = phone
-        requestModel.uid = uid
-        
-        // print("model ===== \(requestModel)")
-        
+        requestModel.uid = uid        
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: { (response) -> ()? in
             
             if let objects = response as? WYIMModel {
@@ -105,9 +103,6 @@ class AppDataHelper: NSObject {
                 
                 NIMSDK.shared().loginManager.login(phoneNum, token: token_value, completion: { (error) in
                     if error == nil {
-                        
-                        print("token登陆成功")
-                        
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
                     }
                 })

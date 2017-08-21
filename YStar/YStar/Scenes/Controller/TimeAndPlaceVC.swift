@@ -137,7 +137,7 @@ class TimeAndPlaceVC: BaseTableViewController,DateSelectorViewDelegate {
             if let objects = response as? ResultModel {
                 if objects.result == 1 {
                     SVProgressHUD.showSuccessMessage(SuccessMessage: "修改成功", ForDuration: 2.0, completion: { 
-                        self.navigationController?.popViewController(animated: true)
+                        _ = self.navigationController?.popViewController(animated: true)
                     })
                 }
             }

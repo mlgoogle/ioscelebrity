@@ -40,7 +40,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  0  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRE-qw-Qs8">
-                                            <rect key="frame" x="329.5" y="13" width="21.5" height="15"/>
+                                            <rect key="frame" x="329" y="13" width="22" height="15"/>
                                             <color key="backgroundColor" red="0.63412415981292725" green="0.23899871110916138" blue="0.22655031085014343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -413,9 +413,6 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5K-fv-ddr" customClass="YYLabel">
                                             <rect key="frame" x="64" y="67" width="287" height="39"/>
                                             <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="39" id="2uZ-n6-s0i"/>
-                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="text" value="感谢这些天辛苦的你们[憧憬]孙婷和覃西[微笑]你们真美。"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -457,7 +454,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="CommentBtn" destination="woN-jK-YpQ" id="gx2-GJ-cBC"/>
-                                    <outlet property="contentHeight" destination="2uZ-n6-s0i" id="3to-vy-7e9"/>
                                     <outlet property="iconImage" destination="5OX-VE-FAK" id="cyr-5j-tut"/>
                                     <outlet property="nameLabel" destination="jvE-CB-5bJ" id="iqV-k3-kNw"/>
                                     <outlet property="newsLabel" destination="H5K-fv-ddr" id="sVf-vQ-Akf"/>
@@ -478,23 +474,20 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jk6-bb-byN">
                                             <rect key="frame" x="64" y="0.0" width="295" height="44"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d0f-0B-GIB">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d0f-0B-GIB">
                                                     <rect key="frame" x="9" y="9" width="12" height="12"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="a5E-S2-p28"/>
                                                         <constraint firstAttribute="width" constant="12" id="rtP-6c-qKV"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户A，用户B，用户C，用户D，用户E，用户F ……" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXG-qe-ZOR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="用户A，用户B，用户C，用户D，用户E，用户F ……" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXG-qe-ZOR">
                                                     <rect key="frame" x="33" y="9" width="262" height="25"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="RMZ-Qj-Tmp"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.57254901960000004" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Wq-ue-UuK">
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Wq-ue-UuK">
                                                     <rect key="frame" x="21" y="44" width="274" height="0.0"/>
                                                     <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -504,14 +497,14 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
+                                                <constraint firstItem="d0f-0B-GIB" firstAttribute="centerY" secondItem="Jk6-bb-byN" secondAttribute="centerY" id="2Ad-Bd-ISc"/>
                                                 <constraint firstAttribute="trailing" secondItem="1Wq-ue-UuK" secondAttribute="trailing" id="D9R-eP-AR0"/>
-                                                <constraint firstItem="d0f-0B-GIB" firstAttribute="top" secondItem="Jk6-bb-byN" secondAttribute="top" constant="9" id="Fri-Qc-Oms"/>
-                                                <constraint firstItem="DXG-qe-ZOR" firstAttribute="top" secondItem="d0f-0B-GIB" secondAttribute="top" id="IPs-un-hks"/>
-                                                <constraint firstAttribute="bottom" secondItem="DXG-qe-ZOR" secondAttribute="bottom" constant="10" id="IaJ-SI-Tmc"/>
+                                                <constraint firstAttribute="bottom" secondItem="DXG-qe-ZOR" secondAttribute="bottom" id="IaJ-SI-Tmc"/>
                                                 <constraint firstItem="d0f-0B-GIB" firstAttribute="leading" secondItem="Jk6-bb-byN" secondAttribute="leading" constant="9" id="OYV-wm-EdS"/>
-                                                <constraint firstItem="1Wq-ue-UuK" firstAttribute="leading" secondItem="d0f-0B-GIB" secondAttribute="trailing" id="Rlb-Cs-iDc"/>
                                                 <constraint firstAttribute="trailing" secondItem="DXG-qe-ZOR" secondAttribute="trailing" id="RoY-l4-vE4"/>
+                                                <constraint firstItem="1Wq-ue-UuK" firstAttribute="leading" secondItem="Jk6-bb-byN" secondAttribute="leading" id="Zhr-NO-oQh"/>
                                                 <constraint firstItem="DXG-qe-ZOR" firstAttribute="leading" secondItem="d0f-0B-GIB" secondAttribute="trailing" constant="12" id="i3T-dh-geT"/>
+                                                <constraint firstItem="DXG-qe-ZOR" firstAttribute="top" secondItem="Jk6-bb-byN" secondAttribute="top" id="kzn-An-epJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="1Wq-ue-UuK" secondAttribute="bottom" id="sDD-Wf-pVp"/>
                                             </constraints>
                                         </view>
@@ -527,7 +520,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="iconImage" destination="d0f-0B-GIB" id="Kxn-xH-ika"/>
-                                    <outlet property="thumbUpHeight" destination="RMZ-Qj-Tmp" id="TDP-1w-g5x"/>
                                     <outlet property="thumbupNames" destination="DXG-qe-ZOR" id="NDv-3o-wtx"/>
                                 </connections>
                             </tableViewCell>
@@ -542,11 +534,8 @@
                                             <rect key="frame" x="64" y="0.0" width="295" height="52"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOl-A1-DrY" customClass="YYLabel">
-                                                    <rect key="frame" x="8" y="8" width="279" height="36"/>
+                                                    <rect key="frame" x="8" y="0.0" width="279" height="52"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="36" id="lMk-36-opU"/>
-                                                    </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="text" value=" 呵呵[微笑]谁能帮我把他们俩的脸都 p成杨幂的。"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
@@ -560,10 +549,10 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="OOl-A1-DrY" firstAttribute="top" secondItem="N8f-zW-cBg" secondAttribute="top" constant="8" id="IMi-dh-GE8"/>
+                                                <constraint firstItem="OOl-A1-DrY" firstAttribute="top" secondItem="N8f-zW-cBg" secondAttribute="top" id="IMi-dh-GE8"/>
                                                 <constraint firstAttribute="trailing" secondItem="OOl-A1-DrY" secondAttribute="trailing" constant="8" id="TFR-5P-fXX"/>
                                                 <constraint firstItem="OOl-A1-DrY" firstAttribute="leading" secondItem="N8f-zW-cBg" secondAttribute="leading" constant="8" id="aYf-2d-vej"/>
-                                                <constraint firstAttribute="bottom" secondItem="OOl-A1-DrY" secondAttribute="bottom" constant="8" id="zfa-xA-zR3"/>
+                                                <constraint firstAttribute="bottom" secondItem="OOl-A1-DrY" secondAttribute="bottom" id="zfa-xA-zR3"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="string" keyPath="text" value="  呵呵[微笑]谁能帮我把他们俩的脸都 p成杨幂的。"/>
@@ -586,7 +575,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="commentHeight" destination="lMk-36-opU" id="WxQ-U2-2rO"/>
                                     <outlet property="commentLabel" destination="OOl-A1-DrY" id="yst-SQ-V5z"/>
                                 </connections>
                             </tableViewCell>

@@ -129,4 +129,8 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
         }
         return sessionIdDic
     }
+    func didUpdate(_ recentSession: NIMRecentSession, totalUnreadCount: Int) {
+        didRequest(0)
+    }
+
 }
