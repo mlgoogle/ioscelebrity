@@ -2348,7 +2348,7 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare.star;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cloudTop.starshare.star-com.cloudTop.starshare.sta-com.cloudTop.starshare.star";
 				PRODUCT_NAME = YStar;
 				PROVISIONING_PROFILE = "c7586f5d-0ad3-4b1f-b6a5-9b62bd0efa48";
 				PROVISIONING_PROFILE_SPECIFIER = starShareAdminDevelop;
@@ -2418,7 +2418,7 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare.star;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cloudTop.starshare.star-com.cloudTop.starshare.sta-com.cloudTop.starshare.star";
 				PRODUCT_NAME = YStar;
 				PROVISIONING_PROFILE = "c7586f5d-0ad3-4b1f-b6a5-9b62bd0efa48";
 				PROVISIONING_PROFILE_SPECIFIER = starShareAdminDevelop;
