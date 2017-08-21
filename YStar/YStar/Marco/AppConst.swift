@@ -31,7 +31,8 @@ class AppConst {
     
     static let pwdKey = "yd1742653sd"
     static let imageTokenUrl = "http://122.144.169.219:3378/imageToken"
-    	
+    static let ipUrl = "http://ip.chinaz.com/getip.aspx"
+    static let ipInfoUrl = "http://ip.taobao.com/service/getIpInfo.php?ip="
     enum KVOKey: String {
         case selectProduct = "selectProduct"
         case allProduct = "allProduct"

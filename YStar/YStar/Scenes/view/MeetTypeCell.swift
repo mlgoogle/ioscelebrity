@@ -96,7 +96,7 @@ class MeetTypeItemCell: UICollectionViewCell {
     
     // FIXME: - 提醒
     func setMeetTypeItem(_ data: MeetTypeModel) {
-        meetTypeImageView.kf.setImage(with: URL.init(string: data.showpic_url), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
+        meetTypeImageView.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  data.showpic_url), placeholder: UIImage.imageWith(AppConst.iconFontName.newsPlaceHolder.rawValue, fontSize: CGSize.init(width: 35, height: 35), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)))
         meetTypeLabel.text = data.name
         meetTypePriceLabel.text = "\(data.price)秒"
     }

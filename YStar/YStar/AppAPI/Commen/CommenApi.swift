@@ -75,5 +75,6 @@ protocol CommenApi {
     func update(complete: CompleteBlock?, error: ErrorBlock?)
     // 七牛上传图片
     func uploadimg(complete: CompleteBlock?, error: ErrorBlock?)
+    func qiniuHttpHeader(complete:CompleteBlock?,error:ErrorBlock?)
 }
 
