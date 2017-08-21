@@ -75,7 +75,7 @@ class AppConst {
     }
     
     enum ColorKey: UInt32 {
-        case main = 0x8c0808
+        case main = 0x185CA5
         case bgColor = 0xfafafa
         case label6 = 0x666666
         case label3 = 0x333333
