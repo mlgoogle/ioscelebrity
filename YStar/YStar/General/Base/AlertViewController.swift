@@ -105,7 +105,7 @@ class AlertViewController: UIViewController {
     }
     // 按钮
     fileprivate func setupCompleteButton(){
-        completeButton.backgroundColor = UIColor.colorFromRGB(0x8C0808)
+        completeButton.backgroundColor = UIColor.colorFromRGB(0x185CA5)
         completeButton.titleLabel?.textColor = UIColor.colorFromRGB(0xFAFAFA)
         completeButton.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
         completeButton.addTarget(self, action: #selector(completeButtonButtonClick(_ :)), for: .touchUpInside)

@@ -36,7 +36,7 @@ class BaseNavigationController: UINavigationController,UINavigationControllerDel
         super.pushViewController(viewController, animated: true)
         
         let btn : UIButton = UIButton.init(type: UIButtonType.custom)
-        let backImage = UIImage.imageWith(AppConst.iconFontName.backItem.rawValue, fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: 0x8c0808))
+        let backImage = UIImage.imageWith(AppConst.iconFontName.backItem.rawValue, fontSize: CGSize.init(width: 22, height: 22), fontColor: UIColor.init(rgbHex: 0x185CA5))
         btn.setTitle("", for: UIControlState.normal)
         btn.setBackgroundImage(backImage, for: UIControlState.normal )
         btn.addTarget(self, action: #selector(popself), for: UIControlEvents.touchUpInside)
