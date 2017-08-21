@@ -41,8 +41,8 @@ class NewsCell: OEZTableViewCell {
             iconImage.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.head_url), placeholder: userIcon)
             nameLabel.text =  model.symbol_name
             newsLabel.text = model.content
-            newsPic.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.pic_url), placeholder: nil)
-            newsPicUrl = model.pic_url
+            newsPic.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.pic_url_tail), placeholder: nil)
+            newsPicUrl = model.pic_url_tail
             timeLabel.text = Date.marginDateStr(Int(model.create_time))
         }
     }

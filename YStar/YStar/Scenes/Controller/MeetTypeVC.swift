@@ -48,7 +48,7 @@ class MeetTypeVC: BaseTableViewController {
                     if let index = self?.ordersDic[model.name]{
                         if let order = self?.allOrders[index]{
                             order.status = 1
-                            model.showpic_url = order.showpic_url
+                            model.showpic_url_tail = order.showpic_url_tail
                             model.price = order.price
                         }
                     }
