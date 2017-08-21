@@ -21,6 +21,7 @@ class AppDataHelper: NSObject {
     }
     
     func initData() {
+        qiniuHelper.helper.getIPAdrees()
         tokenLogin()
         updateUpdateInfo()
     }

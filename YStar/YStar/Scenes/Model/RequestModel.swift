@@ -172,3 +172,6 @@ class placeAndDateRequestModel: LoginModle {
     var startdate = ""
     var enddate = ""
 }
+class LoginModel: BaseModel {
+    
+}

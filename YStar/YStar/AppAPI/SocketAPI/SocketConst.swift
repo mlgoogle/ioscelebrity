@@ -176,6 +176,9 @@ class SocketConst: NSObject {
         case uptoken = 15029
         // 粉丝列表
         case fansLists = 16019
+        //七牛URL链接头
+        case qiniuHttp = 4015
+
         // 修改约见地点时间
         case placeAndDate = 16021
         
