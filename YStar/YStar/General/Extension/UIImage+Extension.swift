@@ -48,7 +48,39 @@ extension UIImage{
             }
         }
     }
-    
+//    class func qiniuUploadImage(image: UIImage, imageName: String, complete: CompleteBlock?, error: ErrorBlock?) {
+//        
+//        //0,将图片存到沙盒中
+//        let filePath = cacheImage(image, imageName: imageName)
+//        
+//        AppAPIHelper.commen().uploadimg(complete: { (result) -> ()? in
+//            
+//            if   let token = result as? UploadTokenModel{
+//                //2,上传图片
+//                let timestamp = NSDate().timeIntervalSince1970
+//                let key = "\(imageName)\(Int(timestamp)).png"
+//                let qiniuManager = QNUploadManager()
+//                qiniuManager?.putFile(filePath, key: key, token: token.uptoken, complete: { (info, key, resp) in
+//                    if complete == nil{
+//                        return
+//                    }
+//                    if resp == nil {
+//                        complete!(nil)
+//                        return
+//                    }
+//                    //3,返回URL
+//                    let respDic: NSDictionary? = resp as NSDictionary?
+//                    let value:String? = respDic!.value(forKey: "key") as? String
+//                    let imageUrl = AppConst.Network.qiniuHost+value!
+//                    complete!(imageUrl as AnyObject?)
+//                }, option: nil)
+//            }
+//            return nil
+//        }) { (error) -> ()? in
+//            return nil
+//            
+//        }
+//    }
     /**
      缓存图片
      

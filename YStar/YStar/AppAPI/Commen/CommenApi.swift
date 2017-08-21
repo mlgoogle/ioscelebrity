@@ -73,5 +73,7 @@ protocol CommenApi {
     func requestPlaceAndDate(model:placeAndDateRequestModel,complete:CompleteBlock?,error:ErrorBlock?)
     // 版本更新提醒
     func update(complete: CompleteBlock?, error: ErrorBlock?)
+    // 七牛上传图片
+    func uploadimg(complete: CompleteBlock?, error: ErrorBlock?)
 }
 

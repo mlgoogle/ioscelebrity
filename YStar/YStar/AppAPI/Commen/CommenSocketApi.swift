@@ -219,5 +219,14 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         let packet: SocketDataPacket = SocketDataPacket.init(opcode: .update, dict: ["ttype": 2 as AnyObject], type: .user)
         startModelRequest(packet, modelClass: UpdateParam.self, complete: complete, error: error)
     }
+    
+    func uploadimg(complete: CompleteBlock?, error: ErrorBlock?){
+        
+        let model = UploadModle()
+    
+        let packet = SocketDataPacket(opcode: .uptoken, model: model)
+        startModelRequest(packet, modelClass: UploadTokenModel.self, complete: complete, error: error)
+    
+    }
 
 }

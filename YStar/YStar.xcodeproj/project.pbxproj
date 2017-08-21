@@ -1722,7 +1722,7 @@
 					};
 					B0CF59DC1DE5BEC300C40C9C = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = GED83X9MRE;
+						DevelopmentTeam = 96YGS7NXK5;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
@@ -2290,7 +2290,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yong ming lu (FD5S65ADL4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = GED83X9MRE;
+				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2345,10 +2345,10 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.redsky.starshare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare;
 				PRODUCT_NAME = YStar;
-				PROVISIONING_PROFILE = "cd195ddb-4108-484e-831b-01ad9e86dada";
-				PROVISIONING_PROFILE_SPECIFIER = com.starShare.Develop;
+				PROVISIONING_PROFILE = "ccdb2ccb-8d8e-40c4-9a6c-890d8283e320";
+				PROVISIONING_PROFILE_SPECIFIER = starShareDevelop;
 				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";
@@ -2362,7 +2362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yong ming lu (FD5S65ADL4)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2414,10 +2414,10 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.redsky.starshare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare;
 				PRODUCT_NAME = YStar;
-				PROVISIONING_PROFILE = "f9340b2d-a4e3-492e-91f6-09a3bfc695e4";
-				PROVISIONING_PROFILE_SPECIFIER = xingyueDistribution;
+				PROVISIONING_PROFILE = "ccdb2ccb-8d8e-40c4-9a6c-890d8283e320";
+				PROVISIONING_PROFILE_SPECIFIER = starShareDevelop;
 				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";
