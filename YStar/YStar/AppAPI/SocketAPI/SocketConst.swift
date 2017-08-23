@@ -173,8 +173,12 @@ class SocketConst: NSObject {
         case allOrders = 16009
         //同意约见
         case agreeOrder = 16013
+        case uptoken = 15029
         // 粉丝列表
         case fansLists = 16019
+        //七牛URL链接头
+        case qiniuHttp = 4015
+
         // 修改约见地点时间
         case placeAndDate = 16021
         

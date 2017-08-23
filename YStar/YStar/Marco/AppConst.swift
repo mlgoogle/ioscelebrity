@@ -31,7 +31,8 @@ class AppConst {
     
     static let pwdKey = "yd1742653sd"
     static let imageTokenUrl = "http://122.144.169.219:3378/imageToken"
-    	
+    static let ipUrl = "http://ip.chinaz.com/getip.aspx"
+    static let ipInfoUrl = "http://ip.taobao.com/service/getIpInfo.php?ip="
     enum KVOKey: String {
         case selectProduct = "selectProduct"
         case allProduct = "allProduct"
@@ -49,9 +50,9 @@ class AppConst {
     }
     
     class Network {
-        #if false //是否是开发环境
-        static let TcpServerIP:String = "139.224.34.22"
-        static let TcpServerPort:UInt16 = 16060
+        #if true //是否是开发环境
+        static let TcpServerIP:String = "122.144.169.214"
+        static let TcpServerPort:UInt16 = 16016
         static let TttpHostUrl:String = "http://139.224.34.22"
         #else
         static let TcpServerIP:String = "tapi.smartdata-x.com"
@@ -74,7 +75,7 @@ class AppConst {
     }
     
     enum ColorKey: UInt32 {
-        case main = 0x8c0808
+        case main = 0x185CA5
         case bgColor = 0xfafafa
         case label6 = 0x666666
         case label3 = 0x333333

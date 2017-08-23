@@ -38,10 +38,10 @@ class NewsCell: OEZTableViewCell {
     override func update(_ data: Any!) {
         if let model = data as? CircleListModel{
             let userIcon = UIImage.imageWith(AppConst.iconFontName.userPlaceHolder.rawValue, fontSize: iconImage.frame.size, fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
-            iconImage.kf.setImage(with: URL.init(string: model.head_url), placeholder: userIcon)
+            iconImage.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.head_url), placeholder: userIcon)
             nameLabel.text =  model.symbol_name
             newsLabel.text = model.content
-            newsPic.kf.setImage(with: URL.init(string: model.pic_url), placeholder: nil)
+            newsPic.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.pic_url), placeholder: nil)
             newsPicUrl = model.pic_url
             timeLabel.text = Date.marginDateStr(Int(model.create_time))
         }
@@ -107,12 +107,12 @@ class CommentCell: OEZTableViewCell {
                 contentAttribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.init(rgbHex: 0x0092ca), range: NSRange.init(location: 0, length: model.user_name.length()))
             }
             if model.direction == 1{
-                contentAttribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.init(rgbHex: 0x8c0808), range: NSRange.init(location: 0, length: listModel.symbol_name.length()))
+                contentAttribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.init(rgbHex: 0x185CA5), range: NSRange.init(location: 0, length: listModel.symbol_name.length()))
                 contentAttribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.init(rgbHex: 0x0092ca), range: NSRange.init(location: listModel.symbol_name.length()+2, length: model.user_name.length()))
                 
             }
             if model.direction == 2{
-                contentAttribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.init(rgbHex: 0x8c0808), range: NSRange.init(location: model.user_name.length()+2, length: listModel.symbol_name.length()))
+                contentAttribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.init(rgbHex: 0x185CA5), range: NSRange.init(location: model.user_name.length()+2, length: listModel.symbol_name.length()))
                 contentAttribute.addAttribute(NSForegroundColorAttributeName, value: UIColor.init(rgbHex: 0x0092ca), range: NSRange.init(location: 0, length: model.user_name.length()))
             }
             commentLabel.attributedText = contentAttribute
@@ -287,7 +287,7 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserD
         return 1
     }
     func photoBrowser(_ photoBrowser: MWPhotoBrowser!, photoAt index: UInt) -> MWPhotoProtocol! {
-        let photo = MWPhoto(url:URL(string: newsPicUrl))
+        let photo = MWPhoto(url:URL(string:qiniuHelper.shared().qiniuHeader +  newsPicUrl))
         return photo
     }
 }

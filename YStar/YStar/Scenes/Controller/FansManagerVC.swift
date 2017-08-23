@@ -13,8 +13,9 @@ class FansManagerVC: BaseTableViewController {
     @IBOutlet weak var choseView: UIView!
     @IBOutlet weak var chatBtn: UIButton!
     @IBOutlet weak var newsBtn: UIButton!
-    private var lastBtn: UIButton?
     @IBOutlet weak var contentSV: UIScrollView!
+    
+    private var lastBtn: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()

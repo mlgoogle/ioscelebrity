@@ -220,6 +220,10 @@ class ResultModel: BaseModel{
     var result = 0
 }
 
+class UploadTokenModel: BaseModel{
+    var uptoken = ""
+}
+
 class WYIMModel: BaseModel {
     var result_value = ""
     var token_value = ""
