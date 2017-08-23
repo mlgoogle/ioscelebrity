@@ -112,7 +112,7 @@ class CircleListModel: Object {
     dynamic var circle_id:Int64 = 0
     dynamic var create_time:Int64 = 0
     dynamic var content = ""
-    dynamic var pic_url = ""
+    dynamic var pic_url_tail = ""
     dynamic var approve_dec_time = 0
     dynamic var comment_dec_time = 0
     let approve_list = List<ApproveModel>()
@@ -220,6 +220,10 @@ class ResultModel: BaseModel{
     var result = 0
 }
 
+class UploadTokenModel: BaseModel{
+    var uptoken = ""
+}
+
 class WYIMModel: BaseModel {
     var result_value = ""
     var token_value = ""
@@ -230,7 +234,7 @@ class MeetTypeModel: BaseModel{
     var mid = 0
     var name = ""
     var price = 0.0
-    var showpic_url = ""
+    var showpic_url_tail = ""
     var status = 0
 }
 

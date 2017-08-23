@@ -115,6 +115,9 @@
                                 </button>
                                 <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duh-Cg-a60">
                                     <rect key="frame" x="215" y="23" width="105" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="26" id="YYn-gI-Fi1"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <state key="normal" title="粉丝互动">
                                         <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -137,7 +140,6 @@
                                 <constraint firstItem="eRv-L1-t2l" firstAttribute="centerY" secondItem="VhZ-EC-rwT" secondAttribute="centerY" id="ZYa-t8-xmI"/>
                                 <constraint firstItem="duh-Cg-a60" firstAttribute="leading" secondItem="eRv-L1-t2l" secondAttribute="trailing" constant="55" id="Zmm-8I-TZo"/>
                                 <constraint firstItem="duh-Cg-a60" firstAttribute="width" secondItem="eRv-L1-t2l" secondAttribute="width" id="hQr-QG-wcD"/>
-                                <constraint firstItem="duh-Cg-a60" firstAttribute="height" secondItem="eRv-L1-t2l" secondAttribute="height" id="isi-tj-Fy2"/>
                                 <constraint firstAttribute="trailing" secondItem="duh-Cg-a60" secondAttribute="trailing" constant="55" id="nMw-Zl-MFJ"/>
                             </constraints>
                         </view>
@@ -308,7 +310,7 @@
             <objects>
                 <navigationController id="4ie-fC-b5d" customClass="BaseNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="粉丝管理" image="user_item_normal" selectedImage="user_item_selected" id="ZhL-fm-8fo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="48n-VO-vM3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="48n-VO-vM3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -15,6 +15,7 @@ class ShareModelHelper: BaseModel {
     }
     
     // 设置交易密码
+    
     var setPayPwd = [String:String]()
     var starCode = ""
     var uid = 0
@@ -22,6 +23,7 @@ class ShareModelHelper: BaseModel {
     var token = ""
     var userinfo = UserBalance()
     var voiceSwitch = false
+    var qiniuHeader = "http://out9d2vy4.bkt.clouddn.com/"
     
     
 }
