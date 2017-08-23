@@ -60,6 +60,7 @@ extension UIImage{
                 let timestamp = NSDate().timeIntervalSince1970
                 let key = "\(imageName)\(Int(timestamp)).png"
                 let qiniuManager = QNUploadManager()
+                
                 qiniuManager?.putFile(filePath, key: key, token: token.uptoken, complete: { (info, key, resp) in
                     if complete == nil{
                         return
