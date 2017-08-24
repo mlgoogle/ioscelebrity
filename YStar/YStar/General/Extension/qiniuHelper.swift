@@ -1,3 +1,4 @@
+
 //
 //  qiniuHelper.swift
 //  iOSStar
@@ -87,4 +88,5 @@ class QinniuModel: BaseModel{
     var QINIU_URL_HUABEI = ""
     var QINIU_URL_HUANAN = ""
 }
+
 
