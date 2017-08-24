@@ -31,7 +31,8 @@ class AppConst {
     
     static let pwdKey = "yd1742653sd"
     static let imageTokenUrl = "http://122.144.169.219:3378/imageToken"
-    	
+    static let ipUrl = "http://ip.chinaz.com/getip.aspx"
+    static let ipInfoUrl = "http://ip.taobao.com/service/getIpInfo.php?ip="
     enum KVOKey: String {
         case selectProduct = "selectProduct"
         case allProduct = "allProduct"
@@ -51,7 +52,7 @@ class AppConst {
     class Network {
         #if true //是否是开发环境
         static let TcpServerIP:String = "122.144.169.214"
-        static let TcpServerPort:UInt16 = 16016
+        static let TcpServerPort:UInt16 = 17004
         static let TttpHostUrl:String = "http://139.224.34.22"
         #else
         static let TcpServerIP:String = "tapi.smartdata-x.com"

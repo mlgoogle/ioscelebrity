@@ -249,6 +249,7 @@
 		8EFEF5751F139D7100AD9513 /* OEZCommSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E8FB0761F0AA4EA00A7B85C /* OEZCommSDK.framework */; };
 		8EFEF57A1F139E6300AD9513 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEF5791F139E6300AD9513 /* UMMobClick.framework */; };
 		8EFEF57C1F13A2E100AD9513 /* APITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEF57B1F13A2E100AD9513 /* APITestCase.swift */; };
+		A00201371F4AF55900698847 /* qiniuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00201361F4AF55900698847 /* qiniuHelper.swift */; };
 		A02722AD1E49C23000801A44 /* DKColorTable.txt in Resources */ = {isa = PBXBuildFile; fileRef = A02722AC1E49C23000801A44 /* DKColorTable.txt */; };
 		A0EA2D511E481BC300DD3158 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D501E481BC300DD3158 /* CFNetwork.framework */; };
 		A0EA2D531E481BD600DD3158 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EA2D521E481BD600DD3158 /* SystemConfiguration.framework */; };
@@ -591,7 +592,7 @@
 		8E4455891F19F7A80059CEEC /* CommenApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenApi.swift; sourceTree = "<group>"; };
 		8E44558A1F19F7A80059CEEC /* CommenSocketApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommenSocketApi.swift; sourceTree = "<group>"; };
 		8E44558D1F19FC3E0059CEEC /* KeyboardInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInputViewController.swift; sourceTree = "<group>"; };
-		8E44558E1F19FC3E0059CEEC /* StarNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarNewsVC.swift; sourceTree = "<group>"; };
+		8E44558E1F19FC3E0059CEEC /* StarNewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = StarNewsVC.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8E4455921F19FE0E0059CEEC /* aio_face_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aio_face_delete@2x.png"; sourceTree = "<group>"; };
 		8E4455931F19FE0E0059CEEC /* aio_face_delete_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aio_face_delete_pressed@2x.png"; sourceTree = "<group>"; };
 		8E4455941F19FE0E0059CEEC /* EmojisList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = EmojisList.plist; sourceTree = "<group>"; };
@@ -624,7 +625,7 @@
 		8E8FB0681F0AA4EA00A7B85C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB0691F0AA4EA00A7B85C /* UIScreen+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB06A1F0AA4EA00A7B85C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		8E8FB06C1F0AA4EA00A7B85C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8E8FB06C1F0AA4EA00A7B85C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		8E8FB06E1F0AA4EA00A7B85C /* EmojiFaceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFaceHelper.swift; sourceTree = "<group>"; };
 		8E8FB06F1F0AA4EA00A7B85C /* TableViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHelper.swift; sourceTree = "<group>"; };
 		8E8FB0721F0AA4EA00A7B85C /* MJRefresh.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MJRefresh.bundle; sourceTree = "<group>"; };
@@ -656,6 +657,7 @@
 		8EFEF56F1F13984A00AD9513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFEF5791F139E6300AD9513 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = Pods/UMengAnalytics/umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
 		8EFEF57B1F13A2E100AD9513 /* APITestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITestCase.swift; sourceTree = "<group>"; };
+		A00201361F4AF55900698847 /* qiniuHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qiniuHelper.swift; sourceTree = "<group>"; };
 		A02722AC1E49C23000801A44 /* DKColorTable.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DKColorTable.txt; sourceTree = "<group>"; };
 		A0EA2D4D1E481BA200DD3158 /* libPaymentControl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPaymentControl.a; sourceTree = "<group>"; };
 		A0EA2D4E1E481BA200DD3158 /* UPPaymentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPaymentControl.h; sourceTree = "<group>"; };
@@ -1484,6 +1486,7 @@
 		8E8FB0601F0AA4EA00A7B85C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A00201361F4AF55900698847 /* qiniuHelper.swift */,
 				8D21977A1F273075004B5789 /* UITabBar+badge.swift */,
 				8E36FE451F15CE44007AEFA6 /* UIBarExtension.swift */,
 				8E36FE461F15CE44007AEFA6 /* UIButton+Extension.swift */,
@@ -2008,6 +2011,7 @@
 				8E397CD41F289D2800847CCB /* NIMKitSwitcherCell.m in Sources */,
 				8E397CD81F289D2800847CCB /* NIMBadgeView.m in Sources */,
 				8E397D391F289D2800847CCB /* NIMKitRobotTemplate.m in Sources */,
+				A00201371F4AF55900698847 /* qiniuHelper.swift in Sources */,
 				8DC75D281F1DEE9F000A9BB9 /* MeetOrderCell.swift in Sources */,
 				8E8FB0D91F0AA4EA00A7B85C /* AppDelegate.swift in Sources */,
 				8DC75D271F1DEE9F000A9BB9 /* BenifityDetailCell.swift in Sources */,
@@ -2334,9 +2338,9 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cloudTop.starshare.star-com.cloudTop.starshare.sta-com.cloudTop.starshare.star";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare.star;
 				PRODUCT_NAME = YStar;
-				PROVISIONING_PROFILE = "c7586f5d-0ad3-4b1f-b6a5-9b62bd0efa48";
+				PROVISIONING_PROFILE = "44268bc9-3cc6-4c32-bdd2-cae38167da82";
 				PROVISIONING_PROFILE_SPECIFIER = starShareAdminDevelop;
 				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
 				SWIFT_VERSION = 3.0;
@@ -2352,7 +2356,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = YStar/YStar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2404,10 +2408,10 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.cloudTop.starshare.star-com.cloudTop.starshare.sta-com.cloudTop.starshare.star";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare.star;
 				PRODUCT_NAME = YStar;
-				PROVISIONING_PROFILE = "c7586f5d-0ad3-4b1f-b6a5-9b62bd0efa48";
-				PROVISIONING_PROFILE_SPECIFIER = starShareAdminDevelop;
+				PROVISIONING_PROFILE = "a3850d3e-7113-46c0-9dd0-458e8dd04245";
+				PROVISIONING_PROFILE_SPECIFIER = starShareAdminDistribution;
 				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";

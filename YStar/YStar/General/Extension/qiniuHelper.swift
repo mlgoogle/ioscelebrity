@@ -1,3 +1,4 @@
+
 //
 //  qiniuHelper.swift
 //  iOSStar
@@ -5,6 +6,7 @@
 //  Created by mu on 2017/8/21.
 //  Copyright © 2017年 YunDian. All rights reserved.
 //
+
 import UIKit
 import Alamofire
 
@@ -86,3 +88,5 @@ class QinniuModel: BaseModel{
     var QINIU_URL_HUABEI = ""
     var QINIU_URL_HUANAN = ""
 }
+
+

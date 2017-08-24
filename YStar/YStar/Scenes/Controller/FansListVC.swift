@@ -29,7 +29,7 @@ class FansListCell: OEZTableViewCell {
             
             let placeholderImage = UIImage.imageWith(AppConst.iconFontName.userPlaceHolder.rawValue, fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
             
-            self.iconImage.kf.setImage(with: URL.init(string: model.head_url), placeholder: placeholderImage)
+            self.iconImage.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.head_url), placeholder: placeholderImage)
             self.nameLabel.text = model.nickname
             self.newsCount.isHidden = model.unreadCount == 0
             newsCount.text = "  \(model.unreadCount)  "
