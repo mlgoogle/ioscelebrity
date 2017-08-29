@@ -280,6 +280,25 @@ class WithdrawListModel: BaseModel {
     class func withdrawListModelClass() ->AnyClass {
         return  WithdrawModel.classForCoder()
     }
+    
+}
+
+class QuestionModel: BaseModel{
+    var a_type = 1      //<0-文字 1-视频 2-语音> int
+    var answer_t = 0    //明星回答时间    int64
+    var ask_t = 0       //用户提问时间   int64
+    var c_type = 0      //消费档次        int
+    var id = 0           //问题id          int64
+    var p_type = 0       //<0-私有 1-公开> int
+    var s_total = 0      //阅读总数        int
+    var sanswer = ""     // 明星回答内容    string
+    var starcode = ""   //明星id          string
+    var uask = ""        //string
+    var uid = 0           //int64
+    var video_url = ""     //string
+    var nickName = ""         //    string
+    var headUrl = ""       //    string
+    var purchased = 0 // 0未购买  1已购买
 }
 
 class UpdateParam: BaseModel{

@@ -15,7 +15,7 @@ class BaseTableViewController: UITableViewController , TableViewHelperProtocol {
     
     override  func viewDidLoad() {
         super.viewDidLoad();
-
+        tableView.backgroundColor = UIColor.init(rgbHex: 0xfafafa)
 //        if tableView.tableFooterView == nil {
 //            tableView.tableFooterView = UIView(frame:CGRect(x: 0,y: 0,width: 0,height: 0.5));
 //        }

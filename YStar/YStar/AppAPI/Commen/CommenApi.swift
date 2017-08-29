@@ -76,5 +76,9 @@ protocol CommenApi {
     // 七牛上传图片
     func uploadimg(complete: CompleteBlock?, error: ErrorBlock?)
     func qiniuHttpHeader(complete:CompleteBlock?,error:ErrorBlock?)
+    // 明星回答
+    func starAnswer(requestModel: AnswerRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
+    // 获取明星的用户问答信息
+    func userQuestions(requestModel: QuestionsRequestModel, complete: CompleteBlock?, error: ErrorBlock?)
 }
 
