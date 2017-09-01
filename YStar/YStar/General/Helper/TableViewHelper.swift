@@ -126,7 +126,7 @@ class TableViewHelper {
                 controller.endLoadMore();
             }
             else {
-                controller.notLoadMore();
+                controller.endLoadMore();
             }
         }
         controller.setIsLoadData(true);

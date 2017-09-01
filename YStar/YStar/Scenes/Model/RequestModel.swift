@@ -177,6 +177,7 @@ class placeAndDateRequestModel: LoginModle {
 class AnswerRequestModel: LoginModle{
     var pType = 0
     var sanswer = ""
+    var thumbnailS = ""
 }
 
 class QuestionsRequestModel: LoginModle{
@@ -184,7 +185,8 @@ class QuestionsRequestModel: LoginModle{
     var pos = 0
     var count = 0
     var aType = 0 // 0文字 1视频 2 语音
-    var pType = 0 // 0私有 1公开 2 所有
+    var pType = 2 // 0私有 1公开 2 所有
+    var uid = 0
 }
 
 

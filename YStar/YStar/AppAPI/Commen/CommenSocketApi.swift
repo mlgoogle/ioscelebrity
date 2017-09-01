@@ -236,8 +236,7 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     
     // 获取明星的用户问答信息
     func userQuestions(requestModel: QuestionsRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
-        requestModel.aType = 2
-        requestModel.starcode = "1003"
+        requestModel.pType = 2
         let packet = SocketDataPacket(opcode: .questions, model: requestModel, type:.question)
         startModelsRequest(packet, listName: "circle_list", modelClass: QuestionModel.self, complete: complete, error: error)
     }

@@ -40,16 +40,18 @@ class QuestionsManagerVC: BaseTableViewController {
         scrollView.frame = scrollViewFrame
         scrollView.contentSize = CGSize.init(width: kScreenWidth * 2, height: scrollView.height)
         
-        if let meetTypeVC = storyboard?.instantiateViewController(withIdentifier: VoiceManagerVC.className()) as? VoiceManagerVC{
-            meetTypeVC.view.frame = scrollViewFrame
-            scrollView.addSubview(meetTypeVC.view)
-            self.addChildViewController(meetTypeVC)
+        if let voiceVC = storyboard?.instantiateViewController(withIdentifier: VoiceManagerVC.className()) as? VoiceManagerVC{
+            voiceVC.view.frame = scrollViewFrame
+            voiceVC.tableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0)
+            scrollView.addSubview(voiceVC.view)
+            self.addChildViewController(voiceVC)
         }
-        if let meetOrderVC = storyboard?.instantiateViewController(withIdentifier: VideoManagerVC.className()) as? VideoManagerVC{
+        if let videoVC = storyboard?.instantiateViewController(withIdentifier: VideoManagerVC.className()) as? VideoManagerVC{
             scrollViewFrame.origin.x = kScreenWidth
-            meetOrderVC.view.frame = scrollViewFrame
-            scrollView.addSubview(meetOrderVC.view)
-            self.addChildViewController(meetOrderVC)
+            videoVC.view.frame = scrollViewFrame
+            videoVC.tableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0)
+            scrollView.addSubview(videoVC.view)
+            self.addChildViewController(videoVC)
         }
     }
     

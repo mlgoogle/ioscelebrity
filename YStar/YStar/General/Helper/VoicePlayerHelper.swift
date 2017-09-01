@@ -14,6 +14,9 @@ class VoicePlayerHelper: NSObject, PLPlayerDelegate{
     static var vPlayer = VoicePlayerHelper()
     var audioRecorder:AVAudioRecorder!
     var audioPlayer:AVAudioPlayer!
+    var resultBlock: CompleteBlock?
+    var count = 0
+    var resultCountDown: CompleteBlock?
     let recordSettings = [AVSampleRateKey : NSNumber(value: Float(44100.0) as Float),//声音采样率
         AVFormatIDKey : NSNumber(value: Int32(kAudioFormatLinearPCM) as Int32),//编码格式
         AVNumberOfChannelsKey : NSNumber(value: 2 as Int32),//采集音轨
@@ -30,6 +33,41 @@ class VoicePlayerHelper: NSObject, PLPlayerDelegate{
         return vPlayer
     }
     
+    func doChanggeStatus(_ timecount : Int) {
+        count =  timecount
+        if count == 4{
+            return
+        }
+        if (count == 3  ){
+            count = 0
+            
+        }
+        count = count + 1
+        self.perform(#selector(changeImg), with: self, afterDelay: 0.5)
+        
+    }
+    
+    func changeImg(){
+        if count == 4{
+            return
+        }
+        if self.resultCountDown != nil{
+            self.doChanggeStatus(count)
+            self.resultCountDown!(count as AnyObject)
+        }
+        
+    }
+    
+    func player(_ player: PLPlayer, statusDidChange state: PLPlayerStatus) {
+        if self.resultBlock != nil{
+            self.resultBlock!(state as AnyObject)
+        }
+    }
+    
+}
+
+extension VoicePlayerHelper{
+    
     func  initRecorder() {
         let audioSession = AVAudioSession.sharedInstance()
         do {
@@ -38,6 +76,16 @@ class VoicePlayerHelper: NSObject, PLPlayerDelegate{
                                                 settings: recordSettings)//初始化实例
             audioRecorder.prepareToRecord()//准备录音
         } catch {
+        }
+    }
+    
+    func play(isRecord:Bool){
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            let cat = isRecord ? AVAudioSessionCategoryPlayAndRecord : AVAudioSessionCategoryPlayback
+            try audioSession.setCategory(cat)
+        } catch {
+            
         }
     }
     
@@ -59,6 +107,7 @@ class VoicePlayerHelper: NSObject, PLPlayerDelegate{
     func startRecord() {
         //开始录音
         if !audioRecorder.isRecording {
+            play(isRecord: true)
             let audioSession = AVAudioSession.sharedInstance()
             do {
                 try audioSession.setActive(true)
@@ -84,28 +133,22 @@ class VoicePlayerHelper: NSObject, PLPlayerDelegate{
     func startPlaying() {
         //开始播放
         if (!audioRecorder.isRecording){
-            do {
-                try audioPlayer = AVAudioPlayer(contentsOf: audioRecorder.url)
-                audioPlayer.play()
-                print("play!!")
-            } catch {
-            }
+//            do {
+//                try audioPlayer = AVAudioPlayer(contentsOf: audioRecorder.url)
+//                audioPlayer.play()
+//                print("play!!")
+//            } catch {
+//            }
+             play(audioRecorder.url.absoluteString)
         }
     }
     
     func play(_ urlStr: String){
-        do {
-            if let url = URL.init(string: urlStr){
-                print(url)
-//                let voiceItem = AVPlayerItem.init(url: url)
-//                let avPlayer = AVPlayer.init(playerItem: voiceItem)
-//                avPlayer.play()
-                print("play!!")
-                player.play(with: url)
-                player.play()
-            }
-        } catch {
-            print("播放失败")
+        play(isRecord: false)
+        if let url = URL.init(string: urlStr){
+            print(url)
+            player.play(with: url)
+            player.play()
         }
     }
     

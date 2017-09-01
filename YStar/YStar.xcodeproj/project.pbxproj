@@ -41,6 +41,10 @@
 		8DE975D81F29E5F300541E07 /* Bugout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975D71F29E5F300541E07 /* Bugout.framework */; };
 		8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DD1F29E63800541E07 /* CoreMotion.framework */; };
 		8DE975E01F29E64100541E07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DF1F29E64100541E07 /* Security.framework */; };
+		8E035A651F57BDE600DF3371 /* PlayVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A641F57BDE600DF3371 /* PlayVideoVC.swift */; };
+		8E035A671F57DB4C00DF3371 /* VideoAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A661F57DB4C00DF3371 /* VideoAnswerVC.swift */; };
+		8E035A691F57E20400DF3371 /* TakeMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A681F57E20400DF3371 /* TakeMovieVC.swift */; };
+		8E035A6B1F57E38600DF3371 /* OProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A6A1F57E38600DF3371 /* OProgressView.swift */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
 		8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */; };
 		8E1CFA591F53F03700014AD8 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1CFA581F53F03700014AD8 /* Question.storyboard */; };
@@ -321,6 +325,10 @@
 		8DE975DB1F29E62A00541E07 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		8DE975DD1F29E63800541E07 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		8DE975DF1F29E64100541E07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8E035A641F57BDE600DF3371 /* PlayVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoVC.swift; sourceTree = "<group>"; };
+		8E035A661F57DB4C00DF3371 /* VideoAnswerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnswerVC.swift; sourceTree = "<group>"; };
+		8E035A681F57E20400DF3371 /* TakeMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeMovieVC.swift; sourceTree = "<group>"; };
+		8E035A6A1F57E38600DF3371 /* OProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OProgressView.swift; sourceTree = "<group>"; };
 		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
 		8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KLineView.swift; path = YStar/Scenes/View/KLineView.swift; sourceTree = SOURCE_ROOT; };
 		8E0FB9961F3AD7E60085BBF6 /* YStar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YStar.entitlements; sourceTree = "<group>"; };
@@ -797,6 +805,7 @@
 		8DC75D1F1F1DEE9F000A9BB9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				8E035A6A1F57E38600DF3371 /* OProgressView.swift */,
 				8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */,
 				8DC75D201F1DEE9F000A9BB9 /* BenifityCell.swift */,
 				8DC75D211F1DEE9F000A9BB9 /* BenifityDetailCell.swift */,
@@ -819,10 +828,13 @@
 		8E1CFA5A1F53F2DE00014AD8 /* Question */ = {
 			isa = PBXGroup;
 			children = (
+				8E035A681F57E20400DF3371 /* TakeMovieVC.swift */,
+				8E035A641F57BDE600DF3371 /* PlayVideoVC.swift */,
 				8E1CFA5B1F53F32A00014AD8 /* QuestionsManagerVC.swift */,
 				8E1CFA5D1F53F45300014AD8 /* VoiceManagerVC.swift */,
 				8E1CFA5F1F53F47300014AD8 /* VideoManagerVC.swift */,
 				8E29144E1F540A7E00350927 /* VoiceAnswerVC.swift */,
+				8E035A661F57DB4C00DF3371 /* VideoAnswerVC.swift */,
 			);
 			name = Question;
 			sourceTree = "<group>";
@@ -1978,6 +1990,7 @@
 			files = (
 				8E397D301F289D2800847CCB /* NIMTeamMemberCardHeaderCell.m in Sources */,
 				8E397CFB1F289D2800847CCB /* NIMFileContentConfig.m in Sources */,
+				8E035A691F57E20400DF3371 /* TakeMovieVC.swift in Sources */,
 				8E397D371F289D2800847CCB /* NIMKitUtil.m in Sources */,
 				8E397D351F289D2800847CCB /* NIMKitResourceResizer.m in Sources */,
 				8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */,
@@ -1990,6 +2003,7 @@
 				8E36FE491F15CE44007AEFA6 /* UIBarExtension.swift in Sources */,
 				8E397CE91F289D2800847CCB /* NIMInputAtCache.m in Sources */,
 				8E397D171F289D2800847CCB /* NIMSessionNetChatNotifyContentView.m in Sources */,
+				8E035A651F57BDE600DF3371 /* PlayVideoVC.swift in Sources */,
 				8E397D2A1F289D2800847CCB /* NIMTeamAnnouncementListViewController.m in Sources */,
 				8E397CEC1F289D2800847CCB /* NIMInputEmoticonContainerView.m in Sources */,
 				8E397D201F289D2800847CCB /* NIMSessionListViewController.m in Sources */,
@@ -2131,6 +2145,7 @@
 				8E8FB0C31F0AA4EA00A7B85C /* BaseMode+Extension.swift in Sources */,
 				8E44558B1F19F7A80059CEEC /* CommenApi.swift in Sources */,
 				8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */,
+				8E035A671F57DB4C00DF3371 /* VideoAnswerVC.swift in Sources */,
 				8DC75D1E1F1DEE56000A9BB9 /* DateSelectorView.swift in Sources */,
 				8E397D0F1F289D2800847CCB /* NIMSessionTableAdapter.m in Sources */,
 				8E397CD91F289D2800847CCB /* NIMCustomLeftBarView.m in Sources */,
@@ -2181,6 +2196,7 @@
 				8E397D381F289D2800847CCB /* NIMKitRobotDefaultTemplateParser.m in Sources */,
 				8E397D101F289D2800847CCB /* NIMMessageCell.m in Sources */,
 				8E4455A11F19FE0E0059CEEC /* HHImageKeyboardCell.swift in Sources */,
+				8E035A6B1F57E38600DF3371 /* OProgressView.swift in Sources */,
 				8E397CF61F289D2800847CCB /* NIMMediaItem.m in Sources */,
 				8E397D1C1F289D2800847CCB /* NIMSessionVideoContentView.m in Sources */,
 				8E397CEF1F289D2800847CCB /* NIMInputEmoticonTabView.m in Sources */,
@@ -2351,7 +2367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = YStar/YStar.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yong ming lu (FD5S65ADL4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: yong ming lu (96YGS7NXK5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yong ming lu (FD5S65ADL4)";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
@@ -2398,6 +2414,7 @@
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDKPlugin",
 					"$(PROJECT_DIR)/YStar/Library/lame",
+					"$(PROJECT_DIR)/YStar/Library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -2426,7 +2443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = YStar/YStar.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: yong ming lu (96YGS7NXK5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
@@ -2469,6 +2486,7 @@
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDKPlugin",
 					"$(PROJECT_DIR)/YStar/Library/lame",
+					"$(PROJECT_DIR)/YStar/Library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (

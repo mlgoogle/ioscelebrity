@@ -50,13 +50,14 @@ class WithDrawaListVC: BasePageListTableViewController {
         requestModel.status = 0
         requestModel.startPos = Int32(pageIndex - 1) * 10 + 1
         
-        AppAPIHelper.commen().withDrawList(requestModel: requestModel, complete: { (response) -> ()? in
+        AppAPIHelper.commen().withDrawList(requestModel: requestModel, complete: { [weak self](response) -> ()? in
             if let objects = response as? WithdrawListModel {
                 
-                self.didRequestComplete(objects.withdrawList as AnyObject)
+                self?.didRequestComplete(objects.withdrawList as AnyObject)
             } else {
-                self.didRequestComplete(nil)
+                self?.didRequestComplete(nil)
             }
+            
             return nil
         }) { (error) -> ()? in
             self.didRequestComplete(nil)

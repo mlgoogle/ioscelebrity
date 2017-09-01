@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import SVProgressHUD
+
 class VoiceAnswerVC: BaseTableViewController {
     
     @IBOutlet weak var iconImage: UIImageView!
@@ -23,9 +25,15 @@ class VoiceAnswerVC: BaseTableViewController {
     @IBOutlet weak var playView: UIView!
     @IBOutlet weak var voiceIndirectorView: UIView!
     @IBOutlet weak var subTimeLabel: UILabel!
+    @IBOutlet weak var openSwitch: UISwitch!
+    @IBOutlet weak var voiceTitleLabel: UILabel!
     var recordTime: Int = 0
+    var totalTime: Int = 0
     var timer: Timer?
     var model: QuestionModel = QuestionModel()
+    var isCancel = false
+    var cancelImage = UIImage.imageWith("\u{e66d}", fontSize: CGSize.init(width: 44, height: 44), fontColor: UIColor.white)
+    var recordImage = UIImage.imageWith("\u{e669}", fontSize: CGSize.init(width: 44, height: 44), fontColor: UIColor.white)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,20 +48,21 @@ class VoiceAnswerVC: BaseTableViewController {
         rerecordBtn.setImage(cancelImage, for: .normal)
         let playImage = UIImage.imageWith("\u{e672}", fontSize: CGSize.init(width: 30, height: 30), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.label9.rawValue))
         playBtn.setImage(playImage, for: .normal)
-        voiceIconimage.image = UIImage.imageWith("\u{e669}", fontSize: CGSize.init(width: 30, height: 44), fontColor: UIColor.white)
+        voiceIconimage.image = UIImage.imageWith("\u{e669}", fontSize: CGSize.init(width: 44, height: 44), fontColor: UIColor.white)
         let recordImage = UIImage.imageWith("\u{e669}", fontSize: CGSize.init(width: 30, height: 30), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.subMain.rawValue))
         recordBtn.setImage(recordImage, for: .normal)
-        
         iconImage.kf.setImage(with: URL.init(string: model.headUrl))
         nameLabel.text =  model.nickName
         timeLabel.text = "定制  \(Date.yt_convertDateStrWithTimestemp(model.ask_t, format: "yyyy-MM-dd"))"
-        subTimeLabel.text = "\((model.c_type + 1)*15)S"
+        totalTime = (model.c_type + 1)*15
+        subTimeLabel.text = "\(totalTime)S"
         contentLabel.text = model.uask
+        tableView.isScrollEnabled = false
     }
     
     func initRecordBtn() {
-        let gesture = UILongPressGestureRecognizer.init(target: self, action: #selector(recordBtnlongTapped(_:)))
-        recordBtn.addGestureRecognizer(gesture)
+        let tapGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(recordBtnlongTapped(_:)))
+        recordBtn.addGestureRecognizer(tapGesture)
     }
     
     func recordBtnlongTapped(_ gesture: UILongPressGestureRecognizer){
@@ -63,23 +72,54 @@ class VoiceAnswerVC: BaseTableViewController {
             recordTime = 0
             voiceIndirectorView.alpha = 0.5
             voiceLengthLabel.text = "0秒"
+            playView.alpha = 0
             VoicePlayerHelper.shared().startRecord()
+            return
         }
         
         if gesture.state == .ended {
             print(">>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            timer?.invalidate()
-            voiceIndirectorView.alpha = 0
-            playView.alpha = 1
-            playBtn.setTitle("  \(recordTime)S     点击播放", for: .normal)
-            VoicePlayerHelper.shared().stopRecord()
+            endRecord()
+            return
         }
+        
+        if gesture.state == .failed{
+            print("================================")
+        }
+        
+        let point = gesture.location(in: recordBtn)
+        if point.y < -20{
+            voiceIconimage.image = cancelImage
+            voiceTitleLabel.text = "松开手指取消录制"
+            isCancel = true
+        }else{
+            voiceIconimage.image = recordImage
+            voiceTitleLabel.text = "手指上滑取消录制"
+            isCancel = false
+        }
+    }
+    
+    func endRecord() {
+        timer?.invalidate()
+        if isCancel{
+            voiceIndirectorView.alpha = 0
+            playView.alpha = 0
+            recordTime = 0
+            return
+        }
+        voiceIndirectorView.alpha = 0
+        playView.alpha = 1
+        playBtn.setTitle("  \(recordTime)S     点击播放", for: .normal)
+        VoicePlayerHelper.shared().stopRecord()
     }
     
     func recordTimeBegin() {
         recordTime = recordTime + 1
         print(recordTime)
         voiceLengthLabel.text = "\(recordTime)秒"
+        if totalTime == recordTime{
+            endRecord()
+        }
     }
  
     @IBAction func rerecordBtnTapped(_ sender: UIButton) {
@@ -92,10 +132,16 @@ class VoiceAnswerVC: BaseTableViewController {
     }
     
     @IBAction func didCommit(_ sender: UIBarButtonItem) {
+        if isCancel || recordTime == 0{
+            SVProgressHUD.showWainningMessage(WainningMessage: "请录制音频", ForDuration: 2, completion: nil)
+            return
+        }
+        
         VoicePlayerHelper.shared().uploadURL(complete: { [weak self] url in
             let param = AnswerRequestModel()
             param.id  = self?.model.id ?? 0
             param.sanswer = url as! String
+            param.pType = (self?.openSwitch.isOn)! ? 1 : 0
             AppAPIHelper.commen().starAnswer(requestModel: param, complete: { (response) -> ()? in
                 if let result = response as? ResultModel{
                     if result.result == 0{
@@ -110,5 +156,6 @@ class VoiceAnswerVC: BaseTableViewController {
         })
     }
     
+   
 }
 

@@ -299,6 +299,10 @@ class QuestionModel: BaseModel{
     var nickName = ""         //    string
     var headUrl = ""       //    string
     var purchased = 0 // 0未购买  1已购买
+    var videoTime = 0  //"提问视频时间"       int
+    var thumbnail = "" //"提问缩略图"            string
+    var videoTimeS = 0  //"回答视频时间"      int
+    var thumbnailS = "" // 回答缩略图   string
 }
 
 class UpdateParam: BaseModel{
@@ -313,3 +317,10 @@ class UpdateParam: BaseModel{
     var haveUpate = false
 }
 
+class VideoModel: BaseModel{
+    var movieUrl = ""
+    var totalTime = 0
+    var videoPath = ""
+    var videoIcon: UIImage?
+    var iconUrl = ""
+}
