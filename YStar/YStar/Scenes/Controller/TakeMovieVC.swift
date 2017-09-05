@@ -116,7 +116,6 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         configViedeo()
         initView()
         configTipView()
-        tap()
         self.view.bringSubview(toFront: self.tipView)
         
         
@@ -145,13 +144,14 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         let audioConfiguration = PLSAudioConfiguration.default()
         self.shortVideoRecorder = PLShortVideoRecorder.init(videoConfiguration: videoConfiguration!, audioConfiguration: audioConfiguration!)
         self.view.addSubview((self.shortVideoRecorder?.previewView)!)
-        //        self.shortVideoRecorder?.toggleCamera()
+        self.shortVideoRecorder?.toggleCamera()
         self.shortVideoRecorder?.maxDuration = CGFloat((question.c_type + 1)*15)
         self.shortVideoRecorder?.minDuration = 1.0
         self.shortVideoRecorder?.delegate = self
         self.shortVideoRecorder?.setBeautify(1)
         self.shortVideoRecorder?.setBeautifyModeOn(true)
         self.shortVideoRecorder?.startCaptureSession()
+        tap()
     }
     //MARK: -添加手势
     func tap(){

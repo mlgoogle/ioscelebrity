@@ -18,11 +18,15 @@ class VideoQuestionCell: OEZTableViewCell{
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var subContentView: UIView!
     @IBOutlet weak var subTimeLabel: UILabel!
+    @IBOutlet weak var viewCountLabel: UILabel!
+    @IBOutlet weak var viewIconImage: UIImageView!
     var question = QuestionModel()
     
     override func awakeFromNib() {
         iconImage.image = UIImage.imageWith("\u{e655}", fontSize: CGSize.init(width: 26, height: 26), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
         subContentView.isUserInteractionEnabled = true
+        viewIconImage.image = UIImage.imageWith("\u{e671}", fontSize: CGSize.init(width: 26, height: 24), fontColor: UIColor.init(rgbHex: 0x666666))
+
     }
     
     override func update(_ data: Any!) {
@@ -33,9 +37,11 @@ class VideoQuestionCell: OEZTableViewCell{
             timeLabel.text = "定制  \(Date.yt_convertDateStrWithTimestemp(model.ask_t, format: "yyyy-MM-dd"))"
             subTimeLabel.text = "\((model.c_type + 1)*15)S"
             contentLabel.text = model.uask
+            viewIconImage.isHidden = model.answer_t == 0
+            viewCountLabel.isHidden = model.answer_t == 0
             if model.answer_t == 0 {
                 videoBtn.backgroundColor = UIColor.init(rgbHex: AppConst.ColorKey.subMain.rawValue)
-                videoBtn.setTitle("未完成", for: .normal)
+                videoBtn.setTitle("   未完成   ", for: .normal)
                 videoBtn.contentHorizontalAlignment = .center
                 videoBtn.setTitleColor(UIColor.white, for: .normal)
                 videoReplyBtn.isHidden = true
@@ -45,6 +51,7 @@ class VideoQuestionCell: OEZTableViewCell{
                 videoBtn.contentHorizontalAlignment = .left
                 videoBtn.setTitleColor(UIColor.init(rgbHex: AppConst.ColorKey.subMain.rawValue), for: .normal)
                 videoReplyBtn.isHidden = model.video_url.length() == 0
+                viewCountLabel.text = "观看 \(model.s_total)"
             }
             
         }

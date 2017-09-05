@@ -87,10 +87,9 @@ class VideoAnswerVC: BaseTableViewController {
     
     @IBAction func submitItemTapped(_ sender: UIBarButtonItem) {
         if isCancel || videoModel.movieUrl.length() == 0{
-            SVProgressHUD.showWainningMessage(WainningMessage: "请录制音频", ForDuration: 2, completion: nil)
+            SVProgressHUD.showWainningMessage(WainningMessage: "请录制视频", ForDuration: 2, completion: nil)
             return
         }
-        
         let param = AnswerRequestModel()
         param.id  = model.id
         param.sanswer = videoModel.movieUrl
