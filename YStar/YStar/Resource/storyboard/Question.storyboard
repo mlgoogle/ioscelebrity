@@ -539,16 +539,16 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="观看0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBA-5N-JMr">
-                                                    <rect key="frame" x="298.5" y="91.5" width="32.5" height="14.5"/>
+                                                    <rect key="frame" x="298" y="91" width="33" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BY4-Op-f6c">
-                                                    <rect key="frame" x="268" y="92" width="22" height="14"/>
+                                                    <rect key="frame" x="270" y="92" width="20" height="14"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="14" id="QaL-eE-TWf"/>
-                                                        <constraint firstAttribute="width" constant="22" id="jze-8G-nOw"/>
+                                                        <constraint firstAttribute="width" constant="20" id="jze-8G-nOw"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -1194,6 +1194,12 @@
                                     <constraint firstAttribute="width" constant="26" id="b7m-g4-CRp"/>
                                     <constraint firstAttribute="height" constant="26" id="nhB-Zp-NTi"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
@@ -1253,7 +1259,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3BF-ps-pSs">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3BF-ps-pSs">
                                 <rect key="frame" x="14" y="457" width="347" height="80"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weichat" translatesAutoresizingMaskIntoConstraints="NO" id="bET-2Q-aDr">
@@ -1301,18 +1307,27 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0秒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="del-Dl-ae0">
+                                <rect key="frame" x="175.5" y="53" width="23" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.98431372549019602" green="0.59999999999999998" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="del-Dl-ae0" firstAttribute="top" secondItem="KBf-vs-Aui" secondAttribute="bottom" constant="33" id="3L3-nV-Ytz"/>
                             <constraint firstItem="MG6-oO-yNC" firstAttribute="top" secondItem="3BF-ps-pSs" secondAttribute="bottom" constant="130" id="4ve-0E-8S2"/>
                             <constraint firstAttribute="trailing" secondItem="3BF-ps-pSs" secondAttribute="trailing" constant="14" id="Afc-U1-0EA"/>
                             <constraint firstItem="3BF-ps-pSs" firstAttribute="leading" secondItem="qYr-T6-SVn" secondAttribute="leading" constant="14" id="aW0-l6-a9f"/>
+                            <constraint firstItem="del-Dl-ae0" firstAttribute="centerX" secondItem="qYr-T6-SVn" secondAttribute="centerX" id="mQO-Cf-Rah"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="contentLabel" destination="EeW-IQ-baT" id="S9r-Pb-yLd"/>
                         <outlet property="iconImage" destination="bET-2Q-aDr" id="Umc-7b-nwa"/>
                         <outlet property="nameLabel" destination="h3n-2Z-2US" id="t6F-dE-Aaj"/>
+                        <outlet property="timeLabel" destination="del-Dl-ae0" id="OI4-RE-CVN"/>
                         <outlet property="tipView" destination="3BF-ps-pSs" id="rLk-8y-Kdo"/>
                     </connections>
                 </viewController>

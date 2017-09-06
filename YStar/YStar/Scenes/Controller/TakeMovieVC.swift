@@ -18,6 +18,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
     var didTap = false
     var index  = 1
     var shortVideoRecorder : PLShortVideoRecorder?
@@ -34,6 +35,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         let  Progress = OProgressView.init(frame: CGRect.init(x: self.view.center.x - 50, y: kScreenHeight - 120, width: 100, height: 100))
         return Progress
     }()
+    
     //确定按钮
     lazy var showStartImg : UIImageView = {
         let sureBtn = UIImageView.init()
@@ -42,12 +44,14 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         sureBtn.isHidden = true
         return sureBtn
     }()
+    
     //showView
     lazy var bgView : UIView = {
         let stopView = UIView.init(frame: self.view.frame)
         stopView.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
         return stopView
     }()
+    
     //切换摄像头
     lazy var switchBtn : UIButton = {
         let resetBtn = UIButton.init(type: .custom)
@@ -71,7 +75,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
     //退出按钮
     lazy var closeBtn: UIButton = {
         let resetBtn = UIButton.init(type: .custom)
-        resetBtn.frame = CGRect.init(x: kScreenWidth - 100, y: 30, width: 25, height: 25)
+        resetBtn.frame = CGRect.init(x: kScreenWidth - 30, y: 30, width: 25, height: 25)
         let image = UIImage.imageWith("\u{e63e}", fontSize: CGSize.init(width: 25, height: 25), fontColor: UIColor.white)
         resetBtn.setImage(image, for: .normal)
         resetBtn.addTarget(self , action: #selector(exit), for: .touchUpInside)
@@ -82,7 +86,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
     lazy var resetBtn : UIButton = {
         let resetBtn = UIButton.init(type: .custom)
         resetBtn.frame = CGRect.init(x: 20, y: kScreenHeight - 100, width: 60, height: 60)
-        let image = UIImage.imageWith("\u{e66d}", fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.white)
+        let image = UIImage.imageWith("\u{e674}", fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.white)
         resetBtn.setImage(image, for: .normal)
         resetBtn.addTarget(self , action: #selector(didreset), for: .touchUpInside)
         resetBtn.isHidden = true
@@ -116,9 +120,6 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         configViedeo()
         initView()
         configTipView()
-        self.view.bringSubview(toFront: self.tipView)
-        
-        
     }
     func initView(){
         self.view.addSubview(showStartImg)
@@ -128,7 +129,8 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         self.view.addSubview(switchBtn)
         self.view.addSubview(sureBtn)
         self.view.addSubview(ProgressView)
-        //
+        view.bringSubview(toFront: self.tipView)
+        view.bringSubview(toFront: timeLabel)
     }
     
     func configTipView() {
@@ -197,7 +199,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
     //重置按钮
     func didreset(){
         //播放器停止
-        
+        timeLabel.text = "0秒"
         if (player?.isPlaying == true){
             canle = true
             player?.stop()
@@ -217,6 +219,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         self.view.bringSubview(toFront: switchBtn)
         self.view.bringSubview(toFront: closeBtn)
         self.view.bringSubview(toFront: self.tipView)
+        self.view.bringSubview(toFront: timeLabel)
         self.shortVideoRecorder?.cancelRecording()
         self.shortVideoRecorder?.stopRecording()
         ProgressView.setProgress(0, animated: true)
@@ -249,9 +252,12 @@ extension TakeMovieVC  {
         if state == .statusPaused{
             stopBtn.isHidden = true
         }
+        view.bringSubview(toFront: timeLabel)
     }
     func shortVideoRecorder(_ recorder: PLShortVideoRecorder, didRecordingToOutputFileAt fileURL: URL, fileDuration: CGFloat, totalDuration: CGFloat) {
-        ProgressView.setProgress(ProgressView.progress + 0.4, animated: true)
+        timeLabel.text = "\(Int(totalDuration))秒"
+        let progress = totalDuration / CGFloat((question.c_type + 1)*15)
+        ProgressView.setProgress(Double(progress), animated: true)
     }
     func shortVideoRecorder(_ recorder: PLShortVideoRecorder, didFinishRecordingMaxDuration maxDuration: CGFloat) {
         ProgressView.isHidden = true
@@ -274,6 +280,7 @@ extension TakeMovieVC  {
         }
         self.filePath = fileURL
         totalTime =  Int(totalDuration)
+        
         self.shortVideoRecorder?.previewView?.isHidden = true
         getScreenImg()
         ProgressView.setProgress(0, animated: true)
@@ -304,7 +311,9 @@ extension TakeMovieVC  {
             self.view.bringSubview(toFront: self.tipView)
             self.view.bringSubview(toFront: sureBtn)
             self.view.bringSubview(toFront: resetBtn)
+            
         }
+        
     }
     //获取屏幕截图
     func getScreenImg(){

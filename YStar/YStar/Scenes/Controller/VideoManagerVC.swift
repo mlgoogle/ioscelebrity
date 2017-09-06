@@ -41,7 +41,7 @@ class VideoQuestionCell: OEZTableViewCell{
             viewCountLabel.isHidden = model.answer_t == 0
             if model.answer_t == 0 {
                 videoBtn.backgroundColor = UIColor.init(rgbHex: AppConst.ColorKey.subMain.rawValue)
-                videoBtn.setTitle("   未完成   ", for: .normal)
+                videoBtn.setTitle("    未完成    ", for: .normal)
                 videoBtn.contentHorizontalAlignment = .center
                 videoBtn.setTitleColor(UIColor.white, for: .normal)
                 videoReplyBtn.isHidden = true

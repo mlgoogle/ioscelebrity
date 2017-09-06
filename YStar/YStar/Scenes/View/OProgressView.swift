@@ -36,6 +36,7 @@ import UIKit
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        contentMode = .scaleAspectFit
     }
     
     override func draw(_ rect: CGRect) {
@@ -46,7 +47,7 @@ import UIKit
         
         //绘制进度槽
         trackLayer.frame = bounds
-        trackLayer.fillColor = UIColor.red.cgColor
+        trackLayer.fillColor = UIColor.white.cgColor
         trackLayer.strokeColor = Constant.trackColor.cgColor
         trackLayer.lineWidth = Constant.lineWidth
         trackLayer.path = path.cgPath
@@ -61,6 +62,8 @@ import UIKit
         progressLayer.strokeStart = 0
         progressLayer.strokeEnd = CGFloat(progress)/100.0
         layer.addSublayer(progressLayer)
+        
+        
     }
     
     //设置进度（可以设置是否播放动画）
@@ -78,7 +81,7 @@ import UIKit
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name:
             kCAMediaTimingFunctionEaseInEaseOut))
         CATransaction.setAnimationDuration(duration)
-        progressLayer.strokeEnd = CGFloat(progress)/100.0
+        progressLayer.strokeEnd = CGFloat(progress)
         CATransaction.commit()
     }
     

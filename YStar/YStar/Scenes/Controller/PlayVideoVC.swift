@@ -35,12 +35,15 @@ class PlayVideoVC: UIViewController {
             view.sendSubview(toBack: playView)
         }
         let iconImage = UIImage.imageWith("\u{e655}", fontSize: CGSize.init(width: 26, height: 26), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
-        qIconImage.kf.setImage(with: URL.init(string: question.video_url), placeholder: iconImage)
+        qIconImage.kf.setImage(with: URL.init(string: question.headUrl), placeholder: iconImage)
         nameLabel.text = question.nickName
         qContentLabel.text = question.uask
         let image = UIImage.imageWith("\u{e63e}", fontSize: CGSize.init(width: 25, height: 25), fontColor: UIColor.white)
         closeBtn.setImage(image, for: .normal)
         playImage.kf.setImage(with: URL.init(string: qiniuHelper.shared().qiniuHeader + bgImageUrl))
+        
+        let hiddleImage = UIImage.imageWith("\u{e673}", fontSize: CGSize.init(width: 25, height: 25), fontColor: UIColor.white)
+        hiddleBtn.setImage(hiddleImage, for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,8 +75,8 @@ class PlayVideoVC: UIViewController {
     }
     
     @IBAction func hiddleBtnTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
         hiddleQustion(sender.isSelected)
+        sender.isSelected = !sender.isSelected
     }
     
     func hiddleQustion(_ isHiddle: Bool){
