@@ -38,6 +38,8 @@ target 'YStar' do
     pod 'UMengAnalytics'
     pod 'YYText'
     pod 'MJRefresh', '~> 3.1.12'
+    pod 'PLPlayerKit'
+    pod 'PLShortVideoKit'
     target 'YStarTests' do
         inherit! :search_paths
     end

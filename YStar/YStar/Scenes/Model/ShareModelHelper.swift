@@ -21,9 +21,10 @@ class ShareModelHelper: BaseModel {
     var uid = 0
     var phone  = ""
     var token = ""
-    var userinfo = UserBalance()
+    var userBalanceinfo = UserBalance()
     var voiceSwitch = false
     var qiniuHeader = "http://out9d2vy4.bkt.clouddn.com/"
-    
+    var userInfo = UserInfo()
+    var allowedVideo = false
     
 }

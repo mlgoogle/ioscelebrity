@@ -9,7 +9,7 @@
 import UIKit
 import SVProgressHUD
 import Alamofire
-
+import AVFoundation
 class AppDataHelper: NSObject {
     
     var updateModel:UpdateParam?
@@ -24,7 +24,25 @@ class AppDataHelper: NSObject {
         qiniuHelper.helper.getIPAdrees()
         tokenLogin()
         updateUpdateInfo()
+        checkAVStatus()
     }
+    
+    func checkAVStatus(){
+        let status = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        print(status)
+        if status == AVAuthorizationStatus.notDetermined{
+            AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (allowed) in
+                ShareModelHelper.instance().allowedVideo = allowed
+            })
+        }
+        if status == AVAuthorizationStatus.authorized{
+            ShareModelHelper.instance().allowedVideo = true
+        }
+        if status == AVAuthorizationStatus.denied{
+            ShareModelHelper.instance().allowedVideo = false
+        }
+    }
+    
     //检查是否登录
     func checkLogin() -> Bool {
         if let _ = UserDefaults.standard.value(forKey: AppConst.UserDefaultKey.uid.rawValue){
@@ -42,7 +60,7 @@ class AppDataHelper: NSObject {
     func userBalance(){
         AppAPIHelper.commen().userinfo(model: LoginModle(), complete: { (result) in
             if let userbalance = result as? UserBalance{
-                ShareModelHelper.instance().userinfo = userbalance
+                ShareModelHelper.instance().userBalanceinfo = userbalance
             }
             return nil
         }, error: nil)
@@ -59,6 +77,7 @@ class AppDataHelper: NSObject {
         }
         if  object.userinfo != nil{
             ShareModelHelper.instance().starCode = (object.userinfo?.starcode)!
+            ShareModelHelper.instance().userInfo = object.userinfo!
         }
         ShareModelHelper.instance().token = object.token
         UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
@@ -106,6 +125,12 @@ class AppDataHelper: NSObject {
                     if error == nil {
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
                     }
+                    let userLarge = ShareModelHelper.instance().userInfo.avatar_Large
+                    let key = NSNumber.init(integerLiteral: NIMUserInfoUpdateTag.avatar.rawValue)
+                    let param = NSDictionary.init(object: userLarge, forKey: key)
+                    NIMSDK.shared().userManager.updateMyUserInfo(param as! [NSNumber : String], completion: { (response) in
+                        print(response.debugDescription)
+                    })
                 })
             }
             return nil

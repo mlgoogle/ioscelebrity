@@ -43,7 +43,7 @@ class CreatNewsVC: BaseTableViewController,
             ] as? UIImage{
             UIImage.qiniuUploadImage(image: image, imageName: "Cycle", complete: { [weak self] (result) in
                 if let qiniuUrl = result as? String{
-                    self?.imageUrl = qiniuUrl
+                    self?.imageUrl = qiniuHelper.shared().qiniuHeader + qiniuUrl
                 }
                 return nil
             }, error: nil)

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Qiniu
 
 class qiniuHelper: NSObject {
     static let helper = qiniuHelper()
@@ -72,6 +73,46 @@ class qiniuHelper: NSObject {
             }
             return nil
         }, error: nil)
+    }
+    
+    
+    //上传视频
+    class  func qiniuUploadVideo(filePath: String,videoName: String, complete: CompleteBlock?, error: ErrorBlock?) {
+        let timestamp = NSDate().timeIntervalSince1970
+        let key = "\(videoName)\(Int(timestamp)).mp4"
+        uploadResource(filePath: filePath, key: key, complete: complete, error: error)
+    }
+    
+    //上传声音
+    class  func qiniuUploadVoice(filePath: String,voiceName: String, complete: CompleteBlock?, error: ErrorBlock?) {
+        let timestamp = NSDate().timeIntervalSince1970
+        let key = "\(voiceName)\(Int(timestamp)).mp3"
+        uploadResource(filePath: filePath, key: key, complete: complete, error: error)
+    }
+    
+    class  func uploadResource(filePath : String, key : String, complete: CompleteBlock?, error: ErrorBlock?){
+        Alamofire.request(AppConst.imageTokenUrl, method: .get).responseJSON { (resultObject) in
+            if let result: NSDictionary = resultObject.result.value as? NSDictionary{
+                let token = result.value(forKey: "imageToken") as! String
+                let qiniuManager = QNUploadManager()
+                qiniuManager?.putFile(filePath, key: key, token: token, complete: {  (info, key, resp) in
+                    if complete == nil{
+                        return
+                    }
+                    if resp == nil {
+                        complete!(nil)
+                        return
+                    }
+                    //3,返回URL
+                    let respDic: NSDictionary? = resp as NSDictionary?
+                    let value:String? = respDic!.value(forKey: "key") as? String
+                    let imageUrl = value!
+                    complete!(imageUrl as AnyObject?)
+                    
+                }, option: nil)
+            }
+        }
+        
     }
 }
 

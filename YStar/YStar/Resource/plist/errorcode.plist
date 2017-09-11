@@ -179,5 +179,9 @@
 	<string>用户时间不足</string>
 	<key>-1506</key>
 	<string>用户没有购买明星时间</string>
+	<key>-1507</key>
+	<string>明星不存在</string>
+	<key>-1508</key>
+	<string>暂无数据</string>
 </dict>
 </plist>

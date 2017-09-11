@@ -1,3 +1,4 @@
+
 //
 //  CommenSocketApi.swift
 //  wp
@@ -220,18 +221,31 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         startModelRequest(packet, modelClass: UpdateParam.self, complete: complete, error: error)
     }
     
+    // 上传图片token
     func uploadimg(complete: CompleteBlock?, error: ErrorBlock?){
-        
         let model = UploadModle()
-    
         let packet = SocketDataPacket(opcode: .uptoken, model: model)
         startModelRequest(packet, modelClass: UploadTokenModel.self, complete: complete, error: error)
-    
     }
+    
     // 获取七牛api
     func qiniuHttpHeader(complete:CompleteBlock?,error:ErrorBlock?){
-        
-        let packet : SocketDataPacket = SocketDataPacket.init(opcode: .qiniuHttp, model:LoginModel(), type: .time)
+        let packet : SocketDataPacket = SocketDataPacket.init(opcode: .qiniuHttp, model:LoginModle(), type: .time)
         startModelRequest(packet, modelClass: QinniuModel.self, complete: complete, error: error)
     }
+    
+    // 获取明星的用户问答信息
+    func userQuestions(requestModel: QuestionsRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        requestModel.pType = 2
+        let packet = SocketDataPacket(opcode: .questions, model: requestModel, type:.question)
+        startModelsRequest(packet, listName: "circle_list", modelClass: QuestionModel.self, complete: complete, error: error)
+    }
+    
+    // 明星回答
+    func starAnswer(requestModel: AnswerRequestModel, complete: CompleteBlock?, error: ErrorBlock?) {
+        let packet = SocketDataPacket(opcode: .starAnswer, model: requestModel)
+        startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
+    }
+
+
 }

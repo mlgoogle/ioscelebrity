@@ -51,7 +51,9 @@ class AppConst {
     
     class Network {
         #if true //是否是开发环境
-        static let TcpServerIP:String = "122.144.169.214"
+        // 139.224.34.22
+        // 122.144.169.214
+        static let TcpServerIP:String = "nsb.smartdata-x.com"
         static let TcpServerPort:UInt16 = 16016
         static let TttpHostUrl:String = "http://139.224.34.22"
         #else
@@ -76,6 +78,7 @@ class AppConst {
     
     enum ColorKey: UInt32 {
         case main = 0x8c0808
+        case subMain = 0xfb9938
         case bgColor = 0xfafafa
         case label6 = 0x666666
         case label3 = 0x333333
@@ -100,11 +103,10 @@ class AppConst {
         case dealTotalIcon = "\u{e604}"
         case timeTotalIcon = "\u{e603}"
         case priceTotalIcon = "\u{e601}"
-//        case selectIcon = "\u{e623}"
-//        case selectIcon = "\u{e65f}"
         case selectIcon = "\u{e660}"
         case notselectIcon = "\u{e65f}"
-        
+        case questionIcon = "\u{e60e}"
+        case cancelIcon = "\u{e627}"
     }
     
     enum UserDefaultKey: String {

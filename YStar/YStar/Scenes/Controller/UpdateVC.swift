@@ -28,7 +28,7 @@ class UpdateVC: UIViewController {
         timeLabel.text = "发布时间:\(AppDataHelper.instance().updateModel!.newAppReleaseTime)"
         versionLabel.text = "版本:\(AppDataHelper.instance().updateModel!.newAppVersionName)"
         mLabel.text = "大小:\(AppDataHelper.instance().updateModel!.newAppSize)M"
-        contentLabel.text = AppDataHelper.instance().updateModel!.newAppUpdateDesc
+        contentLabel.attributedText = NSAttributedString.init(string: AppDataHelper.instance().updateModel!.newAppUpdateDesc)
     }
 
     //确认
