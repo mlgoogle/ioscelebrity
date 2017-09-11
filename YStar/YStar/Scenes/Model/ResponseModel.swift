@@ -303,6 +303,15 @@ class QuestionModel: BaseModel{
     var thumbnail = "" //"提问缩略图"            string
     var videoTimeS = 0  //"回答视频时间"      int
     var thumbnailS = "" // 回答缩略图   string
+    var cellHeight: CGFloat = 0 //行高
+    
+    func calculateCellHeight() {
+        let contentAttribute = NSMutableAttributedString.init(string: uask)
+        contentAttribute.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 14), range: NSRange.init(location: 0, length: uask.length()))
+        let size  = CGSize.init(width: kScreenWidth - 100, height: CGFloat.greatestFiniteMagnitude)
+        let layout = YYTextLayout.init(containerSize: size, text: contentAttribute)
+        cellHeight = layout!.textBoundingSize.height + 160
+    }
 }
 
 class UpdateParam: BaseModel{

@@ -19,23 +19,17 @@ class FansListCell: OEZTableViewCell {
     @IBOutlet weak var newsCount: UILabel!
     
     override func awakeFromNib() {
-//        newsIcon.image = UIImage.imageWith(AppConst.iconFontName.newsIcon.rawValue, fontSize: newsIcon.frame.size, fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
     }
     
     
     override func update(_ data: Any!) {
-        
         if let model = data as? FansListModel {
-            
-            let placeholderImage = UIImage.imageWith(AppConst.iconFontName.userPlaceHolder.rawValue, fontSize: CGSize.init(width: 40, height: 40), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
-            
-            self.iconImage.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.head_url), placeholder: placeholderImage)
+            self.iconImage.kf.setImage(with: URL.init(string: model.head_url))
             self.nameLabel.text = model.nickname
             self.newsCount.isHidden = model.unreadCount == 0
             newsCount.text = "  \(model.unreadCount)  "
+        }
     }
-  }
-    
 }
 
 
@@ -84,7 +78,7 @@ class FansListVC: BasePageListTableViewController,NIMLoginManagerDelegate,NIMCon
     // 请求刷新数据
     override func didRequest(_ pageIndex: Int) {
         let requestModel = FansListRquestModel()
-        requestModel.starPos = (pageIndex - 1) * 10 + 1
+        requestModel.starPos = pageIndex == 1 ? 0 : dataSource?.count ?? 0
         AppAPIHelper.commen().requestFansList(model: requestModel, complete: {[weak self] (response) -> ()? in
             if let objects = response as? [FansListModel] {
                 let unreadCountDic = self?.getUnreadDic()

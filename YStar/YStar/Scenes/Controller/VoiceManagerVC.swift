@@ -62,8 +62,6 @@ class VoiceManagerVC: BasePageListTableViewController,OEZTableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 200
         VoicePlayerHelper.shared().resultBlock =  { (result) in
             if let status = result as? PLPlayerStatus{
                 if status == .statusStopped{
@@ -101,6 +99,9 @@ class VoiceManagerVC: BasePageListTableViewController,OEZTableViewDelegate {
         model.aType = 2
         AppAPIHelper.commen().userQuestions(requestModel: model, complete: { [weak self](response) in
             if let models = response as? [QuestionModel] {
+                for model in models{
+                    model.calculateCellHeight()
+                }
                 self?.didRequestComplete(models as AnyObject?)
             }else {
                 self?.didRequestComplete(nil)
@@ -113,11 +114,22 @@ class VoiceManagerVC: BasePageListTableViewController,OEZTableViewDelegate {
         return VoiceQuestionCell.className()
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let model = dataSource?[indexPath.row] as? QuestionModel{
+            return  model.cellHeight
+        }
+        return  0
+    }
+    
     func tableView(_ tableView: UITableView!, rowAt indexPath: IndexPath!, didAction action: Int, data: Any!) {
         if action == 100{
             if let vc = storyboard?.instantiateViewController(withIdentifier: VoiceAnswerVC.className()) as? VoiceAnswerVC,
                 let model = data as? QuestionModel{
                 vc.model = model
+                vc.complete = { [weak self](response) in
+                    self?.didRequest(1)
+                    return nil
+                }
                 _ = navigationController?.pushViewController(vc, animated: true)
             }
         }

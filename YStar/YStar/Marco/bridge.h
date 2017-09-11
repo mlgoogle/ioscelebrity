@@ -41,5 +41,6 @@ struct SocketPacketHead {
 #import "lameToMp3.h"
 #import <PLShortVideoKit/PLShortVideoKit.h>
 #import <PLPlayerKit/PLPlayer.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 //#import <CommonCrypto/CommonCrytor.h>
 /* nineSister_Bridging_Header_h */

@@ -109,6 +109,12 @@ class VideoAnswerVC: BaseTableViewController {
     }
     
     @IBAction func recordBtnTapped(_ sender: UIButton) {
+        if ShareModelHelper.instance().allowedVideo == false{
+            let alter = UIAlertView.init(title: "提示", message: "请在设备的\"设置-隐私-相机\"中允许访问相机", delegate: nil, cancelButtonTitle: "确定")
+            alter.show()
+            return
+        }
+        
         if let vc = storyboard?.instantiateViewController(withIdentifier: TakeMovieVC.className()) as? TakeMovieVC{
             vc.resultBlock = {  [weak self] (result) in
                 if let video =  result as?  VideoModel{

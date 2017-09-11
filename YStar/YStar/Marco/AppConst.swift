@@ -53,7 +53,7 @@ class AppConst {
         #if true //是否是开发环境
         // 139.224.34.22
         // 122.144.169.214
-        static let TcpServerIP:String = "122.144.169.214"
+        static let TcpServerIP:String = "nsb.smartdata-x.com"
         static let TcpServerPort:UInt16 = 16016
         static let TttpHostUrl:String = "http://139.224.34.22"
         #else
@@ -103,8 +103,6 @@ class AppConst {
         case dealTotalIcon = "\u{e604}"
         case timeTotalIcon = "\u{e603}"
         case priceTotalIcon = "\u{e601}"
-//        case selectIcon = "\u{e623}"
-//        case selectIcon = "\u{e65f}"
         case selectIcon = "\u{e660}"
         case notselectIcon = "\u{e65f}"
         case questionIcon = "\u{e60e}"

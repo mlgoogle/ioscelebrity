@@ -41,7 +41,7 @@ class VideoQuestionCell: OEZTableViewCell{
             viewCountLabel.isHidden = model.answer_t == 0
             if model.answer_t == 0 {
                 videoBtn.backgroundColor = UIColor.init(rgbHex: AppConst.ColorKey.subMain.rawValue)
-                videoBtn.setTitle("    未完成    ", for: .normal)
+                videoBtn.setTitle("未完成", for: .normal)
                 videoBtn.contentHorizontalAlignment = .center
                 videoBtn.setTitleColor(UIColor.white, for: .normal)
                 videoReplyBtn.isHidden = true
@@ -68,50 +68,42 @@ class VideoQuestionCell: OEZTableViewCell{
 }
 
 
-class VideoManagerVC: BaseListTableViewController, OEZTableViewDelegate {
+class VideoManagerVC: BasePageListTableViewController, OEZTableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 200
     }
 
-    override func didRequest() {
-        let model = QuestionsRequestModel()
-        model.pos = pageIndex == 0 ? 0 : dataSource?.count ?? 0 + 1
-        model.count = 10
-        model.aType = 1
-        AppAPIHelper.commen().userQuestions(requestModel: model, complete: { [weak self](response) in
-            if let models = response as? [QuestionModel]{
-                self?.didRequestComplete(models as AnyObject?)
-            }else {
-                self?.didRequestComplete(nil)
-            }
-            self?.setIsLoadData(true)
-            return nil
-        }, error: errorBlockFunc())
-    }
+    
     
     override func didRequest(_ pageIndex: Int) {
         
         let model = QuestionsRequestModel()
-        model.pos = pageIndex == 1 ? 0 : dataSource?.count ?? 0 + 1
+        model.pos = pageIndex == 1 ? 0 : dataSource?.count ?? 0+1
         model.count = 10
         model.aType = 1 
         AppAPIHelper.commen().userQuestions(requestModel: model, complete: { [weak self](response) in
             if let models = response as? [QuestionModel]{
+                for model in models{
+                    model.calculateCellHeight()
+                }
                 self?.didRequestComplete(models as AnyObject?)
             }else {
-                self?.setupLoadMore()
                 self?.didRequestComplete(nil)
             }
-            self?.tableView.reloadData()
             return nil
         }, error: errorBlockFunc())
     }
     
     override func tableView(_ tableView: UITableView, cellIdentifierForRowAtIndexPath indexPath: IndexPath) -> String? {
         return VideoQuestionCell.className()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let model = dataSource?[indexPath.row] as? QuestionModel{
+            return  model.cellHeight
+        }
+        return  0
     }
     
     func tableView(_ tableView: UITableView!, rowAt indexPath: IndexPath!, didAction action: Int, data: Any!) {

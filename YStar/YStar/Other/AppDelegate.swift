@@ -32,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        AppDataHelper.instance().checkAVStatus()
         
     }
 

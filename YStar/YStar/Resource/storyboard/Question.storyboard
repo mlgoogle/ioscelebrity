@@ -487,10 +487,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" tag="101" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDK-je-2Tz">
-                                                    <rect key="frame" x="48" y="76" width="37" height="44"/>
+                                                    <rect key="frame" x="48" y="76" width="88" height="44"/>
                                                     <color key="backgroundColor" red="0.98431372549999996" green="0.59999999999999998" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="Nnc-mu-5NW"/>
+                                                        <constraint firstAttribute="width" constant="88" id="wvB-wj-XuH"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <state key="normal" title="未完成">
@@ -519,7 +520,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" tag="102" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGl-Bk-e95">
-                                                    <rect key="frame" x="129" y="76" width="88" height="44"/>
+                                                    <rect key="frame" x="148" y="76" width="88" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="44" id="X52-qh-fyB"/>
                                                         <constraint firstAttribute="width" constant="88" id="tsH-9M-Gzp"/>
@@ -574,7 +575,7 @@
                                                 <constraint firstItem="Hdp-Iv-3JO" firstAttribute="centerY" secondItem="mNY-5i-T4m" secondAttribute="centerY" id="hqL-Vs-GhX"/>
                                                 <constraint firstItem="CBA-5N-JMr" firstAttribute="centerY" secondItem="BY4-Op-f6c" secondAttribute="centerY" id="iNQ-nx-g7m"/>
                                                 <constraint firstItem="CBA-5N-JMr" firstAttribute="leading" secondItem="BY4-Op-f6c" secondAttribute="trailing" constant="8.5" id="kTi-Jf-6p8"/>
-                                                <constraint firstItem="xGl-Bk-e95" firstAttribute="leading" secondItem="DDK-je-2Tz" secondAttribute="trailing" constant="44" id="kf1-qM-TkV"/>
+                                                <constraint firstItem="xGl-Bk-e95" firstAttribute="leading" secondItem="DDK-je-2Tz" secondAttribute="trailing" constant="12" id="kf1-qM-TkV"/>
                                                 <constraint firstItem="mNY-5i-T4m" firstAttribute="leading" secondItem="cyo-e4-r1T" secondAttribute="leading" constant="14" id="n85-uK-Ebq"/>
                                                 <constraint firstAttribute="trailing" secondItem="etA-Fg-F6m" secondAttribute="trailing" constant="14" id="omC-k9-Jgg"/>
                                             </constraints>

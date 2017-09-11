@@ -27,6 +27,7 @@ class VoiceAnswerVC: BaseTableViewController {
     @IBOutlet weak var subTimeLabel: UILabel!
     @IBOutlet weak var openSwitch: UISwitch!
     @IBOutlet weak var voiceTitleLabel: UILabel!
+    var complete: CompleteBlock?
     var recordTime: Int = 0
     var totalTime: Int = 0
     var timer: Timer?
@@ -67,7 +68,6 @@ class VoiceAnswerVC: BaseTableViewController {
     
     func recordBtnlongTapped(_ gesture: UILongPressGestureRecognizer){
         if gesture.state == .began{
-            print("<<<<<<<<<<<<<<<<<<<<<<<<<")
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(recordTimeBegin), userInfo: nil, repeats: true)
             recordTime = 0
             voiceIndirectorView.alpha = 0.5
@@ -78,13 +78,11 @@ class VoiceAnswerVC: BaseTableViewController {
         }
         
         if gesture.state == .ended {
-            print(">>>>>>>>>>>>>>>>>>>>>>>>>>>")
             endRecord()
             return
         }
         
         if gesture.state == .failed{
-            print("================================")
         }
         
         let point = gesture.location(in: recordBtn)
@@ -142,9 +140,15 @@ class VoiceAnswerVC: BaseTableViewController {
             param.id  = self?.model.id ?? 0
             param.sanswer = url as! String
             param.pType = (self?.openSwitch.isOn)! ? 1 : 0
+            SVProgressHUD.showProgressMessage(ProgressMessage: "回复中...")
             AppAPIHelper.commen().starAnswer(requestModel: param, complete: { (response) -> ()? in
+                SVProgressHUD.dismiss()
                 if let result = response as? ResultModel{
                     if result.result == 0{
+                        if self?.complete != nil{
+                            self?.complete!(1 as AnyObject)
+                        }
+                        SVProgressHUD.showSuccessMessage(SuccessMessage: "回复成功", ForDuration: 1.5, completion: nil)
                         _ = self?.navigationController?.popViewController(animated: true)
                     }
                 }

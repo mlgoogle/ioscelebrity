@@ -40,7 +40,6 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
     lazy var showStartImg : UIImageView = {
         let sureBtn = UIImageView.init()
         sureBtn.frame = CGRect.init(x: 0 , y: 0 , width: kScreenWidth, height: kScreenHeight)
-        
         sureBtn.isHidden = true
         return sureBtn
     }()
