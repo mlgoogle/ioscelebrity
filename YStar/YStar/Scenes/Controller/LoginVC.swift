@@ -14,6 +14,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
     @IBOutlet weak var pwdText: UITextField!
     @IBOutlet var headerView: UIView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var loginBtn: UIButton!
     
     var uid : Int = 0
     
@@ -21,7 +22,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor.clear
         headerView.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
-        
+        loginBtn.backgroundColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
     }
     
     override func viewWillAppear(_ animated: Bool) {

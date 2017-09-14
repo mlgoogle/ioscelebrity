@@ -31,6 +31,7 @@ class ResetPwdVC: BaseTableViewController {
         tableView.backgroundColor = UIColor.clear
         headerView.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
         closeBtn.setImage(UIImage.imageWith(AppConst.iconFontName.closeIcon.rawValue, fontSize: CGSize.init(width: 33, height: 33), fontColor: UIColor.init(rgbHex: AppConst.ColorKey.label9.rawValue)), for: .normal)
+        sureBtn.backgroundColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
     }
     // 获取验证码
     @IBAction func codeBtnTapped(_ sender: UIButton) {

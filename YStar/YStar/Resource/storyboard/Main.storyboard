@@ -13,7 +13,7 @@
         <scene sceneID="XLy-46-2Hg">
             <objects>
                 <navigationController restorationIdentifier="LoginNavigationController" storyboardIdentifier="LoginNavigationController" navigationBarHidden="YES" id="auy-Kd-UGJ" customClass="LoginNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ux3-G4-EXG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ux3-G4-EXG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -195,6 +195,7 @@
                     <connections>
                         <outlet property="contentView" destination="rCf-Q7-wQm" id="xKv-HG-I9d"/>
                         <outlet property="headerView" destination="cXl-3z-nut" id="jIh-f7-6hJ"/>
+                        <outlet property="loginBtn" destination="EfN-zJ-At8" id="0bp-su-Pwq"/>
                         <outlet property="phoneText" destination="UD4-ba-RX7" id="Mo5-7I-3Zt"/>
                         <outlet property="pwdText" destination="X0I-0D-Ieu" id="dLe-Z5-JVP"/>
                     </connections>
@@ -455,7 +456,7 @@
                         <outlet property="headerView" destination="0C4-My-T6n" id="AIz-4y-Tbg"/>
                         <outlet property="phoneText" destination="V5f-l0-4hn" id="mOq-xI-gTF"/>
                         <outlet property="pwdText" destination="cg4-yB-eQB" id="jiP-Yx-IKV"/>
-                        <outlet property="sureBtn" destination="MQ0-cj-nVi" id="BDO-S6-qd9"/>
+                        <outlet property="sureBtn" destination="MQ0-cj-nVi" id="zE6-p7-X3c"/>
                         <outlet property="vaildCodeBtn" destination="mIg-1K-F1f" id="yo1-vP-ok8"/>
                     </connections>
                 </tableViewController>
@@ -466,7 +467,7 @@
         <!--UpdateVC-->
         <scene sceneID="3i9-ve-kOS">
             <objects>
-                <viewController storyboardIdentifier="UpdateVC" id="4ve-xJ-AkK" customClass="UpdateVC" customModule="iOSStar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UpdateVC" id="4ve-xJ-AkK" customClass="UpdateVC" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jsF-Z5-il7"/>
                         <viewControllerLayoutGuide type="bottom" id="jzG-OS-oJV"/>
@@ -513,7 +514,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新内容简介，更新内容简介，更新内容简介，更新内容简介" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFA-ef-Zw2">
-                                        <rect key="frame" x="15" y="145" width="250" height="34"/>
+                                        <rect key="frame" x="15" y="145" width="250" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
