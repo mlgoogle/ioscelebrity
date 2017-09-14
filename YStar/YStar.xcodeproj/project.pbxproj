@@ -1763,7 +1763,6 @@
 				B0CF59DB1DE5BEC300C40C9C /* Resources */,
 				20FE2FBA84F3CB41DC07B34E /* [CP] Embed Pods Frameworks */,
 				7216018706741901D5FE5A13 /* [CP] Copy Pods Resources */,
-				BFEC3F231DF6A73600B36A0E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1946,19 +1945,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YStarTests/Pods-YStarTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		BFEC3F231DF6A73600B36A0E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run 13b0dd85b007ad78249b02fc26fa3972dff8da79 09fbffcee88c3bfa1086819566cdaf4b4c0f451fe57b9699cd9525804778308d";
 		};
 		D55B825BAB8D61DC7414456F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2430,10 +2416,10 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare.star;
 				PRODUCT_NAME = YStar;
-				PROVISIONING_PROFILE = "ccdb2ccb-8d8e-40c4-9a6c-890d8283e320";
-				PROVISIONING_PROFILE_SPECIFIER = starShareDevelop;
+				PROVISIONING_PROFILE = "44268bc9-3cc6-4c32-bdd2-cae38167da82";
+				PROVISIONING_PROFILE_SPECIFIER = starShareAdminDevelop;
 				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";
@@ -2447,8 +2433,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = YStar/YStar.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: yong ming lu (96YGS7NXK5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2502,10 +2488,10 @@
 					"-Objc",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cloudTop.starshare.star;
 				PRODUCT_NAME = YStar;
-				PROVISIONING_PROFILE = "ccdb2ccb-8d8e-40c4-9a6c-890d8283e320";
-				PROVISIONING_PROFILE_SPECIFIER = starShareDevelop;
+				PROVISIONING_PROFILE = "a3850d3e-7113-46c0-9dd0-458e8dd04245";
+				PROVISIONING_PROFILE_SPECIFIER = starShareAdminDistribution;
 				SWIFT_OBJC_BRIDGING_HEADER = YStar/Marco/bridge.h;
 				SWIFT_VERSION = 3.0;
 				VALID_ARCHS = "arm64 armv7s armv7";
