@@ -333,3 +333,5 @@ class VideoModel: BaseModel{
     var videoIcon: UIImage?
     var iconUrl = ""
 }
+
+

@@ -82,7 +82,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                     UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
                     UserDefaults.standard.set(object.token_time, forKey: AppConst.UserDefaultKey.tokenTime.rawValue)
                     UserDefaults.standard.synchronize()
-                    self?.LoginToYunxin()
+                    AppDataHelper.instance().LoginToYunxin()
                     self?.dismissController()
                     
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil, userInfo: nil)
@@ -99,7 +99,6 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         requestModel.name_value = self.phoneText.text!
         requestModel.phone = self.phoneText.text!
         requestModel.uid = self.uid
-        
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: {[weak self] (response) -> ()? in
             
             if let objects = response as? WYIMModel {

@@ -74,7 +74,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
     //退出按钮
     lazy var closeBtn: UIButton = {
         let resetBtn = UIButton.init(type: .custom)
-        resetBtn.frame = CGRect.init(x: kScreenWidth - 30, y: 30, width: 25, height: 25)
+        resetBtn.frame = CGRect.init(x: kScreenWidth - 90, y: 30, width: 60, height: 60)
         let image = UIImage.imageWith("\u{e63e}", fontSize: CGSize.init(width: 25, height: 25), fontColor: UIColor.white)
         resetBtn.setImage(image, for: .normal)
         resetBtn.addTarget(self , action: #selector(exit), for: .touchUpInside)
@@ -107,6 +107,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        SVProgressHUD.showWainningMessage(WainningMessage: "长按录制视频", ForDuration: 3, completion: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -119,6 +120,7 @@ class TakeMovieVC: UIViewController ,PLShortVideoRecorderDelegate ,PLShortVideoU
         configViedeo()
         initView()
         configTipView()
+        
     }
     func initView(){
         self.view.addSubview(showStartImg)

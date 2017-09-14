@@ -68,6 +68,8 @@ class ResetPayPwdRequestModel: LoginModle {
 class BindCardRequestModel: LoginModle {
     var account = ""
     var bankUsername = ""
+    var prov = ""
+    var city = ""
 }
 
 class BankCardListRequestModel: LoginModle {

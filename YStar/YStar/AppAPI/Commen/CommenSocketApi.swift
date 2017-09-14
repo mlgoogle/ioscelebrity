@@ -75,7 +75,7 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
     
     // MARK: - 重置密码(模型)
     func Resetpwd(model: ResetPwdReqModel, complete: CompleteBlock?, error: ErrorBlock?) {
-        let packet:SocketDataPacket = SocketDataPacket.init(opcode: .verifycode, model: model)
+        let packet:SocketDataPacket = SocketDataPacket.init(opcode: .repwd, model: model)
         startRequest(packet, complete: complete, error: error)
     }
     
@@ -246,6 +246,5 @@ class CommenSocketApi: BaseSocketAPI, CommenApi {
         let packet = SocketDataPacket(opcode: .starAnswer, model: requestModel)
         startModelRequest(packet, modelClass: ResultModel.self, complete: complete, error: error)
     }
-
 
 }

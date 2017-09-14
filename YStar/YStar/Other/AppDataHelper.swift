@@ -124,17 +124,39 @@ class AppDataHelper: NSObject {
                 NIMSDK.shared().loginManager.login(phoneNum, token: token_value, completion: { (error) in
                     if error == nil {
                         NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.WYIMLoginSuccess.rawValue), object: nil, userInfo: nil)
+                        self.updateNIMUserInfo()
                     }
-                    let userLarge = ShareModelHelper.instance().userInfo.avatar_Large
-                    let key = NSNumber.init(integerLiteral: NIMUserInfoUpdateTag.avatar.rawValue)
-                    let param = NSDictionary.init(object: userLarge, forKey: key)
-                    NIMSDK.shared().userManager.updateMyUserInfo(param as! [NSNumber : String], completion: { (response) in
-                        print(response.debugDescription)
-                    })
+                    
+
                 })
             }
             return nil
         },error: nil)
+    }
+
+    func updateNIMUserInfo(){
+        let userIds = [UserDefaults.standard.object(forKey: AppConst.UserDefaultKey.phone.rawValue) as! String]
+        NIMSDK.shared().userManager.fetchUserInfos(userIds, completion: { (users, error) in
+            if error  == nil{
+                if let user = users?[0] {
+                    if let headerUrl = user.userInfo?.avatarUrl{
+                        if headerUrl.length() == 0{
+                            let userLarge = ShareModelHelper.instance().userInfo.avatar_Large
+                            let key = NSNumber.init(integerLiteral: NIMUserInfoUpdateTag.avatar.rawValue)
+                            let param: [NSNumber: String] = [key: userLarge.length() > 0 ? userLarge : "http://ofr5nvpm7.bkt.clouddn.com/head.png"]
+                            NIMSDK.shared().userManager.updateMyUserInfo(param, completion: { (response) in
+                                print(response.debugDescription)
+                            })
+
+                        }
+                    }
+                }
+            }else{
+                print(error.debugDescription)
+            }
+        })
+        
+        
     }
     
     //MARK: - 查询是否有新版本更新

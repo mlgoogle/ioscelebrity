@@ -124,7 +124,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                             AppAPIHelper.commen().Withdrawal(requestModel: requestModel, complete: { (responseObject) -> ()? in
                                 if let resultObj = responseObject as? ResultModel {
                                     if resultObj.result == 1 {
-                                        SVProgressHUD.showSuccessMessage(SuccessMessage: "提现成功", ForDuration: 1.0, completion: {
+                                        SVProgressHUD.showSuccessMessage(SuccessMessage: "提现申请成功", ForDuration: 1.0, completion: {
                                             _ = self?.navigationController?.popViewController(animated: true)
                                         })
                                     }

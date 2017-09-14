@@ -91,11 +91,10 @@ class qiniuHelper: NSObject {
     }
     
     class  func uploadResource(filePath : String, key : String, complete: CompleteBlock?, error: ErrorBlock?){
-        Alamofire.request(AppConst.imageTokenUrl, method: .get).responseJSON { (resultObject) in
-            if let result: NSDictionary = resultObject.result.value as? NSDictionary{
-                let token = result.value(forKey: "imageToken") as! String
+        AppAPIHelper.commen().uploadimg(complete: { (result) in
+            if   let response = result as? UploadTokenModel{
                 let qiniuManager = QNUploadManager()
-                qiniuManager?.putFile(filePath, key: key, token: token, complete: {  (info, key, resp) in
+                qiniuManager?.putFile(filePath, key: key, token: response.uptoken, complete: {  (info, key, resp) in
                     if complete == nil{
                         return
                     }
@@ -111,8 +110,10 @@ class qiniuHelper: NSObject {
                     
                 }, option: nil)
             }
+            return nil
+        }) { (error ) in
+            return nil
         }
-        
     }
 }
 

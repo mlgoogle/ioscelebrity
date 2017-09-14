@@ -23,6 +23,7 @@ class VideoAnswerVC: BaseTableViewController {
     @IBOutlet weak var subTimeLabel: UILabel!
     @IBOutlet weak var openSwitch: UISwitch!
     @IBOutlet weak var videoTitleLabel: UILabel!
+    @IBOutlet weak var headView: UIView!
     var complete: CompleteBlock?
     var recordTime: Int = 0
     var totalTime: Int = 0
@@ -50,6 +51,8 @@ class VideoAnswerVC: BaseTableViewController {
         totalTime = (model.c_type + 1)*15
         subTimeLabel.text = "\(totalTime)S"
         contentLabel.text = model.uask
+        model.calculateCellHeight()
+        headView.height = model.cellHeight
     }
     
     @IBAction func checkQuestion(_ sender: UIButton) {
