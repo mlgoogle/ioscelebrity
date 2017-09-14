@@ -38,11 +38,11 @@ class NewsCell: OEZTableViewCell {
     override func update(_ data: Any!) {
         if let model = data as? CircleListModel{
             let userIcon = UIImage.imageWith(AppConst.iconFontName.userPlaceHolder.rawValue, fontSize: iconImage.frame.size, fontColor: UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue))
-            iconImage.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.head_url), placeholder: userIcon)
+            iconImage.kf.setImage(with: URL(string: model.head_url), placeholder: userIcon)
             nameLabel.text =  model.symbol_name
             newsLabel.text = model.content
-            newsPic.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.pic_url), placeholder: nil)
-            newsPicUrl = model.pic_url
+            newsPic.kf.setImage(with: URL(string:qiniuHelper.shared().qiniuHeader +  model.pic_url_tail), placeholder: nil)
+            newsPicUrl = model.pic_url_tail
             timeLabel.text = Date.marginDateStr(Int(model.create_time))
         }
     }
@@ -256,7 +256,7 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserD
                             SVProgressHUD.showSuccessMessage(SuccessMessage: "回复成功", ForDuration: 2, completion: {
                                 let comment = CircleCommentModel()
                                 comment.uid = ShareModelHelper.instance().uid
-                                comment.user_name = ShareModelHelper.instance().userinfo.nick_name
+                                comment.user_name = ShareModelHelper.instance().userBalanceinfo.nick_name
                                 comment.direction = 1
                                 comment.priority = 0
                                 comment.content = message as! String

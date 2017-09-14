@@ -58,7 +58,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         AppAPIHelper.commen().userinfo(model: model, complete: {[weak self] (response) -> ()? in
             if let objects = response as? UserBalance {
                 self?.withDrawMoney.text = "可提现金额" + "," + "¥" + String.init(format: "%.2f", objects.balance)
-                ShareModelHelper.instance().userinfo.balance = objects.balance
+                ShareModelHelper.instance().userBalanceinfo.balance = objects.balance
                 self?.needPwd = objects.is_setpwd
             }
             return nil
@@ -68,7 +68,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
  
     // 全部提现
     @IBAction func withDrawAll(_ sender: Any) {
-        inputMoney.text = String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance)
+        inputMoney.text = String.init(format: "%.2f", ShareModelHelper.instance().userBalanceinfo.balance)
     }
     // 提现
     @IBAction func withDraw(_ sender: Any) {
@@ -79,8 +79,8 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
         }
         
         if inputMoney.text != ""{
-            if Double.init(inputMoney.text!)! > ShareModelHelper.instance().userinfo.balance{
-                SVProgressHUD.showErrorMessage(ErrorMessage: "最多可提现" + String.init(format: "%.2f", ShareModelHelper.instance().userinfo.balance), ForDuration: 1, completion: nil)
+            if Double.init(inputMoney.text!)! > ShareModelHelper.instance().userBalanceinfo.balance{
+                SVProgressHUD.showErrorMessage(ErrorMessage: "最多可提现" + String.init(format: "%.2f", ShareModelHelper.instance().userBalanceinfo.balance), ForDuration: 1, completion: nil)
                 return
             }
             if Double.init(inputMoney.text!)! <= 0{
@@ -124,7 +124,7 @@ class WithdrawalVC: BaseTableViewController,UITextFieldDelegate {
                             AppAPIHelper.commen().Withdrawal(requestModel: requestModel, complete: { (responseObject) -> ()? in
                                 if let resultObj = responseObject as? ResultModel {
                                     if resultObj.result == 1 {
-                                        SVProgressHUD.showSuccessMessage(SuccessMessage: "提现成功", ForDuration: 1.0, completion: {
+                                        SVProgressHUD.showSuccessMessage(SuccessMessage: "提现申请成功", ForDuration: 1.0, completion: {
                                             _ = self?.navigationController?.popViewController(animated: true)
                                         })
                                     }

@@ -26,9 +26,11 @@ class MeetOrderVC: BaseListTableViewController {
         AppAPIHelper.commen().allOrder(requestModel: param, complete: { [weak self](result) in
             if let models = result as? [MeetOrderModel]{
                 self?.didRequestComplete(models as AnyObject?)
+            }else{
+                self?.didRequestComplete(nil)
             }
             return nil
-        }, error: nil)
+        }, error: errorBlockFunc())
     }
     
     override func tableView(_ tableView: UITableView, cellIdentifierForRowAtIndexPath indexPath: IndexPath) -> String? {

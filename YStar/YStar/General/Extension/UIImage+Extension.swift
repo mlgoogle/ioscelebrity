@@ -60,6 +60,7 @@ extension UIImage{
                 let timestamp = NSDate().timeIntervalSince1970
                 let key = "\(imageName)\(Int(timestamp)).png"
                 let qiniuManager = QNUploadManager()
+                
                 qiniuManager?.putFile(filePath, key: key, token: token.uptoken, complete: { (info, key, resp) in
                     if complete == nil{
                         return
@@ -71,7 +72,7 @@ extension UIImage{
                     //3,返回URL
                     let respDic: NSDictionary? = resp as NSDictionary?
                     let value:String? = respDic!.value(forKey: "key") as? String
-                    let imageUrl = AppConst.Network.qiniuHost+value!
+                    let imageUrl = value!
                     complete!(imageUrl as AnyObject?)
                 }, option: nil)
             }

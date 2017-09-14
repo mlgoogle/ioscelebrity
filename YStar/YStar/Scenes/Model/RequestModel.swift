@@ -68,6 +68,8 @@ class ResetPayPwdRequestModel: LoginModle {
 class BindCardRequestModel: LoginModle {
     var account = ""
     var bankUsername = ""
+    var prov = ""
+    var city = ""
 }
 
 class BankCardListRequestModel: LoginModle {
@@ -84,6 +86,7 @@ class CheckPayPwdModel: LoginModle {
     var uid:Int64 = Int64(ShareModelHelper.instance().uid)
     var paypwd = ""
 }
+
 // 提现
 class WithdrawalRequestModel: LoginModle {
     var price = 0.0
@@ -91,7 +94,6 @@ class WithdrawalRequestModel: LoginModle {
 
 // 提现记录
 class WithdrawalListRequetModel: LoginModle {
-    
     var status:Int32 = 0
     var startPos:Int32 = 0
     var count:Int32 = 10
@@ -100,11 +102,9 @@ class WithdrawalListRequetModel: LoginModle {
 
 // 粉丝列表
 class FansListRquestModel : LoginModle {
-    
     var starcode = ShareModelHelper.instance().starCode
     var starPos = 0
     var count = 10
-
 }
 
 class RegisterWYIMRequestModel: LoginModle {
@@ -130,16 +130,18 @@ class ApproveCircleModel: BaseModel {
     var circle_id:Int64 = 0
     var uid:Int64 = Int64(ShareModelHelper.instance().uid)
 }
+
 class CommentCircleModel: ApproveCircleModel {
     var direction = 0
     var content = ""
-    
 }
+
 class SendCircleRequestModel: BaseModel {
     var star_code = ShareModelHelper.instance().starCode
     var content = ""
     var picurl = ""
 }
+
 class DeleteCircle: BaseModel {
     dynamic var star_code = ""
     dynamic var circle_id = 0
@@ -149,29 +151,45 @@ class DeleteCircle: BaseModel {
 class MeetTypesRequest: LoginModle{
     var starcode = ShareModelHelper.instance().starCode
 }
+
 class MeetOrderListRequest: LoginModle{
     var starcode = ShareModelHelper.instance().starCode
     var starPos = 0
     var count = 10
-    
 }
+
 class AgreeOrderRequest: MeetOrderListRequest{
     var meettype = 4
     var meetid = 0
 }
+
 class ChangerMeetTypeRequest: MeetOrderListRequest{
     var mid = 0
     var type = 0
-    
 }
 
 class placeAndDateRequestModel: LoginModle {
-    
     var starcode = ShareModelHelper.instance().starCode
     var meet_city = ""
     var startdate = ""
     var enddate = ""
 }
-class LoginModel: BaseModel {
-    
+
+
+class AnswerRequestModel: LoginModle{
+    var pType = 0
+    var sanswer = ""
+    var thumbnailS = ""
 }
+
+class QuestionsRequestModel: LoginModle{
+    var starcode = ShareModelHelper.instance().starCode
+    var pos = 0
+    var count = 0
+    var aType = 0 // 0文字 1视频 2 语音
+    var pType = 2 // 0私有 1公开 2 所有
+    var uid = 0
+}
+
+
+

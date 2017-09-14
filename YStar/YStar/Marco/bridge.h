@@ -37,6 +37,10 @@ struct SocketPacketHead {
 #import <objc/runtime.h>
 #import "NIMKit.h"
 #import <Bugout/Bugout.h>
-
+#import "lame.h"
+#import "lameToMp3.h"
+#import <PLShortVideoKit/PLShortVideoKit.h>
+#import <PLPlayerKit/PLPlayer.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 //#import <CommonCrypto/CommonCrytor.h>
 /* nineSister_Bridging_Header_h */

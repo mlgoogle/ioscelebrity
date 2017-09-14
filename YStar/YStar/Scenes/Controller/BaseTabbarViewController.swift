@@ -16,10 +16,10 @@ class BaseTabbarViewController: UITabBarController,NIMLoginManagerDelegate,NIMCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let storyboardNames = ["Benifity","Fans","Meet"]
+        let storyboardNames = ["Benifity","Fans","Meet","Question"]
         
-        let itemIconNames = ["\u{e65e}","\u{e65b}"]
-        let titles = ["收益管理","联系粉丝","约见管理"]
+        let itemIconNames = ["\u{e65e}","\u{e65b}","","\u{e66b}"]
+        let titles = ["收益管理","联系粉丝","约见管理","粉丝问答"]
         
         for (index, name) in storyboardNames.enumerated() {
             let storyboard = UIStoryboard.init(name: name, bundle: nil)
