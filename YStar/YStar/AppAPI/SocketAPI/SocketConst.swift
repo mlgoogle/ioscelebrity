@@ -23,7 +23,6 @@ class SocketConst: NSObject {
         case bindCard = 8005
         // 验证码
         case verifycode = 3011
-        
         // 是否绑定银行
         case bankcardList = 8003
         // 银行信息
@@ -173,16 +172,19 @@ class SocketConst: NSObject {
         case allOrders = 16009
         //同意约见
         case agreeOrder = 16013
+        //
         case uptoken = 15029
         // 粉丝列表
         case fansLists = 16019
         //七牛URL链接头
         case qiniuHttp = 4015
-
         // 修改约见地点时间
         case placeAndDate = 16021
-        
-    }
+        // 获取明星的用户回答信息
+        case questions = 15017
+        // 明星回答
+        case starAnswer = 15021
+     }
     
     
     enum type:UInt8 {
@@ -200,6 +202,8 @@ class SocketConst: NSObject {
         case market = 11
         case comment = 12
         case search = 13
+        case question = 15
+        
     }
     
     

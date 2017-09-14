@@ -256,7 +256,7 @@ class StarNewsVC: BaseTableViewController, OEZTableViewDelegate, MWPhotoBrowserD
                             SVProgressHUD.showSuccessMessage(SuccessMessage: "回复成功", ForDuration: 2, completion: {
                                 let comment = CircleCommentModel()
                                 comment.uid = ShareModelHelper.instance().uid
-                                comment.user_name = ShareModelHelper.instance().userinfo.nick_name
+                                comment.user_name = ShareModelHelper.instance().userBalanceinfo.nick_name
                                 comment.direction = 1
                                 comment.priority = 0
                                 comment.content = message as! String

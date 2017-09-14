@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pVX-9G-3Np">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pVX-9G-3Np">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +13,7 @@
         <scene sceneID="XLy-46-2Hg">
             <objects>
                 <navigationController restorationIdentifier="LoginNavigationController" storyboardIdentifier="LoginNavigationController" navigationBarHidden="YES" id="auy-Kd-UGJ" customClass="LoginNavigationController" customModule="YStar" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ux3-G4-EXG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ux3-G4-EXG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -198,6 +198,7 @@
                     <connections>
                         <outlet property="contentView" destination="rCf-Q7-wQm" id="xKv-HG-I9d"/>
                         <outlet property="headerView" destination="cXl-3z-nut" id="jIh-f7-6hJ"/>
+                        <outlet property="loginBtn" destination="EfN-zJ-At8" id="0bp-su-Pwq"/>
                         <outlet property="phoneText" destination="UD4-ba-RX7" id="Mo5-7I-3Zt"/>
                         <outlet property="pwdText" destination="X0I-0D-Ieu" id="dLe-Z5-JVP"/>
                     </connections>
@@ -461,7 +462,7 @@
                         <outlet property="headerView" destination="0C4-My-T6n" id="AIz-4y-Tbg"/>
                         <outlet property="phoneText" destination="V5f-l0-4hn" id="mOq-xI-gTF"/>
                         <outlet property="pwdText" destination="cg4-yB-eQB" id="jiP-Yx-IKV"/>
-                        <outlet property="sureBtn" destination="MQ0-cj-nVi" id="BDO-S6-qd9"/>
+                        <outlet property="sureBtn" destination="MQ0-cj-nVi" id="zE6-p7-X3c"/>
                         <outlet property="vaildCodeBtn" destination="mIg-1K-F1f" id="yo1-vP-ok8"/>
                     </connections>
                 </tableViewController>

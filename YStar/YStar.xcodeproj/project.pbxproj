@@ -41,8 +41,19 @@
 		8DE975D81F29E5F300541E07 /* Bugout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975D71F29E5F300541E07 /* Bugout.framework */; };
 		8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DD1F29E63800541E07 /* CoreMotion.framework */; };
 		8DE975E01F29E64100541E07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DF1F29E64100541E07 /* Security.framework */; };
+		8E035A651F57BDE600DF3371 /* PlayVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A641F57BDE600DF3371 /* PlayVideoVC.swift */; };
+		8E035A671F57DB4C00DF3371 /* VideoAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A661F57DB4C00DF3371 /* VideoAnswerVC.swift */; };
+		8E035A691F57E20400DF3371 /* TakeMovieVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A681F57E20400DF3371 /* TakeMovieVC.swift */; };
+		8E035A6B1F57E38600DF3371 /* OProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E035A6A1F57E38600DF3371 /* OProgressView.swift */; };
 		8E08A5D41F1DE4D20072AB14 /* ytest.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E08A5D31F1DE4D20072AB14 /* ytest.plist */; };
 		8E08A5DA1F1DF9BA0072AB14 /* KLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */; };
+		8E1CFA591F53F03700014AD8 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1CFA581F53F03700014AD8 /* Question.storyboard */; };
+		8E1CFA5C1F53F32A00014AD8 /* QuestionsManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CFA5B1F53F32A00014AD8 /* QuestionsManagerVC.swift */; };
+		8E1CFA5E1F53F45300014AD8 /* VoiceManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CFA5D1F53F45300014AD8 /* VoiceManagerVC.swift */; };
+		8E1CFA601F53F47300014AD8 /* VideoManagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1CFA5F1F53F47300014AD8 /* VideoManagerVC.swift */; };
+		8E29144F1F540A7E00350927 /* VoiceAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E29144E1F540A7E00350927 /* VoiceAnswerVC.swift */; };
+		8E2914551F54202A00350927 /* lameToMp3.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2914531F54202A00350927 /* lameToMp3.m */; };
+		8E2914561F54202A00350927 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E2914541F54202A00350927 /* libmp3lame.a */; };
 		8E338E031F0E0C4D006D3C68 /* Fans.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */; };
 		8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */; };
 		8E338E051F0E0C4D006D3C68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E338E011F0E0C4D006D3C68 /* Main.storyboard */; };
@@ -197,6 +208,8 @@
 		8E44559F1F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455971F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift */; };
 		8E4455A01F19FE0E0059CEEC /* HHEmojiManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455981F19FE0E0059CEEC /* HHEmojiManage.swift */; };
 		8E4455A11F19FE0E0059CEEC /* HHImageKeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4455991F19FE0E0059CEEC /* HHImageKeyboardCell.swift */; };
+		8E4F2EC21F5553F2008BEDF3 /* VoicePlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F2EC11F5553F1008BEDF3 /* VoicePlayerHelper.swift */; };
+		8E4F2EC41F556F91008BEDF3 /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F2EC31F556F91008BEDF3 /* NSData+Extension.swift */; };
 		8E73BEB71F2F59AE008E21EC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE975DB1F29E62A00541E07 /* ImageIO.framework */; };
 		8E8FB0B21F0AA4EA00A7B85C /* AppAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */; };
 		8E8FB0B31F0AA4EA00A7B85C /* BaseSocketAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */; };
@@ -242,6 +255,7 @@
 		8E94A0E81F21D18000731757 /* VCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E94A0E71F21D18000731757 /* VCTestCase.swift */; };
 		8E99C78D1F344BEA00ED1EC5 /* PhotoBrowserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E99C78C1F344BEA00ED1EC5 /* PhotoBrowserVC.swift */; };
 		8EAE0AB61F31F2FA007B8AF2 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */; };
+		8EB2D78F1F628AFE00C63EED /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB2D78E1F628AFE00C63EED /* AssetsLibrary.framework */; };
 		8EBA26A41F0F5F830057ADE5 /* AppTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */; };
 		8ED4E92E1F3DA4AD009F5AE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1CC71A1F0BAE3F009B1A1B /* AVFoundation.framework */; };
 		8EE21D481F0E656100EE5C34 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */; };
@@ -312,9 +326,22 @@
 		8DE975DB1F29E62A00541E07 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		8DE975DD1F29E63800541E07 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		8DE975DF1F29E64100541E07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8E035A641F57BDE600DF3371 /* PlayVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayVideoVC.swift; sourceTree = "<group>"; };
+		8E035A661F57DB4C00DF3371 /* VideoAnswerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnswerVC.swift; sourceTree = "<group>"; };
+		8E035A681F57E20400DF3371 /* TakeMovieVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeMovieVC.swift; sourceTree = "<group>"; };
+		8E035A6A1F57E38600DF3371 /* OProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OProgressView.swift; sourceTree = "<group>"; };
 		8E08A5D31F1DE4D20072AB14 /* ytest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ytest.plist; sourceTree = "<group>"; };
 		8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KLineView.swift; path = YStar/Scenes/View/KLineView.swift; sourceTree = SOURCE_ROOT; };
 		8E0FB9961F3AD7E60085BBF6 /* YStar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YStar.entitlements; sourceTree = "<group>"; };
+		8E1CFA581F53F03700014AD8 /* Question.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		8E1CFA5B1F53F32A00014AD8 /* QuestionsManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsManagerVC.swift; sourceTree = "<group>"; };
+		8E1CFA5D1F53F45300014AD8 /* VoiceManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceManagerVC.swift; sourceTree = "<group>"; };
+		8E1CFA5F1F53F47300014AD8 /* VideoManagerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManagerVC.swift; sourceTree = "<group>"; };
+		8E29144E1F540A7E00350927 /* VoiceAnswerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceAnswerVC.swift; sourceTree = "<group>"; };
+		8E2914511F54202A00350927 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		8E2914521F54202A00350927 /* lameToMp3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lameToMp3.h; sourceTree = "<group>"; };
+		8E2914531F54202A00350927 /* lameToMp3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lameToMp3.m; sourceTree = "<group>"; };
+		8E2914541F54202A00350927 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		8E338DFF1F0E0C4D006D3C68 /* Fans.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fans.storyboard; sourceTree = "<group>"; };
 		8E338E001F0E0C4D006D3C68 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E338E011F0E0C4D006D3C68 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -601,6 +628,8 @@
 		8E4455971F19FE0E0059CEEC /* HHEmojiKeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHEmojiKeyboardCell.swift; sourceTree = "<group>"; };
 		8E4455981F19FE0E0059CEEC /* HHEmojiManage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHEmojiManage.swift; sourceTree = "<group>"; };
 		8E4455991F19FE0E0059CEEC /* HHImageKeyboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHImageKeyboardCell.swift; sourceTree = "<group>"; };
+		8E4F2EC11F5553F1008BEDF3 /* VoicePlayerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicePlayerHelper.swift; sourceTree = "<group>"; };
+		8E4F2EC31F556F91008BEDF3 /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB04C1F0AA4EA00A7B85C /* AppAPIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAPIHelper.swift; sourceTree = "<group>"; };
 		8E8FB04E1F0AA4EA00A7B85C /* BaseSocketAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSocketAPI.swift; sourceTree = "<group>"; };
 		8E8FB0511F0AA4EA00A7B85C /* SocketConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketConst.swift; sourceTree = "<group>"; };
@@ -622,7 +651,7 @@
 		8E8FB0651F0AA4EA00A7B85C /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB0661F0AA4EA00A7B85C /* SVProgressHUDExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SVProgressHUDExt.swift; sourceTree = "<group>"; };
 		8E8FB0671F0AA4EA00A7B85C /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		8E8FB0681F0AA4EA00A7B85C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		8E8FB0681F0AA4EA00A7B85C /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB0691F0AA4EA00A7B85C /* UIScreen+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB06A1F0AA4EA00A7B85C /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		8E8FB06C1F0AA4EA00A7B85C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -650,6 +679,7 @@
 		8E94A0E71F21D18000731757 /* VCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCTestCase.swift; sourceTree = "<group>"; };
 		8E99C78C1F344BEA00ED1EC5 /* PhotoBrowserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoBrowserVC.swift; sourceTree = "<group>"; };
 		8EAE0AB51F31F2FA007B8AF2 /* UpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
+		8EB2D78E1F628AFE00C63EED /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8EBA26A31F0F5F830057ADE5 /* AppTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTransition.swift; sourceTree = "<group>"; };
 		8EE21D471F0E656100EE5C34 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
 		8EFEF56B1F13984A00AD9513 /* YStarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YStarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -693,7 +723,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EB2D78F1F628AFE00C63EED /* AssetsLibrary.framework in Frameworks */,
 				8ED4E92E1F3DA4AD009F5AE8 /* AVFoundation.framework in Frameworks */,
+				8E2914561F54202A00350927 /* libmp3lame.a in Frameworks */,
 				8E73BEB71F2F59AE008E21EC /* ImageIO.framework in Frameworks */,
 				8DE975E01F29E64100541E07 /* Security.framework in Frameworks */,
 				8DE975DE1F29E63800541E07 /* CoreMotion.framework in Frameworks */,
@@ -724,6 +756,7 @@
 		10CEA088AA8041FD84B55B62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EB2D78E1F628AFE00C63EED /* AssetsLibrary.framework */,
 				8DE975DF1F29E64100541E07 /* Security.framework */,
 				8DE975DD1F29E63800541E07 /* CoreMotion.framework */,
 				8DE975DB1F29E62A00541E07 /* ImageIO.framework */,
@@ -776,6 +809,7 @@
 		8DC75D1F1F1DEE9F000A9BB9 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				8E035A6A1F57E38600DF3371 /* OProgressView.swift */,
 				8E08A5D91F1DF9BA0072AB14 /* KLineView.swift */,
 				8DC75D201F1DEE9F000A9BB9 /* BenifityCell.swift */,
 				8DC75D211F1DEE9F000A9BB9 /* BenifityDetailCell.swift */,
@@ -795,6 +829,31 @@
 			path = chatSessionConfig;
 			sourceTree = "<group>";
 		};
+		8E1CFA5A1F53F2DE00014AD8 /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				8E035A681F57E20400DF3371 /* TakeMovieVC.swift */,
+				8E035A641F57BDE600DF3371 /* PlayVideoVC.swift */,
+				8E1CFA5B1F53F32A00014AD8 /* QuestionsManagerVC.swift */,
+				8E1CFA5D1F53F45300014AD8 /* VoiceManagerVC.swift */,
+				8E1CFA5F1F53F47300014AD8 /* VideoManagerVC.swift */,
+				8E29144E1F540A7E00350927 /* VoiceAnswerVC.swift */,
+				8E035A661F57DB4C00DF3371 /* VideoAnswerVC.swift */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
+		8E2914501F54202A00350927 /* lame */ = {
+			isa = PBXGroup;
+			children = (
+				8E2914511F54202A00350927 /* lame.h */,
+				8E2914521F54202A00350927 /* lameToMp3.h */,
+				8E2914531F54202A00350927 /* lameToMp3.m */,
+				8E2914541F54202A00350927 /* libmp3lame.a */,
+			);
+			path = lame;
+			sourceTree = "<group>";
+		};
 		8E338DFE1F0E0C4D006D3C68 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -803,6 +862,7 @@
 				8E338E011F0E0C4D006D3C68 /* Main.storyboard */,
 				8E338E021F0E0C4D006D3C68 /* Meet.storyboard */,
 				8D0090EE1F0E11BB00AB9C05 /* Benifity.storyboard */,
+				8E1CFA581F53F03700014AD8 /* Question.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -1368,6 +1428,7 @@
 		8E435F441F0B440B00FB1976 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E1CFA5A1F53F2DE00014AD8 /* Question */,
 				8E99C78B1F344BCE00ED1EC5 /* Base */,
 				8E36FC011F14B116007AEFA6 /* Login */,
 				8E36FC001F14B10A007AEFA6 /* Benifity */,
@@ -1503,6 +1564,7 @@
 				8E8FB0691F0AA4EA00A7B85C /* UIScreen+Extension.swift */,
 				8E8FB06A1F0AA4EA00A7B85C /* UITableView+Extension.swift */,
 				8E8FB06C1F0AA4EA00A7B85C /* UIViewController+Extension.swift */,
+				8E4F2EC31F556F91008BEDF3 /* NSData+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1512,6 +1574,7 @@
 			children = (
 				8E8FB06E1F0AA4EA00A7B85C /* EmojiFaceHelper.swift */,
 				8E8FB06F1F0AA4EA00A7B85C /* TableViewHelper.swift */,
+				8E4F2EC11F5553F1008BEDF3 /* VoicePlayerHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -1519,6 +1582,7 @@
 		8E8FB0701F0AA4EA00A7B85C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				8E2914501F54202A00350927 /* lame */,
 				8DE975D71F29E5F300541E07 /* Bugout.framework */,
 				8E397BAE1F289D2700847CCB /* NIMKit */,
 				8E4455911F19FE0E0059CEEC /* EmojiKeyboard */,
@@ -1780,6 +1844,7 @@
 			files = (
 				8E8FB0E11F0AA4EA00A7B85C /* errorcode.plist in Resources */,
 				8E8FB0DF1F0AA4EA00A7B85C /* BankList.plist in Resources */,
+				8E1CFA591F53F03700014AD8 /* Question.storyboard in Resources */,
 				8DD39C291F3419A300D7D63B /* Assets.xcassets in Resources */,
 				8E338E041F0E0C4D006D3C68 /* LaunchScreen.storyboard in Resources */,
 				8E397D3E1F289D2800847CCB /* NIMKitResource.bundle in Resources */,
@@ -1915,6 +1980,7 @@
 			files = (
 				8E397D301F289D2800847CCB /* NIMTeamMemberCardHeaderCell.m in Sources */,
 				8E397CFB1F289D2800847CCB /* NIMFileContentConfig.m in Sources */,
+				8E035A691F57E20400DF3371 /* TakeMovieVC.swift in Sources */,
 				8E397D371F289D2800847CCB /* NIMKitUtil.m in Sources */,
 				8E397D351F289D2800847CCB /* NIMKitResourceResizer.m in Sources */,
 				8DD2FC0E1F137B0C00F2FA04 /* MeetTypeDetailVC.swift in Sources */,
@@ -1927,6 +1993,7 @@
 				8E36FE491F15CE44007AEFA6 /* UIBarExtension.swift in Sources */,
 				8E397CE91F289D2800847CCB /* NIMInputAtCache.m in Sources */,
 				8E397D171F289D2800847CCB /* NIMSessionNetChatNotifyContentView.m in Sources */,
+				8E035A651F57BDE600DF3371 /* PlayVideoVC.swift in Sources */,
 				8E397D2A1F289D2800847CCB /* NIMTeamAnnouncementListViewController.m in Sources */,
 				8E397CEC1F289D2800847CCB /* NIMInputEmoticonContainerView.m in Sources */,
 				8E397D201F289D2800847CCB /* NIMSessionListViewController.m in Sources */,
@@ -2010,6 +2077,7 @@
 				8E397CDF1F289D2800847CCB /* NIMContactDataCell.m in Sources */,
 				8E397CD41F289D2800847CCB /* NIMKitSwitcherCell.m in Sources */,
 				8E397CD81F289D2800847CCB /* NIMBadgeView.m in Sources */,
+				8E4F2EC21F5553F2008BEDF3 /* VoicePlayerHelper.swift in Sources */,
 				8E397D391F289D2800847CCB /* NIMKitRobotTemplate.m in Sources */,
 				A00201371F4AF55900698847 /* qiniuHelper.swift in Sources */,
 				8DC75D281F1DEE9F000A9BB9 /* MeetOrderCell.swift in Sources */,
@@ -2040,12 +2108,14 @@
 				8DC75D2B1F1DEE9F000A9BB9 /* MeetTypeDetailCell.swift in Sources */,
 				8E397D241F289D2800847CCB /* NIMTeamCardRowItem.m in Sources */,
 				8E397D0E1F289D2800847CCB /* NIMSessionMsgDatasource.m in Sources */,
+				8E1CFA601F53F47300014AD8 /* VideoManagerVC.swift in Sources */,
 				8E397CC91F289D2800847CCB /* M80AttributedLabel+NIMKit.m in Sources */,
 				8E8FB0B91F0AA4EA00A7B85C /* SocketDataPacket.swift in Sources */,
 				8E397D2D1F289D2800847CCB /* NIMAdvancedTeamMemberCell.m in Sources */,
 				8DAEF2CE1F2B07F600A85EF0 /* TimeAndPlaceVC.swift in Sources */,
 				8E435F501F0B44E800FB1976 /* BenifityDetailVC.swift in Sources */,
 				8E397D1B1F289D2800847CCB /* NIMSessionUnknowContentView.m in Sources */,
+				8E1CFA5E1F53F45300014AD8 /* VoiceManagerVC.swift in Sources */,
 				8E435F4C1F0B449F00FB1976 /* LoginVC.swift in Sources */,
 				8E397D3C1F289D2800847CCB /* NIMSpellingCenter.m in Sources */,
 				8E397CE31F289D2800847CCB /* NIMContactPickedView.m in Sources */,
@@ -2065,9 +2135,12 @@
 				8E8FB0C31F0AA4EA00A7B85C /* BaseMode+Extension.swift in Sources */,
 				8E44558B1F19F7A80059CEEC /* CommenApi.swift in Sources */,
 				8E435F5C1F0B4AB700FB1976 /* RequestModel.swift in Sources */,
+				8E035A671F57DB4C00DF3371 /* VideoAnswerVC.swift in Sources */,
 				8DC75D1E1F1DEE56000A9BB9 /* DateSelectorView.swift in Sources */,
 				8E397D0F1F289D2800847CCB /* NIMSessionTableAdapter.m in Sources */,
 				8E397CD91F289D2800847CCB /* NIMCustomLeftBarView.m in Sources */,
+				8E2914551F54202A00350927 /* lameToMp3.m in Sources */,
+				8E29144F1F540A7E00350927 /* VoiceAnswerVC.swift in Sources */,
 				8E397D071F289D2800847CCB /* NIMMessageCellFactory.m in Sources */,
 				8E397CCC1F289D2800847CCB /* NSString+NIMKit.m in Sources */,
 				8E397D231F289D2800847CCB /* NIMTeamCardOperationItem.m in Sources */,
@@ -2091,6 +2164,7 @@
 				8E8FB0D81F0AA4EA00A7B85C /* AppDataHelper.swift in Sources */,
 				8E36FE4A1F15CE44007AEFA6 /* UIButton+Extension.swift in Sources */,
 				8E8FB0CE1F0AA4EA00A7B85C /* EmojiFaceHelper.swift in Sources */,
+				8E4F2EC41F556F91008BEDF3 /* NSData+Extension.swift in Sources */,
 				8E8FB0C01F0AA4EA00A7B85C /* BaseTableViewController.swift in Sources */,
 				8DC75D261F1DEE9F000A9BB9 /* BenifityCell.swift in Sources */,
 				8E4455901F19FC3E0059CEEC /* StarNewsVC.swift in Sources */,
@@ -2102,6 +2176,7 @@
 				8E397D1D1F289D2800847CCB /* NIMLocationViewController.m in Sources */,
 				8E397CCF1F289D2800847CCB /* UIView+NIM.m in Sources */,
 				8E397D191F289D2800847CCB /* NIMSessionRobotContentView.m in Sources */,
+				8E1CFA5C1F53F32A00014AD8 /* QuestionsManagerVC.swift in Sources */,
 				8E397D091F289D2800847CCB /* NIMKitAudioCenter.m in Sources */,
 				8E8FB0C41F0AA4EA00A7B85C /* NSDateExt.swift in Sources */,
 				8E8FB0BE1F0AA4EA00A7B85C /* BaseCustomTableViewController.swift in Sources */,
@@ -2111,6 +2186,7 @@
 				8E397D381F289D2800847CCB /* NIMKitRobotDefaultTemplateParser.m in Sources */,
 				8E397D101F289D2800847CCB /* NIMMessageCell.m in Sources */,
 				8E4455A11F19FE0E0059CEEC /* HHImageKeyboardCell.swift in Sources */,
+				8E035A6B1F57E38600DF3371 /* OProgressView.swift in Sources */,
 				8E397CF61F289D2800847CCB /* NIMMediaItem.m in Sources */,
 				8E397D1C1F289D2800847CCB /* NIMSessionVideoContentView.m in Sources */,
 				8E397CEF1F289D2800847CCB /* NIMInputEmoticonTabView.m in Sources */,
@@ -2281,7 +2357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = YStar/YStar.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yong ming lu (FD5S65ADL4)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: yong ming lu (96YGS7NXK5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yong ming lu (FD5S65ADL4)";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
@@ -2327,6 +2403,8 @@
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/YStar/Library/lame",
+					"$(PROJECT_DIR)/YStar/Library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
@@ -2356,7 +2434,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = YStar/YStar.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+                "CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 96YGS7NXK5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2397,6 +2475,8 @@
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/YStar/Scenes/Controller/iosstar/Pods/UMengUShare/UShareSDK/UMSocialSDKPlugin",
+					"$(PROJECT_DIR)/YStar/Library/lame",
+					"$(PROJECT_DIR)/YStar/Library",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (

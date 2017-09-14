@@ -62,7 +62,7 @@ extension Date{
         let formatter = DateFormatter.init()
         formatter.dateFormat = format
         formatter.timeZone = TimeZone.autoupdatingCurrent
-        let date = Date.init(timeIntervalSince1970: Double(timeStemp)/1000 as TimeInterval)
+        let date = Date.init(timeIntervalSince1970: Double(timeStemp) as TimeInterval)
         return yt_convertDateToStr(date, format: format)
     }
     /**

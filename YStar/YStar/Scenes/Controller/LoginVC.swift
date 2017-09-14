@@ -14,6 +14,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
     @IBOutlet weak var pwdText: UITextField!
     @IBOutlet var headerView: UIView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var loginBtn: UIButton!
     
     var uid : Int = 0
     
@@ -21,7 +22,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor.clear
         headerView.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
-        
+        loginBtn.backgroundColor = UIColor.init(rgbHex: AppConst.ColorKey.main.rawValue)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +83,7 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
                     UserDefaults.standard.set(object.token, forKey: AppConst.UserDefaultKey.token.rawValue)
                     UserDefaults.standard.set(object.token_time, forKey: AppConst.UserDefaultKey.tokenTime.rawValue)
                     UserDefaults.standard.synchronize()
-                    self?.LoginToYunxin()
+                    AppDataHelper.instance().LoginToYunxin()
                     self?.dismissController()
                     
                     NotificationCenter.default.post(name: NSNotification.Name(rawValue:AppConst.NoticeKey.LoginSuccess.rawValue), object: nil, userInfo: nil)
@@ -99,7 +100,6 @@ class LoginVC: BaseTableViewController, UINavigationControllerDelegate {
         requestModel.name_value = self.phoneText.text!
         requestModel.phone = self.phoneText.text!
         requestModel.uid = self.uid
-        
         AppAPIHelper.commen().registWYIM(model: requestModel, complete: {[weak self] (response) -> ()? in
             
             if let objects = response as? WYIMModel {

@@ -23,6 +23,10 @@ class BindBankCardVC: BaseTableViewController {
     
     @IBOutlet weak var bindBankButton: UIButton! // 绑定银行卡按钮
     
+    @IBOutlet weak var shengText: UITextField!
+    
+    @IBOutlet weak var cityText: UITextField!
+    
     fileprivate var timer : Timer? // 定时器
     
     fileprivate var codeTimer = 60 // 时间区间
@@ -106,7 +110,7 @@ extension BindBankCardVC {
     // 绑定银行卡Action
     @IBAction func bindBankAction(_ sender: UIButton) {
         
-        if !checkTextFieldEmpty([starNameTextField,starCardNumTextField,starPhoneNumTextField,verificationCodeTextField]) {
+        if !checkTextFieldEmpty([starNameTextField,starCardNumTextField,starPhoneNumTextField,verificationCodeTextField,shengText,cityText]) {
             return
         }
         
@@ -124,21 +128,12 @@ extension BindBankCardVC {
         let model = BindCardRequestModel()
         model.bankUsername = starNameTextField.text!
         model.account = starCardNumTextField.text!
+        model.prov = shengText.text!
+        model.city = cityText.text!
         AppAPIHelper.commen().bindCard(model: model, complete: {[weak self] (response) -> ()? in
-            if let objects = response as? BindBankModel {
-                if objects.cardNO.length() != 0 {
-                    SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: {
-                         _ = self?.navigationController?.popViewController(animated: true)
-                    })
-                } else {
-                    SVProgressHUD.showErrorMessage(ErrorMessage: "绑定失败", ForDuration: 2.0, completion: nil)
-                }
-            }
-//            if (response as? BindBankModel) != nil{
-//                SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 2.0, completion: { 
-//                    _ = self?.navigationController?.popViewController(animated: true)
-//                })
-//            }
+            SVProgressHUD.showSuccessMessage(SuccessMessage: "绑定成功", ForDuration: 1, completion: {
+                self?.navigationController?.popViewController(animated: true)
+            })
             return nil
         }, error: errorBlockFunc())
         

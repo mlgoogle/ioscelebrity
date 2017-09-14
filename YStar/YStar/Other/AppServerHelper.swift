@@ -24,6 +24,7 @@ class AppServerHelper: NSObject , WXApiDelegate, UNUserNotificationCenterDelegat
         initUMengAnalytics()
         setupNIMSDK()
         setupBugout()
+        VoicePlayerHelper.shared().initRecorder()
     }
 
     // MARK: -云信

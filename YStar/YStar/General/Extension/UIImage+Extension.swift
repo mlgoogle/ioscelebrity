@@ -72,7 +72,7 @@ extension UIImage{
                     //3,返回URL
                     let respDic: NSDictionary? = resp as NSDictionary?
                     let value:String? = respDic!.value(forKey: "key") as? String
-                    let imageUrl = AppConst.Network.qiniuHost+value!
+                    let imageUrl = value!
                     complete!(imageUrl as AnyObject?)
                 }, option: nil)
             }

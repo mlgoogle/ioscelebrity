@@ -20,19 +20,23 @@ class WithDrawaListVCCell: OEZTableViewCell {
     // 提现金额
     @IBOutlet weak var moneyLabel: UILabel!
     
+    @IBOutlet weak var statusLabel: UILabel!
     // 刷新cell
     override func update(_ data: Any!) {
 
-        let model : WithdrawModel = data as! WithdrawModel
+        if let model : WithdrawModel = data as? WithdrawModel{
+            timeLabel.text = model.withdrawTime
+            
+            let indexTail = model.cardNo.index(model.cardNo.startIndex,  offsetBy: model.cardNo.length()-4)
+            let cardNotail = model.cardNo.substring(from: indexTail)
+            let bankName : String = model.bank as String
+            
+            bankNameLabel.text = String.init(format: "%@   尾号(%@)", bankName,cardNotail )
+            moneyLabel.text = String.init(format: "- %.2f 元",model.amount)
         
-        timeLabel.text = model.withdrawTime
+            statusLabel.text = model.status == 2 ? "成功" : (model.status == 3 ? "失败" : "进行中")
+        }
         
-        let indexTail = model.cardNo.index(model.cardNo.startIndex,  offsetBy: model.cardNo.length()-4)
-        let cardNotail = model.cardNo.substring(from: indexTail)
-        let bankName : String = model.bank as String
-        
-        bankNameLabel.text = String.init(format: "%@   尾号(%@)", bankName,cardNotail )
-        moneyLabel.text = String.init(format: "- %.2f 元",model.amount)
     }
 }
 
@@ -50,13 +54,14 @@ class WithDrawaListVC: BasePageListTableViewController {
         requestModel.status = 0
         requestModel.startPos = Int32(pageIndex - 1) * 10 + 1
         
-        AppAPIHelper.commen().withDrawList(requestModel: requestModel, complete: { (response) -> ()? in
+        AppAPIHelper.commen().withDrawList(requestModel: requestModel, complete: { [weak self](response) -> ()? in
             if let objects = response as? WithdrawListModel {
                 
-                self.didRequestComplete(objects.withdrawList as AnyObject)
+                self?.didRequestComplete(objects.withdrawList as AnyObject)
             } else {
-                self.didRequestComplete(nil)
+                self?.didRequestComplete(nil)
             }
+            
             return nil
         }) { (error) -> ()? in
             self.didRequestComplete(nil)
